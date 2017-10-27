@@ -37,8 +37,7 @@ gulp.task('dev', ['scripts', 'css', 'html', 'static'], function(cb) {
     },
     cwd: __dirname,
     port: 3474,
-    host: 'localhost',
-    debug: true
+    debug: false
   });
 
   app.listen(function(err) {
