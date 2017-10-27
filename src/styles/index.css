@@ -1,6 +1,6 @@
 .intro{
 	padding-top: 0;
-	padding-bottom: 80px;
+	padding-bottom: 60px;
     }
     .intro h1{
         font-size: 32px;
@@ -8,6 +8,8 @@
     }
     .intro p{
         font-size: 16px;
+        line-height: 28px;
+        color: #444;
     }
     .intro .hello{
         padding: 15px 0;
@@ -59,14 +61,17 @@
         padding: 30px 25px;
         color: #fff;
         background-color: #3399D8;
+        position: relative;
     }
     .products .product::after {
         display: table;
         clear: both;
         content: "";
     }
-    
-    .products .product a.btn{
+    .products .product:hover{
+        box-shadow: 0 6px 32px rgba(0, 0, 0, 0.3);
+    }
+    .products .product .btn{
         padding: 6px 12px;
         text-decoration: none;
         border: 1px solid #fff;

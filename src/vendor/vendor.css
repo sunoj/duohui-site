@@ -1,2 +1,2 @@
-/* @include ./../../node_modules/normalize.css/normalize.css */
-/* @include ./../../node_modules/primer-layout/build/build.css */
+/* @include-static ./../../node_modules/normalize.css/normalize.css */
+/* @include-static ./../../node_modules/primer-layout/build/build.css */

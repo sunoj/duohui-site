@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var preprocess = require('gulp-preprocess');
-var superstatic = require('superstatic').server;
 var browserSync = require("browser-sync").create();
 
 gulp.task('html', function() {
