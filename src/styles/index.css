@@ -115,8 +115,17 @@
         text-align: center;
     }
     
-    .partners .logowall img{
-        padding: 12px;
+    .partners .logowall *{
+        box-sizing: border-box;
+    }
+
+    .partners .logowall .column {
+        text-align: left;
+        padding: 0 7px;
+    }
+
+    .partners .logowall .column img {
+        width: 100%;
     }
     
     .partners .mobile{
@@ -151,8 +160,7 @@
     .events .item h4{
         margin: 0;
         font-size: 16px;
-        font-weight: normal;
-        padding-bottom: 8px;
+        line-height: 28px;
     }
     
     .events .item ul li{
@@ -161,6 +169,11 @@
         line-height: 17px;
         padding-right: 16px;
         color: #666;
+    }
+
+    .events .item .meta{
+        margin-top: 6px;
+        font-size: 14px;
     }
     
     .events .item .icon{

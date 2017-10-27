@@ -213,14 +213,7 @@ strong{
 		margin-left: 0;
 		margin-right: 0;
 	}
-	.partners .fbox{
-		align-content: flex-start;
-	    justify-content: flex-start;
-	}
-	.partners .logowall img{
-		padding: 8px;
-		height: 22px;
-	}
+
 	.footer .line{
 		padding: 0;
 		width: 50%;
