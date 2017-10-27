@@ -143,14 +143,16 @@ strong{
 	padding: 10px 20px;
 	margin: 0 5px;
 	border-radius: 6px;
-	transition: .3s all;
+  transition: .3s all;
+  font-weight: bold;
+  color: #444;
 }
 
 .header .nav li:hover{
 	background-color: #fff;
 }
 
-.header .nav li.btn{
+.header .nav li.app{
 	background-color: #efefef;
 }
 

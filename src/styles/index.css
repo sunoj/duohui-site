@@ -59,7 +59,6 @@
     }
     
     .products .item a.btn{
-        display: inline-block;
         padding: 6px 12px;
         text-decoration: none;
         border: 1px solid #fff;
@@ -69,11 +68,7 @@
         transition: .3s all;
         font-weight: normal;
         background: transparent;
-    }
-    
-    .products .item a.btn:hover{
-        background-color: #fff;
-        color: #333;
+        float: right;
     }
     
     .products .item .titlebox{
@@ -101,6 +96,19 @@
     .products .item p{
         min-height: 63px;
         line-height: 22px;
+    }
+
+    .products .item .price{
+        font-size: 30px;
+        vertical-align: middle;
+        font-weight: bold;
+        height: 36px;
+        float: left;
+        margin-top: 10px;
+    }
+
+    .products .item .price .unit {
+        font-size: 22px;
     }
 
 .partners{
