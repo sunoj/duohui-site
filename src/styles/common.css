@@ -23,6 +23,10 @@ ul{
 	clear: both;
 }
 
+.column{
+  box-sizing: border-box;
+}
+
 .btn {
     background: #fff;
     line-height: 1.4;
@@ -209,13 +213,6 @@ strong{
 	.section .fbox{
 		display: block;
 	}
-	.section .fbox .item{
-		width: 100%;
-		margin-bottom: 22px;
-		margin-left: 0;
-		margin-right: 0;
-	}
-
 	.footer .line{
 		padding: 0;
 		width: 50%;

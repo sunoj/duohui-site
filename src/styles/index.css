@@ -50,15 +50,23 @@
 .products{
 
     }
-    .products .item{
+    .products .columns{
+        margin-bottom: 20px;
+    }
+    .products .product{
         border-radius: 14px;
         box-sizing: border-box;
         padding: 30px 25px;
         color: #fff;
         background-color: #3399D8;
     }
+    .products .product::after {
+        display: table;
+        clear: both;
+        content: "";
+    }
     
-    .products .item a.btn{
+    .products .product a.btn{
         padding: 6px 12px;
         text-decoration: none;
         border: 1px solid #fff;
@@ -71,34 +79,34 @@
         float: right;
     }
     
-    .products .item .titlebox{
+    .products .product .titlebox{
         height: 40px;
         line-height: 40px;
     }
     
-    .products .item .titlebox img{
+    .products .product .titlebox img{
         float: left;
         margin-right: 15px;
         height: 40px;
     }
     
-    .products .item .titlebox h3{
+    .products .product .titlebox h3{
         font-size: 26px;
         margin: 0;
     }
     
-    .products .item h4{
+    .products .product h4{
         font-size: 20px;
         line-height: 22px;
         margin: 20px 0 12px;
     }
     
-    .products .item p{
+    .products .product p{
         min-height: 63px;
         line-height: 22px;
     }
 
-    .products .item .price{
+    .products .product .price{
         font-size: 30px;
         vertical-align: middle;
         font-weight: bold;
@@ -107,7 +115,7 @@
         margin-top: 10px;
     }
 
-    .products .item .price .unit {
+    .products .product .price .unit {
         font-size: 22px;
     }
 
@@ -151,30 +159,30 @@
         text-decoration: none;
     }
     
-    .events .item{
+    .events .event{
         background-color: #fff;
         border-radius: 6px;
-        width: 350px;
+        margin-bottom: 12px;
     }
     
-    .events .item .event-poster{
+    .events .event .event-poster{
         width: 100%;
         height: auto;
         display: block;
     }
     
-    .events .item .content{
+    .events .event .content{
         box-sizing: border-box;
         padding: 14px 20px;
     }
     
-    .events .item h4{
+    .events .event h4{
         margin: 0;
         font-size: 16px;
         line-height: 28px;
     }
     
-    .events .item ul li{
+    .events .event ul li{
         list-style: none;
         float: left;
         line-height: 17px;
@@ -182,17 +190,17 @@
         color: #666;
     }
 
-    .events .item .meta{
+    .events .event .meta{
         margin-top: 6px;
         font-size: 14px;
     }
     
-    .events .item .icon{
+    .events .event .icon{
         float: left;
         padding-right: 4px;
     }
     
-    .events a.more{
+    .events .more-events{
         display: block;
         height: 50px;
         line-height: 50px;
@@ -202,9 +210,18 @@
         background-color: #ededed;
         border-radius: 6px;
         transition: .3s all;
+        margin-top: 12px;
     }
 
-    .events a.more:hover{
-        color: #fff;
-        background-color: #3A88FD;
+    .events .more-events:hover{
+        color: #282828;
     }
+
+@media screen and (max-width: 720px) {
+	.section.products .product{
+		margin-bottom: 22px;
+    }
+    .products .columns{
+        margin-bottom: 0;
+    }
+}
