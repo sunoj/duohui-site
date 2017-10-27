@@ -1,0 +1,186 @@
+.intro{
+	padding-top: 0;
+	padding-bottom: 80px;
+    }
+    .intro h1{
+        font-size: 32px;
+        padding-bottom: 10px;
+    }
+    .intro p{
+        font-size: 16px;
+    }
+    .intro .hello{
+        padding: 15px 0;
+    }
+    .intro .hello p{
+        font-size: 20px;
+    }
+
+.why{
+
+    }
+    .why ul li{
+        list-style: none;
+        position: relative;
+        padding: .5em 0;
+        font-size: 16px;
+    }
+    
+    .why ul li::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -14px;
+        display: block;
+        width: 4px;
+        height: 4px;
+        margin-top: -2px;
+        border-radius: 100%;
+        background-color: #35AFFB;
+    }
+    
+    .why .item h2{
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+.products{
+
+    }
+    .products .item{
+        border-radius: 14px;
+        box-sizing: border-box;
+        padding: 30px 25px;
+        color: #fff;
+        background-color: #3399D8;
+    }
+    
+    .products .item a.btn{
+        display: inline-block;
+        padding: 6px 12px;
+        text-decoration: none;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        color: #fff;
+        margin-top: 10px;
+        transition: .3s all;
+        font-weight: normal;
+        background: transparent;
+    }
+    
+    .products .item a.btn:hover{
+        background-color: #fff;
+        color: #333;
+    }
+    
+    .products .item .titlebox{
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    .products .item .titlebox img{
+        float: left;
+        margin-right: 15px;
+        height: 40px;
+    }
+    
+    .products .item .titlebox h3{
+        font-size: 26px;
+        margin: 0;
+    }
+    
+    .products .item h4{
+        font-size: 20px;
+        line-height: 22px;
+        margin: 20px 0 12px;
+    }
+    
+    .products .item p{
+        min-height: 63px;
+        line-height: 22px;
+    }
+
+.partners{
+
+    }
+    .partners .fbox{
+        align-items: center;
+    }
+    .partners .fbox::after{
+        content: '';
+        flex: auto;
+    }
+    
+    .partners .logowall{
+        text-align: center;
+    }
+    
+    .partners .logowall img{
+        padding: 12px;
+    }
+    
+    .partners .mobile{
+        display: none;
+    }
+
+.events{
+
+    }
+    .events a{
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    .events .item{
+        background-color: #fff;
+        border-radius: 6px;
+        width: 350px;
+    }
+    
+    .events .item .event-poster{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .events .item .content{
+        box-sizing: border-box;
+        padding: 14px 20px;
+    }
+    
+    .events .item h4{
+        margin: 0;
+        font-size: 16px;
+        font-weight: normal;
+        padding-bottom: 8px;
+    }
+    
+    .events .item ul li{
+        list-style: none;
+        float: left;
+        line-height: 17px;
+        padding-right: 16px;
+        color: #666;
+    }
+    
+    .events .item .icon{
+        float: left;
+        padding-right: 4px;
+    }
+    
+    .events a.more{
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        color: #666;
+        width: 100%;
+        text-align: center;
+        background-color: #ededed;
+        border-radius: 6px;
+        transition: .3s all;
+    }
+
+    .events a.more:hover{
+        color: #fff;
+        background-color: #3A88FD;
+    }
