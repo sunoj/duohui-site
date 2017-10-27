@@ -1,10 +1,11 @@
 var gulp = require('gulp');
 var preprocess = require('gulp-preprocess');
 var browserSync = require("browser-sync").create();
+var pug = require('gulp-pug');
 
 gulp.task('html', function() {
-  gulp.src('./src/*.html')
-    .pipe(preprocess({context: { NODE_ENV: 'production', DEBUG: true}}))
+  gulp.src('./src/*.pug')
+    .pipe(pug())
     .pipe(gulp.dest('./dist/'))
 });
 
@@ -43,6 +44,6 @@ gulp.task('reload', function (done) {
 gulp.task('dev', ['scripts', 'css', 'html', 'static', 'serve'], function(cb) {
   gulp.watch('./src/**/*.js', ['scripts', 'reload']);
   gulp.watch('./src/**/*.css', ['css', 'reload']);
-  gulp.watch('./src/**/*.html', ['html', 'reload']);
+  gulp.watch('./src/**/*.pug', ['html', 'reload']);
   gulp.watch('./static/**/*.*', ['static', 'reload']);
 });
