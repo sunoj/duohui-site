@@ -1,5 +1,10 @@
+html{
+  min-width: 1024px;  
+}
+
 body{
-	background: #F6F9FC;
+  width: 100%;
+  background: #F6F9FC;
 	font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
     -webkit-font-smoothing: antialiased;
     color: #333333;
@@ -28,26 +33,26 @@ ul{
 }
 
 .btn {
-    background: #fff;
-    line-height: 1.4;
-    display: inline-block;
-    padding: 6px 10px;
-    white-space: nowrap;
-    border-radius: 4px;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    font-weight: 700;
-    text-decoration: none;
+  background: #fff;
+  line-height: 1.4;
+  display: inline-block;
+  padding: 6px 10px;
+  white-space: nowrap;
+  border-radius: 4px;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .action .btn{
 	font-size: 18px;
-    padding: 10px 26px;
-    margin-right: 24px;
-    border: 2px solid #4893ff;
-    position: relative;
-    cursor: pointer;
-    background: #4893ff;
+  padding: 10px 26px;
+  margin-right: 24px;
+  border: 2px solid #4893ff;
+  position: relative;
+  cursor: pointer;
+  background: #4893ff;
 	color: #fff;
 	transition: all 0.3s;
 }
@@ -193,7 +198,13 @@ strong{
 	padding-right: 10px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+  html{
+    min-width: auto;    
+  }
 	.header{
 		padding: 0;
 		padding-top: 30px;
@@ -206,9 +217,8 @@ strong{
 		padding: 30px 0;
 	}
 	.container{
-		width: auto;
-		padding: 0 6%;
-		width: 88%;
+		width: 100%;
+    padding: 0 4%;
 	}
 	.section .fbox{
 		display: block;

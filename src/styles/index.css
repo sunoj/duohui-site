@@ -41,8 +41,8 @@
         border-radius: 100%;
         background-color: #35AFFB;
     }
-    
-    .why .item h2{
+
+    .why .trait h2{
         font-size: 20px;
         padding: 10px 0;
     }
@@ -217,11 +217,14 @@
         color: #282828;
     }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
 	.section.products .product{
 		margin-bottom: 22px;
     }
     .products .columns{
         margin-bottom: 0;
+    }
+    .why .trait{
+        margin-bottom: 24px;
     }
 }
