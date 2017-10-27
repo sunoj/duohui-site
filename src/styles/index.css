@@ -19,6 +19,9 @@
 .why{
 
     }
+    .why ul{
+        padding-left: 14px;
+    }
     .why ul li{
         list-style: none;
         position: relative;
