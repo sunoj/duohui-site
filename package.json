@@ -1,13 +1,12 @@
 {
   "scripts": {
     "dev": "NODE_ENV=development ./node_modules/.bin/gulp dev",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "start": "superstatic",
-    "deploy": "./node_modules/.bin/gulp deploy"
+    "deploy": "NODE_ENV=production ./node_modules/.bin/gulp deploy"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^3.9.1", 
     "gulp-preprocess": "^2.0.0",
-    "primer-layout": "^1.4.1"
+    "primer-layout": "^1.4.1",
+    "superstatic": "^5.0.1"
   }
 }
