@@ -4,10 +4,10 @@
     "deploy": "NODE_ENV=production ./node_modules/.bin/gulp deploy"
   },
   "dependencies": {
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-preprocess": "^2.0.0",
     "normalize.css": "^7.0.0",
-    "primer-layout": "^1.4.1",
-    "superstatic": "^5.0.1"
+    "primer-layout": "^1.4.1"
   }
 }

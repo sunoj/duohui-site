@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var preprocess = require('gulp-preprocess');
 var superstatic = require('superstatic').server;
+var browserSync = require("browser-sync").create();
 
 gulp.task('html', function() {
   gulp.src('./src/*.html')
@@ -25,23 +26,24 @@ gulp.task('static', function() {
     .pipe(gulp.dest('./dist/static'))
 });
 
-gulp.task('dev', ['scripts', 'css', 'html', 'static'], function(cb) {
-  gulp.watch('./src/**/*.js', ['scripts']);
-  gulp.watch('./src/**/*.css', ['css']);
-  gulp.watch('./src/**/*.html', ['html']);
-  gulp.watch('./static/**/*.*', ['static']);
-
-  var app = superstatic({
-    config: {
-      public: './dist'
-    },
-    cwd: __dirname,
-    port: 3474,
-    debug: false
+gulp.task('serve', function(done) {
+  browserSync.init({
+    server: {
+      baseDir: './dist'
+    }
   });
+  done();
+})
 
-  app.listen(function(err) {
-    if (err) { console.log(err); }
-    console.log('Visit http://localhost:3474 to view Duohui site.')
-  });
+
+gulp.task('reload', function (done) {
+  browserSync.reload();
+  done();
+});
+
+gulp.task('dev', ['scripts', 'css', 'html', 'static', 'serve'], function(cb) {
+  gulp.watch('./src/**/*.js', ['scripts', 'reload']);
+  gulp.watch('./src/**/*.css', ['css', 'reload']);
+  gulp.watch('./src/**/*.html', ['html', 'reload']);
+  gulp.watch('./static/**/*.*', ['static', 'reload']);
 });
