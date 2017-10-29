@@ -1,235 +1,217 @@
-.intro{
-	padding-top: 0;
-	padding-bottom: 60px;
-    }
-    .intro h1{
-        font-size: 32px;
-        padding-bottom: 10px;
-    }
-    .intro p{
-        font-size: 16px;
-        line-height: 28px;
-        color: #444;
-    }
-    .intro .hello{
-        padding: 15px 0;
-    }
-    .intro .hello p{
-        font-size: 20px;
-    }
+.why {}
 
-.why{
+.why ul {
+  padding-left: 14px;
+}
 
-    }
-    .why ul{
-        padding-left: 14px;
-    }
-    .why ul li{
-        list-style: none;
-        position: relative;
-        padding: .5em 0;
-        font-size: 16px;
-    }
-    
-    .why ul li::before{
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: -14px;
-        display: block;
-        width: 4px;
-        height: 4px;
-        margin-top: -2px;
-        border-radius: 100%;
-        background-color: #35AFFB;
-    }
+.why ul li {
+  list-style: none;
+  position: relative;
+  padding: .5em 0;
+  font-size: 16px;
+}
 
-    .why .trait h2{
-        font-size: 20px;
-        padding: 10px 0;
-    }
+.why ul li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -14px;
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 100%;
+  background-color: #35AFFB;
+}
 
-.products{
+.why .trait h2 {
+  font-size: 20px;
+  padding: 10px 0;
+}
 
-    }
-    .products .columns{
-        margin-bottom: 20px;
-    }
-    .products .product{
-        border-radius: 14px;
-        box-sizing: border-box;
-        padding: 30px 25px;
-        color: #fff;
-        background-color: #3399D8;
-        position: relative;
-    }
-    .products .product::after {
-        display: table;
-        clear: both;
-        content: "";
-    }
-    .products .product:hover{
-        box-shadow: 0 6px 32px rgba(0, 0, 0, 0.3);
-    }
-    .products .product .btn{
-        padding: 6px 12px;
-        text-decoration: none;
-        border: 1px solid #fff;
-        border-radius: 5px;
-        color: #fff;
-        margin-top: 10px;
-        transition: .3s all;
-        font-weight: normal;
-        background: transparent;
-        float: right;
-    }
-    
-    .products .product .titlebox{
-        height: 40px;
-        line-height: 40px;
-    }
-    
-    .products .product .titlebox img{
-        float: left;
-        margin-right: 15px;
-        height: 40px;
-    }
-    
-    .products .product .titlebox h3{
-        font-size: 26px;
-        margin: 0;
-    }
-    
-    .products .product h4{
-        font-size: 20px;
-        line-height: 22px;
-        margin: 20px 0 12px;
-    }
-    
-    .products .product p{
-        min-height: 63px;
-        line-height: 22px;
-    }
+.products {}
 
-    .products .product .price{
-        font-size: 30px;
-        vertical-align: middle;
-        font-weight: bold;
-        height: 36px;
-        float: left;
-        margin-top: 10px;
-    }
+.products .columns {
+  margin-bottom: 20px;
+}
 
-    .products .product .price .unit {
-        font-size: 22px;
-    }
+.products .product {
+  border-radius: 14px;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  color: #fff;
+  background-color: #3399D8;
+  position: relative;
+}
 
-.partners{
+.products .product::after {
+  display: table;
+  clear: both;
+  content: "";
+}
 
-    }
-    .partners .fbox{
-        align-items: center;
-    }
-    .partners .fbox::after{
-        content: '';
-        flex: auto;
-    }
-    
-    .partners .logowall{
-        text-align: center;
-    }
-    
-    .partners .logowall *{
-        box-sizing: border-box;
-    }
+.products .product:hover {
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.3);
+}
 
-    .partners .logowall .column {
-        text-align: left;
-        padding: 0 7px;
-    }
+.products .product .btn {
+  padding: 6px 12px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 10px;
+  transition: .3s all;
+  font-weight: normal;
+  background: transparent;
+  float: right;
+}
 
-    .partners .logowall .column img {
-        width: 100%;
-    }
-    
-    .partners .mobile{
-        display: none;
-    }
+.products .product .titlebox {
+  height: 40px;
+  line-height: 40px;
+}
 
-.events{
+.products .product .titlebox img {
+  float: left;
+  margin-right: 15px;
+  height: 40px;
+}
 
-    }
-    .events a{
-        color: inherit;
-        text-decoration: none;
-    }
-    
-    .events .event{
-        background-color: #fff;
-        border-radius: 6px;
-        margin-bottom: 12px;
-    }
-    
-    .events .event .event-poster{
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-    .events .event .content{
-        box-sizing: border-box;
-        padding: 14px 20px;
-    }
-    
-    .events .event h4{
-        margin: 0;
-        font-size: 16px;
-        line-height: 28px;
-    }
-    
-    .events .event ul li{
-        list-style: none;
-        float: left;
-        line-height: 17px;
-        padding-right: 16px;
-        color: #666;
-    }
+.products .product .titlebox h3 {
+  font-size: 26px;
+  margin: 0;
+}
 
-    .events .event .meta{
-        margin-top: 6px;
-        font-size: 14px;
-    }
-    
-    .events .event .icon{
-        float: left;
-        padding-right: 4px;
-    }
-    
-    .events .more-events{
-        display: block;
-        height: 50px;
-        line-height: 50px;
-        color: #666;
-        width: 100%;
-        text-align: center;
-        background-color: #ededed;
-        border-radius: 6px;
-        transition: .3s all;
-        margin-top: 12px;
-    }
+.products .product h4 {
+  font-size: 20px;
+  line-height: 22px;
+  margin: 20px 0 12px;
+}
 
-    .events .more-events:hover{
-        color: #282828;
-    }
+.products .product p {
+  min-height: 63px;
+  line-height: 22px;
+}
+
+.products .product .price {
+  font-size: 30px;
+  vertical-align: middle;
+  font-weight: bold;
+  height: 36px;
+  float: left;
+  margin-top: 10px;
+}
+
+.products .product .price .unit {
+  font-size: 22px;
+}
+
+.partners {}
+
+.partners .fbox {
+  align-items: center;
+}
+
+.partners .fbox::after {
+  content: '';
+  flex: auto;
+}
+
+.partners .logowall {
+  text-align: center;
+}
+
+.partners .logowall * {
+  box-sizing: border-box;
+}
+
+.partners .logowall .column {
+  text-align: left;
+  padding: 0 7px;
+}
+
+.partners .logowall .column img {
+  width: 100%;
+}
+
+.partners .mobile {
+  display: none;
+}
+
+.events {}
+
+.events a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.events .event {
+  background-color: #fff;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.events .event .event-poster {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.events .event .content {
+  box-sizing: border-box;
+  padding: 14px 20px;
+}
+
+.events .event h4 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.events .event ul li {
+  list-style: none;
+  float: left;
+  line-height: 17px;
+  padding-right: 16px;
+  color: #666;
+}
+
+.events .event .meta {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.events .event .icon {
+  float: left;
+  padding-right: 4px;
+}
+
+.events .more-events {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  color: #666;
+  width: 100%;
+  text-align: center;
+  background-color: #ededed;
+  border-radius: 6px;
+  transition: .3s all;
+  margin-top: 12px;
+}
+
+.events .more-events:hover {
+  color: #282828;
+}
 
 @media screen and (max-width: 768px) {
-	.section.products .product{
-		margin-bottom: 22px;
-    }
-    .products .columns{
-        margin-bottom: 0;
-    }
-    .why .trait{
-        margin-bottom: 24px;
-    }
+  .section.products .product {
+    margin-bottom: 22px;
+  }
+  .products .columns {
+    margin-bottom: 0;
+  }
+  .why .trait {
+    margin-bottom: 24px;
+  }
 }

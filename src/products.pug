@@ -1,0 +1,245 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
+    title 多会
+    meta(name='description', content='通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css')
+    link(rel='stylesheet', type='text/css', href='./styles/products.css')
+    meta(name='msapplication-tap-highlight', content='no')
+  body
+    .header
+      .container.clear
+        .logo
+          img(src='./static/img/logo.png', srcset='./static/img/logo@2x.png 2x', alt='多会')
+        ul.nav.clear
+          .more
+            a(href='#')
+              li 产品列表
+            a(href='#')
+              li 服务案例
+            a(href='#')
+              li 帮助支持
+          a(href='#')
+            li.app 主办方登录
+    .section.intro
+      .container
+        .hello
+          h1 选择适合的多会产品
+          p 多会为不同的应用场景设计了专属的产品方案，请根据您的应用场景选择适合的多会产品。
+        .action
+          a.btn(href='#') 联系销售
+          a.btn.solid(href='#') 帮我推荐
+    .section.contrast
+      .container
+        h1.chtitle 对比多会产品
+        .columns
+          .column.col-md-4.col-12.trait
+            .header
+              h2 标准版
+              p 适合低频小型活动
+            .content
+              h2 免费
+              ul
+                li.gray 每月可发布三个活动
+                li.gray 每个活动最多可报名100人
+                li 每月免费赠送100条短信额度
+                li 微信提现免费
+                li 支付手续费成为1元+1%
+                li.gray 展示多会品牌
+          .column.col-md-4.col-12.trait
+            .header
+              h2 高级版
+              p 适合经常举办中小型活动
+            .content
+              h2 ￥999
+                span 每年
+              ul
+                li 可发布<strong>无限</strong>个活动
+                li 每个活动最多可报名<strong>无限</strong>人
+                li 每月免费赠送<strong>500</strong>条短信额度
+                li 微信提现免费
+                li 支付手续费成为<strong>1%</strong>
+                li.gray 展示多会品牌
+          .column.col-md-4.col-12.trait
+            .header
+              h2 企业版
+              p 适合专业品牌主办方
+            .content
+              h2 ￥2999
+                span 起每年
+              ul
+                li 可发布<strong>无限</strong>个活动
+                li 每个活动最多可报名<strong>无限</strong>人
+                li 每月免费赠送<strong>1000</strong>条短信额度
+                li 无需提现，<strong>实时到帐</strong>
+                li 支付手续费成为<strong>0.6%</strong>（渠道收取）
+                li 隐藏多会品牌
+    .section.quota
+      .container
+        h1.chtitle 根据功能需求为我推荐产品
+        .columns
+          .column.col-md-12.col-12.trait
+            .line
+              p 
+                | 我们每个月举办
+                select(name="time")
+                  option(value="3") 1~3
+                  option(value="3") 1~3
+                  option(value="3") 1~3
+                | 场活动，平均每场有
+                select(name="time")
+                  option(value="3") 1~3
+                  option(value="3") 1~3
+                  option(value="3") 1~3
+                | 人参与，人均票价为
+                select(name="time")
+                  option(value="3") 1~3
+                  option(value="3") 1~3
+                  option(value="3") 1~3
+                | 元。
+              .line
+                p
+                  | 我们推荐您使用
+                  a.product.btn.premier(href="#") 多会高级版
+                  | 对比其他活动平台，预计每月可以节省
+                  span 286.75
+                  | 元！
+        .columns
+          .column.col-md-6.col-12.trait
+            h3.linetitle 多会成本预计
+            .line
+              .left
+                p 交易手续费
+                pre 100x2x50x1%=
+              .right ￥100
+            .line
+              .left
+                p 月费
+                pre 999/12=
+              .right ￥83.25
+            .line
+              .left
+                p 短信费
+                pre max(2x100-500, 0)x0.1=
+              .right ￥0
+            .line.total
+              .left
+                p 总计
+              .right ￥183.25
+          .column.col-md-6.col-12.trait
+            h3.linetitle 活动行成本预计
+            .line
+              .left
+                p 交易手续费
+                pre 100x2+100x2x50x2.5%=
+              .right.red ￥450
+            .line
+              .left
+                p 月费
+                pre 0=
+              .right.green ￥0
+            .line
+              .left
+                p 短信费
+                pre 2x100x0.1=
+              .right.red ￥20
+            .line.total
+              .left
+                p 总计
+              .right.red ￥470
+    .section.function
+      .container
+        h1.chtitle 根据功能需求为我推荐产品
+        .checkers
+          .columns
+            .column.col-md-6.col-12.trait
+              h3 资金实时到帐，无需提现
+              p 使用自有的收款账号，费率更低，实时到帐。
+              .checkbox
+            .column.col-md-6.col-12.trait
+              h3 独立品牌展示
+              p 隐藏多会品牌，完整独立的品牌展示。
+              .checkbox
+          .columns
+            .column.col-md-6.col-12.trait
+              h3 活动开始短信提醒
+              p 在活动开始前向参与者群发短信提醒。
+              .checkbox
+            .column.col-md-6.col-12.trait
+              h3 离线快速签到
+              p 提供专用签到 APP，没有网络同样快速签到。
+              .checkbox
+          .columns
+            .column.col-md-6.col-12.trait
+              h3 在线选座
+              p 上传座位表，购票时可直接在线选座。
+              .checkbox
+            .column.col-md-6.col-12.trait
+              h3 报名时关注公众号
+              p 生产专属报名二维码，先关注后报名。
+              .checkbox
+          .columns
+            .column.col-md-6.col-12.trait
+              h3 子账号权限管理
+              p 为其他团队成员创建子账号，设置管理权限。
+              .checkbox
+            .column.col-md-6.col-12.trait
+              h3 分渠道统计
+              p 创建活动发布渠道，设置渠道专属票，生成统计。
+              .checkbox
+        .answer
+          p 以下产品符合您选择的功能需求：
+          .products
+            a.btn.premier(href="#") 多会高级版
+            a.btn.mini(href="#") 多会小程序
+            a.btn.service(href="#") 多会服务号
+    .section.help
+      .container
+        h2 还未决定？我们的活动专家可以帮助你
+        p
+          a.btn 在线咨询
+          | 或致电
+          span 021 6064 6046
+        p.small 周一至周六 9:00 至 21:00
+    .section.footer
+      .container
+        .clear
+          .line
+            h3 多会产品
+            ul.clear
+              li
+                a(href='') 标准版
+              li
+                a(href='') 高级版
+              li
+                a(href='') 活动微信小程序
+              li
+                a(href='') 活动微信服务号
+              li
+                a(href='') 现场极速签到
+              li
+                a(href='') 活动现场互动
+          .line
+            h3 关于和帮助
+            ul.clear
+              li
+                a(href='') 关于多会
+              li
+                a(href='') 品牌资源
+              li
+                a(href='') 使用帮助
+              li
+                a(href='') 客户案例
+              li
+                a(href='') 联系方式
+              li
+                a(href='') 用户协议
+        .line.copyright
+          p
+            span 上海新小信息科技有限公司
+            span 沪ICP备17014612号-2
+    script(src='./vendor/vendor.js')

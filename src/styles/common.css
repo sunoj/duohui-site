@@ -6,9 +6,9 @@ body{
   width: 100%;
   background: #F6F9FC;
 	font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    color: #333333;
-    font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  color: #333333;
+  font-size: 16px;
 }
 
 a.fullsizelink {
@@ -42,7 +42,8 @@ ul{
 }
 
 .btn {
-  background: #fff;
+  position: relative;
+  cursor: pointer;
   line-height: 1.4;
   display: inline-block;
   padding: 6px 10px;
@@ -52,28 +53,26 @@ ul{
   touch-action: manipulation;
   font-weight: 700;
   text-decoration: none;
+  border: 2px solid #4893ff;
+  background-color: transparent;
+  color: #4893FF;  
+  transition: all 0.3s;
+}
+
+.btn.solid{
+	border: 2px solid #4893ff;
+  background-color: #4893ff;
+  color: #fff; 
+}
+
+.btn:hover{
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
 }
 
 .action .btn{
 	font-size: 18px;
-  padding: 10px 26px;
-  margin-right: 24px;
-  border: 2px solid #4893ff;
-  position: relative;
-  cursor: pointer;
-  background: #4893ff;
-	color: #fff;
-	transition: all 0.3s;
-}
-
-.action .btn.line{
-	border-color: #4893FF;
-	color: #4893FF;
-	background-color: transparent;
-}
-
-.action .btn:hover{
-	box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+	padding: 10px 26px;
+	margin-right: 24px;
 }
 
 .shadow{
@@ -91,26 +90,26 @@ ul{
 }
 
 .section .fbox{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: justify;
-    align-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    margin: 22px 0;
-	}
-	.section .fbox .item{
-		margin: 0 10px;
-		flex: 1;
-	}
-	.section .fbox .item:first-child{
-	margin-left: 0;
-	}
-	.section .fbox .item:last-child{
-	margin-right: 0;
-	}
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin: 22px 0;
+}
+.section .fbox .item{
+  margin: 0 10px;
+  flex: 1;
+}
+.section .fbox .item:first-child{
+  margin-left: 0;
+}
+.section .fbox .item:last-child{
+  margin-right: 0;
+}
 
 strong{
 	color: #35AFFB;
@@ -171,6 +170,26 @@ strong{
 
 .header .nav li.app{
 	background-color: #efefef;
+}
+
+.intro{
+	padding-top: 0;
+	padding-bottom: 60px;
+}
+.intro h1{
+	font-size: 32px;
+	padding-bottom: 10px;
+}
+.intro p{
+	font-size: 16px;
+	line-height: 28px;
+	color: #444;
+}
+.intro .hello{
+	padding: 15px 0;
+}
+.intro .hello p{
+	font-size: 20px;
 }
 
 .footer .line{
