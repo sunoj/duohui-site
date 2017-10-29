@@ -2,6 +2,7 @@
   border: 1px solid #DFDFDF;
   padding: 0;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .contrast .title{
@@ -26,6 +27,7 @@
 
 .contrast .content ul{
   padding: 0 35px 30px 65px;
+  min-height: 205px;
 }
 
 .contrast .content ul li{
@@ -152,6 +154,10 @@
 .quota .group .line.total .left p{
   line-height: 38px;
   font-size: 18px;
+}
+
+.quota .group .line.total .right{
+  font-size: 26px;
 }
 
 .function .item{
