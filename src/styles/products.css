@@ -1,0 +1,68 @@
+.contrast .product{
+  border: 1px solid #DFDFDF;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.contrast .title{
+  padding: 12px;
+  text-align: center;
+  background-color: #F4F4F4;
+}
+
+.contrast .title h2{
+  margin: 10px;
+}
+
+.contrast .content h2{
+  text-align: center;
+  font-size: 30px;
+}
+
+.contrast .content h2 span{
+  font-size: .65em;
+  padding-left: .35em;
+}
+
+.contrast .content ul{
+  padding: 0 35px 30px 65px;
+}
+
+.contrast .content ul li{
+  position: relative;
+  list-style: none;
+  padding: 8px 0;
+  font-size: 15px;
+}
+
+.contrast .content ul li:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  display: block;
+  width: 17px;
+  height: 13px;
+  margin-top: -7px;
+  background-image: url("/static/img/icon/check.png");
+}
+
+.contrast .content ul li.gray:before{
+  background-image: url("/static/img/icon/check_gray.png");
+}
+
+.quota .group{
+  border: 1px solid #CCCCCC;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 10px 40px ;
+}
+
+.quota .group.byus{
+  border-color: #0DAFFF;
+}
+
+.quota .group.byother{
+  border-color: #27AE60;
+}
