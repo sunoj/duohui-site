@@ -11,6 +11,10 @@ body{
   font-size: 16px;
 }
 
+pre,input,select,textarea{
+  font-family: consolas, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+}
+
 a.fullsizelink {
   position: absolute;
   left: 0;
@@ -87,28 +91,6 @@ ul{
 .section{
 	width: 100%;
 	padding: 40px 0;
-}
-
-.section .fbox{
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: justify;
-  align-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  margin: 22px 0;
-}
-.section .fbox .item{
-  margin: 0 10px;
-  flex: 1;
-}
-.section .fbox .item:first-child{
-  margin-left: 0;
-}
-.section .fbox .item:last-child{
-  margin-right: 0;
 }
 
 strong{
@@ -223,6 +205,49 @@ strong{
 
 .footer .copyright span{
 	padding-right: 10px;
+}
+
+
+a.btn.product{
+  line-height: 36px;
+  vertical-align: middle; 
+  height: 36px;
+  font-size: 18px;
+  padding: 6px 12px;
+}
+a.btn.product:before{
+  content: "";
+  display: inline-block;
+  float: left;
+  margin-right: 8px;
+  height: 36px;
+  width: 36px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+a.btn.product.premier{
+  color: #0DAFFF;
+  border-color: #0DAFFF;
+}
+a.btn.product.premier:before{
+  background-image: url("/static/img/products/product-btn-premier.png");
+}
+
+a.btn.product.mini{
+  color: #6761A3;
+  border-color: #6761A3;
+}
+a.btn.product.mini:before{
+  background-image: url("/static/img/products/product-btn-mini.png");
+}
+
+a.btn.product.service{
+  color: #4EB027;
+  border-color: #4EB027;
+}
+a.btn.product.service:before{
+  background-image: url("/static/img/products/product-btn-service.png");
 }
 
 @media screen and (max-width: 768px) {
