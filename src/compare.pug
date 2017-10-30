@@ -156,45 +156,45 @@ html
               .item
                 h3 资金实时到帐，无需提现
                 p 使用自有的收款账号，费率更低，实时到帐。
-                .checkbox.js-toggle.on
+                .checkbox.js-toggle(data-cantuse='premier')
             .column.col-md-6.col-12
               .item
                 h3 独立品牌展示
                 p 隐藏多会品牌，完整独立的品牌展示。
-                .checkbox.js-toggle
+                .checkbox.js-toggle(data-cantuse='premier')
           .columns
             .column.col-md-6.col-12
               .item
                 h3 活动开始短信提醒
                 p 在活动开始前向参与者群发短信提醒。
-                .checkbox.js-toggle
+                .checkbox.js-toggle(data-cantuse='mini')
             .column.col-md-6.col-12
               .item
                 h3 离线快速签到
                 p 提供专用签到 APP，没有网络同样快速签到。
-                .checkbox.js-toggle.on
+                .checkbox.js-toggle(data-cantuse='mini,service')
           .columns
             .column.col-md-6.col-12
               .item
                 h3 在线选座
                 p 上传座位表，购票时可直接在线选座。
-                .checkbox.js-toggle
+                .checkbox.js-toggle(data-cantuse='premier,mini,service')
             .column.col-md-6.col-12
               .item
                 h3 报名时关注公众号
                 p 生产专属报名二维码，先关注后报名。
-                .checkbox.js-toggle.on
+                .checkbox.js-toggle(data-cantuse='premier,mini,service')
           .columns
             .column.col-md-6.col-12
               .item
                 h3 子账号权限管理
                 p 为其他团队成员创建子账号，设置管理权限。
-                .checkbox.js-toggle
+                .checkbox.js-toggle(data-cantuse='premier,mini,service')
             .column.col-md-6.col-12
               .item
                 h3 分渠道统计
                 p 创建活动发布渠道，设置渠道专属票，生成统计。
-                .checkbox.js-toggle
+                .checkbox.js-toggle(data-cantuse='premier,mini,service')
         .answer
           p 以下产品符合您选择的功能需求：
           .products
@@ -209,16 +209,36 @@ html
           | 或致电
           span 021 6064 6046
         p.small 周一至周六 9:00 至 21:00
-    
+
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
     script.
       $(document).ready(function() {
         $('.js-toggle').minitoggle();
         $('.js-toggle').on("toggle", function(e){
-          if (e.isActive)
-              $(".result").html("Oh, you turn me on.")
-          else
-              $(".result").html("No, you turn me off.")
+          selectFunction();
         });
       });
+      Array.prototype.unique = function(){
+        var res = [];
+        var json = {};
+        for(var i = 0; i < this.length; i++){
+          if(!json[this[i]]){
+            res.push(this[i]);
+            json[this[i]] = 1;
+          }
+        }
+        return res;
+      }
+      function selectFunction() {
+        var selected = [];
+        $(".function .checkers .minitoggle.active").each(function() {
+          var data = $(this).parent('.js-toggle').data('cantuse').split(',');
+          selected = selected.concat(data);
+        });
+        selected = selected.unique();
+        $(".function .answer .products .product").css('display','inline-block');
+        for (var i=0;i<selected.length;i++) {
+          $(".function .answer .products .product."+selected[i]).css('display','none');
+        };
+      }
