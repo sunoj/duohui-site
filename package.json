@@ -8,6 +8,7 @@
     "gulp": "^3.9.1",
     "gulp-preprocess": "^2.0.0",
     "gulp-pug": "^3.3.0",
+    "miniToggle": "untsop/miniToggle.js",
     "normalize.css": "^7.0.0",
     "primer-layout": "^1.4.1",
     "tilt.js": "^1.2.0"

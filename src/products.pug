@@ -118,47 +118,47 @@ html
         .columns
           .column.col-md-6.col-12.byus
             .group.byus
-              h3.line 多会成本预计
+              h3.group-title.line 多会成本预计
               .line.hr.clear
                 .left
-                  p 交易手续费
+                  h4.item-title 交易手续费
                   pre 100x2x50x1%=
                 .right ￥100
               .line.hr.clear
                 .left
-                  p 月费
+                  h4.item-title 月费
                   pre 999/12=
                 .right ￥83.25
               .line.hr.clear
                 .left
-                  p 短信费
+                  h4.item-title 短信费
                   pre max(2x100-500, 0)x0.1=
                 .right ￥0
               .line.total.clear
                 .left
-                  p 总计
+                  h4.item-title 总计
                 .right ￥183.25
           .column.col-md-6.col-12.byother
             .group.byother
-              h3.line 活动行成本预计
+              h3.group-title.line 活动行成本预计
               .line.hr.clear
                 .left
-                  p 交易手续费
+                  h4.item-title 交易手续费
                   pre 100x2+100x2x50x2.5%=
                 .right.red ￥450
               .line.hr.clear
                 .left
-                  p 月费
+                  h4.item-title 月费
                   pre 0=
-                .right.green ￥0
+                .right ￥0
               .line.hr.clear
                 .left
-                  p 短信费
+                  h4.item-title 短信费
                   pre 2x100x0.1=
                 .right.red ￥20
               .line.total.clear
                 .left
-                  p 总计
+                  h4.item-title 总计
                 .right.red ￥470
     .section.function
       .container
@@ -169,45 +169,45 @@ html
               .item
                 h3 资金实时到帐，无需提现
                 p 使用自有的收款账号，费率更低，实时到帐。
-                .checkbox.on
+                .checkbox.js-toggle.on
             .column.col-md-6.col-12
               .item
                 h3 独立品牌展示
                 p 隐藏多会品牌，完整独立的品牌展示。
-                .checkbox
+                .checkbox.js-toggle
           .columns
             .column.col-md-6.col-12
               .item
                 h3 活动开始短信提醒
                 p 在活动开始前向参与者群发短信提醒。
-                .checkbox
+                .checkbox.js-toggle
             .column.col-md-6.col-12
               .item
                 h3 离线快速签到
                 p 提供专用签到 APP，没有网络同样快速签到。
-                .checkbox.on
+                .checkbox.js-toggle.on
           .columns
             .column.col-md-6.col-12
               .item
                 h3 在线选座
                 p 上传座位表，购票时可直接在线选座。
-                .checkbox
+                .checkbox.js-toggle
             .column.col-md-6.col-12
               .item
                 h3 报名时关注公众号
                 p 生产专属报名二维码，先关注后报名。
-                .checkbox.on
+                .checkbox.js-toggle.on
           .columns
             .column.col-md-6.col-12
               .item
                 h3 子账号权限管理
                 p 为其他团队成员创建子账号，设置管理权限。
-                .checkbox
+                .checkbox.js-toggle
             .column.col-md-6.col-12
               .item
                 h3 分渠道统计
                 p 创建活动发布渠道，设置渠道专属票，生成统计。
-                .checkbox
+                .checkbox.js-toggle
         .answer
           p 以下产品符合您选择的功能需求：
           .products
@@ -260,3 +260,13 @@ html
             span 上海新小信息科技有限公司
             span 沪ICP备17014612号-2
     script(src='./vendor/vendor.js')
+    script.
+      $(document).ready(function() {
+        $('.js-toggle').minitoggle();
+        $('.js-toggle').on("toggle", function(e){
+          if (e.isActive)
+              $(".result").html("Oh, you turn me on.")
+          else
+              $(".result").html("No, you turn me off.")
+        });
+      });

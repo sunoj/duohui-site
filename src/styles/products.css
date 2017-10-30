@@ -9,6 +9,7 @@
   padding: 12px;
   text-align: center;
   background-color: #F4F4F4;
+  border-radius: 8px 8px 0 0;
 }
 
 .contrast .title h2{
@@ -69,6 +70,7 @@
   text-align: center;
   vertical-align: middle;
   line-height: 40px;
+  font-size: 20px;
 }
 
 .quota .group.calc select{
@@ -78,7 +80,7 @@
   padding: 6px 10px;
   border-radius: 6px;
   margin: 0 10px;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .quota .group.calc select:focus{
@@ -91,8 +93,9 @@
 
 .quota .group.calc .answer span.clac_save{
   color: #0DAFFF;
-  font-size: 24px;
-  vertical-align: middle;
+  font-size: 26px;
+  vertical-align: baseline;
+  font-weight: bold;
 }
 
 .quota .group.byus{
@@ -130,6 +133,7 @@
   text-align: right;
   font-size: 22px;
   line-height: 38px;
+  font-weight: bold;
 }
 
 .quota .group .line .right.red{
@@ -160,6 +164,20 @@
   font-size: 26px;
 }
 
+.quota .group-title{
+  font-size: 22px;
+}
+
+.quota .item-title{
+  margin: 3px 0;
+  font-size: 20px;
+}
+
+.quota .total .item-title{
+  font-size: 22px;
+  line-height: 38px;
+}
+
 .function .item{
   position: relative;
   padding: 6px 25px;
@@ -171,39 +189,9 @@
 .function .item .checkbox{
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 40px;
-  width: 75px;
-  background-color: #EBEBEB;
-  border: 2px solid #E6E6E6;
-  border-radius: 20px;
-  transition: .3s all;
-}
-
-.function .item .checkbox:after{
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  border-radius: 100%;
-  height: 36px;
-  width: 36px;
-  box-sizing: border-box;
-  background-color: #fff;
-  border: 1px solid #E6E6E6;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
-  transition: .3s all;
-}
-
-.function .item .checkbox.on{
-  background-color: #4CD964;
-}
-
-.function .item .checkbox.on:after{
-  right: 2px;
-  left: initial;
+  top: 25px;
+  height: 56px;
+  width: 90px;
 }
 
 .function .answer p{
