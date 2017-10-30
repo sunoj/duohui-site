@@ -11,20 +11,7 @@ html
     link(rel='stylesheet', type='text/css', href='./styles/products.css')
     meta(name='msapplication-tap-highlight', content='no')
   body
-    .header
-      .container.clear
-        .logo
-          img(src='./static/img/logo.png', srcset='./static/img/logo@2x.png 2x', alt='多会')
-        ul.nav.clear
-          .more
-            a(href='#')
-              li 产品列表
-            a(href='#')
-              li 服务案例
-            a(href='#')
-              li 帮助支持
-          a(href='#')
-            li.app 主办方登录
+    include partials/_header.pug
     .section.intro
       .container
         .hello
@@ -222,43 +209,8 @@ html
           | 或致电
           span 021 6064 6046
         p.small 周一至周六 9:00 至 21:00
-    .section.footer
-      .container
-        .clear
-          .line
-            h3 多会产品
-            ul.clear
-              li
-                a(href='') 标准版
-              li
-                a(href='') 高级版
-              li
-                a(href='') 活动微信小程序
-              li
-                a(href='') 活动微信服务号
-              li
-                a(href='') 现场极速签到
-              li
-                a(href='') 活动现场互动
-          .line
-            h3 关于和帮助
-            ul.clear
-              li
-                a(href='') 关于多会
-              li
-                a(href='') 品牌资源
-              li
-                a(href='') 使用帮助
-              li
-                a(href='') 客户案例
-              li
-                a(href='') 联系方式
-              li
-                a(href='') 用户协议
-        .line.copyright
-          p
-            span 上海新小信息科技有限公司
-            span 沪ICP备17014612号-2
+    
+    include partials/_footer.pug
     script(src='./vendor/vendor.js')
     script.
       $(document).ready(function() {
