@@ -37,8 +37,10 @@ gulp.task('serve', function(done) {
 
 
 gulp.task('reload', function (done) {
-  browserSync.reload();
-  done();
+  setTimeout(function(){
+    browserSync.reload();
+    done();
+  }, 300)
 });
 
 gulp.task('dev', ['scripts', 'css', 'html', 'static', 'serve'], function(cb) {

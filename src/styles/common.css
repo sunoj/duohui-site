@@ -4,7 +4,6 @@ html{
 
 body{
   width: 100%;
-  background: #F6F9FC;
 	font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #333333;
@@ -91,23 +90,21 @@ ul{
 .section{
 	width: 100%;
 	padding: 40px 0;
+  background: #F6F9FC;
 }
 
 strong{
 	color: #35AFFB;
 }
 
-.section:nth-child(odd){
+.section.white-bg {
 	background: #fff;
 }
+
 .section .chtitle{
 	font-size: 24px;
 	margin: 0;
 	margin-bottom: 40px;
-}
-
-.section.header{
-	background: transparent;
 }
 
 .header{
@@ -248,6 +245,10 @@ a.btn.product.service:before{
   background-image: url("/static/img/products/product-btn-service.png");
 }
 
+.fbox{
+  display: flex;
+}
+
 @media screen and (max-width: 768px) {
   * {
     box-sizing: border-box;
@@ -269,9 +270,6 @@ a.btn.product.service:before{
 	.container{
 		width: 100%;
     padding: 0 4%;
-	}
-	.section .fbox{
-		display: block;
 	}
 	.footer .line{
 		padding: 0;

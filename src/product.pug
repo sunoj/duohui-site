@@ -14,7 +14,7 @@ html
     include partials/_header.pug
     
     .section.product-head
-      .container
+      .container.intro
         .clear
           .product-name
             .product-icon
@@ -28,7 +28,25 @@ html
           h1 简单易用，小型活动的最佳选择
           p 多会是专业的活动小程序系统。通过多会轻松管理活动报名，在线售票收款，现场快速签到。
         .action
-          a.btn(href='#') 体验购票
+          a.btn(href='#') 联系销售
           a.btn.solid(href='#') 立即试用
+
+    .section.product-features: .container
+      - var features = [{'icon': 'sms', 'titile': '免费短信通知', 'desc': '购票后系统自动发送出票短信通知。标准版用户每月免费获赠 100 条短信额度。'}, {'icon': 'tickets', 'titile': '支持设置多个票种', 'desc': '购票后系统自动发送出票短信通知。标准版用户每月免费获赠 100 条短信额度。'}]
+      h1.chtitle 功能特征
+      .columns
+        each feature in features
+          .column.col-md-4.col-12.feature.fbox
+            .icon(class=feature.icon)
+              img(src="./static/img/product/feature-icon/"+feature.icon+".png" srcset="./static/img/product/feature-icon/"+feature.icon+"@2x.png 2x")
+            .copy
+              h4.feature-title=feature.titile
+              p.description=feature.desc
+
+    .section.product-pricing.white-bg: .container
+      h1.chtitle 价格费用
+
+    .section.product-faq: .container
+      h1.chtitle 常见问题
 
     include partials/_footer.pug
