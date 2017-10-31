@@ -2,6 +2,10 @@
   background: #fff;
 }
 
+.product-head .intro{
+  padding-bottom: 0;
+}
+
 .product-head .nav {
   float: right;
   list-style: none;
@@ -71,4 +75,22 @@
   line-height: 24px;
   font-size: 14px;
   padding-right: 2em;
+}
+
+.product-pricing .pricing {
+  background: #F7F8F9;
+  border-radius: 10px;
+  padding: 12px 24px 24px;
+}
+
+.product-pricing .price-tag {
+  font-size: 32px;
+  color: #35AFFB;
+  font-weight: 600;
+  margin: 24px 0;
+}
+
+.product-pricing .price-desc {
+  font-size: 16px;
+  line-height: 26px;
 }
