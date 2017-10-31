@@ -62,3 +62,13 @@
   color: #444;
   line-height: 25px;
 }
+
+.product-faq .qa .question{
+  font-size: 18px;
+}
+
+.product-faq .qa .answer{
+  line-height: 24px;
+  font-size: 14px;
+  padding-right: 2em;
+}

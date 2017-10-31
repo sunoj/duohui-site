@@ -48,5 +48,12 @@ html
 
     .section.product-faq: .container
       h1.chtitle 常见问题
+      - var faqs = [{'q': '免费的短信额度用完之后还能发短信吗？', 'a': '当然可以。我们为标准版用户每月免费赠送 100 条短信额度。如果免费额度用完之后，可以按 0.1 元／条短信的价格购买短信额度。'}, {'q': '免费的短信额度用完之后还能发短信吗？', 'a': '当然可以。我们为标准版用户每月免费赠送 100 条短信额度。如果免费额度用完之后，可以按 0.1 元／条短信的价格购买短信额度。'}]
+      .columns
+        each qa in faqs
+          .column.col-md-6.col-12.qa
+            h3.question= qa.q
+            p.answer= qa.a
+
 
     include partials/_footer.pug
