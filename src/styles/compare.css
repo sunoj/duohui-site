@@ -73,6 +73,10 @@
   font-size: 20px;
 }
 
+.quota .group.calc .line{
+  padding: 35px 20px;
+}
+
 .quota .group.calc select{
   background-color: #0DAFFF;
   border: 2px solid #06A3F1;
@@ -87,8 +91,14 @@
   outline: none;
 }
 
-.quota .group.calc .answer span{
+.quota .group.calc .answer span,
+.quota .group.calc .answer .products{
+  display: inline-block;
   margin: 0 10px;
+}
+
+.quota .group.calc .answer .products .product{
+  display: none;
 }
 
 .quota .group.calc .answer span.clac_save{
