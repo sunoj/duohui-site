@@ -18,7 +18,7 @@ html
         .clear
           .product-name
             .product-icon
-              img(src="./static/img/product/product-std.png" srcset="./static/img/product-std@2x.png 2x")
+              img(src="./static/img/product/product-std.png" srcset="./static/img/product/product-std@2x.png 2x")
             h1 标准版
           ul.nav.clear
             li: a(href='#') 功能特征
@@ -55,7 +55,8 @@ html
           h3.title 售票手续费
           .price-tag 1元+1%
           .price-desc 对于每个付费票订单，收取一元加订单金额的 1% 作为售票手续费。
-    .section.product-faq: .container
+    
+    .section.product-faq.product-cases: .container
       h1.chtitle 常见问题
       - var faqs = [{'q': '免费的短信额度用完之后还能发短信吗？', 'a': '当然可以。我们为标准版用户每月免费赠送 100 条短信额度。如果免费额度用完之后，可以按 0.1 元／条短信的价格购买短信额度。'}, {'q': '免费的短信额度用完之后还能发短信吗？', 'a': '当然可以。我们为标准版用户每月免费赠送 100 条短信额度。如果免费额度用完之后，可以按 0.1 元／条短信的价格购买短信额度。'}]
       .columns
@@ -64,5 +65,19 @@ html
             h3.question= qa.q
             p.answer= qa.a
 
-
+      h1.chtitle.examples 应用案例
+      - var cases = [{'img': 'eico.png', 'event': 'EICO Talk', 'logo': 'eico', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]}, {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]}, {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}]
+      .columns
+        each usecase in cases
+          .column.col-md-4.col-12: .case
+            .bg
+              img(src="./static/img/cases/" + usecase.img)
+            h5.event= usecase.event
+            .foot
+              .brand
+                img(src="./static/img/cases/logos/" + usecase.logo + ".png" srcset="./static/img/cases/logos/" + usecase.logo + "@2x.png 2x")
+              .tags
+                each tag in usecase.tags
+                  span.tag(class=tag.style)= tag.name
+                
     include partials/_footer.pug
