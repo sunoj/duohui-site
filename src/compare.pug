@@ -158,58 +158,59 @@ html
               .item
                 h3 资金实时到帐，无需提现
                 p 使用自有的收款账号，费率更低，实时到帐。
-                .checkbox.js-toggle(data-cantuse='premier')
+                .checkbox.js-toggle(data-cantuse='std,premier')
             .column.col-md-6.col-12
               .item
                 h3 独立品牌展示
                 p 隐藏多会品牌，完整独立的品牌展示。
-                .checkbox.js-toggle(data-cantuse='premier')
+                .checkbox.js-toggle(data-cantuse='std,premier')
           .columns
             .column.col-md-6.col-12
               .item
                 h3 活动开始短信提醒
                 p 在活动开始前向参与者群发短信提醒。
-                .checkbox.js-toggle(data-cantuse='mini')
+                .checkbox.js-toggle(data-cantuse='')
             .column.col-md-6.col-12
               .item
                 h3 离线快速签到
                 p 提供专用签到 APP，没有网络同样快速签到。
-                .checkbox.js-toggle(data-cantuse='mini,service')
+                .checkbox.js-toggle(data-cantuse='')
           .columns
             .column.col-md-6.col-12
               .item
                 h3 在线选座
                 p 上传座位表，购票时可直接在线选座。
-                .checkbox.js-toggle(data-cantuse='premier,mini,service')
+                .checkbox.js-toggle(data-cantuse='std')
             .column.col-md-6.col-12
               .item
                 h3 报名时关注公众号
                 p 生产专属报名二维码，先关注后报名。
-                .checkbox.js-toggle(data-cantuse='premier,mini,service')
+                .checkbox.js-toggle(data-cantuse='premier,mini,std')
           .columns
             .column.col-md-6.col-12
               .item
                 h3 子账号权限管理
                 p 为其他团队成员创建子账号，设置管理权限。
-                .checkbox.js-toggle(data-cantuse='premier,mini,service')
+                .checkbox.js-toggle(data-cantuse='std')
             .column.col-md-6.col-12
               .item
                 h3 分渠道统计
                 p 创建活动发布渠道，设置渠道专属票，生成统计。
-                .checkbox.js-toggle(data-cantuse='premier,mini,service')
+                .checkbox.js-toggle(data-cantuse='std')
         .answer
           p 以下产品符合您选择的功能需求：
           .products
+            a.btn.product.std(href="#") 多会标准版
             a.btn.product.premier(href="#") 多会高级版
             a.btn.product.mini(href="#") 多会活动小程序
             a.btn.product.service(href="#") 多会活动服务号
     .section.help
       .container
-        h2 还未决定？我们的活动专家可以帮助你
+        h1.chtitle 还未决定？我们的活动专家可以帮助你
         p
           a.btn 在线咨询
           | 或致电
-          span 021 6064 6046
+          span.phone 021 6064 6046
         p.small 周一至周六 9:00 至 21:00
 
     include partials/_footer.pug
@@ -252,7 +253,9 @@ html
         var selected = [];
         $(".function .checkers .minitoggle.active").each(function() {
           var data = $(this).parent('.js-toggle').data('cantuse').split(',');
-          selected = selected.concat(data);
+          if (data[0] != '') {
+            selected = selected.concat(data);
+          }
         });
         selected = selected.unique();
         $(".function .answer .products .product").css('display','inline-block');

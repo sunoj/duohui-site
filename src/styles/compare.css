@@ -203,10 +203,11 @@
 
 .function .item .checkbox{
   position: absolute;
-  right: 20px;
-  top: 25px;
-  height: 56px;
+  right: 10px;
+  top: 50%;
+  height: 42px;
   width: 90px;
+  margin-top: -21px;
 }
 
 .function .answer p{
@@ -223,7 +224,7 @@
 }
 
 .help a.btn{
-  margin-right: 20px;
+  margin-right: 12px;
   padding: 6px 20px;
 }
 
@@ -231,11 +232,20 @@
   color: #4893FF;
   font-size: 25px;
   vertical-align: middle;
-  margin: 0 20px;
+  margin: 0 12px;
 }
 
 .help p.small{
   padding-top: 10px;
+}
+
+.minitoggle{
+  width: 80px;
+  height: 42px;
+}
+.minitoggle .toggle-handle{
+  width: 34px;
+  height: 34px;
 }
 
 
@@ -253,5 +263,9 @@
   }
   .function .item p{
     max-width: 75%;
+  }
+
+  .section.help .phone{
+    font-size: 24px;
   }
 }
