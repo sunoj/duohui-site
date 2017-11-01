@@ -130,46 +130,28 @@ html
     .section.events
       .container
         h1.chtitle 服务案例
+        -
+          var events = [
+            {"poster": "nicc.png", "title": "NICC 中国新三板投资者大会", "date": "09月17日", "location": "上海"},
+            {"poster": "gnome.png", "title": "GNOME Asia 2017 亚洲峰会", "date": "10月14日", "location": "重庆"},
+            {"poster": "rubyconf.png", "title": "RubyConf China 2017", "date": "09月16日", "location": "杭州"},
+          ]
         .columns
-          .column.col-md-4.col-12
-            .shadow.event
-              a(href='#')
-                img.event-poster(src='./static/img/events/nicc.png', alt='NICC 中国新三板投资者大会')
-                .content
-                  h4 NICC 中国新三板投资者大会
-                  ul.meta.clear
-                    li
-                      img.icon(src='./static/img/icon/time.png')
-                      | 09月17日
-                    li
-                      img.icon(src='./static/img/icon/position.png')
-                      | 上海
-          .column.col-md-4.col-12
-            a(href='#')
+          each event in events
+            .column.col-md-4.col-12
               .shadow.event
-                img.event-poster(src='./static/img/events/gnome.png', alt='GNOME Asia 2017 亚洲峰会')
-                .content
-                  h4 GNOME Asia 2017 亚洲峰会
-                  ul.meta.clear
-                    li
-                      img.icon(src='./static/img/icon/time.png')
-                      | 10月14日
-                    li
-                      img.icon(src='./static/img/icon/position.png')
-                      | 重庆
-          .column.col-md-4.col-12
-            a(href='#')
-              .shadow.event
-                img.event-poster(src='./static/img/events/rubyconf.png', alt='RubyConf China 2017')
-                .content
-                  h4 RubyConf China 2017
-                  ul.meta.clear
-                    li
-                      img.icon(src='./static/img/icon/time.png')
-                      | 09月16日
-                    li
-                      img.icon(src='./static/img/icon/position.png')
-                      | 杭州
+                a(href='#')
+                  img.event-poster(src='./static/img/events/'+event.poster, alt=event.title)
+                  .content
+                    h4=event.title
+                    ul.meta.clear
+                      li
+                        img.icon(src='./static/img/icon/time.png')
+                        span=event.date
+                      li
+                        img.icon(src='./static/img/icon/position.png')
+                        span=event.location
+
         a.more-events(href='#') 查看更多服务案例
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
