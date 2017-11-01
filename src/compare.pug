@@ -95,10 +95,12 @@ html
                 | 元。
               .line.answer
                 | 我们推荐您使用
-                span.clac_product
-                  a.btn.product.premier(href="#") 多会高级版
+                .products
+                  a.btn.product.premier(href="#",style="display:inline-block;") 多会高级版
+                  a.btn.product.mini(href="#") 多会活动小程序
+                  a.btn.product.service(href="#") 多会活动服务号
                 | 对比其他活动平台，预计每月可以节省
-                span.clac_save 286.75
+                span.clac_save --
                 | 元！
         .columns
           .column.col-md-6.col-12.byus
@@ -107,44 +109,44 @@ html
               .line.hr.clear(data-item="poundage")
                 .left
                   h4.item-title 交易手续费
-                  pre.exp 100x2x50x1%=
-                .right.result ￥100
+                  pre.exp --
+                .right.result --
               .line.hr.clear(data-item="fee_per_month")
                 .left
                   h4.item-title 月费
-                  pre.exp 999/12=
-                .right.result ￥83.25
+                  pre.exp --
+                .right.result --
               .line.hr.clear(data-item="sms")
                 .left
                   h4.item-title 短信费
-                  pre.exp max(2x100-500, 0)x0.1=
-                .right.result ￥0
+                  pre.exp --
+                .right.result --
               .line.total.clear(data-item="total")
                 .left
                   h4.item-title 总计
-                .right.result ￥183.25
+                .right.result --
           .column.col-md-6.col-12.byother
             .group.byother
               h3.group-title.line 活动行成本预计
               .line.hr.clear(data-item="poundage")
                 .left
                   h4.item-title 交易手续费
-                  pre.exp 100x2+100x2x50x2.5%=
-                .right.result ￥450
+                  pre.exp --
+                .right.result --
               .line.hr.clear(data-item="fee_per_month")
                 .left
                   h4.item-title 月费
-                  pre.exp 0=
-                .right.result ￥0
+                  pre.exp --
+                .right.result --
               .line.hr.clear(data-item="sms")
                 .left
                   h4.item-title 短信费
-                  pre.exp 2x100x0.1=
-                .right.result ￥20
+                  pre.exp --
+                .right.result --
               .line.total.clear(data-item="total")
                 .left
                   h4.item-title 总计
-                .right.result ￥470
+                .right.result --
     .section.function.white-bg
       .container
         h1.chtitle 根据功能需求为我推荐产品
@@ -216,6 +218,7 @@ html
         $('.js-toggle').on("toggle", function(e){
           selectFunction();
         });
+        calcPrice();
         $('.quota .calc select').click(function(){
           calcPrice();
         });
@@ -275,6 +278,18 @@ html
               sms: '({time}*100-100)*0.1'
             }
           },
+          'mini':{//小程序
+            expression :{//显示用公式
+              poundage: '{people}x{time}x{price}x5%',
+              fee_per_month: '0',
+              sms: '({time}*100-200)*0.1'
+            },
+            result:{//实际计算表达式
+              poundage: '{people}*{time}*{price}*0.05',
+              fee_per_month: '0',
+              sms: '({time}*100-200)*0.1'
+            }
+          },
           'other':{//第三方
             expression:{//显示用公式
               poundage: '{people}x{time}+{people}x{time}x{price}x2.5%',
@@ -296,9 +311,9 @@ html
             for(exp in collect){
               // 单价表达式
               collect[exp] = formatTemplate(input,collect[exp]);
-              // 计算单价
+              // 计算单价，>0
               if(type=='result'){
-                collect[exp] = eval(collect[exp]);
+                eval(collect[exp]) <= 0 ? collect[exp] = 0 : collect[exp] = eval(collect[exp]);
                 total = total + collect[exp];
               }
             };
@@ -314,14 +329,17 @@ html
           });
         });
         console.log(data);
+        // dom产品
+        $(".quota .answer .products .product").css('display','none');
+        $(".quota .answer .products ."+min_data.type).css('display','inline-block');
         // dom节省价格
         var cacl_save = data.other.result.total - min_data.total;
         $(".clac_save").text(cacl_save);
         // dom自家方案最低价
         $(".quota .byus .line[data-item]").each(function(){
           var data_item = $(this).data('item');
-          $(this).find('.exp').text(data[min_data.type]['expression'][data_item]);
-          $(this).find('.result').text(data[min_data.type]['result'][data_item]);
+          $(this).find('.exp').text(data[min_data.type]['expression'][data_item]+"=");
+          $(this).find('.result').text("￥"+data[min_data.type]['result'][data_item]);
         });
         // dom活动行方案
         $(".quota .byother .line[data-item]").each(function(){
