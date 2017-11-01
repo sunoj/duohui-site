@@ -77,13 +77,18 @@
   padding: 35px 20px;
 }
 
+.quota .group.calc .line p{
+  display: inline-block;
+  margin: 0;
+}
+
 .quota .group.calc select{
   background-color: #0DAFFF;
   border: 2px solid #06A3F1;
   color: #fff;
   padding: 6px 10px;
   border-radius: 6px;
-  margin: 0 10px;
+  margin: 10px;
   font-size: 22px;
 }
 
@@ -231,4 +236,22 @@
 
 .help p.small{
   padding-top: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .quota .group.calc .line p{
+    display: block;
+  }
+
+  .quota .group.calc .answer .products{
+    margin-bottom: 10px;
+  }
+  .products .product{
+    margin: 10px;
+    margin-left: 0;
+  }
+  .function .item p{
+    max-width: 75%;
+  }
 }
