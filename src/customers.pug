@@ -9,6 +9,7 @@ html
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
     link(rel='stylesheet', type='text/css', href='./styles/common.css')
     link(rel='stylesheet', type='text/css', href='./styles/product.css')
+    link(rel='stylesheet', type='text/css', href='./styles/customers.css')
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_header.pug
@@ -76,6 +77,17 @@ html
           {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]},
           {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}
         ]
+      .hero-case
+        .bg
+          img(src="./static/img/cases/onsite-eico-talks.png")
+        .mask
+        h5.event EICO TALKS
+        .info
+          .brand
+            img(src="./static/img/cases/logos/eico.png" srcset="./static/img/cases/logos/eico@2x.png 2x")
+          .desc
+            p EICO 是国内最知名的数字化业务咨询与产品设计专家。曾服务于摩拜、魅族、一加手机等国内外知名品牌。他们创造的数字化产品与品牌，正影响着中国数亿用户的工作与生活，为品牌带来持续的商业价值。
+            p EICO TALKS 是由 EICO 策划举办的设计分享会。EICO 使用多会发布了效果精美的活动展示页面，轻松完成报名售票。
       .columns
         each usecase in cases
           .column.col-md-4.col-12: .case
@@ -91,8 +103,12 @@ html
 
     .section.customers.product-cases: .container
       h1.chtitle 演出娱乐
-      
-      - var cases = [{'img': 'eico.png', 'event': 'EICO Talk', 'logo': 'eico', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]}, {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]}, {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}]
+      -
+        var cases = [
+          {'img': 'eico.png', 'event': 'EICO Talk', 'logo': 'eico', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]},
+          {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]},
+          {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}
+        ]
       .columns
         each usecase in cases
           .column.col-md-4.col-12: .case
@@ -108,8 +124,12 @@ html
     
     .section.customers.product-cases.white-bg: .container
       h1.chtitle 文化体育
-      
-      - var cases = [{'img': 'eico.png', 'event': 'EICO Talk', 'logo': 'eico', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]}, {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]}, {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}]
+      -
+        var cases = [
+          {'img': 'eico.png', 'event': 'EICO Talk', 'logo': 'eico', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]},
+          {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]},
+          {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}
+        ]
       .columns
         each usecase in cases
           .column.col-md-4.col-12: .case
@@ -125,8 +145,12 @@ html
 
     .section.customers.product-cases: .container
       h1.chtitle 教育公益
-      
-      - var cases = [{'img': 'eico.png', 'event': 'EICO Talk', 'logo': 'eico', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]}, {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]}, {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}]
+      -
+        var cases = [
+          {'img': 'eico.png', 'event': 'EICO Talk', 'logo': 'eico', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]},
+          {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]},
+          {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}
+        ]
       .columns
         each usecase in cases
           .column.col-md-4.col-12: .case
