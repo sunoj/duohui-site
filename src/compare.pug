@@ -258,9 +258,9 @@ html
           }
         });
         selected = selected.unique();
-        $(".function .answer .products .product").css('display','inline-block');
+        $(".function .answer .products .product").removeClass('unable');
         for (var i=0;i<selected.length;i++) {
-          $(".function .answer .products .product."+selected[i]).css('display','none');
+          $(".function .answer .products .product."+selected[i]).addClass('unable');
         };
       }
       function calcPrice(){

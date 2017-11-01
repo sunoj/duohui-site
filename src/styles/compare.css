@@ -90,10 +90,15 @@
   border-radius: 6px;
   margin: 10px;
   font-size: 22px;
+  transition: .3s all;
 }
 
-.quota .group.calc select:focus{
+.quota .group.calc select:focus,
+.quota .group.calc select:hover{
   outline: none;
+  background-color: #fff;
+  color: #0DAFFF;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .12);
 }
 
 .quota .group.calc .answer span,

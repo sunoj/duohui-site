@@ -213,6 +213,16 @@ a.btn.product{
   vertical-align: middle; 
   font-size: 18px;
   padding: 6px 12px;
+  transition: .3s all;
+  max-width: 300px;
+  overflow: hidden;
+}
+a.btn.product.unable{
+  opacity: .3;
+  max-width: 0;
+  padding: 6px 0px;
+  border: 0;
+  margin-right: 0!important;
 }
 a.btn.product:before{
   content: "";
@@ -223,6 +233,14 @@ a.btn.product:before{
   width: 36px;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+a.btn.product.std{
+  color: #ff6868;
+  border-color: #ff6868;
+}
+a.btn.product.std:before{
+  background-image: url("/static/img/products/product-btn-premier.png");
 }
 
 a.btn.product.premier{
