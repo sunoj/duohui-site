@@ -28,21 +28,21 @@ html
         .logowall
           .columns.i2.clients
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-1.png', srcset='./static/img/partners/clients-1@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-2.png', srcset='./static/img/partners/clients-2@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-2.png', srcset='./img/partners/clients-2@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-3.png', srcset='./static/img/partners/clients-3@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-3.png', srcset='./img/partners/clients-3@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-4.png', srcset='./static/img/partners/clients-4@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-4.png', srcset='./img/partners/clients-4@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-5.png', srcset='./static/img/partners/clients-5@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-5.png', srcset='./img/partners/clients-5@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-6.png', srcset='./static/img/partners/clients-6@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-6.png', srcset='./img/partners/clients-6@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-7.png', srcset='./static/img/partners/clients-7@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-8.png', srcset='./static/img/partners/clients-8@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
 
     .section.events
       .container
@@ -58,15 +58,15 @@ html
             .column.col-md-4.col-12
               .shadow.event
                 a(href='#')
-                  img.event-poster(src='./static/img/events/'+event.poster, alt=event.title)
+                  img.event-poster(src='./img/events/'+event.poster, alt=event.title)
                   .content
                     h4=event.title
                     ul.meta.clear
                       li
-                        img.icon(src='./static/img/icon/time.png')
+                        img.icon(src='./img/icon/time.png')
                         span=event.date
                       li
-                        img.icon(src='./static/img/icon/position.png')
+                        img.icon(src='./img/icon/position.png')
                         span=event.location
     
     .section.customers.product-cases.white-bg: .container
@@ -79,12 +79,12 @@ html
         ]
       .hero-case
         .bg
-          img(src="./static/img/cases/onsite-eico-talks.png")
+          img(src="./img/cases/onsite-eico-talks.png")
         .mask
         h5.event EICO TALKS
         .info
           .brand
-            img(src="./static/img/cases/logos/eico.png" srcset="./static/img/cases/logos/eico@2x.png 2x")
+            img(src="./img/cases/logos/eico.png" srcset="./img/cases/logos/eico@2x.png 2x")
           .desc
             p EICO 是国内最知名的数字化业务咨询与产品设计专家。曾服务于摩拜、魅族、一加手机等国内外知名品牌。他们创造的数字化产品与品牌，正影响着中国数亿用户的工作与生活，为品牌带来持续的商业价值。
             p EICO TALKS 是由 EICO 策划举办的设计分享会。EICO 使用多会发布了效果精美的活动展示页面，轻松完成报名售票。
@@ -92,11 +92,11 @@ html
         each usecase in cases
           .column.col-md-4.col-12: .case
             .bg
-              img(src="./static/img/cases/" + usecase.img)
+              img(src="./img/cases/" + usecase.img)
             h5.event= usecase.event
             .foot
               .brand
-                img(src="./static/img/cases/logos/" + usecase.logo + ".png" srcset="./static/img/cases/logos/" + usecase.logo + "@2x.png 2x")
+                img(src="./img/cases/logos/" + usecase.logo + ".png" srcset="./img/cases/logos/" + usecase.logo + "@2x.png 2x")
               .tags
                 each tag in usecase.tags
                   span.tag(class=tag.style)= tag.name
@@ -113,11 +113,11 @@ html
         each usecase in cases
           .column.col-md-4.col-12: .case
             .bg
-              img(src="./static/img/cases/" + usecase.img)
+              img(src="./img/cases/" + usecase.img)
             h5.event= usecase.event
             .foot
               .brand
-                img(src="./static/img/cases/logos/" + usecase.logo + ".png" srcset="./static/img/cases/logos/" + usecase.logo + "@2x.png 2x")
+                img(src="./img/cases/logos/" + usecase.logo + ".png" srcset="./img/cases/logos/" + usecase.logo + "@2x.png 2x")
               .tags
                 each tag in usecase.tags
                   span.tag(class=tag.style)= tag.name
@@ -134,11 +134,11 @@ html
         each usecase in cases
           .column.col-md-4.col-12: .case
             .bg
-              img(src="./static/img/cases/" + usecase.img)
+              img(src="./img/cases/" + usecase.img)
             h5.event= usecase.event
             .foot
               .brand
-                img(src="./static/img/cases/logos/" + usecase.logo + ".png" srcset="./static/img/cases/logos/" + usecase.logo + "@2x.png 2x")
+                img(src="./img/cases/logos/" + usecase.logo + ".png" srcset="./img/cases/logos/" + usecase.logo + "@2x.png 2x")
               .tags
                 each tag in usecase.tags
                   span.tag(class=tag.style)= tag.name
@@ -155,11 +155,11 @@ html
         each usecase in cases
           .column.col-md-4.col-12: .case
             .bg
-              img(src="./static/img/cases/" + usecase.img)
+              img(src="./img/cases/" + usecase.img)
             h5.event= usecase.event
             .foot
               .brand
-                img(src="./static/img/cases/logos/" + usecase.logo + ".png" srcset="./static/img/cases/logos/" + usecase.logo + "@2x.png 2x")
+                img(src="./img/cases/logos/" + usecase.logo + ".png" srcset="./img/cases/logos/" + usecase.logo + "@2x.png 2x")
               .tags
                 each tag in usecase.tags
                   span.tag(class=tag.style)= tag.name

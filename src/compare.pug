@@ -77,30 +77,33 @@ html
               .line.hr
                 p 我们每个月举办
                   select(name="calc_time")
-                    option(value="1") 1~3
-                    option(value="3") 3~10
-                    option(value="10") 10+
+                    option(value="1") 1
+                    option(value="3", selected) 2~4
+                    option(value="7") 5~10
+                    option(value="20") 10+
                   | 场活动，
                 p 平均每场有
                   select(name="calc_people")
-                    option(value="100") 100
-                    option(value="500") 500
-                    option(value="1000") 1000
-                    option(value="3000") 3000+
+                    option(value="25") 10~50
+                    option(value="75") 50~100
+                    option(value="300", selected) 100~500
+                    option(value="750") 500~1000
+                    option(value="3000") 1000+
                   | 人参与，
                 p 人均票价为
                   select(name="calc_price")
-                    option(value="10") 10
-                    option(value="50",selected) 50
-                    option(value="100") 100
-                    option(value="300") 300+
+                    option(value="0") 0
+                    option(value="25") 10~50
+                    option(value="75", selected) 50~100
+                    option(value="300") 100~500
+                    option(value="1000") 500+
                   | 元。
               .line.answer
                 p 我们推荐您使用
                 .products
-                  a.btn.product.premier(href="#",style="display:inline-block;") 多会高级版
-                  a.btn.product.mini(href="#") 多会活动小程序
-                  a.btn.product.service(href="#") 多会活动服务号
+                  a.btn.product.std(href="#") 多会标准版
+                  a.btn.product.premier(href="#", style="display:inline-block;") 多会高级版
+                  a.btn.product.enterprise(href="#") 多会企业版
                 p 对比其他活动平台，预计每月可以节省
                 span.clac_save --
                 | 元！
@@ -221,8 +224,9 @@ html
         $('.js-toggle').on("toggle", function(e){
           selectFunction();
         });
-        calcPrice();
-        $('.quota .calc select').click(function(){
+        //- calcPrice();
+        $('.quota .calc select').on('change', function(){
+          console.log("calcPrice");
           calcPrice();
         });
       });
@@ -267,55 +271,68 @@ html
         var input = {
           time : $('.quota .calc select[name=calc_time]').val(),
           people : $('.quota .calc select[name=calc_people]').val(),
-          price : $('.quota .calc select[name=calc_price]').val()
+          price : $('.quota .calc select[name=calc_price]').val(),
+          isfree: ($('.quota .calc select[name=calc_price]').val() > 0 ? 1: 0)
         }
-        console.log(input);
-        var data = {
-          'premier':{//高级版
-            expression :{//显示用公式
+        var feeRates = {
+          'std':{
+            expression :{
+              poundage: '{people}x{time}x{isfree}+{people}x{time}x{price}x1%',
+              fee_per_month: '0',
+              sms: '({time}*{people}-100)*0.1'
+            },
+            result:{
+              poundage: '{people}*{time}*{isfree}+{people}*{time}*{price}*0.01',
+              fee_per_month: '0',
+              sms: '({time}*{people}-100)*0.1'
+            }
+          },
+          'premier':{
+            expression :{
               poundage: '{people}x{time}x{price}x1%',
               fee_per_month: '999/12',
-              sms: '({time}*100-100)*0.1'
+              sms: '({time}*{people}-500)*0.1'
             },
-            result:{//实际计算表达式
+            result:{
               poundage: '{people}*{time}*{price}*0.01',
               fee_per_month: '999/12',
-              sms: '({time}*100-100)*0.1'
+              sms: '({time}*{people}-500)*0.1'
             }
           },
-          'mini':{//小程序
-            expression :{//显示用公式
-              poundage: '{people}x{time}x{price}x5%',
-              fee_per_month: '0',
-              sms: '({time}*100-200)*0.1'
+          'enterprise':{
+            expression :{
+              poundage: '{people}x{time}x{price}x0.6%',
+              fee_per_month: '4999/12',
+              sms: '({time}*{people}-1000)*0.1'
             },
-            result:{//实际计算表达式
-              poundage: '{people}*{time}*{price}*0.05',
-              fee_per_month: '0',
-              sms: '({time}*100-200)*0.1'
+            result:{
+              poundage: '{people}*{time}*{price}*0.006',
+              fee_per_month: '4999/12',
+              sms: '({time}*{people}-1000)*0.1'
             }
           },
-          'other':{//第三方
-            expression:{//显示用公式
-              poundage: '{people}x{time}+{people}x{time}x{price}x2.5%',
+          'other':{
+            expression:{
+              poundage: '{people}x{time}x{isfree}+{people}x{time}x{price}x2.5%',
               fee_per_month: '0',
               sms: '{time}x{people}x0.1'
             },
-            result:{//实际计算表达式
-              poundage: '{people}*{time}+{people}*{time}*{price}*0.025',
+            result:{
+              poundage: '{people}*{time}*{isfree}+{people}*{time}*{price}*0.025',
               fee_per_month: '0',
               sms: '{time}*{people}*0.1'
             }
           }
         };
         var min_data = {type: null,total: 9999999}; //最小方案
-        $.each(data,function(service,item){
+        $.each(feeRates,function(service,item){
+          console.log("cal item", service, item)
           // 循环：公式，表达式
-          $.each(item,function(type,collect){
+          $.each(item, function(type,collect){
             var total = 0;
             for(exp in collect){
               // 单价表达式
-              collect[exp] = formatTemplate(input,collect[exp]);
+              collect[exp] = formatTemplate(input, collect[exp]);
               // 计算单价，>0
               if(type=='result'){
                 eval(collect[exp]) <= 0 ? collect[exp] = 0 : collect[exp] = eval(collect[exp]);
@@ -331,25 +348,26 @@ html
                 min_data.type = service;
               }
             }
+            console.log('collect', collect, type, service, min_data)
           });
         });
-        console.log(data);
+
         // dom产品
         $(".quota .answer .products .product").css('display','none');
         $(".quota .answer .products ."+min_data.type).css('display','inline-block');
         // dom节省价格
-        var cacl_save = data.other.result.total - min_data.total;
-        $(".clac_save").text(cacl_save);
+        var cacl_save = feeRates.other.result.total - min_data.total;
+        $(".clac_save").text(cacl_save.toFixed(0));
         // dom自家方案最低价
         $(".quota .byus .line[data-item]").each(function(){
           var data_item = $(this).data('item');
-          $(this).find('.exp').text(data[min_data.type]['expression'][data_item]+"=");
-          $(this).find('.result').text("￥"+data[min_data.type]['result'][data_item]);
+          $(this).find('.exp').text(feeRates[min_data.type]['expression'][data_item]+"=");
+          $(this).find('.result').text("￥"+feeRates[min_data.type]['result'][data_item].toFixed(0) );
         });
         // dom活动行方案
         $(".quota .byother .line[data-item]").each(function(){
           var data_item = $(this).data('item');
-          $(this).find('.exp').text(data['other']['expression'][data_item]+"=");
-          $(this).find('.result').text("￥"+data['other']['result'][data_item]);
+          $(this).find('.exp').text(feeRates['other']['expression'][data_item]+"=");
+          $(this).find('.result').text("￥"+feeRates['other']['result'][data_item]);
         });
       }

@@ -23,7 +23,7 @@ gulp.task('css', function() {
 
 gulp.task('static', function() {
   gulp.src('./static/**/*.*')
-    .pipe(gulp.dest('./dist/static'))
+    .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('serve', function(done) {

@@ -151,8 +151,8 @@
   float: right;
   width: 50%;
   text-align: right;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 26px;
+  line-height: 60px;
   font-weight: bold;
 }
 
@@ -170,7 +170,6 @@
 }
 
 .quota .group .line .left pre{
-  padding-top: 5px;
   font-size: 13px;
   color: #888;
 }
@@ -194,8 +193,8 @@
 }
 
 .quota .total .item-title{
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 24px;
+  line-height: 60px;
 }
 
 .function .item{
