@@ -48,19 +48,25 @@ html
       h1#pricing.chtitle 价格费用
       .columns
         .column.col-md-4.col-12: .pricing
-          h3.title 基础费用
-          .price-tag= product.price.basic
+          h3.title= product.price.basic_title || "基础费用"
+          .price-tag !{product.price.basic}
           .price-desc= product.price.basic_desc
         .column.col-md-4.col-12: .pricing
-          h3.title 售票手续费
-          .price-tag= product.price.fee
+          h3.title= product.price.fee_title || "售票手续费"
+          .price-tag !{product.price.fee}
           .price-desc= product.price.fee_desc
-        .column.col-md-4.col-12: .save.pricing
-          h3.title 预计可节省
-          .divider(style="bottom: " + (100 - product.price.save_percent) + "%")
-          .save-bg(style="height: " + (100 - product.price.save_percent) + "%")
-          .price-tag= product.price.save_percent + "%"
-          .price-desc 相比其他活动平台，多会可大幅节省成本。不仅更好，而且更便宜！
+        if product.code == 'checkin'
+          .column.col-md-4.col-12: .save.pricing
+            h3.title 小型活动签到
+            .price-tag 免费
+            .price-desc 小型活动可使用多会签到应用或公众号完成现场签到，完全免费。
+        else
+          .column.col-md-4.col-12: .save.pricing
+            h3.title= product.price.save_title || "预计可节省"
+            .divider(style="bottom: " + (100 - product.price.save_percent) + "%")
+            .save-bg(style="height: " + (100 - product.price.save_percent) + "%")
+            .price-tag= product.price.save_percent + "%"
+            .price-desc 相比其他活动平台，多会可大幅节省成本。不仅更好，而且更便宜！
     
     .section.product-faq.product-cases: .container
       h1#faq.chtitle 常见问题
@@ -74,8 +80,7 @@ html
       .columns
         each usecase in product.cases
           .column.col-md-4.col-12: .case
-            .bg
-              img(src="./img/cases/" + usecase.img)
+            .bg(style="background-image: url('/img/cases/" + usecase.img + "');")
             h5.event= usecase.event
             .foot
               .brand

@@ -1,0 +1,39 @@
+extends partials/_product.pug
+
+block vars
+  -
+    var product = {
+      code: "wechat",
+      name: "活动服务号",
+      tagline: "结合微信公众号，报名即关注",
+      desc: "获得专属于您的线下活动服务号，直接售票给公众号粉丝。还可创建专属二维码，报名即关注。",
+      features: [
+        {'icon': 'fast', 'titile': '资金即刻到账', 'desc': '使用自有的收款商户账号。售票资金即刻到账，无需提现、无平台账期。'},
+        {'icon': 'sms', 'titile': '免费短信通知', 'desc': '购票后系统自动发送出票短信通知。标准版用户每月免费获赠 500 条短信额度。'},
+        {'icon': 'brand', 'titile': '隐藏多会品牌', 'desc': '完全隐藏多会品牌元素。为用户提供完整统一的使用体验。'},
+        {'icon': 'coupon', 'titile': '配置优惠券', 'desc': '为活动设置优惠券。可指定折扣方式，限制优惠券的可用票种，限制优惠券使用次数等。'},
+        {'icon': 'embed', 'titile': '嵌入网页购票', 'desc': '将活动购票功能嵌入到活动网页，实现无缝式的购票体验。'},
+        {'icon': 'payment', 'titile': '多种支付方式', 'desc': '支持支付宝和微信支付。另外还可通过 PayPal 接收美元付款。'},
+        {'icon': 'lang', 'titile': '多语言支持', 'desc': '为活动创建中英文版本，并可根据用户的设备语言自动选择。'},
+        {'icon': 'form', 'titile': '自定义报名表', 'desc': '根据活动报名需求自定义报名表单，支持文本、图片、单选、多选等多种表单项。'},
+        {'icon': 'export', 'titile': '导出报名表', 'desc': '可导出完整的报名数据，支持 Excel 和 CSV 格式。'},
+      ],
+      price: {
+        basic: "2999 <span>元每年</span>",
+        basic_desc: "包含所有高级功能，包括无限制的活动发布、渠道、隐藏多会品牌等。",
+        fee: "0.6%",
+        fee_desc: "对于每个付费票订单，微信支付收取 0.6% 的支付手续费。",
+        save_percent: 47
+      },
+      faqs: [
+        {'q': '服务号到期之后活动还能访问吗？', 'a': '可以的。服务号到期不会影响您的数据和用户访问，我们只会对新建活动进行限制，其他功能不会做限制。'},
+        {'q': '免费的短信额度用完之后还能发短信吗？', 'a': '当然可以。我们为标准版用户每月免费赠送 1000 条短信额度。如果免费额度用完之后，可以按 0.1 元／条短信的价格购买短信额度。'},
+        {'q': '用户退票会产生费用吗？', 'a': '不会。用户支付的款项将原路退回，不会产生任何费用。退款操作直接通过支付渠道的退款接口完成，一般会即刻处理。'},
+        {'q': '我可以试用活动服务号吗？', 'a': '可以。我们为客户提供 2 个月的活动服务号付费试用，您可以联系在线客服获取试用资格。试用期结束后您可以补齐差价来续费。'},
+      ],
+      cases: [
+        {'img': 'sketchmeetup.jpg', 'event': 'Sketch Meetup', 'logo': 'dex', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]},
+        {'img': 'kxsy.jpg', 'event': '理性的力量', 'logo': 'voiceofscience', 'tags': [{'name': '科普', 'style': 'design'}, {'name': '演讲', 'style': 'lined'}]},
+        {'img': 'girlscodingday.jpg', 'event': 'Girls Coding Day', 'logo': 'cgc', 'tags': [{'name': '公益', 'style': 'lined'}, {'name': '教育', 'style': 'sport'}]}
+      ]
+    }

@@ -1,0 +1,33 @@
+extends partials/_product.pug
+
+block vars
+  -
+    var product = {
+      code: "checkin",
+      name: "极速签到",
+      tagline: "千人大型活动轻松完成签到",
+      desc: "适用基于专用软硬件的多会快速签到系统，数千人的大型活动可在 30 分钟内完成签到。",
+      features: [
+        {'icon': 'offline', 'titile': '离线同步签到', 'desc': '多个签到设备在离线状态下通过局域网自动同步签到状态，签到更快，数据更准。'},
+        {'icon': 'tickets', 'titile': '报名信息实时显示', 'desc': '在签到时可实时展示票种、票价及其他自定义的报名信息。'},
+        {'icon': 'scene', 'titile': '多场次签到', 'desc': '支持分会场、VIP 区域等有多个场次的活动场景。'},
+      ],
+      price: {
+        basic_title: "签到设备租用",
+        basic: "299 <span>元每套每场</span>",
+        basic_desc: "每套签到设备预计签到速度为 300 人每小时。",
+        fee_title: "现场支持人员",
+        fee: "1999 <span>元每天</span>",
+        fee_desc: "专业技术人员到场提供支持，大型活动现场签到有保障。",
+        save_percent: 62
+      },
+      faqs: [
+        {'q': '活动现场需要有网络吗？', 'a': '不必要。我们的签到设备和签到 App 都支持离线签到，只需提前联网将报名数据下载到设备上，即可在离线的情况下完成签到。'},
+        {'q': '签到设备是否需要连接电脑使用？', 'a': '不需要。多会的签到系统可独立完成工作，不需要连接电脑或其他设备。多会签到设备使用时无需连接电源，电池可以连续工作四小时左右。'}
+      ],
+      cases: [
+        {'img': 'gmis.jpg', 'event': 'GMIS 2017 全球机器智能峰会', 'logo': 'synced', 'tags': [{'name': '技术', 'style': 'design'}, {'name': '行业峰会', 'style': 'solid'}]},
+        {'img': 'onsite-nicc.jpg', 'event': '中国新三板投资者大会', 'logo': 'dudong', 'tags': [{'name': '投资', 'style': 'design'}, {'name': '行业峰会', 'style': 'lined'}]},
+        {'img': 'onsite-tedx.jpg', 'event': 'TEDxFuxingPark', 'logo': 'tedx', 'tags': [{'name': '文化', 'style': 'sport'}, {'name': '分享会', 'style': 'lined'}]}
+      ]
+    }

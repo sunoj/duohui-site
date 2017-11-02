@@ -139,7 +139,10 @@
   color: #35AFFB;
   font-weight: 600;
   margin: 24px 0;
-  
+}
+
+.product-pricing .price-tag span{
+  font-size: 24px;
 }
 
 .product-pricing .price-desc {
@@ -201,6 +204,9 @@
   right: 0;
   top: 0;
   line-height: 0;
+  background-position: center;
+  bottom: 0;
+  background-size: cover;
 }
 
 .product-cases .case .bg img{
