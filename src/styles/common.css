@@ -12,6 +12,7 @@ body{
   -webkit-font-smoothing: antialiased;
   color: #333333;
   font-size: 16px;
+  line-height: 1.5;
 }
 
 pre,input,select,textarea{
@@ -103,6 +104,10 @@ strong{
 
 .section.white-bg {
 	background: #fff;
+}
+
+.section.gray-bg {
+	background: #f0f0f0;
 }
 
 .section .chtitle{
