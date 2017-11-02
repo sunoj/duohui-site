@@ -241,19 +241,19 @@ a.btn.product:before{
 }
 
 a.btn.product.std{
-  color: #ff6868;
-  border-color: #ff6868;
-}
-a.btn.product.std:before{
-  background-image: url("/static/img/products/product-btn-premier.png");
-}
-
-a.btn.product.premier{
   color: #0DAFFF;
   border-color: #0DAFFF;
 }
+a.btn.product.std:before{
+  background-image: url("/img/products/product-btn-std.png");
+}
+
+a.btn.product.premier{
+  color: #333;
+  border-color: #666;
+}
 a.btn.product.premier:before{
-  background-image: url("/static/img/products/product-btn-premier.png");
+  background-image: url("/img/products/product-btn-prime.png");
 }
 
 a.btn.product.mini{
@@ -261,7 +261,7 @@ a.btn.product.mini{
   border-color: #6761A3;
 }
 a.btn.product.mini:before{
-  background-image: url("/static/img/products/product-btn-mini.png");
+  background-image: url("/img/products/product-btn-mini.png");
 }
 
 a.btn.product.service{
@@ -269,7 +269,7 @@ a.btn.product.service{
   border-color: #4EB027;
 }
 a.btn.product.service:before{
-  background-image: url("/static/img/products/product-btn-service.png");
+  background-image: url("/img/products/product-btn-service.png");
 }
 
 .fbox{
