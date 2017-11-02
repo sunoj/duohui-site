@@ -85,8 +85,8 @@ html
                 p 平均每场有
                   select(name="calc_people")
                     option(value="25") 10~50
-                    option(value="75") 50~100
-                    option(value="300", selected) 100~500
+                    option(value="75", selected) 50~100
+                    option(value="300") 100~500
                     option(value="750") 500~1000
                     option(value="3000") 1000+
                   | 人参与，
@@ -224,9 +224,8 @@ html
         $('.js-toggle').on("toggle", function(e){
           selectFunction();
         });
-        //- calcPrice();
+        calcPrice();
         $('.quota .calc select').on('change', function(){
-          console.log("calcPrice");
           calcPrice();
         });
       });
@@ -302,12 +301,12 @@ html
           'enterprise':{
             expression :{
               poundage: '{people}x{time}x{price}x0.6%',
-              fee_per_month: '4999/12',
+              fee_per_month: '2999/12',
               sms: '({time}*{people}-1000)*0.1'
             },
             result:{
               poundage: '{people}*{time}*{price}*0.006',
-              fee_per_month: '4999/12',
+              fee_per_month: '2999/12',
               sms: '({time}*{people}-1000)*0.1'
             }
           },
@@ -326,7 +325,6 @@ html
         };
         var min_data = {type: null,total: 9999999}; //最小方案
         $.each(feeRates,function(service,item){
-          console.log("cal item", service, item)
           // 循环：公式，表达式
           $.each(item, function(type,collect){
             var total = 0;
@@ -348,7 +346,6 @@ html
                 min_data.type = service;
               }
             }
-            console.log('collect', collect, type, service, min_data)
           });
         });
 
