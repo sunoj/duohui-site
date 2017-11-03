@@ -29,8 +29,12 @@ gulp.task('static', function() {
 gulp.task('serve', function(done) {
   browserSync.init({
     server: {
-      baseDir: './dist'
-    }
+      baseDir: './dist',
+      serveStaticOptions: {
+        extensions: ['html'] // pretty urls
+      }
+    },
+    
   });
   done();
 })

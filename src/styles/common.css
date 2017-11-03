@@ -217,7 +217,7 @@ a.btn.product{
   line-height: 36px;
   vertical-align: middle; 
   font-size: 18px;
-  padding: 6px 12px;
+  padding: 4px 12px;
   transition: .3s all;
   max-width: 300px;
   overflow: hidden;
@@ -231,13 +231,14 @@ a.btn.product.unable{
 }
 a.btn.product:before{
   content: "";
-  display: inline-block;
   float: left;
-  margin-right: 8px;
-  height: 36px;
-  width: 36px;
+  margin-right: 6px;
+  height: 30px;
+  width: 30px;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: 30px;
+  margin-top: 3px;
 }
 
 a.btn.product.std{
@@ -245,15 +246,15 @@ a.btn.product.std{
   border-color: #0DAFFF;
 }
 a.btn.product.std:before{
-  background-image: url("/img/products/product-btn-std.png");
+  background-image: url("/img/product/product-std.png");
 }
 
 a.btn.product.premier{
   color: #333;
-  border-color: #666;
+  border-color: #999;
 }
 a.btn.product.premier:before{
-  background-image: url("/img/products/product-btn-prime.png");
+  background-image: url("/img/product/product-prime.png");
 }
 
 a.btn.product.mini{
@@ -261,7 +262,7 @@ a.btn.product.mini{
   border-color: #6761A3;
 }
 a.btn.product.mini:before{
-  background-image: url("/img/products/product-btn-mini.png");
+  background-image: url("/img/product/product-mini.png");
 }
 
 a.btn.product.service{
@@ -269,7 +270,7 @@ a.btn.product.service{
   border-color: #4EB027;
 }
 a.btn.product.service:before{
-  background-image: url("/img/products/product-btn-service.png");
+  background-image: url("/img/product/product-wechat.png");
 }
 
 .fbox{
