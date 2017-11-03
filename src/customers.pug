@@ -13,7 +13,8 @@ html
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_header.pug
-    
+    include partials/_event_block.pug
+
     .section.intro
       .container
         .hello
@@ -90,16 +91,8 @@ html
             p EICO TALKS 是由 EICO 策划举办的设计分享会。EICO 使用多会发布了效果精美的活动展示页面，轻松完成报名售票。
       .columns
         each usecase in cases
-          .column.col-md-4.col-12: .case
-            .bg
-              img(src="./img/cases/" + usecase.img)
-            h5.event= usecase.event
-            .foot
-              .brand
-                img(src="./img/cases/logos/" + usecase.logo + ".png" srcset="./img/cases/logos/" + usecase.logo + "@2x.png 2x")
-              .tags
-                each tag in usecase.tags
-                  span.tag(class=tag.style)= tag.name
+          .column.col-md-4.col-12
+            +event(usecase)
 
     .section.customers.product-cases: .container
       h1.chtitle 演出娱乐
@@ -107,61 +100,37 @@ html
         var cases = [
           {'img': 'eico.png', 'event': 'EICO Talk', 'logo': 'eico', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]},
           {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]},
-          {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}
+          {'img': 'punkeek.png', 'event': '協作派對的派對', 'logo': 'networkparty', 'tags': [{'name': '派对', 'style': 'lined'}, {'name': '现场娱乐', 'style': 'sport'}]},
         ]
       .columns
         each usecase in cases
-          .column.col-md-4.col-12: .case
-            .bg
-              img(src="./img/cases/" + usecase.img)
-            h5.event= usecase.event
-            .foot
-              .brand
-                img(src="./img/cases/logos/" + usecase.logo + ".png" srcset="./img/cases/logos/" + usecase.logo + "@2x.png 2x")
-              .tags
-                each tag in usecase.tags
-                  span.tag(class=tag.style)= tag.name
+          .column.col-md-4.col-12
+            +event(usecase)
     
     .section.customers.product-cases.white-bg: .container
       h1.chtitle 文化体育
       -
         var cases = [
-          {'img': 'eico.png', 'event': 'EICO Talk', 'logo': 'eico', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]},
-          {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]},
-          {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}
+          {'img': 'zizai.png', 'event': '字在生活节', 'logo': 'china30s', 'tags': [{'name': '分享', 'style': 'design'}, {'name': '市集', 'style': 'solid'}]},
+          {'img': 'pingtalk.jpg', 'event': 'Ping-Talk', 'logo': 'pingwest', 'tags': [{'name': '分享会', 'style': 'lined'}, {'name': '品牌活动', 'style': 'sport'}]},
+          {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]},
         ]
       .columns
         each usecase in cases
-          .column.col-md-4.col-12: .case
-            .bg
-              img(src="./img/cases/" + usecase.img)
-            h5.event= usecase.event
-            .foot
-              .brand
-                img(src="./img/cases/logos/" + usecase.logo + ".png" srcset="./img/cases/logos/" + usecase.logo + "@2x.png 2x")
-              .tags
-                each tag in usecase.tags
-                  span.tag(class=tag.style)= tag.name
+          .column.col-md-4.col-12
+            +event(usecase)
 
     .section.customers.product-cases: .container
       h1.chtitle 教育公益
       -
         var cases = [
           {'img': 'eico.png', 'event': 'EICO Talk', 'logo': 'eico', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]},
-          {'img': 'anyway.png', 'event': 'Anyway Meetup', 'logo': 'anyway', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '粉丝聚会', 'style': 'lined'}]},
-          {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]}
+          {'img': 'kxsy.jpg', 'event': '理性的力量', 'logo': 'voiceofscience', 'tags': [{'name': '科普', 'style': 'design'}, {'name': '演讲', 'style': 'lined'}]},
+         {'img': 'girlscodingday.jpg', 'event': 'Girls Coding Day', 'logo': 'cgc', 'tags': [{'name': '公益', 'style': 'lined'}, {'name': '教育', 'style': 'sport'}]}
         ]
       .columns
         each usecase in cases
-          .column.col-md-4.col-12: .case
-            .bg
-              img(src="./img/cases/" + usecase.img)
-            h5.event= usecase.event
-            .foot
-              .brand
-                img(src="./img/cases/logos/" + usecase.logo + ".png" srcset="./img/cases/logos/" + usecase.logo + "@2x.png 2x")
-              .tags
-                each tag in usecase.tags
-                  span.tag(class=tag.style)= tag.name
+          .column.col-md-4.col-12
+            +event(usecase)
 
     include partials/_footer.pug

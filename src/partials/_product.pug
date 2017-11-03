@@ -77,16 +77,10 @@ html
             p.answer= qa.a
 
       h1#cases.chtitle.examples 应用案例
+      include _event_block.pug
       .columns
         each usecase in product.cases
-          .column.col-md-4.col-12: .case
-            .bg(style="background-image: url('/img/cases/" + usecase.img + "');")
-            h5.event= usecase.event
-            .foot
-              .brand
-                img(src="./img/cases/logos/" + usecase.logo + ".png" srcset="./img/cases/logos/" + usecase.logo + "@2x.png 2x")
-              .tags
-                each tag in usecase.tags
-                  span.tag(class=tag.style)= tag.name
+          .column.col-md-4.col-12
+            +event(usecase)
                 
     include _footer.pug
