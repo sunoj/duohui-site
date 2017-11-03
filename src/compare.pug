@@ -213,10 +213,10 @@ html
         .answer
           p 以下产品符合您选择的功能需求：
           .products
-            a.btn.product.std(href="#") 多会标准版
-            a.btn.product.premier(href="#") 多会高级版
-            a.btn.product.mini(href="#") 多会活动小程序
-            a.btn.product.service(href="#") 多会活动服务号
+            a.btn.product.std(href="/standard") 多会标准版
+            a.btn.product.premier(href="/prime") 多会高级版
+            a.btn.product.mini(href="/mini") 多会活动小程序
+            a.btn.product.service(href="/wechat") 多会活动服务号
     .section.help
       .container
         h1.chtitle 还未决定？我们的活动专家可以帮助你
@@ -376,6 +376,6 @@ html
         $(".quota .byother .line[data-item]").each(function(){
           var data_item = $(this).data('item');
           $(this).find('.exp').text(feeRates['other']['expression'][data_item]+"=");
-          $(this).find('.result').text("￥"+feeRates['other']['result'][data_item]);
+          $(this).find('.result').text("￥"+feeRates['other']['result'][data_item].toFixed(0));
         });
       }

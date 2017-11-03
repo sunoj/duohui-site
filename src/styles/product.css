@@ -207,6 +207,7 @@
   background-position: center;
   bottom: 0;
   background-size: cover;
+  border-radius: 10px;
 }
 
 .product-cases .case .bg img{
