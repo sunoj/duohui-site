@@ -61,7 +61,7 @@ html
             .price-tag 免费
             .price-desc 小型活动可使用多会签到应用或公众号完成现场签到，完全免费。
         else
-          .column.col-md-4.col-12: .save.pricing
+          a(href="/compare#price-cal"): .column.col-md-4.col-12: .save.pricing
             h3.title= product.price.save_title || "预计可节省"
             .divider(style="bottom: " + (100 - product.price.save_percent) + "%")
             .save-bg(style="height: " + (100 - product.price.save_percent) + "%")
