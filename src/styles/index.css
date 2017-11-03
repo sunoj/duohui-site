@@ -83,6 +83,19 @@
   margin: 0;
 }
 
+.products .product .titlebox h3 .enterprise {
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #fff;
+  display: inline-block;
+  padding: 3px 6px;
+  margin-left: 8px;
+  line-height: 24px;
+  vertical-align: middle;
+  border-radius: 4px;
+  margin-top: -4px;
+}
+
 .products .product h4 {
   font-size: 20px;
   line-height: 22px;

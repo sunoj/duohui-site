@@ -20,7 +20,7 @@ html
         .action
           a.btn(href="javascript:void(0)" onclick="_MEIQIA('showPanel')") 联系销售
           a.btn.solid(href='#') 帮我推荐
-    .section.contrast.white-bg
+    .section.compare.white-bg
       .container
         h1.chtitle 对比多会产品
         .columns
@@ -38,14 +38,17 @@ html
                   li 微信提现免费
                   li 支付手续费为1元+1%
                   li.gray 展示多会品牌
+              .action
+                a.btn(href="/standard") 选择标准版
+              
           .column.col-md-4.col-12
             .product
               .title
                 h2 高级版
                 p 适合经常举办中小型活动
               .content
-                h2 ￥999
-                  span 每年
+                h2 999
+                  span 元每年
                 ul
                   li 可发布<strong>无限</strong>个活动
                   li 每个活动最多可报名<strong>无限</strong>人
@@ -53,14 +56,17 @@ html
                   li 微信提现免费
                   li 支付手续费为 <strong>1%</strong> 
                   li.gray 展示多会品牌
+              .action
+                a.btn(href="/prime") 选择高级版
+
           .column.col-md-4.col-12
             .product
               .title
                 h2 企业版
                 p 适合专业品牌主办方
               .content
-                h2 ￥2999
-                  span 起每年
+                h2 4999
+                  span 元每年
                 ul
                   li 可发布<strong>无限</strong>个活动
                   li 每个活动最多可报名<strong>无限</strong>人
@@ -68,6 +74,10 @@ html
                   li 无需提现，<strong>实时到帐</strong>
                   li 支付手续费为 <strong>0.6%</strong>（渠道收取）
                   li 隐藏多会品牌
+              .action
+                a.btn(href="/mini") 小程序版
+                a.btn(href="/wechat") 服务号版
+
     .section.quota
       .container
         h1.chtitle 根据用量为我推荐产品
@@ -301,12 +311,12 @@ html
           'enterprise':{
             expression :{
               poundage: '{people}x{time}x{price}x0.6%',
-              fee_per_month: '2999/12',
+              fee_per_month: '4999/12',
               sms: '({time}*{people}-1000)*0.1'
             },
             result:{
               poundage: '{people}*{time}*{price}*0.006',
-              fee_per_month: '2999/12',
+              fee_per_month: '4999/12',
               sms: '({time}*{people}-1000)*0.1'
             }
           },

@@ -1,44 +1,44 @@
-.contrast .product{
+.compare .product{
   border: 1px solid #DFDFDF;
   padding: 0;
   border-radius: 8px;
   margin-bottom: 20px;
 }
 
-.contrast .title{
+.compare .title{
   padding: 12px;
   text-align: center;
   background-color: #F4F4F4;
   border-radius: 8px 8px 0 0;
 }
 
-.contrast .title h2{
+.compare .title h2{
   margin: 10px;
 }
 
-.contrast .content h2{
+.compare .content h2{
   text-align: center;
   font-size: 30px;
 }
 
-.contrast .content h2 span{
+.compare .content h2 span{
   font-size: .65em;
   padding-left: .35em;
 }
 
-.contrast .content ul{
+.compare .content ul{
   padding: 0 35px 30px 65px;
   min-height: 205px;
 }
 
-.contrast .content ul li{
+.compare .content ul li{
   position: relative;
   list-style: none;
   padding: 8px 0;
   font-size: 15px;
 }
 
-.contrast .content ul li:before{
+.compare .content ul li:before{
   content: '';
   position: absolute;
   top: 50%;
@@ -47,11 +47,27 @@
   width: 17px;
   height: 13px;
   margin-top: -7px;
-  background-image: url("/static/img/icon/check.png");
+  background-image: url("/img/icon/check.png");
 }
 
-.contrast .content ul li.gray:before{
-  background-image: url("/static/img/icon/check_gray.png");
+.compare .content ul li.gray:before{
+  background-image: url("/img/icon/check_gray.png");
+}
+
+.compare .product .action {
+  text-align: center;
+  padding-bottom: 24px;
+  display: flex;
+  padding: 12px 18px;
+  background: #f4f4f4;
+}
+
+.compare .product .action .btn{
+  margin: 6px;
+  padding: 6px 12px;
+  font-size: 16px;
+  flex: 1;
+  background: #fff;
 }
 
 .quota .group{

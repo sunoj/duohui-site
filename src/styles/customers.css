@@ -23,7 +23,7 @@
   right: 50%;
   top: 0;
   bottom: 0;
-  background: url(/static/img/cases/hero-frame-mask.png) right center no-repeat;
+  background: url(/img/cases/hero-frame-mask.png) right center no-repeat;
   background-size: contain;
   width: 30%;
 }
