@@ -120,7 +120,14 @@
   font-size: 22px;
   margin-left: 6px;
 }
-
+.products .learn-more{
+  float: right;
+  font-size: 16px;
+  padding: 6px 10px;
+  background: #4893ff;
+  color: #fff;
+  border-radius: 4px;
+}
 .partners {}
 
 .partners .fbox {
