@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var preprocess = require('gulp-preprocess');
 var browserSync = require("browser-sync").create();
 var pug = require('gulp-pug');
+var del = require('del');
+var rsync = require('gulp-rsync');
 
 gulp.task('html', function() {
   gulp.src('./src/*.pug')
@@ -39,7 +41,6 @@ gulp.task('serve', function(done) {
   done();
 })
 
-
 gulp.task('reload', function (done) {
   setTimeout(function(){
     browserSync.reload();
@@ -54,4 +55,28 @@ gulp.task('dev', ['scripts', 'css', 'html', 'static', 'serve'], function(cb) {
   gulp.watch('./static/**/*.*', ['static']);
 
   gulp.watch('./dist/**/*.*', ['reload']);
+});
+
+gulp.task('clean', () => del(['dist/*'], { dot: true }));
+
+gulp.task('build', ['scripts', 'css', 'html', 'static'])
+
+function deploy(target) {
+  return gulp.src(['dist/**/*.*'])
+    .pipe(rsync({
+      root: './dist',
+      username: 'deploy',
+      hostname: `${target}.tinyservices.net`,
+      destination: '/home/deploy/www/duohui-web',
+      incremental: true
+    }))
+}
+
+gulp.task('sandbox', function () {
+  return deploy('sandbox')
+});
+
+gulp.task('deploy', function () {
+  deploy('1')
+  deploy('3')
 });
