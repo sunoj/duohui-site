@@ -1,7 +1,8 @@
 mixin event(usecase)
   .case
     .bg(style="background-image: url('/img/cases/" + usecase.img + "');")
-    h5.event= usecase.event
+    if usecase.event
+      h5.event= usecase.event
     .foot
       .brand
         img(src="./img/cases/logos/" + usecase.logo + ".png" srcset="./img/cases/logos/" + usecase.logo + "@2x.png 2x")
