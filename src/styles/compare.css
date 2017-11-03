@@ -65,6 +65,7 @@
 .compare .product .action .btn{
   margin: 6px;
   padding: 6px 12px;
+  line-height: 26px;
   font-size: 16px;
   flex: 1;
   background: #fff;

@@ -241,7 +241,7 @@ a.btn.product:before{
   margin-top: 3px;
 }
 
-a.btn.product.std{
+a.btn.std{
   color: #0DAFFF;
   border-color: #0DAFFF;
 }
@@ -249,7 +249,7 @@ a.btn.product.std:before{
   background-image: url("/img/product/product-std.png");
 }
 
-a.btn.product.premier{
+a.btn.premier{
   color: #333;
   border-color: #999;
 }
@@ -257,7 +257,7 @@ a.btn.product.premier:before{
   background-image: url("/img/product/product-prime.png");
 }
 
-a.btn.product.mini{
+a.btn.mini{
   color: #6761A3;
   border-color: #6761A3;
 }
@@ -265,11 +265,11 @@ a.btn.product.mini:before{
   background-image: url("/img/product/product-mini.png");
 }
 
-a.btn.product.service{
+a.btn.wechat{
   color: #4EB027;
   border-color: #4EB027;
 }
-a.btn.product.service:before{
+a.btn.product.wechat:before{
   background-image: url("/img/product/product-wechat.png");
 }
 
