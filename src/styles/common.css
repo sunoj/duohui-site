@@ -273,6 +273,10 @@ a.btn.product.wechat:before{
   background-image: url("/img/product/product-wechat.png");
 }
 
+a.btn.product.enterprise:before{
+  background-image: url("/img/product/product-enterprise.png");
+}
+
 .fbox{
   display: flex;
 }

@@ -77,6 +77,11 @@ gulp.task('sandbox', function () {
 });
 
 gulp.task('deploy', function () {
-  deploy('1')
-  deploy('3')
+  return deploy('1').pipe(rsync({
+    root: './dist',
+    username: 'deploy',
+    hostname: '3.tinyservices.net',
+    destination: '/home/deploy/www/duohui-web',
+    incremental: true
+  }))
 });
