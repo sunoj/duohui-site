@@ -14,6 +14,7 @@ html
   body
     include partials/_header.pug
     include partials/_event_block.pug
+    include partials/_poster_block.pug
 
     .section.intro
       .container
@@ -57,18 +58,7 @@ html
         .columns
           each event in events
             .column.col-md-4.col-12
-              .shadow.event
-                a(href='https://docs.duohui.co/customer-stories.html' target="_blank")
-                  img.event-poster(src='./img/events/'+event.poster, alt=event.title)
-                  .content
-                    h4=event.title
-                    ul.meta.clear
-                      li
-                        img.icon(src='./img/icon/time.png')
-                        span=event.date
-                      li
-                        img.icon(src='./img/icon/position.png')
-                        span=event.location
+              +poster(event)
     
     .section.customers.product-cases.white-bg: .container
       h1.chtitle 聚会沙龙

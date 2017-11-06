@@ -326,7 +326,9 @@ a.btn.product.enterprise:before{
 
 .events .event .icon {
   float: left;
-  padding-right: 4px;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
 }
 
 .events .more-events {

@@ -19,6 +19,7 @@ html
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_header.pug
+    include partials/_poster_block.pug
     .section.intro
       .container
         .hello
@@ -149,20 +150,9 @@ html
         .columns
           each event in events
             .column.col-md-4.col-12
-              .shadow.event
-                a(href='https://docs.duohui.co/customer-stories.html' target="_blank")
-                  img.event-poster(src='./img/events/'+event.poster, alt=event.title)
-                  .content
-                    h4=event.title
-                    ul.meta.clear
-                      li
-                        img.icon(src='./img/icon/time.png')
-                        span=event.date
-                      li
-                        img.icon(src='./img/icon/position.png')
-                        span=event.location
+              +poster(event)
 
-        a.more-events(href='/customers.html') 查看更多服务案例
+        a.more-events(href='/customers') 查看更多服务案例
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
     script.
