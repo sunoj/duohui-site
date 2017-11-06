@@ -16,6 +16,8 @@
   bottom: 0;
   line-height: 0;
   overflow: hidden;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-case .mask{
@@ -58,4 +60,25 @@
   border-radius: 4px;
   margin: 0;
   font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-case{
+    height: auto;
+  }
+  .hero-case .bg{
+    right: 0;
+    height: 250px;
+  }
+  .hero-case .mask{
+    display: none;
+  }
+  .hero-case .info{
+    width: 100%;
+    margin-top: 250px;
+    padding: 20px;
+  }
+  .hero-case .brand{
+    margin: 6px 0 12px;
+  }
 }
