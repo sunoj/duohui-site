@@ -348,6 +348,23 @@ a.btn.product.enterprise:before{
   color: #282828;
 }
 
+.logowall {
+  text-align: center;
+}
+
+.logowall * {
+  box-sizing: border-box;
+}
+
+.logowall .column {
+  text-align: left;
+  padding: 0 7px;
+}
+
+.logowall .column img {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   html{
     min-width: auto;    
