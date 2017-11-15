@@ -139,7 +139,8 @@ strong{
 }
 
 .header .nav a{
-	color: inherit;
+  color: inherit;
+  display: inline-block;
 }
 
 .header .nav li{
