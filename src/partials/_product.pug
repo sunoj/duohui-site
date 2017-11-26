@@ -8,8 +8,8 @@ html
     title #{product.name} - 多会
     meta(name='description', content=product.desc)
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
-    link(rel='stylesheet', type='text/css', href='./styles/common.css')
-    link(rel='stylesheet', type='text/css', href='./styles/product.css')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/product.css?v=<!--@echo curtime -->')
     meta(name='msapplication-tap-highlight', content='no')
   body
     include _header.pug

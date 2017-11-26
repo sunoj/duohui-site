@@ -12,7 +12,7 @@
       "title": "标准版",
       "subtitle": "小型活动报名售票",
       "price": "免费使用",
-      "url": "https://duohui.co/standard",
+      "url": "https://duohui.co/standard#inmini",
       "icon": "/static/images/product-icon-duohui.svg",
       "background": "linear-gradient(180deg, #59B7FD 0%, #0695FE 100%)"
     },
@@ -20,7 +20,7 @@
       "title": "高级版",
       "subtitle": "功能更多，体检更佳",
       "price": "999 元每年",
-      "url": "https://duohui.co/prime",
+      "url": "https://duohui.co/prime#inmini",
       "icon": "/static/images/product-icon-duohui.svg",
       "background": "linear-gradient(180deg, #F2A024 0%, #ED7721 100%)"
     },
@@ -28,7 +28,7 @@
       "title": "活动小程序",
       "subtitle": "企业专属的活动小程序",
       "price": "4999 元每年",
-      "url": "https://duohui.co/mini",
+      "url": "https://duohui.co/mini#inmini",
       "icon": "/static/images/product-icon-mini.svg",
       "background": "linear-gradient(180deg, #857BE8 0%, #6761A3 100%)"
     },
@@ -36,7 +36,7 @@
       "title": "活动服务号",
       "subtitle": "企业专属的活动公众号",
       "price": "4999 元每年",
-      "url": "https://duohui.co/wechat",
+      "url": "https://duohui.co/wechat#inmini",
       "icon": "/static/images/product-icon-service.svg",
       "background": "linear-gradient(180deg, #5ACF2B 0%, #4EB027 100%)"
     }
@@ -62,7 +62,7 @@
   "client": {
     "recommanded": [
       {
-        "logo": "/static/images/eico_logo_white.svg",
+        "logo": "https://duohui.co/appdata/logos/eico.png",
         "brief": "EICO 是国内知名的数字化业务咨询与产品设计专家。 服务于摩拜、魅族、一加手机等国内外知名品牌。"
       },
       {

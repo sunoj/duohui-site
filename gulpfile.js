@@ -7,6 +7,7 @@ var rsync = require('gulp-rsync');
 
 gulp.task('html', function() {
   gulp.src('./src/*.pug')
+    .pipe(preprocess({ context: { curtime: Date.now() } }))
     .pipe(pug())
     .pipe(gulp.dest('./dist/'))
 });
