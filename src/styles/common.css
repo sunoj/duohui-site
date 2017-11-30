@@ -256,8 +256,8 @@ a.btn.product.std:before{
 }
 
 a.btn.premier{
-  color: #333;
-  border-color: #999;
+  color: #d67735;
+  border-color: #ffa669;
 }
 a.btn.product.premier:before{
   background-image: url("/img/product/product-prime.png");
