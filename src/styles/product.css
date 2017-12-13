@@ -179,6 +179,7 @@
 .product-cases .case .tag {
     display: inline-block;
     padding: 5px 8px 4px;
+    padding: 5px 8px 4px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin: 3px;
@@ -233,4 +234,17 @@
   .product-cases .case{
     margin-bottom: 24px;
   }
+}
+
+.inmini .action .try,
+.inmini .action .contact {
+  display: none;
+}
+
+.inmini .action .support {
+  display: inline-block;
+}
+
+.action .support{
+  display: none;
 }
