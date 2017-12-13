@@ -1,0 +1,84 @@
+.hero-case{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    margin-bottom: 36px;
+}
+
+.hero-case .bg{
+  position: absolute;
+  left: 0;
+  right: 50.1%;
+  top: 0;
+  bottom: 0;
+  line-height: 0;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-case .mask{
+  position: absolute;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  background: url(/img/cases/hero-frame-mask.png) right center no-repeat;
+  background-size: contain;
+  width: 30%;
+}
+
+.hero-case .bg img{
+  min-width: 100%;
+  max-height: 100%;
+}
+
+.hero-case .brand{
+  margin-bottom: 24px;
+}
+
+.hero-case .info{
+  width: 50%;
+  float: right;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.hero-case .info p {
+  line-height: 24px;
+}
+
+.hero-case .event{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 4px;
+  margin: 0;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-case{
+    height: auto;
+  }
+  .hero-case .bg{
+    right: 0;
+    height: 250px;
+  }
+  .hero-case .mask{
+    display: none;
+  }
+  .hero-case .info{
+    width: 100%;
+    margin-top: 250px;
+    padding: 20px;
+  }
+  .hero-case .brand{
+    margin: 6px 0 12px;
+  }
+}

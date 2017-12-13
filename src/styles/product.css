@@ -42,6 +42,7 @@
 .product-head .product-icon{
   display: inline-block;
   vertical-align: middle;
+  line-height: 0;
 }
 
 .product-head .product-name h1{
@@ -53,6 +54,13 @@
   padding: 0;
 }
 
+.product-features {
+  padding-bottom: 28px;
+}
+
+.product-features .feature{
+  margin-bottom: 12px;
+}
 
 .product-features .feature .icon{
   width: 32px;
@@ -67,7 +75,7 @@
 .product-features .feature .feature-title {
   font-size: 18px;
   line-height: 24px;
-  margin: 4px 0 20px;
+  margin: 4px 0 16px;
 }
 
 .product-features .feature .copy > p{
@@ -90,6 +98,40 @@
   background: #F7F8F9;
   border-radius: 10px;
   padding: 12px 24px 24px;
+  position: relative;
+}
+
+.product-pricing .save.pricing{
+  background: #28D16F;
+  color: #fff;
+  overflow: hidden;
+}
+.product-pricing .save.pricing .divider{
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: url(/img/product/save-divider.png) no-repeat center bottom;
+  background-size: 100%;
+  height: 72px;
+  margin-bottom: -36px;
+  z-index: 2;
+}
+.product-pricing .save.pricing .save-bg{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0DAFFF;
+  z-index: 0;
+}
+
+.product-pricing .save.pricing .price-tag{
+  color: #fff;
+}
+
+.product-pricing .title, .product-pricing .price-tag , .product-pricing .price-desc{
+  position: relative;
+  z-index: 3;
 }
 
 .product-pricing .price-tag {
@@ -97,6 +139,10 @@
   color: #35AFFB;
   font-weight: 600;
   margin: 24px 0;
+}
+
+.product-pricing .price-tag span{
+  font-size: 24px;
 }
 
 .product-pricing .price-desc {
@@ -120,6 +166,10 @@
 .product-cases .case .brand{
   float: left;
   line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
 }
 
 .product-cases .case .tags{
@@ -133,6 +183,7 @@
     border-radius: 4px;
     margin: 3px;
     font-size: 14px;
+    line-height: 14px;
 }
 
 .product-cases .case .event{
@@ -153,6 +204,10 @@
   right: 0;
   top: 0;
   line-height: 0;
+  background-position: center;
+  bottom: 0;
+  background-size: cover;
+  border-radius: 10px;
 }
 
 .product-cases .case .bg img{

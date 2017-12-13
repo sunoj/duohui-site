@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
+    title 帮助支持 - 多会
+    meta(name='description', content='通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css')
+    link(rel='stylesheet', type='text/css', href='./styles/product.css')
+    link(rel='stylesheet', type='text/css', href='./styles/compare.css')
+    link(rel='stylesheet', type='text/css', href='./styles/support.css')
+    meta(name='msapplication-tap-highlight', content='no')
+  body
+    include partials/_header.pug
+    
+    .section.intro
+      .container
+        .hello
+          h1 获取多会的服务支持
+          p 有兴趣了解更多关于多会产品的信息，或是遇到了活动管理的挑战，我们的活动专家愿意帮助您。
+        .action
+          a.btn(href="javascript:void(0)" onclick="_MEIQIA('showPanel')") 联系销售
+          a.btn.solid(href='/app/') 立即试用
+
+    .section.demo-form.white-bg: .container
+        h1.chtitle 预约产品演示
+        <iframe id="demo-form" height="600" width="100%" src="https://i.duotai.co/forms/vo52o" frameborder="0" allowfullscreen>
+        </iframe>
+
+    .section.help
+      .container
+        h1.chtitle 联系方式
+        p
+          a.btn(href="javascript:void(0)" onclick="_MEIQIA('showPanel')") 在线咨询
+          | 或致电
+          span.phone 021 6064 6046
+        p.small 周一至周六 9:00 至 21:00
+
+    include partials/_footer.pug

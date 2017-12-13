@@ -1,0 +1,86 @@
+doctype html
+html
+  block vars
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
+    title #{product.name} - 多会
+    meta(name='description', content=product.desc)
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/product.css?v=<!--@echo curtime -->')
+    meta(name='msapplication-tap-highlight', content='no')
+  body
+    include _header.pug
+    
+    .section.product-head
+      .container.intro
+        .clear
+          .product-name
+            .product-icon
+              img(src="./img/product/product-" + product.code + ".png" srcset="./img/product/product-" + product.code + "@2x.png 2x")
+            h1 #{product.name}
+          ul.nav.clear
+            li: a(href='#features') 功能特征
+            li: a(href='#pricing') 价格费用
+            li: a(href='#faq') 常见问题
+            li: a(href='#cases') 应用案例
+        .hello
+          h1 #{product.tagline}
+          p #{product.desc}
+        .action
+          a.btn(href="javascript:void(0)" onclick="_MEIQIA('showPanel')") 联系销售
+          a.btn.solid(href='/app/') 立即试用
+
+    .section.product-features: .container
+      h1#features.chtitle 功能特征
+      .columns
+        each feature in product.features
+          .column.col-md-4.col-12.feature.fbox
+            .icon(class=feature.icon)
+              img(src="./img/product/feature-icon/"+feature.icon+".png" srcset="./img/product/feature-icon/"+feature.icon+"@2x.png 2x")
+            .copy
+              h4.feature-title=feature.titile
+              p.description=feature.desc
+
+    .section.product-pricing.white-bg: .container
+      h1#pricing.chtitle 价格费用
+      .columns
+        .column.col-md-4.col-12: .pricing
+          h3.title= product.price.basic_title || "基础费用"
+          .price-tag !{product.price.basic}
+          .price-desc= product.price.basic_desc
+        .column.col-md-4.col-12: .pricing
+          h3.title= product.price.fee_title || "售票手续费"
+          .price-tag !{product.price.fee}
+          .price-desc= product.price.fee_desc
+        if product.code == 'checkin'
+          .column.col-md-4.col-12: .save.pricing
+            h3.title 小型活动签到
+            .price-tag 免费
+            .price-desc 小型活动可使用多会签到应用或公众号完成现场签到，完全免费。
+        else
+          a(href="/compare#price-cal"): .column.col-md-4.col-12: .save.pricing
+            h3.title= product.price.save_title || "预计可节省"
+            .divider(style="bottom: " + (100 - product.price.save_percent) + "%")
+            .save-bg(style="height: " + (100 - product.price.save_percent) + "%")
+            .price-tag= product.price.save_percent + "%"
+            .price-desc 相比其他活动平台，多会可大幅节省成本。不仅更好，而且更便宜！
+    
+    .section.product-faq.product-cases: .container
+      h1#faq.chtitle 常见问题
+      .columns
+        each qa in product.faqs
+          .column.col-md-6.col-12.qa
+            h3.question= qa.q
+            p.answer= qa.a
+
+      h1#cases.chtitle.examples 应用案例
+      include _event_block.pug
+      .columns
+        each usecase in product.cases
+          .column.col-md-4.col-12
+            +event(usecase)
+                
+    include _footer.pug

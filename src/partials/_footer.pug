@@ -5,33 +5,55 @@
         h3 多会产品
         ul.clear
           li
-            a(href='') 标准版
+            a(href='/standard') 标准版
           li
-            a(href='') 高级版
+            a(href='/prime') 高级版
           li
-            a(href='') 活动微信小程序
+            a(href='/mini') 活动微信小程序
           li
-            a(href='') 活动微信服务号
+            a(href='/wechat') 活动微信服务号
           li
-            a(href='') 现场极速签到
-          li
-            a(href='') 活动现场互动
+            a(href='/checkin') 现场极速签到
+          //- li
+          //-   a(href='') 活动现场互动
       .line
         h3 关于和帮助
         ul.clear
           li
-            a(href='') 关于多会
+            a(href='https://docs.duohui.co/brand/' target="_blank") 品牌资源
           li
-            a(href='') 品牌资源
+            a(href='/support') 帮助支持
           li
-            a(href='') 使用帮助
+            a(href='/customers') 客户案例
           li
-            a(href='') 客户案例
-          li
-            a(href='') 联系方式
-          li
-            a(href='') 用户协议
+            a(href='https://docs.duohui.co/business-term.html' target="_blank") 用户协议
     .line.copyright
       p
         span 上海新小信息科技有限公司
         span 沪ICP备17014612号-2
+
+    script.
+      if (location.hash && location.hash.indexOf('inmini') > -1 ) {
+        document.body.classList.add("inmini")
+      } else {
+        (function(m, ei, q, i, a, j, s) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            j = ei.createElement(q),
+                s = ei.getElementsByTagName(q)[0];
+            j.async = true;
+            j.charset = 'UTF-8';
+            j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+            s.parentNode.insertBefore(j, s);
+        })(window, document, 'script', '_MEIQIA');
+        _MEIQIA('entId', 55145);
+      }
+
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-7239743-22")
+
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-7239743-22');

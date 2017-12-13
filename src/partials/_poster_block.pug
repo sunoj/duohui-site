@@ -1,0 +1,13 @@
+mixin poster(event)
+  .shadow.event
+    a(href='https://docs.duohui.co/customer-stories.html' target="_blank")
+      img.event-poster(src='./img/events/'+event.poster, alt=event.title)
+      .content
+        h4=event.title
+        ul.meta.clear
+          li
+            img.icon(src='./img/icon/time.png' srcset='./img/icon/time@2x.png 2x')
+            span=event.date
+          li
+            img.icon(src='./img/icon/location.png' srcset='./img/icon/location@2x.png 2x')
+            span=event.location

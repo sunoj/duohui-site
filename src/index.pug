@@ -6,171 +6,154 @@ html
     meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
     title 多会
     meta(name='description', content='通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
+    
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="多会")
+    meta(property="og:description" content="多会为主办方提供技术支持，帮助主办方建设属于自己的活动平台。")
+    meta(property="og:image" content="https://duohui.co/img/thumbnail.png")
+    meta(property="og:url" content="https://duohui.co/")
+
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
-    link(rel='stylesheet', type='text/css', href='./styles/common.css')
-    link(rel='stylesheet', type='text/css', href='./styles/index.css')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/index.css?v=<!--@echo curtime -->')
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_header.pug
+    include partials/_poster_block.pug
     .section.intro
       .container
         .hello
-          h1 你的专属活动平台
+          h1 您的专属活动平台
           p 多会为主办方提供技术支持，帮助主办方建设属于自己的活动平台。
         .action
-          a.btn(href='#') 体验购票
-          a.btn.solid(href='#') 立即试用
+          a.btn(href="javascript:void(0)" onclick="_MEIQIA('showPanel')") 联系销售
+          a.btn.solid(href='/app/') 立即试用
     .section.why.white-bg
       .container
         h1.chtitle 为什么选择多会
         .columns
           .column.col-md-4.col-12.trait
-            img(src='./static/img/why/features-icon-cheap.png', srcset='./static/img/why/features-icon-cheap@2x.png 2x')
+            img(src='./img/why/features-icon-cheap.png', srcset='./img/why/features-icon-cheap@2x.png 2x')
             h2 收费活动，就用多会
             ul
               li 手续费低至 0.6%，业界最低
               li 资金<strong>实时到账</strong> ，无需等待提现
               li 支持支付宝，微信和 PayPal
-              li 优惠券、渠道统计等高级功能
+              //- li 优惠券、渠道统计等高级功能
           .column.col-md-4.col-12.trait
-            img(src='./static/img/why/features-icon-pro.png', srcset='./static/img/why/features-icon-pro@2x.png 2x')
+            img(src='./img/why/features-icon-pro.png', srcset='./img/why/features-icon-pro@2x.png 2x')
             h2 专业活动主办方的专业之选
             ul
               li 独立的品牌形象，隐藏多会品牌
               li 直接在您的公众号和网站完成购票
               li 获得<strong>专属活动小程序</strong>
-              li 自定义样式和通知邮件等
+              //- li 自定义样式和通知邮件等
           .column.col-md-4.col-12.trait
-            img(src='./static/img/why/features-icon-tech.png', srcset='./static/img/why/features-icon-tech@2x.png 2x')
+            img(src='./img/why/features-icon-tech.png', srcset='./img/why/features-icon-tech@2x.png 2x')
             h2 我们专注于提供技术服务
             ul
-              li 多会不是活动平台，我们专注技术服务
+              //- li 多会不是活动平台，我们专注技术服务
               li 扎实的技术基础，<strong>领先的软硬件方案</strong>
               li 支持私有部署，数据隐私有保障
               li 提供功能定制服务
     .section.products
       .container
         h1.chtitle 多会的产品
+          a(href="/compare"): span.learn-more 了解更多
         .columns
           .column.col-md-6.col-12
             .product.shadow.js-tilt(style='background-color: #3399D8;')
               .titlebox
-                img(src='./static/img/products/product-icon-duohui.png', srcset='./static/img/products/product-icon-duohui@2x.png 2x', alt='多会产品')
+                img(src='./img/products/product-icon-duohui.png', srcset='./img/products/product-icon-duohui@2x.png 2x', alt='多会产品')
                 h3 标准版
               h4 简单易用，轻松开始
               p 多会是专业的活动小程序系统，通过多会轻松管理活动报名，在线售票收款，现场快速签到。
-              span.price 免费
-              a.fullsizelink(href='/standard.html')
+              span.price 99
+                span.unit 元每年
+              a.fullsizelink(href='/standard')
           .column.col-md-6.col-12
-            .product.shadow.js-tilt(style='background-color: #63625e;')
+            .product.shadow.js-tilt(style='background-color: #d2854f;')
               .titlebox
-                img(src='./static/img/products/product-icon-duohui.png', srcset='./static/img/products/product-icon-duohui@2x.png 2x', alt='多会产品')
+                img(src='./img/products/product-icon-duohui.png', srcset='./img/products/product-icon-duohui@2x.png 2x', alt='多会产品')
                 h3 高级版
               h4 更多高级功能，提供强力支持
               p 多会高级版为频繁举办活动的专业主办方设计。提供包括邀请函、渠道统计、短信邀请等高级功能。
               .price
                 span 999
                 span.unit 元每年
-              a.fullsizelink(href='/standard.html')
+              a.fullsizelink(href='/prime')
         .columns
           .column.col-md-4.col-12
-            .product.shadow.js-tilt(style='background-color: #DB893F;')
+            .product.shadow.js-tilt(style='background-color: #f36c6c;')
               .titlebox
-                img(src='./static/img/products/product-icon-checkin.png', srcset='./static/img/products/product-icon-checkin@2x.png 2x', alt='多会产品')
+                img(src='./img/products/product-icon-checkin.png', srcset='./img/products/product-icon-checkin@2x.png 2x', alt='多会产品')
                 h3 极速签到
               h4 唯快不破，千人活动轻松搞定
               p 多会是专业的活动小程序系统，通过多会轻松管理活动报名，在线售票收款，现场快速签到。
               .price
                 span 499
                 span.unit 元每通道
-              a.fullsizelink(href='/standard')
+              a.fullsizelink(href='/checkin')
           .column.col-md-4.col-12
             .product.shadow.js-tilt(style='background-color: #6761A3;')
               .titlebox
-                img(src='./static/img/products/product-icon-mini.png', srcset='./static/img/products/product-icon-mini@2x.png 2x', alt='多会产品')
+                img(src='./img/products/product-icon-mini.png', srcset='./img/products/product-icon-mini@2x.png 2x', alt='多会产品')
                 h3 活动小程序
+                  span.enterprise 企业版
               h4 一键生成专属微信小程序
               p 多会是专业的活动小程序系统。通过多会轻松管理活动报名，在线售票收款，独立收款渠道。
               .price
                 span 4999
                 span.unit 元每年
-              a.fullsizelink(href='/standard')
+              a.fullsizelink(href='/mini')
           .column.col-md-4.col-12
             .product.shadow.js-tilt(style='background-color: #4EB027;')
               .titlebox
-                img(src='./static/img/products/product-icon-service.png', srcset='./static/img/products/product-icon-service@2x.png 2x', alt='多会产品')
+                img(src='./img/products/product-icon-service.png', srcset='./img/products/product-icon-service@2x.png 2x', alt='多会产品')
                 h3 活动服务号
+                  span.enterprise 企业版
               h4 报名即关注，观众变粉丝
               p 使用多会活动服务号版本，结合微信服务号，生成活动二维码，扫码关注后再购票，让活动关注变为后续。
               .price
-                span 2999
+                span 4999
                 span.unit 元每年
-              a.fullsizelink(href='/standard')
+              a.fullsizelink(href='/wechat')
     .section.partners.white-bg
       .container
         h1.chtitle 多会的客户
         .logowall
           .columns.i2.clients
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-1.png', srcset='./static/img/partners/clients-1@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-2.png', srcset='./static/img/partners/clients-2@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-2.png', srcset='./img/partners/clients-2@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-3.png', srcset='./static/img/partners/clients-3@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-3.png', srcset='./img/partners/clients-3@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-4.png', srcset='./static/img/partners/clients-4@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-4.png', srcset='./img/partners/clients-4@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-5.png', srcset='./static/img/partners/clients-5@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-5.png', srcset='./img/partners/clients-5@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-6.png', srcset='./static/img/partners/clients-6@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-6.png', srcset='./img/partners/clients-6@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-7.png', srcset='./static/img/partners/clients-7@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
-              img(src='./static/img/partners/clients-8.png', srcset='./static/img/partners/clients-8@2x.png 2x', alt='多会客户列表')
+              img(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
     .section.events
       .container
         h1.chtitle 服务案例
+        -
+          var events = [
+            {"poster": "nicc.png", "title": "NICC 中国新三板投资者大会", "date": "09月17日", "location": "上海"},
+            {"poster": "gnome.png", "title": "GNOME Asia 2017 亚洲峰会", "date": "10月14日", "location": "重庆"},
+            {"poster": "rubyconf.png", "title": "RubyConf China 2017", "date": "09月16日", "location": "杭州"},
+          ]
         .columns
-          .column.col-md-4.col-12
-            .shadow.event
-              a(href='#')
-                img.event-poster(src='./static/img/events/nicc.png', alt='NICC 中国新三板投资者大会')
-                .content
-                  h4 NICC 中国新三板投资者大会
-                  ul.meta.clear
-                    li
-                      img.icon(src='./static/img/icon/time.png')
-                      | 09月17日
-                    li
-                      img.icon(src='./static/img/icon/position.png')
-                      | 上海
-          .column.col-md-4.col-12
-            a(href='#')
-              .shadow.event
-                img.event-poster(src='./static/img/events/gnome.png', alt='GNOME Asia 2017 亚洲峰会')
-                .content
-                  h4 GNOME Asia 2017 亚洲峰会
-                  ul.meta.clear
-                    li
-                      img.icon(src='./static/img/icon/time.png')
-                      | 10月14日
-                    li
-                      img.icon(src='./static/img/icon/position.png')
-                      | 重庆
-          .column.col-md-4.col-12
-            a(href='#')
-              .shadow.event
-                img.event-poster(src='./static/img/events/rubyconf.png', alt='RubyConf China 2017')
-                .content
-                  h4 RubyConf China 2017
-                  ul.meta.clear
-                    li
-                      img.icon(src='./static/img/icon/time.png')
-                      | 09月16日
-                    li
-                      img.icon(src='./static/img/icon/position.png')
-                      | 杭州
-        a.more-events(href='#') 查看更多服务案例
+          each event in events
+            .column.col-md-4.col-12
+              +poster(event)
+
+        a.more-events(href='/customers') 查看更多服务案例
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
     script.
@@ -181,3 +164,20 @@ html
         maxGlare: .1,
         scale: 1.02
       })
+    //- TODO: need sign
+    //- script(src="//res.wx.qq.com/open/js/jweixin-1.0.0.js")
+    //- script.
+    //-   wx.ready(function(){
+    //-     wx.onMenuShareTimeline({
+    //-       title: "多会 - 你的专属活动平台",
+    //-       desc: "多会为主办方提供技术支持，帮助主办方建设属于自己的活动平台。现在注册，可获得专属的活动小程序。",
+    //-       link: "https://duohui.co",
+    //-       imgUrl: "https://duohui.co/img/thumbnail.png"
+    //-     })
+    //-     wx.onMenuShareAppMessage({
+    //-       title: "多会 - 你的专属活动平台",
+    //-       desc: "多会为主办方提供技术支持，帮助主办方建设属于自己的活动平台。现在注册，可获得专属的活动小程序。",
+    //-       link: "https://duohui.co",
+    //-       imgUrl: "https://duohui.co/img/thumbnail.png"
+    //-     })
+    //-   })

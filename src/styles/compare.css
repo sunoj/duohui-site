@@ -1,44 +1,44 @@
-.contrast .product{
+.compare .product{
   border: 1px solid #DFDFDF;
   padding: 0;
   border-radius: 8px;
   margin-bottom: 20px;
 }
 
-.contrast .title{
+.compare .title{
   padding: 12px;
   text-align: center;
   background-color: #F4F4F4;
   border-radius: 8px 8px 0 0;
 }
 
-.contrast .title h2{
+.compare .title h2{
   margin: 10px;
 }
 
-.contrast .content h2{
+.compare .content h2{
   text-align: center;
   font-size: 30px;
 }
 
-.contrast .content h2 span{
+.compare .content h2 span{
   font-size: .65em;
   padding-left: .35em;
 }
 
-.contrast .content ul{
+.compare .content ul{
   padding: 0 35px 30px 65px;
   min-height: 205px;
 }
 
-.contrast .content ul li{
+.compare .content ul li{
   position: relative;
   list-style: none;
   padding: 8px 0;
   font-size: 15px;
 }
 
-.contrast .content ul li:before{
+.compare .content ul li:before{
   content: '';
   position: absolute;
   top: 50%;
@@ -47,11 +47,28 @@
   width: 17px;
   height: 13px;
   margin-top: -7px;
-  background-image: url("/static/img/icon/check.png");
+  background-image: url("/img/icon/check.png");
 }
 
-.contrast .content ul li.gray:before{
-  background-image: url("/static/img/icon/check_gray.png");
+.compare .content ul li.gray:before{
+  background-image: url("/img/icon/check_gray.png");
+}
+
+.compare .product .action {
+  text-align: center;
+  padding-bottom: 24px;
+  display: flex;
+  padding: 12px 18px;
+  background: #f4f4f4;
+}
+
+.compare .product .action .btn{
+  margin: 6px;
+  padding: 6px 12px;
+  line-height: 26px;
+  font-size: 16px;
+  flex: 1;
+  background: #fff;
 }
 
 .quota .group{
@@ -77,18 +94,20 @@
   padding: 35px 20px;
 }
 
+.quota .group.calc .line p{
+  display: inline-block;
+  margin: 0;
+}
+
 .quota .group.calc select{
   background-color: #0DAFFF;
   border: 2px solid #06A3F1;
   color: #fff;
   padding: 6px 10px;
   border-radius: 6px;
-  margin: 0 10px;
+  margin: 10px;
   font-size: 22px;
-}
-
-.quota .group.calc select:focus{
-  outline: none;
+  transition: .3s all;
 }
 
 .quota .group.calc .answer span,
@@ -141,8 +160,8 @@
   float: right;
   width: 50%;
   text-align: right;
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 26px;
+  line-height: 60px;
   font-weight: bold;
 }
 
@@ -160,7 +179,6 @@
 }
 
 .quota .group .line .left pre{
-  padding-top: 5px;
   font-size: 13px;
   color: #888;
 }
@@ -184,8 +202,8 @@
 }
 
 .quota .total .item-title{
-  font-size: 22px;
-  line-height: 38px;
+  font-size: 24px;
+  line-height: 60px;
 }
 
 .function .item{
@@ -198,10 +216,11 @@
 
 .function .item .checkbox{
   position: absolute;
-  right: 20px;
-  top: 25px;
-  height: 56px;
+  right: 10px;
+  top: 50%;
+  height: 42px;
   width: 90px;
+  margin-top: -21px;
 }
 
 .function .answer p{
@@ -218,7 +237,7 @@
 }
 
 .help a.btn{
-  margin-right: 20px;
+  margin-right: 12px;
   padding: 6px 20px;
 }
 
@@ -226,9 +245,40 @@
   color: #4893FF;
   font-size: 25px;
   vertical-align: middle;
-  margin: 0 20px;
+  margin: 0 12px;
 }
 
 .help p.small{
   padding-top: 10px;
+}
+
+.minitoggle{
+  width: 80px;
+  height: 42px;
+}
+.minitoggle .toggle-handle{
+  width: 34px;
+  height: 34px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .quota .group.calc .line p{
+    display: block;
+  }
+
+  .quota .group.calc .answer .products{
+    margin-bottom: 10px;
+  }
+  .products .product{
+    margin: 10px;
+    margin-left: 0;
+  }
+  .function .item p{
+    max-width: 75%;
+  }
+
+  .section.help .phone{
+    font-size: 24px;
+  }
 }

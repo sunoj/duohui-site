@@ -2,9 +2,12 @@ var gulp = require('gulp');
 var preprocess = require('gulp-preprocess');
 var browserSync = require("browser-sync").create();
 var pug = require('gulp-pug');
+var del = require('del');
+var rsync = require('gulp-rsync');
 
 gulp.task('html', function() {
   gulp.src('./src/*.pug')
+    .pipe(preprocess({ context: { curtime: Date.now() } }))
     .pipe(pug())
     .pipe(gulp.dest('./dist/'))
 });
@@ -23,18 +26,21 @@ gulp.task('css', function() {
 
 gulp.task('static', function() {
   gulp.src('./static/**/*.*')
-    .pipe(gulp.dest('./dist/static'))
+    .pipe(gulp.dest('./dist/'))
 });
 
 gulp.task('serve', function(done) {
   browserSync.init({
     server: {
-      baseDir: './dist'
-    }
+      baseDir: './dist',
+      serveStaticOptions: {
+        extensions: ['html'] // pretty urls
+      }
+    },
+    
   });
   done();
 })
-
 
 gulp.task('reload', function (done) {
   setTimeout(function(){
@@ -50,4 +56,33 @@ gulp.task('dev', ['scripts', 'css', 'html', 'static', 'serve'], function(cb) {
   gulp.watch('./static/**/*.*', ['static']);
 
   gulp.watch('./dist/**/*.*', ['reload']);
+});
+
+gulp.task('clean', () => del(['dist/*'], { dot: true }));
+
+gulp.task('build', ['scripts', 'css', 'html', 'static'])
+
+function deploy(target) {
+  return gulp.src(['dist/**/*.*'])
+    .pipe(rsync({
+      root: './dist',
+      username: 'deploy',
+      hostname: `${target}.tinyservices.net`,
+      destination: '/home/deploy/www/duohui-web',
+      incremental: true
+    }))
+}
+
+gulp.task('sandbox', function () {
+  return deploy('sandbox')
+});
+
+gulp.task('deploy', function () {
+  return deploy('1').pipe(rsync({
+    root: './dist',
+    username: 'deploy',
+    hostname: '3.tinyservices.net',
+    destination: '/home/deploy/www/duohui-web',
+    incremental: true
+  }))
 });

@@ -18,9 +18,9 @@ html
           h1 选择适合的多会产品
           p 多会为不同的应用场景设计了专属的产品方案，请根据您的应用场景选择适合的多会产品。
         .action
-          a.btn(href='#') 联系销售
-          a.btn.solid(href='#') 帮我推荐
-    .section.contrast.white-bg
+          a.btn(href="javascript:void(0)" onclick="_MEIQIA('showPanel')") 联系销售
+          a.btn.solid(href='#price-cal') 帮我推荐
+    .section.compare.white-bg
       .container
         h1.chtitle 对比多会产品
         .columns
@@ -30,123 +30,142 @@ html
                 h2 标准版
                 p 适合低频小型活动
               .content
-                h2 免费
+                h2 99
+                  span 元每年
                 ul
-                  li.gray 每月可发布三个活动
-                  li.gray 每个活动最多可报名100人
+                  li 可发布<strong>无限</strong>个活动
+                  li.gray 每个活动最多可报名300人
                   li 每月免费赠送100条短信额度
                   li 微信提现免费
-                  li 支付手续费为1元+1%
+                  li 免费票完全免费
+                  li 付费票手续费为1元+1%
                   li.gray 展示多会品牌
+              .action
+                a.btn.std(href="/standard") 选择标准版
+              
           .column.col-md-4.col-12
             .product
               .title
                 h2 高级版
                 p 适合经常举办中小型活动
               .content
-                h2 ￥999
-                  span 每年
+                h2 999
+                  span 元每年
                 ul
                   li 可发布<strong>无限</strong>个活动
                   li 每个活动最多可报名<strong>无限</strong>人
                   li 每月免费赠送 <strong>500</strong> 条短信额度
                   li 微信提现免费
-                  li 支付手续费为 <strong>1%</strong> 
+                  li 免费票完全免费
+                  li 付费票手续费为 <strong>1%</strong> 
                   li.gray 展示多会品牌
+              .action
+                a.btn.premier(href="/prime") 选择高级版
+
           .column.col-md-4.col-12
             .product
               .title
                 h2 企业版
                 p 适合专业品牌主办方
               .content
-                h2 ￥2999
-                  span 起每年
+                h2 4999
+                  span 元每年
                 ul
                   li 可发布<strong>无限</strong>个活动
                   li 每个活动最多可报名<strong>无限</strong>人
                   li 每月免费赠送 <strong>1000</strong> 条短信额度
                   li 无需提现，<strong>实时到帐</strong>
+                  li 免费票完全免费                  
                   li 支付手续费为 <strong>0.6%</strong>（渠道收取）
                   li 隐藏多会品牌
+              .action
+                a.btn.mini(href="/mini") 小程序版
+                a.btn.wechat(href="/wechat") 服务号版
+
     .section.quota
       .container
-        h1.chtitle 根据用量为我推荐产品
+        h1#price-cal.chtitle 根据用量为我推荐产品
         .columns
           .column.col-md-12.col-12
             .group.calc
               .line.hr
-                p 
-                  | 我们每个月举办
+                p 我们每个月举办
                   select(name="calc_time")
-                    option(value="1") 1~3
-                    option(value="3") 3~10
-                    option(value="10") 10+
-                  | 场活动，平均每场有
+                    option(value="1") 1
+                    option(value="3", selected) 2~4
+                    option(value="7") 5~10
+                    option(value="20") 10+
+                  | 场活动，
+                p 平均每场有
                   select(name="calc_people")
-                    option(value="100") 100
-                    option(value="500") 500
-                    option(value="1000") 1000
-                    option(value="3000") 3000+
-                  | 人参与，人均票价为
+                    option(value="25") 10~50
+                    option(value="75", selected) 50~100
+                    option(value="300") 100~500
+                    option(value="750") 500~1000
+                    option(value="3000") 1000+
+                  | 人参与，
+                p 人均票价为
                   select(name="calc_price")
-                    option(value="10") 10
-                    option(value="50",selected) 50
-                    option(value="100") 100
-                    option(value="300") 300+
+                    option(value="0") 0
+                    option(value="25") 10~50
+                    option(value="75", selected) 50~100
+                    option(value="300") 100~500
+                    option(value="1000") 500+
                   | 元。
               .line.answer
-                p
-                  | 我们推荐您使用
-                  span.clac_product
-                    a.btn.product.premier(href="#") 多会高级版
-                  | 对比其他活动平台，预计每月可以节省
-                  span.clac_save 286.75
-                  | 元！
+                p 我们推荐您使用
+                .products
+                  a.btn.product.std(href="#") 多会标准版
+                  a.btn.product.premier(href="#", style="display:inline-block;") 多会高级版
+                  a.btn.product.enterprise(href="#") 多会企业版
+                p 对比其他活动平台，预计每月可以节省
+                span.clac_save --
+                | 元！
         .columns
           .column.col-md-6.col-12.byus
             .group.byus
               h3.group-title.line 多会成本预计
-              .line.hr.clear
+              .line.hr.clear(data-item="poundage")
                 .left
                   h4.item-title 交易手续费
-                  pre 100x2x50x1%=
-                .right ￥100
-              .line.hr.clear
+                  pre.exp --
+                .right.result --
+              .line.hr.clear(data-item="fee_per_month")
                 .left
                   h4.item-title 月费
-                  pre 999/12=
-                .right ￥83.25
-              .line.hr.clear
+                  pre.exp --
+                .right.result --
+              .line.hr.clear(data-item="sms")
                 .left
                   h4.item-title 短信费
-                  pre max(2x100-500, 0)x0.1=
-                .right ￥0
-              .line.total.clear
+                  pre.exp --
+                .right.result --
+              .line.total.clear(data-item="total")
                 .left
                   h4.item-title 总计
-                .right ￥183.25
+                .right.result --
           .column.col-md-6.col-12.byother
             .group.byother
               h3.group-title.line 活动行成本预计
-              .line.hr.clear
+              .line.hr.clear(data-item="poundage")
                 .left
                   h4.item-title 交易手续费
-                  pre 100x2+100x2x50x2.5%=
-                .right.red ￥450
-              .line.hr.clear
+                  pre.exp --
+                .right.result --
+              .line.hr.clear(data-item="fee_per_month")
                 .left
                   h4.item-title 月费
-                  pre 0=
-                .right ￥0
-              .line.hr.clear
+                  pre.exp --
+                .right.result --
+              .line.hr.clear(data-item="sms")
                 .left
                   h4.item-title 短信费
-                  pre 2x100x0.1=
-                .right.red ￥20
-              .line.total.clear
+                  pre.exp --
+                .right.result --
+              .line.total.clear(data-item="total")
                 .left
                   h4.item-title 总计
-                .right.red ￥470
+                .right.result --
     .section.function.white-bg
       .container
         h1.chtitle 根据功能需求为我推荐产品
@@ -156,58 +175,59 @@ html
               .item
                 h3 资金实时到帐，无需提现
                 p 使用自有的收款账号，费率更低，实时到帐。
-                .checkbox.js-toggle(data-cantuse='premier')
+                .checkbox.js-toggle(data-cantuse='std,premier')
             .column.col-md-6.col-12
               .item
                 h3 独立品牌展示
                 p 隐藏多会品牌，完整独立的品牌展示。
-                .checkbox.js-toggle(data-cantuse='premier')
+                .checkbox.js-toggle(data-cantuse='std,premier')
           .columns
             .column.col-md-6.col-12
               .item
                 h3 活动开始短信提醒
                 p 在活动开始前向参与者群发短信提醒。
-                .checkbox.js-toggle(data-cantuse='mini')
+                .checkbox.js-toggle(data-cantuse='')
             .column.col-md-6.col-12
               .item
                 h3 离线快速签到
                 p 提供专用签到 APP，没有网络同样快速签到。
-                .checkbox.js-toggle(data-cantuse='mini,service')
+                .checkbox.js-toggle(data-cantuse='')
           .columns
             .column.col-md-6.col-12
               .item
                 h3 在线选座
                 p 上传座位表，购票时可直接在线选座。
-                .checkbox.js-toggle(data-cantuse='premier,mini,service')
+                .checkbox.js-toggle(data-cantuse='std')
             .column.col-md-6.col-12
               .item
                 h3 报名时关注公众号
                 p 生产专属报名二维码，先关注后报名。
-                .checkbox.js-toggle(data-cantuse='premier,mini,service')
+                .checkbox.js-toggle(data-cantuse='premier,mini,std')
           .columns
             .column.col-md-6.col-12
               .item
                 h3 子账号权限管理
                 p 为其他团队成员创建子账号，设置管理权限。
-                .checkbox.js-toggle(data-cantuse='premier,mini,service')
+                .checkbox.js-toggle(data-cantuse='std')
             .column.col-md-6.col-12
               .item
                 h3 分渠道统计
                 p 创建活动发布渠道，设置渠道专属票，生成统计。
-                .checkbox.js-toggle(data-cantuse='premier,mini,service')
+                .checkbox.js-toggle(data-cantuse='std')
         .answer
           p 以下产品符合您选择的功能需求：
           .products
-            a.btn.product.premier(href="#") 多会高级版
-            a.btn.product.mini(href="#") 多会活动小程序
-            a.btn.product.service(href="#") 多会活动服务号
+            a.btn.product.std(href="/standard") 多会标准版
+            a.btn.product.premier(href="/prime") 多会高级版
+            a.btn.product.mini(href="/mini") 多会活动小程序
+            a.btn.product.wechat(href="/wechat") 多会活动服务号
     .section.help
       .container
-        h2 还未决定？我们的活动专家可以帮助你
+        h1.chtitle 还未决定？我们的活动专家可以帮助你
         p
           a.btn 在线咨询
           | 或致电
-          span 021 6064 6046
+          span.phone 021 6064 6046
         p.small 周一至周六 9:00 至 21:00
 
     include partials/_footer.pug
@@ -217,6 +237,10 @@ html
         $('.js-toggle').minitoggle();
         $('.js-toggle').on("toggle", function(e){
           selectFunction();
+        });
+        calcPrice();
+        $('.quota .calc select').on('change', function(){
+          calcPrice();
         });
       });
       Array.prototype.unique = function(){
@@ -230,15 +254,132 @@ html
         }
         return res;
       }
+      var formatTemplate = function(data, tmpl) {  
+        var format = {  
+            name: function(x) {  
+              return x ; 
+            }  
+        };  
+        return tmpl.replace(/{(\w+)}/g, function(m1, m2) {  
+            if (!m2)  
+              return "";  
+            return (format && format[m2]) ? format[m2](data[m2]) : data[m2];  
+        });
+      }
       function selectFunction() {
         var selected = [];
         $(".function .checkers .minitoggle.active").each(function() {
           var data = $(this).parent('.js-toggle').data('cantuse').split(',');
-          selected = selected.concat(data);
+          if (data[0] != '') {
+            selected = selected.concat(data);
+          }
         });
         selected = selected.unique();
-        $(".function .answer .products .product").css('display','inline-block');
+        $(".function .answer .products .product").removeClass('unable');
         for (var i=0;i<selected.length;i++) {
-          $(".function .answer .products .product."+selected[i]).css('display','none');
+          $(".function .answer .products .product."+selected[i]).addClass('unable');
         };
+      }
+      function calcPrice(){
+        var input = {
+          time : $('.quota .calc select[name=calc_time]').val(),
+          people : $('.quota .calc select[name=calc_people]').val(),
+          price : $('.quota .calc select[name=calc_price]').val(),
+          isfree: ($('.quota .calc select[name=calc_price]').val() > 0 ? 1: 0)
+        }
+        var feeRates = {
+          'std':{
+            expression :{
+              poundage: '{people}x{time}x{isfree}+{people}x{time}x{price}x1%',
+              fee_per_month: '99/12',
+              sms: '({time}*{people}-100)*0.1'
+            },
+            result:{
+              poundage: '{people}*{time}*{isfree}+{people}*{time}*{price}*0.01',
+              fee_per_month: '99/12',
+              sms: '({time}*{people}-100)*0.1'
+            }
+          },
+          'premier':{
+            expression :{
+              poundage: '{people}x{time}x{price}x1%',
+              fee_per_month: '999/12',
+              sms: '({time}*{people}-500)*0.1'
+            },
+            result:{
+              poundage: '{people}*{time}*{price}*0.01',
+              fee_per_month: '999/12',
+              sms: '({time}*{people}-500)*0.1'
+            }
+          },
+          'enterprise':{
+            expression :{
+              poundage: '{people}x{time}x{price}x0.6%',
+              fee_per_month: '4999/12',
+              sms: '({time}*{people}-1000)*0.1'
+            },
+            result:{
+              poundage: '{people}*{time}*{price}*0.006',
+              fee_per_month: '4999/12',
+              sms: '({time}*{people}-1000)*0.1'
+            }
+          },
+          'other':{
+            expression:{
+              poundage: '{people}x{time}x{isfree}+{people}x{time}x{price}x2.5%',
+              fee_per_month: '0',
+              sms: '{time}x{people}x0.1'
+            },
+            result:{
+              poundage: '{people}*{time}*{isfree}+{people}*{time}*{price}*0.025',
+              fee_per_month: '0',
+              sms: '{time}*{people}*0.1'
+            }
+          }
+        };
+        var min_data = {type: null,total: 9999999}; //最小方案
+        $.each(feeRates,function(service,item){
+          // 循环：公式，表达式
+          $.each(item, function(type,collect){
+            var total = 0;
+            for(exp in collect){
+              // 单价表达式
+              collect[exp] = formatTemplate(input, collect[exp]);
+              // 计算单价，>0
+              if(type=='result'){
+                eval(collect[exp]) <= 0 ? collect[exp] = 0 : collect[exp] = eval(collect[exp]);
+                total = total + collect[exp];
+              }
+            };
+            if(type=='result'){
+              // 计算金额总数
+              collect['total'] = total;
+              // 比较大小，记录最小方案
+              if(total < min_data.total){
+                min_data.total = total;
+                min_data.type = service;
+              }
+            }
+            console.log('collect', service, collect)
+          });
+        });
+
+        // dom产品
+        $(".quota .answer .products .product").css('display','none');
+        $(".quota .answer .products ."+min_data.type).css('display','inline-block');
+        // dom节省价格
+        var cacl_save = feeRates.other.result.total - min_data.total;
+        $(".clac_save").text(cacl_save.toFixed(0));
+        // dom自家方案最低价
+        $(".quota .byus .line[data-item]").each(function(){
+          var data_item = $(this).data('item');
+          $(this).find('.exp').text(feeRates[min_data.type]['expression'][data_item]+"=");
+          $(this).find('.result').text("￥"+feeRates[min_data.type]['result'][data_item].toFixed(0) );
+        });
+        // dom活动行方案
+        $(".quota .byother .line[data-item]").each(function(){
+          var data_item = $(this).data('item');
+          $(this).find('.exp').text(feeRates['other']['expression'][data_item]+"=");
+          $(this).find('.result').text("￥"+feeRates['other']['result'][data_item].toFixed(0));
+        });
       }
