@@ -1,0 +1,56 @@
+.activity{
+    overflow: hidden;
+}
+
+.activity .container{
+    position: relative;
+}
+
+.activity .container>div{
+    position: relative;
+    z-index: 5;
+}
+
+.activity .container .dock{
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: -200px;
+    z-index: 1;
+    background-color: #fff;
+    width: 112%;
+    margin-left: -6%;
+    height: 350px;
+    transform: perspective(1200px) rotateX(70deg);
+    z-index: 0;
+}
+
+.activity .introduct{
+    padding-top: 15px;
+    padding-bottom: 100px;
+}
+
+.activity .introduct li{
+    list-style-position: inside;
+    font-size: 14px;
+    line-height: 2em;
+}
+
+.activity .tv{
+    position: absolute !important;
+    right: 0;
+    top: 0;
+    height: 356px;
+    width: 566px;
+    margin: 16px;
+    box-sizing: border-box;
+    padding: 9px 6px 35px 5px;
+    background: url(/img/onsite/tv.png);
+    background-size: 100% 100%;
+}
+
+.activity .tv img{
+    width: 100%;
+    height: 100%;
+}
