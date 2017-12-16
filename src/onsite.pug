@@ -12,6 +12,10 @@ html
     link(rel='stylesheet', type='text/css', href='./styles/onsite.css')
     meta(name='msapplication-tap-highlight', content='no')
   body
+    - 
+      var product = {
+        code: "onsite"
+      }
     include partials/_header.pug
 
     .section.product-head
@@ -36,6 +40,22 @@ html
           li 可自定义大屏幕背景
           li 支持填写姓名签到
           li 自动获取微信头像昵称
+        .action
+          a.btn.contact(href="javascript:void(0)") 查看演示
+          a.btn.solid.try(href='/app/') 立即试用
+        .tv
+          img(src="/img/onsite/preview_lottery.gif")
+        .dock
+
+    .section.activity
+      .container
+        .hello
+          h1 现场抽奖
+          p 活跃现场气氛，点击即用。
+        ul.introduct
+          li 可定制的抽奖方案
+          li 现实中奖人的任何信息
+          li 自动获取入场用户
         .action
           a.btn.contact(href="javascript:void(0)") 查看演示
           a.btn.solid.try(href='/app/') 立即试用
