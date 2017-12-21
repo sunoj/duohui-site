@@ -59,8 +59,8 @@ html
         if product.code == 'checkin'
           .column.col-md-4.col-12: .save.pricing
             h3.title 小型活动签到
-            .price-tag 免费
-            .price-desc 小型活动可使用多会签到应用或公众号完成现场签到，完全免费。
+            .price-tag 免费*
+            .price-desc 小型活动可使用多会签到应用或公众号完成现场签到。
         else
           a(href="/compare#price-cal"): .column.col-md-4.col-12: .save.pricing
             h3.title= product.price.save_title || "预计可节省"
@@ -68,7 +68,8 @@ html
             .save-bg(style="height: " + (100 - product.price.save_percent) + "%")
             .price-tag= product.price.save_percent + "%"
             .price-desc 相比其他活动平台，多会可大幅节省成本。不仅更好，而且更便宜！
-    
+      if product.code == 'checkin'
+        p.tips(style="font-size: 14px; color: #666; text-align: right; margin-top: 24px;") * 签到 App 和功能无需额外付费，但需购买标准版、高级版或专业版账号方可使用。
     .section.product-faq.product-cases: .container
       h1#faq.chtitle 常见问题
       .columns
