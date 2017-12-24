@@ -1,0 +1,189 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
+    title 多会企业版 - 专属线下活动平台
+    meta(name='description', content='多会企业版帮助企业用户快速配置专属的活动平台。通过微信小程序、微信服务号和网页等多种方式提供服务。收款实时到账，费用业界最低。活动报名签到体验更佳，效率更高。')
+    
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="多会企业版")
+    meta(property="og:description" content="多会企业版帮助企业用户快速配置专属的活动平台。通过微信小程序、微信服务号和网页等多种方式提供服务。收款实时到账，费用业界最低。活动报名签到体验更佳，效率更高。")
+    meta(property="og:image" content="https://duohui.co/img/thumbnail.png")
+    meta(property="og:url" content="https://duohui.co/enterprise")
+
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/enterprise.css?v=<!--@echo curtime -->')
+    meta(name='msapplication-tap-highlight', content='no')
+  body.enterprise
+    include partials/_mixins.pug
+    .header.section
+      .container.clear
+        .logo
+          a(href="/"): img(src='/img/logo.png', srcset='/img/logo@2x.png 2x', alt='多会')
+          h1 企业版
+        ul.nav.clear
+          a(href='#features')
+            li 功能特征
+          a(href='#pricing')
+            li 价格费用
+          a(href='#contact')
+            li 联系咨询
+    
+    .section.hero
+      .container
+        .slogan
+          h1 专属线下活动平台
+          h2 多会企业版为主办方提供独立品牌的专属活动平台
+        .feature-icons
+          .columns
+            .column.col-2.margin
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-mini', '活动微信小程序')
+              h4 活动小程序
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-wechat-service', '活动微信服务号')
+              h4 微信服务号
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-payment', '独立收款渠道')
+              h4 独立收款渠道
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-label', '融合品牌风格')
+              h4 融合品牌风格
+        .action
+          a.color-btn.yellow(href='/app/') 立即试用
+          a.color-btn.blue(href="javascript:void(0)" onclick="_MEIQIA('showPanel')") 联系销售
+    
+    .section.features
+      .container
+        h2#features.section-title 企业级的线下活动解决方案
+        p.section-desc 多会企业版帮助企业用户快速配置专属的活动平台。通过微信小程序、微信服务号和网页等多种方式提供服务。收款实时到账，费用业界最低。活动报名签到体验更佳，效率更高。
+
+        .columns.features-list
+          .column.col-6
+            .icon: +icon('/img/enterprise/', 'icon-mini', '活动微信小程序')
+            h3 独立活动小程序
+            p 多会企业版不仅完全隐藏多会品牌信息，还可配置匹配品牌风格的色彩和徽标。甚至在短信和邮件中，也是您的品牌信息。
+          .column.col-6
+            .icon: +icon('/img/enterprise/', 'icon-wechat-service', '活动微信服务号')
+            h3 结合微信服务号
+            p 多会企业版不仅完全隐藏多会品牌信息，还可配置匹配品牌风格的色彩和徽标。甚至在短信和邮件中，也是您的品牌信息。
+          .column.col-6
+            .icon: +icon('/img/enterprise/', 'icon-payment', '独立收款渠道')
+            h3 实时专属收款渠道
+            p 多会企业版不仅完全隐藏多会品牌信息，还可配置匹配品牌风格的色彩和徽标。甚至在短信和邮件中，也是您的品牌信息。
+          .column.col-6
+            .icon: +icon('/img/enterprise/', 'icon-label', '融合品牌风格')
+            h3 融合品牌风格
+            p 多会企业版不仅完全隐藏多会品牌信息，还可配置匹配品牌风格的色彩和徽标。甚至在短信和邮件中，也是您的品牌信息。
+
+    .section.pricing.white-bg
+      .container
+        h2#pricing.section-title 简单的价格，专业的产品和服务
+        .price-box
+          .head 多会企业版
+          .body
+            p 包括微信小程序、公众号和网页版，可接入微信支付、支付宝和 PayPal。
+            .price ￥
+              span.value 9,999
+              span.pre-year 每年
+            a.btn(href="/app/#signup") 免费试用
+        .feature-icons
+          .columns
+            .column.col-2.margin
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-infinity', '活动场数无限')
+              h4 活动场数无限
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-auth', '子账号权限管理')
+              h4 子账号权限管理
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-refund', '30 天无理由退款')
+              h4 30 天无理由退款
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-call', '专属客户经理支持')
+              h4 专属客户经理支持
+    
+    .section.contact
+      .container
+        h2#contact.section-title 与我们联系
+        p.section-desc 需要了解更多关于多会企业版的信息？我们可以根据您的需求为您提供专属解决方案。
+        .contact-box
+          h3 咨询多会企业版服务
+          form(action="https://i.duotai.co/forms/xzdlo" method="post" accept-charset="UTF-8")
+            dl.form-group
+              dt
+                label(for='form-name') 姓名
+              dd
+                input#form-name.form-control(type='text' name="name" placeholder="我们该怎么称呼您" required)
+            dl.form-group
+              dt
+                label(for='form-phone') 联系电话
+              dd
+                input#form-phone.form-control(type='text' name="phone" placeholder="请输入您的联系电话" required)
+            dl.form-group
+              dt
+                label(for='form-name') 公司
+              dd
+                input#form-name.form-control(type='text' name="name" placeholder="请输入您的公司名称" required)
+            dl.form-group
+              dt
+                label(for='form-project') 活动需求
+              dd
+                textarea#form-project.form-control(name="project" placeholder="请简单介绍一下您的活动需求，例如活动类型、规模和频次等")
+            .actions
+              button.color-btn.blue 提交咨询
+              p.tips 我们将在工作时间通过电话回复您的咨询
+
+    .section.self-host
+      .container
+        h2.section-title 多会企业独立部署版
+        p.section-desc 将多会企业版部署在自有的基础设施或云服务上。可确保数据的隐私性，同时可通过 API 和二次开发将多会企业版与自有业务模块融合。
+        .feature-icons
+          .columns
+            .column.col-2.margin
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-host', '独立部署')
+              h4 独立部署
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-secured-data', '数据私密')
+              h4 数据私密
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-custumization', '二次开发')
+              h4 二次开发
+            .column.col-2
+              .icon: +icon('/img/enterprise/', 'icon-training', '培训服务')
+              h4 培训服务
+        .action
+          a.color-btn.black(href="javascript:void(0)" onclick="_MEIQIA('showPanel')") 联系销售
+
+    .section.customers.white-bg
+      .container
+        h2.section-title 与众多行业领袖一起使用多会
+        .logowall
+          .columns.i2.clients
+            .column.col-md-6.col-12
+              img(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
+            .column.col-md-6.col-12
+              img(src='./img/partners/clients-2.png', srcset='./img/partners/clients-2@2x.png 2x', alt='多会客户列表')
+            .column.col-md-6.col-12
+              img(src='./img/partners/clients-3.png', srcset='./img/partners/clients-3@2x.png 2x', alt='多会客户列表')
+            .column.col-md-6.col-12
+              img(src='./img/partners/clients-4.png', srcset='./img/partners/clients-4@2x.png 2x', alt='多会客户列表')
+            .column.col-md-6.col-12
+              img(src='./img/partners/clients-5.png', srcset='./img/partners/clients-5@2x.png 2x', alt='多会客户列表')
+            .column.col-md-6.col-12
+              img(src='./img/partners/clients-6.png', srcset='./img/partners/clients-6@2x.png 2x', alt='多会客户列表')
+            .column.col-md-6.col-12
+              img(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
+            .column.col-md-6.col-12
+              img(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
+
+        h2.section-title 免费获取 15 天多会企业版试用
+        .action
+          a.color-btn.yellow(href='/app/') 立即试用
+          a.color-btn.blue(href="javascript:void(0)" onclick="_MEIQIA('showPanel')") 联系销售
+
+    include partials/_footer.pug
