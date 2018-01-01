@@ -2,7 +2,7 @@
   .container.clear
     .logo
       a(href="/"): img(src='/img/logo.png', srcset='/img/logo@2x.png 2x', alt='多会')
-    ul.nav.clear
+    ul.nav.main-nav.clear
       .more
         .dropdown.is-hoverable
           a(href='/compare')
@@ -18,11 +18,11 @@
                 a.dropdown-item(href='/checkin' class=(productCode == 'checkin') ?'is-active': '') 极速签到
                 hr.dropdown-divider
                 a.dropdown-item(href='/compare') 对比产品
-
         a(href='/customers')
           li 服务案例
         a(href='/support')
           li 帮助支持
+    ul.nav.clear
       a(href='/app/')
         li 注册
       a(href='/app/')
