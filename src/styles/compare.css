@@ -261,6 +261,15 @@
   height: 34px;
 }
 
+.compare .product h2 {
+  margin: 24px 0 12px;
+}
+
+.compare .product .promotion{
+  margin-bottom: 24px;
+  color: #666;
+}
+
 
 @media screen and (max-width: 768px) {
   .quota .group.calc .line p{

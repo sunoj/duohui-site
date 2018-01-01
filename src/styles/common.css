@@ -121,21 +121,25 @@ strong{
 }
 
 .header{
-	padding: 30px 0;
+  background: #fff;
+  padding: 20px 0 22px;
+  border-bottom: 1px solid #eee;
 }
 
 .header .logo{
-	float: left;
+  float: left;
+  line-height: 0;
 }
 
 .header .logo img{
-	height: 52px;
+	height: 42px;
 }
 
 .header .nav{
 	float: right;
 	list-style: none;
-	margin: 8px 0;
+  margin: 0;
+  line-height: 0;
 }
 
 .header .nav .more{
@@ -155,6 +159,7 @@ strong{
 	border-radius: 6px;
   font-weight: bold;
   color: #444;
+  line-height: 22px;
 }
 
 .header .nav li:hover{
@@ -170,8 +175,7 @@ strong{
 	padding-bottom: 60px;
 }
 .intro h1{
-	font-size: 32px;
-	padding-bottom: 10px;
+  font-size: 42px;
 }
 .intro p{
 	font-size: 16px;
@@ -507,3 +511,73 @@ a.dropdown-item.is-active {
 .is-hoverable > a li:hover{
   background: none !important;
 }
+
+  .price-box{
+    background: #1A8CFF;
+    border-radius: 6px;
+    color: #fff;
+    text-align: center;
+  }
+  .price-box .head{
+    background: #0066CC;
+    height: 54px;
+    line-height: 54px;
+    color: #fff;
+    border-radius: 6px 6px 0 0;
+    font-size: 20px;
+  }
+  .price-box .body{
+    padding: 12px 24px;
+  }
+  .price-box .price{
+    color: #eee;
+    font-size: 22px;
+  }
+  .price-box .value{
+    font-size: 40px;
+    margin: 0 4px;
+  }
+  .price-box .btn{
+    width: 100%;
+    color: #fff;
+    line-height: 28px;
+    margin: 24px 0 12px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+  }
+  .price-box.gray{
+    background: #32AAD1;
+  }
+  .price-box.gray .head{
+    background: #1A95BD;
+  }
+
+  .price-box.yellow{
+    background: #DB802E;
+  }
+  .price-box.yellow .head{
+    background: #C76C1C;
+  }
+  .compare .product .promotion, .price-box .promotion{
+    margin: 3px 0 6px;
+    text-align: center;
+  }
+  .compare .product .promotion .money, .price-box .promotion .money {
+    text-decoration: line-through;
+    font-size: 20px;
+  }
+  .compare .product .promotion .discount, .price-box .promotion .discount {
+    margin-left: 8px;
+    display: inline-block;
+    background: #ed4343;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 2px 6px;
+    font-weight: bold;
+    vertical-align: top;
+    line-height: 20px;
+    margin-top: 4px;
+  }
+  .price-box .pre-year{
+    margin-left: 6px;
+  }

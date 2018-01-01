@@ -147,39 +147,10 @@
   border-bottom: 1px solid #EEE;
   }
   .enterprise .pricing .price-box{
-    max-width: 320px;
     margin: 42px auto;
-    background: #1A8CFF;
-    border-radius: 4px;
-    color: #fff;
+    max-width: 320px;
   }
-  .enterprise .pricing .price-box .head{
-    background: #0066CC;
-    height: 54px;
-    line-height: 54px;
-    color: #fff;
-    border-radius: 4px 4px 0 0;
-    font-size: 20px;
-  }
-  .enterprise .pricing .price-box .body{
-    padding: 12px 18px;
-  }
-  .enterprise .pricing .price-box .price{
-    color: #eee;
-    font-size: 22px;
-  }
-  .enterprise .pricing .price-box .value{
-    font-size: 40px;
-    margin: 0 4px;
-  }
-  .enterprise .pricing .price-box .btn{
-    width: 100%;
-    background: #fff;
-    line-height: 32px;
-    margin-top: 18px;
-    border: none;
-  }
-
+  
 .enterprise .contact{
   /* border-bottom: 1px solid #EEE; */
   }

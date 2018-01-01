@@ -26,108 +26,27 @@
 
 .why .trait h2 {
   font-size: 20px;
-  padding: 10px 0;
+  padding: 0;
+  display: inline-block;
+  line-height: 72px;
+  margin: 6px 12px;
+  vertical-align: top;
 }
 
 .products {}
+  .products .learn-more{
+    float: right;
+    font-size: 16px;
+    padding: 6px 12px 5px;
+    background: #FFF;
+    color: #4893ff;
+    border-radius: 4px;
+    border: 1px solid;
+  }
+  .products .learn-more img{
+    margin-right: 12px;
+  }
 
-.products .columns {
-  margin-bottom: 20px;
-}
-
-.products .product {
-  border-radius: 14px;
-  box-sizing: border-box;
-  padding: 30px 25px;
-  color: #fff;
-  background-color: #3399D8;
-  position: relative;
-}
-
-.products .product::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-
-.products .product:hover {
-  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.3);
-}
-
-.products .product .btn {
-  padding: 6px 12px;
-  text-decoration: none;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  color: #fff;
-  margin-top: 10px;
-  transition: .3s all;
-  font-weight: normal;
-  background: transparent;
-  float: right;
-}
-
-.products .product .titlebox {
-  height: 40px;
-  line-height: 40px;
-}
-
-.products .product .titlebox img {
-  float: left;
-  margin-right: 15px;
-  height: 40px;
-}
-
-.products .product .titlebox h3 {
-  font-size: 26px;
-  margin: 0;
-}
-
-.products .product .titlebox h3 .enterprise {
-  font-size: 18px;
-  color: #fff;
-  border: 1px solid #fff;
-  display: inline-block;
-  padding: 3px 6px;
-  margin-left: 8px;
-  line-height: 24px;
-  vertical-align: middle;
-  border-radius: 4px;
-  margin-top: -4px;
-}
-
-.products .product h4 {
-  font-size: 20px;
-  line-height: 22px;
-  margin: 20px 0 12px;
-}
-
-.products .product p {
-  min-height: 63px;
-  line-height: 22px;
-}
-
-.products .product .price {
-  font-size: 30px;
-  vertical-align: middle;
-  font-weight: bold;
-  height: 36px;
-  float: left;
-  margin-top: 10px;
-}
-
-.products .product .price .unit {
-  font-size: 22px;
-  margin-left: 6px;
-}
-.products .learn-more{
-  float: right;
-  font-size: 16px;
-  padding: 6px 10px;
-  background: #4893ff;
-  color: #fff;
-  border-radius: 4px;
-}
 .partners {}
 
 .partners .fbox {

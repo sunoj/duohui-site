@@ -4,12 +4,12 @@ html
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=Edge')
     meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
-    title 多会 - 办活动从未如此轻松！
-    meta(name='description', content='通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
+    title 多会 - 新一代活动票务系统
+    meta(name='description', content='多会是新一代的活动票务系统。通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
     
     meta(property="og:type" content="website")
     meta(property="og:title" content="多会")
-    meta(property="og:description" content="多会为主办方提供技术支持，帮助主办方建设属于自己的活动平台。")
+    meta(property="og:description" content="新一代的活动票务系统")
     meta(property="og:image" content="https://duohui.co/img/thumbnail.png")
     meta(property="og:url" content="https://duohui.co/")
 
@@ -23,8 +23,8 @@ html
     .section.intro
       .container
         .hello
-          h1 您的专属活动平台
-          p 多会为主办方提供技术支持，帮助主办方建设属于自己的活动平台。
+          h1 新一代活动票务系统
+          p 多会是领先的活动票务系统，为线下活动提供报名售票、现场签到等技术解决方案。
         .action
           a.btn(href="javascript:void(0)" onclick="_MEIQIA('showPanel')") 联系销售
           a.btn.solid(href='/app/') 立即试用
@@ -34,15 +34,15 @@ html
         .columns
           .column.col-md-4.col-12.trait
             img(src='./img/why/features-icon-cheap.png', srcset='./img/why/features-icon-cheap@2x.png 2x')
-            h2 收费活动，就用多会
+            h2 成本更低
             ul
               li 手续费低至 0.6%，业界最低
               li 资金<strong>实时到账</strong> ，无需等待提现
-              li 支持支付宝，微信和 PayPal
+              li 支持支付宝，微信支付和 PayPal
               //- li 优惠券、渠道统计等高级功能
           .column.col-md-4.col-12.trait
             img(src='./img/why/features-icon-pro.png', srcset='./img/why/features-icon-pro@2x.png 2x')
-            h2 专业活动主办方的专业之选
+            h2 服务专业
             ul
               li 独立的品牌形象，隐藏多会品牌
               li 直接在您的公众号和网站完成购票
@@ -50,7 +50,7 @@ html
               //- li 自定义样式和通知邮件等
           .column.col-md-4.col-12.trait
             img(src='./img/why/features-icon-tech.png', srcset='./img/why/features-icon-tech@2x.png 2x')
-            h2 我们专注于提供技术服务
+            h2 技术领先
             ul
               //- li 多会不是活动平台，我们专注技术服务
               li 扎实的技术基础，<strong>领先的软硬件方案</strong>
@@ -59,65 +59,55 @@ html
     .section.products
       .container
         h1.chtitle 多会的产品
-          a(href="/compare"): span.learn-more 了解更多
-        .columns
-          .column.col-md-6.col-12
-            .product.shadow.js-tilt(style='background-color: #3399D8;')
-              .titlebox
-                img(src='./img/products/product-icon-duohui.png', srcset='./img/products/product-icon-duohui@2x.png 2x', alt='多会产品')
-                h3 标准版
-              h4 简单易用，轻松开始
-              p 多会是专业的活动小程序系统，通过多会轻松管理活动报名，在线售票收款，现场快速签到。
-              span.price 99
-                span.unit 元每年
-              a.fullsizelink(href='/standard')
-          .column.col-md-6.col-12
-            .product.shadow.js-tilt(style='background-color: #d2854f;')
-              .titlebox
-                img(src='./img/products/product-icon-duohui.png', srcset='./img/products/product-icon-duohui@2x.png 2x', alt='多会产品')
-                h3 高级版
-              h4 更多高级功能，提供强力支持
-              p 多会高级版为频繁举办活动的专业主办方设计。提供包括邀请函、渠道统计、短信邀请等高级功能。
-              .price
-                span 999
-                span.unit 元每年
-              a.fullsizelink(href='/prime')
+          a(href="/compare")
+            span.learn-more
+              img(src='./img/icon/compare-icon.png', srcset='./img/icon/compare-icon@2x.png 2x', alt='产品对比')
+              | 产品对比
         .columns
           .column.col-md-4.col-12
-            .product.shadow.js-tilt(style='background-color: #f36c6c;')
-              .titlebox
-                img(src='./img/products/product-icon-checkin.png', srcset='./img/products/product-icon-checkin@2x.png 2x', alt='多会产品')
-                h3 极速签到
-              h4 唯快不破，千人活动轻松搞定
-              p 多会是专业的活动小程序系统，通过多会轻松管理活动报名，在线售票收款，现场快速签到。
-              .price
-                span 499
-                span.unit 元每通道
-              a.fullsizelink(href='/checkin')
+            .product.price-box.gray
+              .head 标准版
+              .body
+                p 轻松易用。通过微信小程序、公众号和网页版快速售票。
+                .price ￥
+                  span.value 99
+                  span.pre-year 每年
+                .promotion
+                  span.money ￥199
+                  span.discount 新年特惠
+                .columns
+                  .column.col-6: a.btn(href="/standard") 了解详情
+                  .column.col-6: a.btn(href="/app/#signup") 免费试用
+            
           .column.col-md-4.col-12
-            .product.shadow.js-tilt(style='background-color: #6761A3;')
-              .titlebox
-                img(src='./img/products/product-icon-mini.png', srcset='./img/products/product-icon-mini@2x.png 2x', alt='多会产品')
-                h3 活动小程序
-                  span.enterprise 企业版
-              h4 一键生成专属微信小程序
-              p 多会是专业的活动小程序系统。通过多会轻松管理活动报名，在线售票收款，独立收款渠道。
-              .price
-                span 4999
-                span.unit 元每年
-              a.fullsizelink(href='/mini')
+            .product.price-box.yellow
+              .head 高级版
+              .body
+                p 更多高级功能。支持在线选座、优惠券和渠道统计等。
+                .price ￥
+                  span.value 999
+                  span.pre-year 每年
+                .promotion
+                  span.money ￥1,999
+                  span.discount 新年特惠
+                .columns
+                  .column.col-6: a.btn(href="/prime") 了解详情
+                  .column.col-6: a.btn(href="/app/#signup") 免费试用
           .column.col-md-4.col-12
-            .product.shadow.js-tilt(style='background-color: #4EB027;')
-              .titlebox
-                img(src='./img/products/product-icon-service.png', srcset='./img/products/product-icon-service@2x.png 2x', alt='多会产品')
-                h3 活动服务号
-                  span.enterprise 企业版
-              h4 报名即关注，观众变粉丝
-              p 使用多会活动服务号版本，结合微信服务号，生成活动二维码，扫码关注后再购票，让活动关注变为后续。
-              .price
-                span 4999
-                span.unit 元每年
-              a.fullsizelink(href='/wechat')
+            .product.price-box
+              .head 企业版
+              .body
+                p 独立微信小程序、公众号和网页版。微信支付、支付宝和 PayPal 实时到账。
+                .price ￥
+                  span.value 4,999
+                  span.pre-year 每年
+                .promotion
+                  span.money ￥9,999
+                  span.discount 新年特惠
+                .columns
+                  .column.col-6: a.btn(href="/enterprise") 了解详情
+                  .column.col-6: a.btn(href="/app/#signup") 免费试用
+
     .section.partners.white-bg
       .container
         h1.chtitle 多会的客户
