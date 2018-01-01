@@ -6,8 +6,8 @@
   border-radius: 4px;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.06);
   text-decoration: none;
-  font-weight: bold;
-  font-size: 22px;
+  font-weight: normal;
+  font-size: 18px;
   padding: 8px 32px;
 }
 
@@ -61,7 +61,7 @@
 .feature-icons h4{
   font-size: 18px;
   font-weight: normal;
-  margin: 12px 0;
+  margin: 12px 0 24px;
 }
 
 .enterprise .header{
@@ -82,7 +82,7 @@
 
   .enterprise .header .nav li {
     line-height: 22px;
-    color: #4E91F5;
+    font-weight: normal;
   }
 
   .enterprise .header .logo {
@@ -173,7 +173,6 @@
     margin: 24px 0;
   }
   .contact-box .color-btn{
-    font-size: 20px;
     padding: 12px 32px;
   }
   .contact-box .tips{
@@ -231,4 +230,49 @@
 .enterprise .section.footer{
   background: transparent !important;
   text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .enterprise .header .nav {
+    display: none;
+  }
+  .enterprise .header{
+    padding: 20px 0 !important;
+  }
+  .enterprise .header .logo img{
+    margin-top: 0;
+  }
+  .enterprise .hero .slogan h1{
+    font-size: 36px;
+  }
+  .enterprise .hero .slogan h2{
+    font-size: 20px;
+    line-height: 1.8;
+  }
+  .enterprise .section-title{
+    font-size: 22px;
+  }
+  .enterprise .section-desc{
+    font-size: 16px;
+  }
+  .enterprise .feature-icons h4{
+    font-size: 16px;
+  }
+  .enterprise .features .features-list h3{
+    font-size: 18px;
+  }
+  .enterprise .features .features-list p{
+    font-size: 14px;
+    min-height: 90px;
+  }
+  .color-btn + .color-btn{
+    margin-left: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .col-0{
+    width: 0;
+    padding: 0;
+  }
 }

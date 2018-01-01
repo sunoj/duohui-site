@@ -13,7 +13,7 @@ html
     meta(property="og:image" content="https://duohui.co/img/thumbnail.png")
     meta(property="og:url" content="https://duohui.co/enterprise")
 
-    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/enterprise.css?v=<!--@echo curtime -->')
     meta(name='msapplication-tap-highlight', content='no')
@@ -39,17 +39,17 @@ html
           h2 多会企业版为主办方提供独立品牌的专属活动平台
         .feature-icons
           .columns
-            .column.col-2.margin
-            .column.col-2
+            .column.col-md-2.col-0.margin
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-mini', '活动微信小程序')
               h4 活动小程序
-            .column.col-2
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-wechat-service', '活动微信服务号')
               h4 微信服务号
-            .column.col-2
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-payment', '独立收款渠道')
               h4 独立收款渠道
-            .column.col-2
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-label', '融合品牌风格')
               h4 融合品牌风格
         .action
@@ -95,17 +95,17 @@ html
             a.btn(href="/app/#signup") 免费试用
         .feature-icons
           .columns
-            .column.col-2.margin
-            .column.col-2
+            .column.col-md-2.col-0.margin
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-infinity', '活动场数无限')
               h4 活动场数无限
-            .column.col-2
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-auth', '子账号权限管理')
               h4 子账号权限管理
-            .column.col-2
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-refund', '30 天无理由退款')
               h4 30 天无理由退款
-            .column.col-2
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-call', '专属客户经理支持')
               h4 专属客户经理支持
     
@@ -146,17 +146,17 @@ html
         p.section-desc 将多会企业版部署在自有的基础设施或云服务上。可确保数据的隐私性，同时可通过 API 和二次开发将多会企业版与自有业务模块融合。
         .feature-icons
           .columns
-            .column.col-2.margin
-            .column.col-2
+            .column.col-md-2.col-0.margin
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-host', '独立部署')
               h4 独立部署
-            .column.col-2
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-secured-data', '数据私密')
               h4 数据私密
-            .column.col-2
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-custumization', '二次开发')
               h4 二次开发
-            .column.col-2
+            .column.col-md-2.col-6
               .icon: +icon('/img/enterprise/', 'icon-training', '培训服务')
               h4 培训服务
         .action
