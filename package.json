@@ -11,11 +11,13 @@
     "gulp-preprocess": "^2.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-rsync": "^0.0.8",
+    "gulp-shell": "^0.6.5",
     "jquery": "^3.2.1",
     "miniToggle": "untsop/miniToggle.js",
     "normalize.css": "^7.0.0",
     "primer-forms": "^2.0.2",
     "primer-layout": "^1.4.1",
+    "run-sequence": "^2.2.0",
     "tilt.js": "^1.2.0"
   }
 }

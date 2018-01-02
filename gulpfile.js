@@ -2,8 +2,10 @@ var gulp = require('gulp');
 var preprocess = require('gulp-preprocess');
 var browserSync = require("browser-sync").create();
 var pug = require('gulp-pug');
+var shell = require('gulp-shell');
 var del = require('del');
 var rsync = require('gulp-rsync');
+var runSequence = require('run-sequence');
 
 gulp.task('html', function() {
   gulp.src('./src/*.pug')
@@ -62,27 +64,31 @@ gulp.task('clean', () => del(['dist/*'], { dot: true }));
 
 gulp.task('build', ['scripts', 'css', 'html', 'static'])
 
-function deploy(target) {
+gulp.task('rsync', function () {
   return gulp.src(['dist/**/*.*'])
     .pipe(rsync({
       root: './dist',
       username: 'deploy',
-      hostname: `${target}.tinyservices.net`,
+      hostname: `2.tinyservices.net`,
       destination: '/home/deploy/www/duohui-web',
       incremental: true
     }))
-}
+})
 
 gulp.task('sandbox', function () {
   return deploy('sandbox')
 });
 
-gulp.task('deploy', function () {
-  return deploy('1').pipe(rsync({
-    root: './dist',
-    username: 'deploy',
-    hostname: '3.tinyservices.net',
-    destination: '/home/deploy/www/duohui-web',
-    incremental: true
-  }))
+gulp.task('sync_to_instances', function () {
+  return shell.task([
+    "ssh -t deploy@2.tinyservices.net ./plant-web-admin push duohui-web 10.105.117.198 10.105.113.208 10.154.47.36"
+  ])
+});
+
+gulp.task('deploy', function (cb) {
+  return runSequence(
+    'rsync',
+    'sync_to_instances',
+    cb
+  )
 });
