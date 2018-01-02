@@ -385,9 +385,6 @@ a.btn.product.enterprise:before{
     min-width: 0;    
   }
 	.header{
-		padding: 0;
-    padding-top: 20px;
-    padding-bottom: 0 !important;
 		height: auto;
   }
   .header .nav{
