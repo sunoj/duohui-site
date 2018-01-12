@@ -79,11 +79,7 @@ gulp.task('sandbox', function () {
   return deploy('sandbox')
 });
 
-gulp.task('sync_to_instances', function () {
-  return shell.task([
-    "ssh -t deploy@2.tinyservices.net ./plant-web-admin push duohui-web 10.105.117.198 10.105.113.208 10.154.47.36"
-  ])
-});
+gulp.task('sync_to_instances', shell.task("ssh -t deploy@2.tinyservices.net ./plant-web-admin push duohui-web 10.105.117.198 10.105.113.208 10.154.47.36"));
 
 gulp.task('deploy', function (cb) {
   return runSequence(
