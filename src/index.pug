@@ -31,6 +31,13 @@ html
     .section.why.white-bg
       .container
         h1.chtitle 为什么选择多会
+          a.tryout(href="https://wx.duohui.co/event/1161" target="_blank")
+            .dropdown.is-hoverable
+              span.learn-more
+                img(src='./img/icon/ticket-icon.png', srcset='./img/icon/ticket-icon@2x.png 2x', alt='体验购票')
+                | 体验购票
+              .dropdown-menu
+                img(src="./img/qrcode/try.jpg", alt="二维码")
         .columns
           .column.col-md-4.col-12.trait
             img(src='./img/why/features-icon-cheap.png', srcset='./img/why/features-icon-cheap@2x.png 2x')
@@ -134,9 +141,9 @@ html
         h1.chtitle 服务案例
         -
           var events = [
-            {"poster": "nicc.png", "title": "NICC 中国新三板投资者大会", "date": "09月17日", "location": "上海"},
-            {"poster": "gnome.png", "title": "GNOME Asia 2017 亚洲峰会", "date": "10月14日", "location": "重庆"},
-            {"poster": "rubyconf.png", "title": "RubyConf China 2017", "date": "09月16日", "location": "杭州"},
+            {"poster": "pingwest-hay.png", "title": "HAY! 17 PingWest 年度数字嘉年华", "date": "12月16日", "location": "北京", "link": "http://hay.pingwest.com/"},
+            {"poster": "gnome.png", "title": "GNOME Asia 2017 亚洲峰会", "date": "10月14日", "location": "重庆", "link": "https://wx.duohui.co/event/1390"},
+            {"poster": "rubyconf.png", "title": "RubyConf China 2017", "date": "09月16日", "location": "杭州", "link": "https://wx.duohui.co/event/1251"},
           ]
         .columns
           each event in events
