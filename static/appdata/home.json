@@ -11,7 +11,7 @@
     {
       "title": "标准版",
       "subtitle": "小型活动报名售票",
-      "price": "99 元每年",
+      "price": "179 元每年",
       "url": "https://duohui.co/standard#inmini",
       "icon": "/static/images/product-icon-duohui.svg",
       "background": "linear-gradient(180deg, #59B7FD 0%, #0695FE 100%)"
@@ -19,7 +19,7 @@
     {
       "title": "高级版",
       "subtitle": "功能更多，体检更佳",
-      "price": "999 元每年",
+      "price": "1,799 元每年",
       "url": "https://duohui.co/prime#inmini",
       "icon": "/static/images/product-icon-duohui.svg",
       "background": "linear-gradient(180deg, #F2A024 0%, #ED7721 100%)"
@@ -27,7 +27,7 @@
     {
       "title": "活动小程序",
       "subtitle": "企业专属的活动小程序",
-      "price": "4999 元每年",
+      "price": "8,999 元每年",
       "url": "https://duohui.co/mini#inmini",
       "icon": "/static/images/product-icon-mini.svg",
       "background": "linear-gradient(180deg, #857BE8 0%, #6761A3 100%)"
@@ -35,7 +35,7 @@
     {
       "title": "活动服务号",
       "subtitle": "企业专属的活动公众号",
-      "price": "4999 元每年",
+      "price": "8,999 元每年",
       "url": "https://duohui.co/wechat#inmini",
       "icon": "/static/images/product-icon-service.svg",
       "background": "linear-gradient(180deg, #5ACF2B 0%, #4EB027 100%)"
