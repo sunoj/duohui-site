@@ -51,6 +51,7 @@ html
         .column.col-md-4.col-12: .pricing
           h3.title= product.price.basic_title || "基础费用"
           .price-tag !{product.price.basic}
+            .monthly-price-tag !{product.price.monthly}
           .price-desc= product.price.basic_desc
         .column.col-md-4.col-12: .pricing
           h3.title= product.price.fee_title || "售票手续费"

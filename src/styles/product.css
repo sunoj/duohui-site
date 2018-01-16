@@ -142,7 +142,14 @@
 }
 
 .product-pricing .price-tag span{
-  font-size: 24px;
+  font-size: .6em;
+}
+
+.product-pricing .monthly-price-tag{
+  display: inline-block;
+  font-size: 17px;
+  padding-left: 6px;
+  color: #28d16e;
 }
 
 .product-pricing .price-desc {
