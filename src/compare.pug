@@ -126,9 +126,9 @@ html
                   a.btn.product.std(href="#") 多会标准版
                   a.btn.product.premier(href="#", style="display:inline-block;") 多会高级版
                   a.btn.product.enterprise(href="#") 多会企业版
-                p 对比其他活动平台，预计每月可以节省
-                span.clac_save --
-                | 元！
+                p#js-compare-save 对比其他活动平台，预计每月可以节省
+                  span.clac_save --
+                  | 元！
         .columns
           .column.col-md-6.col-12.byus
             .group.byus
@@ -346,7 +346,7 @@ html
           }
         };
         var min_data = {type: null,total: 9999999}; //最小方案
-        $.each(feeRates,function(service,item){
+        $.each(feeRates, function(service,item){
           // 循环：公式，表达式
           $.each(item, function(type,collect){
             var total = 0;
@@ -371,6 +371,13 @@ html
             console.log('collect', service, collect)
           });
         });
+
+        if (min_data.type == "other") {
+          min_data.type = 'std'
+          $('#js-compare-save').hide()
+        } else {
+          $('#js-compare-save').show()
+        }
 
         // dom产品
         $(".quota .answer .products .product").css('display','none');

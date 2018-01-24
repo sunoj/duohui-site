@@ -3,7 +3,7 @@
     {
       "openType": "duohui",
       "url": "/pages/event/event?id=1161",
-      "img": "https://duohui.co/appdata/imgs/demo-banner.png",
+      "img": "https://www.duohui.cn/appdata/imgs/demo-banner.png",
       "appId": null
     }
   ],
@@ -12,7 +12,7 @@
       "title": "标准版",
       "subtitle": "小型活动报名售票",
       "price": "179 元每年",
-      "url": "https://duohui.co/standard#inmini",
+      "url": "https://www.duohui.cn/standard#inmini",
       "icon": "/static/images/product-icon-duohui.svg",
       "background": "linear-gradient(180deg, #59B7FD 0%, #0695FE 100%)"
     },
@@ -20,7 +20,7 @@
       "title": "高级版",
       "subtitle": "功能更多，体检更佳",
       "price": "1,799 元每年",
-      "url": "https://duohui.co/prime#inmini",
+      "url": "https://www.duohui.cn/prime#inmini",
       "icon": "/static/images/product-icon-duohui.svg",
       "background": "linear-gradient(180deg, #F2A024 0%, #ED7721 100%)"
     },
@@ -28,7 +28,7 @@
       "title": "活动小程序",
       "subtitle": "企业专属的活动小程序",
       "price": "8,999 元每年",
-      "url": "https://duohui.co/mini#inmini",
+      "url": "https://www.duohui.cn/mini#inmini",
       "icon": "/static/images/product-icon-mini.svg",
       "background": "linear-gradient(180deg, #857BE8 0%, #6761A3 100%)"
     },
@@ -36,7 +36,7 @@
       "title": "活动服务号",
       "subtitle": "企业专属的活动公众号",
       "price": "8,999 元每年",
-      "url": "https://duohui.co/wechat#inmini",
+      "url": "https://www.duohui.cn/wechat#inmini",
       "icon": "/static/images/product-icon-service.svg",
       "background": "linear-gradient(180deg, #5ACF2B 0%, #4EB027 100%)"
     }
@@ -62,18 +62,18 @@
   "client": {
     "recommanded": [
       {
-        "logo": "https://duohui.co/appdata/logos/eico.png",
+        "logo": "https://www.duohui.cn/appdata/logos/eico.png",
         "brief": "EICO 是国内知名的数字化业务咨询与产品设计专家。 服务于摩拜、魅族、一加手机等国内外知名品牌。"
       },
       {
-        "logo": "https://duohui.co/appdata/logos/teambition.png",
+        "logo": "https://www.duohui.cn/appdata/logos/teambition.png",
         "brief": "Teambition 是国内团队协作工具的创导者。已经被应用于超过十个行业的逾一百万项目中"
       },
       {
-        "logo": "https://duohui.co/appdata/logos/pingwest.png",
+        "logo": "https://www.duohui.cn/appdata/logos/pingwest.png",
         "brief": "PingWest 品玩国内知名科技媒体。提供最新锐和有个性的科技消费、科技生活、科技文化和科技娱乐领域的内容。"
       }
     ],
-    "heap": "https://duohui.co/appdata/imgs/home-clients.png"
+    "heap": "https://www.duohui.cn/appdata/imgs/home-clients.png"
   }
 }
