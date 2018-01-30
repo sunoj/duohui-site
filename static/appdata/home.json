@@ -10,35 +10,27 @@
   "products": [
     {
       "title": "标准版",
-      "subtitle": "小型活动报名售票",
-      "price": "179 元每年",
+      "subtitle": "轻松易用。通过微信小程序、公众号和网页版快速售票。",
+      "price": 179,
       "url": "https://www.duohui.cn/standard#inmini",
-      "icon": "/static/images/product-icon-duohui.svg",
-      "background": "linear-gradient(180deg, #59B7FD 0%, #0695FE 100%)"
+      "promotion": "年付优惠",
+      "background": "linear-gradient(180deg, #2BBFF0 0%, #19A4D1 100%)"
     },
     {
       "title": "高级版",
-      "subtitle": "功能更多，体检更佳",
-      "price": "1,799 元每年",
+      "subtitle": "更多高级功能。支持在线选座、优惠券和渠道统计等。",
+      "price": 1799,
+      "promotion": "年付优惠",
       "url": "https://www.duohui.cn/prime#inmini",
-      "icon": "/static/images/product-icon-duohui.svg",
-      "background": "linear-gradient(180deg, #F2A024 0%, #ED7721 100%)"
+      "background": "linear-gradient(180deg, #F78F31 0%, #DB781F 100%)"
     },
     {
-      "title": "活动小程序",
-      "subtitle": "企业专属的活动小程序",
-      "price": "8,999 元每年",
+      "title": "企业版",
+      "subtitle": "独立微信小程序、公众号和网页版。微信支付、支付宝实时到账。",
+      "price": 8999,
+      "promotion": "年付优惠",
       "url": "https://www.duohui.cn/mini#inmini",
-      "icon": "/static/images/product-icon-mini.svg",
-      "background": "linear-gradient(180deg, #857BE8 0%, #6761A3 100%)"
-    },
-    {
-      "title": "活动服务号",
-      "subtitle": "企业专属的活动公众号",
-      "price": "8,999 元每年",
-      "url": "https://www.duohui.cn/wechat#inmini",
-      "icon": "/static/images/product-icon-service.svg",
-      "background": "linear-gradient(180deg, #5ACF2B 0%, #4EB027 100%)"
+      "background": "linear-gradient(180deg, #3393F2 0%, #0066CC 100%)"
     }
   ],
   "advantages": [
