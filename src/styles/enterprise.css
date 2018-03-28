@@ -105,9 +105,16 @@
 
 
 .enterprise .hero{
-  background: #FAFBFC;
+  background: linear-gradient(#35affc, #3a88fd);
   border-bottom: 1px solid #eee;
-  }
+  color: #fff;
+}
+
+.enterprise .icon img {
+  background: #fff;
+  border-radius: 30px;
+  border: 1px #fff solid;
+}
 
   .enterprise .hero .slogan h1{
     font-size: 48px;
@@ -148,12 +155,20 @@
   }
   .enterprise .pricing .price-box{
     margin: 42px auto;
-    max-width: 320px;
+    max-width: 380px;
   }
-  
-.enterprise .contact{
-  /* border-bottom: 1px solid #EEE; */
+
+  .enterprise .sub-price{
+    color: #f3f3f3;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 2px;
   }
+
+  .enterprise .sub-price .value {
+    font-size: 14px;
+  }
+ 
   .contact-box {
     text-align: left;
     max-width: 660px;
@@ -268,6 +283,11 @@
   .color-btn + .color-btn{
     margin-left: 24px;
   }
+}
+
+
+.contact .tips .phone {
+  color: #4893FF;
 }
 
 @media screen and (max-width: 767px) {

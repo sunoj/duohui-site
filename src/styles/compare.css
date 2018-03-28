@@ -270,6 +270,35 @@
   color: #666;
 }
 
+.compare .standard .title {
+  background-color: #eaeaea;
+}
+
+.compare .prime .title {
+  background: linear-gradient(#338ed6, #4f6eab);
+  color: #fff;
+}
+
+.compare .enterprise .title {
+  background: linear-gradient(#807979, #484a4e);
+  color: #fff;
+}
+
+.compare .product ul a{
+    color: #35AFFB;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.compare .product h2 a {
+  color: #666;
+  text-decoration: none;
+}
+
+.compare .product.enterprise h2 a,
+.compare .product.prime h2 a {
+  color: #fff;
+}
 
 @media screen and (max-width: 768px) {
   .quota .group.calc .line p{

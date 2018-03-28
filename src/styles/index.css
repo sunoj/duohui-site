@@ -69,6 +69,12 @@
   margin-bottom: -2px;
 }
 
+.why ul a {
+  color: #35AFFB;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 .inmini .why .tryout {
   display: none;
