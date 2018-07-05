@@ -31,10 +31,10 @@ html
                   a(href="/standard") 标准版
                 p 适合低频小型活动
               .content
-                h2 179
+                h2 299
                   span 元每年
                 .promotion
-                  span.money ￥299
+                  span.money ￥488
                   span.discount 年付优惠
                 ul
                   li 可发布<strong>无限</strong>个活动
@@ -83,10 +83,10 @@ html
                   a(href="/enterprise") 企业版
                 p 适合专业品牌主办方
               .content
-                h2 8,999
+                h2 9,999
                   span 元每年
                 .promotion
-                  span.money ￥11,988
+                  span.money ￥13,996
                   span.discount 年付优惠
                 ul
                   li 可发布<strong>无限</strong>个活动
@@ -321,12 +321,12 @@ html
           'std':{
             expression :{
               poundage: '{people}x{time}x{isfree}+{people}x{time}x{price}x1%',
-              fee_per_month: '179/12',
+              fee_per_month: '299/12',
               sms: '({time}*{people}-100)*0.1'
             },
             result:{
               poundage: '{people}*{time}*{isfree}+{people}*{time}*{price}*0.01',
-              fee_per_month: '179/12',
+              fee_per_month: '299/12',
               sms: '({time}*{people}-100)*0.1'
             }
           },
@@ -345,12 +345,12 @@ html
           'enterprise':{
             expression :{
               poundage: '{people}x{time}x{price}x0.6%',
-              fee_per_month: '8999/12',
+              fee_per_month: '9999/12',
               sms: '({time}*{people}-1000)*0.1'
             },
             result:{
               poundage: '{people}*{time}*{price}*0.006',
-              fee_per_month: '8999/12',
+              fee_per_month: '9999/12',
               sms: '({time}*{people}-1000)*0.1'
             }
           },
