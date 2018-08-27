@@ -11,7 +11,7 @@
     {
       "title": "标准版",
       "subtitle": "轻松易用。通过微信小程序、公众号和网页版快速售票。",
-      "price": 179,
+      "price": 299,
       "url": "https://www.duohui.cn/standard#inmini",
       "promotion": "年付优惠",
       "background": "linear-gradient(180deg, #2BBFF0 0%, #19A4D1 100%)"
@@ -27,7 +27,7 @@
     {
       "title": "企业版",
       "subtitle": "独立微信小程序、公众号和网页版。微信支付、支付宝实时到账。",
-      "price": 8999,
+      "price": 9999,
       "promotion": "年付优惠",
       "url": "https://www.duohui.cn/enterprise#inmini",
       "background": "linear-gradient(180deg, #3393F2 0%, #0066CC 100%)"
