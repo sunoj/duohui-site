@@ -585,3 +585,7 @@ a.dropdown-item.is-active {
   .price-box .pre-year{
     margin-left: 6px;
   }
+
+  #ib-content {
+    display: none;
+  }

@@ -1,3 +1,21 @@
+
+#ib-content
+  #ib-close(onclick="hideMessage()") &times;
+  .ib-header
+    h2 我们正在招聘，快上车 🚎
+  .ib-message
+    p 新小科技是多会的创造者，我们是一家热爱和信仰技术的初创公司。我们是开源社区的参与者，也是 Element 等一些开源项目的支持者。如果你正在找工作，不妨考虑一下我们。
+  .ib-more
+      a(href="https://xinxiao.xyz" target="_blank" class="el-button el-button--success") 我来试试
+
+script.
+  let searchParams = new URLSearchParams(window.location.search)
+  if (searchParams.get('utm_source') == "element") {
+    document.getElementById("ib-content").style.display = 'block';
+  }
+  function hideMessage(){
+    document.getElementById("ib-content").style.display = 'none';
+  }
 .header.section
   .container.clear
     .logo
