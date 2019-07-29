@@ -37,22 +37,12 @@
 
         span <广告>
 
+    script(src="https://helpchat.tinyservices.net/js/widget.js")
     script.
       if (location.hash && location.hash.indexOf('inmini') > -1 ) {
         document.body.classList.add("inmini")
       } else {
-        (function(m, ei, q, i, a, j, s) {
-            m[i] = m[i] || function() {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-            j = ei.createElement(q),
-                s = ei.getElementsByTagName(q)[0];
-            j.async = true;
-            j.charset = 'UTF-8';
-            j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
-            s.parentNode.insertBefore(j, s);
-        })(window, document, 'script', '_MEIQIA');
-        _MEIQIA('entId', 55145);
+        loadTalkative('duohui')
       }
 
     script(async src="https://www.googletagmanager.com/gtag/js?id=UA-7239743-22")
