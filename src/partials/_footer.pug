@@ -37,13 +37,9 @@
 
         span <广告>
 
-    script(src="https://helpchat.tinyservices.net/js/widget.js")
     script.
-      if (location.hash && location.hash.indexOf('inmini') > -1 ) {
-        document.body.classList.add("inmini")
-      } else {
-        loadTalkative('duohui')
-      }
+      (function(y,o,u,k,e){y['YoukeInstance']=k;y[k]=y[k]||function(){(y[k].e=y[k].e||[]).push(arguments)};e=o.createElement('script');e.async=1;e.src=u;o.currentScript.parentNode.insertBefore(e,o.currentScript);})(window,document,'https://static.cdn.youke.co/js/widget.js','$youke');
+      $youke('load','duohui');
 
     script(async src="https://www.googletagmanager.com/gtag/js?id=UA-7239743-22")
 
