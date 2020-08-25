@@ -4,7 +4,7 @@ html
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=Edge')
     meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
-    title 帮助支持 - 多会
+    title 关于我们 - 多会
     meta(name='description', content='通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
     link(rel='stylesheet', type='text/css', href='./styles/common.css')
@@ -14,22 +14,12 @@ html
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_header.pug
-    
     .section.intro
       .container
         .hello
-          h1 获取多会的服务支持
-          p 有兴趣了解更多关于多会产品的信息，或是遇到了活动管理的挑战，我们的活动专家愿意帮助您。
-        .action
-          a.btn.contact(href="javascript:void(0)" onclick="window.openYoukeChatbox()") 联系销售
-          a.btn.solid.try(href='/app/') 立即试用
+          h1 关于我们
+          p 上海新小信息科技有限公司致力于为中小企业打造体验优异的专业解决方案，旗下产品包括专业的活动管理系统多会、表单管理系统多态等。
 
-    .section.demo-form.white-bg: .container
-        h1.chtitle 预约产品演示
-        <iframe id="demo-form" height="600" width="100%" src="https://i.duotai.net/forms/vo52o" frameborder="0" allowfullscreen>
-        </iframe>
-
-    .section.help
       .container
         h1.chtitle 联系方式
         p
@@ -37,5 +27,6 @@ html
           |  或致电
           span.phone  021-80370533
         p.small 周一至周五 10:00 至 19:00
+        p.small 地址：上海市静安区恒丰路600号机电大厦12楼B区1226室
 
     include partials/_footer.pug
