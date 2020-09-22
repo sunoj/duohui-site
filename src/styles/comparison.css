@@ -1,0 +1,36 @@
+.bg-geo {
+  height: 400px;
+  background-image: url("data:image/svg+xml,%3Csvg width='1920' height='479' viewBox='0 0 1920 479' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath fill='%23fff' d='M0 0h1920v479H0z'/%3E%3Cpath fill='%23DCE9F9' d='M0 0h1920v479H0z'/%3E%3Ccircle opacity='.6' cx='1635.15' cy='359.15' r='178.406' transform='rotate(-12.23 1635.15 359.15)' fill='url(%23paint0_linear)'/%3E%3Cpath opacity='.6' d='M419.543 315.65c5.096 7.736 1.409 18.2-7.411 21.032L226.48 396.293c-11.021 3.538-21.331-7.066-17.484-17.983l78.38-222.438c3.847-10.918 18.527-12.716 24.895-3.05L419.543 315.65z' fill='url(%23paint1_linear)'/%3E%3Cellipse opacity='.7' cx='1438' cy='31.5' rx='58' ry='57.5' fill='url(%23paint2_linear)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='1607.5' y1='486.021' x2='1572.05' y2='116.118' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.076' stop-color='%23fff' stop-opacity='.2'/%3E%3Cstop offset='1' stop-color='%23fff'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='511.516' y1='191.838' x2='220.881' y2='386.488' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.076' stop-color='%23fff' stop-opacity='.2'/%3E%3Cstop offset='1' stop-color='%23fff'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear' x1='1477.65' y1='-41.498' x2='1367.43' y2='77.15' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.076' stop-color='%23fff' stop-opacity='.2'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='.69'/%3E%3C/linearGradient%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' d='M0 0h1920v479H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-position: center;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.comparison-table-wrapper {
+  margin-top: -400px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 18px rgba(25, 25, 25, 0.1);
+}
+
+.comparison-table tr.colspan {
+  background-color: #EFF1F3;
+}
+
+.comparison-table tr td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.comparison-table tr td:nth-child(1) {
+  text-align: left;
+}
