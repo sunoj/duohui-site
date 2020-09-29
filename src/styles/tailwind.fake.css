@@ -1,0 +1,73 @@
+/* position */
+.relative {
+  position: relative;
+}
+
+/* box */
+.p-4 {
+  padding: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* align */
+.text-center {
+  text-align: center;
+}
+
+/* font-size */
+.text-xs {
+  font-size: 12px;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+}
+
+.text-6xl {
+  font-size: 4rem;
+}
+
+/* text-decoration */
+.line-through {
+  text-decoration: line-through;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+/* background */
+.bg-white {
+  background-color: #fff;
+}

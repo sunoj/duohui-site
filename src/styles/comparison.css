@@ -4,8 +4,31 @@
   background-position: center;
 }
 
-.bg-white {
-  background-color: #fff;
+.text-blue-link {
+  color: #35AFFB;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.promotion-tag {
+  margin-right: 8px;
+  padding: 4px 8px;
+  background: #F44D4D;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.top-tile h2 {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  font-size: 2.2rem;
+}
+
+.top-tile p {
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 .comparison-table-wrapper {
@@ -21,16 +44,129 @@
   box-shadow: 0px 4px 18px rgba(25, 25, 25, 0.1);
 }
 
-.comparison-table tr.colspan {
+.comparison-table tr.secondary-header {
+  background: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.333 1.333L7 6.667 1.667 1.334' stroke='%235B6E8B' stroke-width='1.333' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E") no-repeat 99% center;
   background-color: #EFF1F3;
+  cursor: pointer;
+  user-select: none;
+}
+
+.comparison-table tr.secondary-header:hover {
+  background-color: #eaeaea;
+}
+
+.comparison-table tr.secondary-header.close {
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M1.667 6.667L7 1.333l5.333 5.333' stroke='%235B6E8B' stroke-width='1.333' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' transform='rotate(-180 7 4)' d='M0 0h14v8H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
 
 .comparison-table tr td {
-  padding: 8px;
-  text-align: center;
+  padding: 12px 24px;
   border: 1px solid #eee;
+  width: 25%;
+  font-size: 14px;
+  text-align: center;
 }
 
 .comparison-table tr td:nth-child(1) {
   text-align: left;
 }
+
+.comparison-table tr td.tick {
+  background: url("data:image/svg+xml,%3Csvg width='20' height='14' viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 7l5 5 10-10' stroke='%233F9FFF' stroke-width='2.5' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.phone-call {
+  width: 64px;
+  height: 64px;
+  background: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36.405 38.092l-4.087 4.026a33.236 33.236 0 0 1-5.902-4.536 33.604 33.604 0 0 1-4.534-5.899l4.028-4.087a1.752 1.752 0 0 0 .36-1.91l-4.197-9.798a1.752 1.752 0 0 0-2.058-1.002l-7.701 2.033A1.754 1.754 0 0 0 11 18.673a37.035 37.035 0 0 0 10.48 23.848 37.035 37.035 0 0 0 23.856 10.478 1.75 1.75 0 0 0 1.75-1.313l2.035-7.705a1.75 1.75 0 0 0-1-2.058l-9.791-4.196a1.75 1.75 0 0 0-1.925.365zM35.817 11.001a17.18 17.18 0 0 1 17.181 17.18M35.817 18.637a9.546 9.546 0 0 1 9.546 9.545' stroke='%23333' stroke-width='3.341' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.price-panel {
+  height: 140px;
+}
+
+.price-panel .price {
+  margin-top: 28px;
+}
+
+.price-panel .price-origin {
+  margin-top: 16px;
+}
+
+.price-panel a.btn {
+  margin-top: 40px;
+}
+
+.fee-tip {
+  display: inline-block;
+  position: relative;
+  margin-left: 4px;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 15.333A7.333 7.333 0 1 0 8 .666a7.333 7.333 0 0 0 0 14.667zM8 7.333v4' stroke='%23B4B4B4' stroke-width='1.333' stroke-miterlimit='10' stroke-linecap='square'/%3E%3Cpath d='M8 5.333A.667.667 0 1 0 8 4a.667.667 0 0 0 0 1.333z' fill='%23B4B4B4'/%3E%3C/svg%3E") no-repeat center;
+  cursor: pointer;
+}
+
+.fee-tip .fee-tooltip {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  width: 300px;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+  text-align: left;
+}
+
+.fee-tip:hover .fee-tooltip {
+  display: block;
+}
+
+/* <!-- content-switch */
+.content-switch .switchers {
+  margin: 0 auto;
+  width: 120px;
+  display: flex;
+  padding: 3px;
+  border-radius: 6px;
+  background: #E6E9EF;
+  user-select: none;
+}
+
+.content-switch .switchers .switcher {
+  flex-grow: 1;
+  padding: 2px 0;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.content-switch .switchers .switcher + .switcher {
+  margin-left: 4px;
+}
+
+.content-switch .switchers .switcher:hover {
+  cursor: pointer;
+}
+
+.content-switch .switchers .switcher.active {
+  background: #fff;
+}
+
+.content-switch .switchers .switcher.active:hover {
+  cursor: default;
+}
+
+.content-switch .switchers .switcher:not(.active):hover {
+  background: #ddd;
+}
+
+.content-switch .contents .content {
+  display: none;
+}
+
+.content-switch .contents .content.active {
+  display: block;
+}
+/* content-switch --> */

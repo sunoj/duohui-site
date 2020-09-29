@@ -5,7 +5,7 @@
     ul.nav.main-nav.clear
       .more
         .dropdown.is-hoverable
-          a(href='/compare')
+          a(href='/comparison')
             li 产品列表
             #dropdown-menu.dropdown-menu(role='menu')
               - var productCode = product ? product.code: ''
@@ -17,7 +17,7 @@
                 a.dropdown-item(href='/mini' class=(productCode == 'mini') ?'is-active': '') 活动小程序
                 a.dropdown-item(href='/checkin' class=(productCode == 'checkin') ?'is-active': '') 极速签到
                 hr.dropdown-divider
-                a.dropdown-item(href='/compare') 对比产品
+                a.dropdown-item(href='/comparison') 对比产品
         a(href='/customers')
           li 服务案例
         a(href='/enterprise')

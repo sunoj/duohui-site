@@ -263,6 +263,7 @@ html
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
     script.
+      location.href = '/comparison'
       $(document).ready(function() {
         $('.js-toggle').minitoggle();
         $('.js-toggle').on("toggle", function(e){
