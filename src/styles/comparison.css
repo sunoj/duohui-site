@@ -4,6 +4,10 @@
   background-position: center;
 }
 
+.text-color-theme {
+  color: #4893ff;
+}
+
 .text-blue-light {
   color: #35AFFB;
 }
@@ -22,6 +26,10 @@
   background: #F44D4D;
   border-radius: 4px;
   color: #fff;
+}
+
+.center-shadow {
+  box-shadow: 0 0 24px rgba(0, 0, 0, .05);
 }
 
 .top-tile h2 {
@@ -111,6 +119,7 @@
   height: 16px;
   background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 15.333A7.333 7.333 0 1 0 8 .666a7.333 7.333 0 0 0 0 14.667zM8 7.333v4' stroke='%23B4B4B4' stroke-width='1.333' stroke-miterlimit='10' stroke-linecap='square'/%3E%3Cpath d='M8 5.333A.667.667 0 1 0 8 4a.667.667 0 0 0 0 1.333z' fill='%23B4B4B4'/%3E%3C/svg%3E") no-repeat center;
   cursor: pointer;
+  vertical-align: text-bottom;
 }
 
 .fee-tip .fee-tooltip {
@@ -164,7 +173,7 @@
 }
 
 .content-switch .switchers .switcher:not(.active):hover {
-  background: #ddd;
+  background: #f4f4f4;
 }
 
 .content-switch .contents .content {
@@ -176,6 +185,33 @@
 }
 /* content-switch --> */
 
+.calc-select {
+  border-radius: 3px;
+  border: 1px solid #4893ff;
+  color: #4893ff;
+}
+
+.calc_detail_modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .2)
+}
+
+.calc_detail_modal .calc_detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
 .quota .group{
   border: 1px solid #CCCCCC;
