@@ -339,11 +339,56 @@ html
               | 元。
             .answer.mt-12
               .text-color-theme.font-semibold 我们推荐您使用
-              .products
-                a.btn.product.std(href="#") 多会标准版
-                a.btn.product.premier(href="#", style="display:inline-block;") 多会高级版
-                a.btn.product.enterprise(href="#") 多会企业版
-              .show_calc_detail.cursor-pointer 查看详情
+              .products.outline.mt-4
+                .product.std
+                  .font-bold 多会标准版
+                  .main
+                    .main-left
+                      span
+                        span.text-3xl 299
+                        span 元/年
+                      div.price-origin
+                        span.promotion-tag.text-sm 年付优惠
+                        span.line-through 708 元/年
+                    .main-right.mt-2
+                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
+                      .mt-1.text-center
+                        //- span.show_calc_detail.cursor-pointer 查看详情
+                        a(href="/standard") 查看详情
+                .product.premier(style="display:inline-block;")
+                  .font-bold 多会高级版
+                  .main
+                    .main-left
+                      span
+                        span.text-3xl 1,799
+                        span 元/年
+                      div.price-origin
+                        span.promotion-tag.text-sm 年付优惠
+                        span.line-through 3,588 元/年
+                    .main-right.mt-2
+                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
+                      .mt-1.text-center
+                        //- span.show_calc_detail.cursor-pointer 查看详情
+                        a(href="/prime") 查看详情
+                .product.enterprise
+                  .font-bold 多会企业版
+                  .main
+                    .main-left
+                      span
+                        span.text-3xl 9,999
+                        span 元/年
+                      div.price-origin
+                        span.promotion-tag.text-sm 年付优惠
+                        span.line-through 17,988 元/年
+                    .main-right.mt-2
+                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
+                      .mt-1.text-center
+                        //- span.show_calc_detail.cursor-pointer 查看详情
+                        a(href="/enterprise") 查看详情
+          
+          h2 根据功能需求为我推荐产品
+          h3.mt-8 所需功能
+
 
         .calc_detail_modal
           .calc_detail
