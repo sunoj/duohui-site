@@ -1,0 +1,160 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
+    title 多会 - 新一代活动管理系统
+    meta(name='description', content='多会是新一代的活动票务系统。通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
+
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="多会")
+    meta(property="og:description" content="新一代的活动票务系统")
+    meta(property="og:image" content="https://www.duohui.cn/img/thumbnail.png")
+    meta(property="og:url" content="https://www.duohui.cn/")
+
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/service.css?v=<!--@echo curtime -->')
+    meta(name='msapplication-tap-highlight', content='no')
+  body
+    include partials/_header.pug
+    include partials/_poster_block.pug
+    .section.intro
+      .slogan-demo.container.pt-12.flex.items-center
+        .slogan
+          .hello
+            h1.mt-0.mb-0 多种服务 轻松售票
+            p.mt-2 售票功能强大，适用于多种服务场景，线上线下可同步售票。
+          .action
+            a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
+            a.btn.solid(href='https://app.duohui.cn') 立即试用
+        .demo
+          img(src='./img/banner/service.svg', alt='体验购票')
+    .section.white-bg.mt-12
+      .container.flex.flex-wrap.service-features.product-icons
+        div
+          .font-bold.icon-writeoff 多次核销功能
+          .feature-description.mt-2 单次购票，可多次核销，简单设置即可出售次卡、月卡、年卡。
+        div
+          .font-bold.icon-child 子账户权限
+          .feature-description.mt-2 支持创建多个子账户，可为子账户授予不同项目权限。
+        div
+          .font-bold.icon-code 自定义票码
+          .feature-description.mt-2 支持自定义票码。如导入实体卡号，电子票码可与实体卡保持一致。
+        div
+          .font-bold.icon-scene 多场次功能
+          .feature-description.mt-2 单个票种可绑定多个场次，购票时可进行场次选择。
+        div
+          .font-bold.icon-entrance 多种入口
+          .feature-description.mt-2 提供网页链接、二维码、小程序码等多种入口，适应多种推广形式。
+        div
+          .font-bold.icon-medium 渠道功能
+          .feature-description.mt-2 通过渠道功能统计订单来源，还可为某一渠道设置渠道专属票。
+        div
+          .font-bold.icon-refund 自定义退款规则
+          .feature-description.mt-2 灵活的退款规则，支持部分退款，保护商家权益。
+        div
+          .font-bold.icon-coupon 优惠促销
+          .feature-description.mt-2 提供优惠券、限时特价、拼团等多种优惠促销功能。
+        div
+          .font-bold.icon-data 服务数据统计
+          .feature-description.mt-2 订单数据将通过多种图表进行统计展示，轻松查看售票情况。
+    .section.white-bg.mt-12
+      .container.service-frames
+        .frame.flex.flex-row-reverse
+          div
+            .frame-title 一次购票多次核销
+            .frame-subtitle 可根据实际需求，自由设定电子票可用次数
+            div.frame-icons.mt-8
+              div.mt-4.icon-card
+                .font-bold 次卡、月卡、年卡
+                .mt-1.text-sm 电子票可设置可用次数，实现次卡、月卡、年卡功能
+              div.mt-4.icon-person
+                .font-bold 一人购票，多人入场
+                .mt-1.text-sm 可出售多人团体票，一人购票，多人入场
+              div.mt-4.icon-multiple
+                .font-bold 一票多用
+                .mt-1.text-sm 电子票除验票使用，还可以作为其他项目兑换凭证
+          div
+            img(src="./img/service/ticket.svg")
+        .frame.flex
+          div.pl-8
+            .frame-title 库存设置灵活
+            .frame-subtitle 可为不同日期设置不同库存，库存余量实时显示，简单直观。
+            div.frame-icons.mt-8
+              div.mt-4.icon-ticket-stock
+                .font-bold 票种库存
+                .mt-1.text-sm 可同时设置多个票种，并按票种分别设置库存，方便管理购票总量
+              div.mt-4.icon-daily-stock
+                .font-bold 每日库存
+                .mt-1.text-sm 可根据实际情况，设置并调整某日库存，轻松管理单日顾客人数
+              div.mt-4.icon-scene-stock
+                .font-bold 场次库存
+                .mt-1.text-sm 可同时设置多个场次，并按场次分别设置库存，以便控制场次人数
+          div
+            img(src="./img/service/calendar.svg")
+        .frame.flex.flex-row-reverse
+          div
+            .frame-title 自定义退款规则
+            .frame-subtitle 可自定义退款规则，支持部分退款，减少退单损失。
+            div.frame-icons.mt-8
+              div.mt-4.icon-review
+                .font-bold 退款审核
+                .mt-1.text-sm 可设置退款审核规则，购票者发起退款后需主办方审核
+              div.mt-4.icon-refund
+                .font-bold 按比例退款
+                .mt-1.text-sm 可设置比例退款规则，按比例收取手续费后进行退款
+              div.mt-4.icon-limit
+                .font-bold 退款时限
+                .mt-1.text-sm 设置退款时限，比如仅允许在预约时间48小时之前申请退款
+          div
+            img(src="./img/service/refund.svg")
+    .section.white-bg.mt-12
+      .container
+        .title.mb-4 满足多个行业场景需求
+        input(name="tab", type="radio", checked="true").hidden.tool-tab#casual
+        label(for="casual") 休闲健身
+        input(name="tab", type="radio").hidden.tool-tab#bus
+        label(for="bus") 客运巴士
+        .mt-12.flex.flex-wrap.service-tools.casual
+          .text-center
+            .icon-cards
+            .mt-4.font-bold.text-lg 年卡月卡次卡
+            .mt-2.text-gray-600 支持设置单张电子票使用次数，单次购票，可多次核销。
+          .text-center
+            .icon-card
+            .mt-4.font-bold.text-lg 绑定实体卡
+            .mt-2.text-gray-600 支持自定义票码，可导入实体卡号，电子票码可与实体卡保持一致。
+          .text-center
+            .icon-lesson
+            .mt-4.font-bold.text-lg 选课预约
+            .mt-2.text-gray-600 支持多场次功能，可灵活设置库存，方便进行选课预约。
+        .mt-12.flex.flex-wrap.service-tools.bus
+          .text-center
+            .icon-cards
+            .mt-4.font-bold.text-lg 移动验票
+            .mt-2.text-gray-600 提供多种验票方案，包括专用手持设备，以及手机验票APP，随时随地轻松验票。
+          .text-center
+            .icon-card
+            .mt-4.font-bold.text-lg 车次选择
+            .mt-2.text-gray-600 支持多场次功能，可灵活设置库存，方便进行车次选择。
+          .text-center
+            .icon-lesson
+            .mt-4.font-bold.text-lg 多种收款方式
+            .mt-2.text-gray-600 支持多种收款方式，包括支付宝、微信支付以及现金付款等。
+    //- .section.white-bg.mt-12
+    //-   .container
+    //-     .title 超多成功案例 丰富行业经验
+    //-     .subtitle 丰富的成功案例让我们积累了更多行业经验
+    //-     .case-list.mt-12
+    .section.white-bg.mt-12.mb-12
+      include partials/_advisory.pug
+    .section.bg-blue-geo
+      .container.text-center
+        h2.mt-8.text-2xl 现在注册，立享 15 天免费试用和专属技术支持
+        .mt-6
+          a.btn(href="https://app.duohui.cn", target="_blank") 立即试用
+          a.btn.solid.ml-4(href="/compare") 查看定价
+    include partials/_footer.pug
