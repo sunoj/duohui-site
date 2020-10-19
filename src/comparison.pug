@@ -310,7 +310,7 @@ html
     .section.bg-white.quota
       .container
         h1#price-cal.chtitle.text-center 版本智能推荐
-        .p-8.center-shadow.rounded-2xl.bg-white
+        .p-8.center-shadow.rounded-2xl
           h2 根据用量为我推荐产品
           h3.mt-8 预计用量
           .calc
@@ -498,14 +498,10 @@ html
             a.btn.product.premier(href="/prime") 多会高级版
             a.btn.product.mini(href="/mini") 多会活动小程序
             a.btn.product.wechat(href="/wechat") 多会活动服务号
-    .section.help
+    .section.white-bg
       .container
-        h1.chtitle 还未决定？我们的活动专家可以帮助你
-        p
-          a.btn 在线咨询
-          | 或致电
-          span.phone 021 80370533
-        p.small 周一至周六 9:00 至 21:00
+        h1.text-center 还未决定？我们的活动专家可以帮助你
+      include partials/_advisory.pug
 
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
