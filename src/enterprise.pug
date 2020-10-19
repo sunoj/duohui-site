@@ -54,7 +54,7 @@ html
               h4 融合品牌风格
         .action
           a.color-btn.yellow(href='/app/') 立即试用
-          a.color-btn.blue(href="javascript:void(0)" onclick="window.openYoukeChatbox()") 联系销售
+          a.color-btn.blue(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
     
     .section.features
       .container
@@ -166,7 +166,7 @@ html
               .icon: +icon('/img/enterprise/', 'icon-training', '培训服务')
               h4 培训服务
         .action
-          a.color-btn.black(href="javascript:void(0)" onclick="window.openYoukeChatbox()") 联系销售
+          a.color-btn.black(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
 
     .section.customers.white-bg
       .container
@@ -193,6 +193,6 @@ html
         h2.section-title 免费获取 15 天多会企业版试用
         .action
           a.color-btn.yellow(href='/app/') 立即试用
-          a.color-btn.blue(href="javascript:void(0)" onclick="window.openYoukeChatbox()") 联系销售
+          a.color-btn.blue(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
 
     include partials/_footer.pug

@@ -28,10 +28,6 @@
   color: #fff;
 }
 
-.center-shadow {
-  box-shadow: 0 0 24px rgba(0, 0, 0, .05);
-}
-
 .top-tile h2 {
   margin-top: 1rem;
   margin-bottom: .5rem;
