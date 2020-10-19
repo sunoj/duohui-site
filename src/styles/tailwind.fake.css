@@ -15,6 +15,18 @@
   flex-wrap: wrap;
 }
 
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
 /* position */
 .relative {
   position: relative;
@@ -109,6 +121,15 @@
 
 .pl-2 {
   padding-left: 0.5rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .py-2 {

@@ -1,0 +1,153 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
+    title 多会 - 新一代活动管理系统
+    meta(name='description', content='多会是新一代的活动票务系统。通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
+
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="多会")
+    meta(property="og:description" content="新一代的活动票务系统")
+    meta(property="og:image" content="https://www.duohui.cn/img/thumbnail.png")
+    meta(property="og:url" content="https://www.duohui.cn/")
+
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/event.css?v=<!--@echo curtime -->')
+    meta(name='msapplication-tap-highlight', content='no')
+  body
+    include partials/_header.pug
+    include partials/_poster_block.pug
+    .section.intro
+      .slogan-demo.container.pt-12.flex.items-center
+        .slogan
+          .hello
+            h1.mt-0 专业易用的活动票务系统
+            p 支持娱乐演出、会议展览、剧场剧院等各场景活动
+          .action
+            a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
+            a.btn.solid(href='https://app.duohui.cn') 立即试用
+        .demo
+          img(src='./img/banner/event.svg', alt='体验购票')
+    .section.white-bg.mt-12
+      .container.flex.flex-wrap.weixin-features.product-icons
+        div
+          .font-bold.icon-form 自定义报名表单
+          .feature-description.mt-2 根据活动报名需求自定义报名表单，支持文本、图片、选择等多种表单项。
+        div
+          .font-bold.icon-order 订单导入导出
+          .feature-description.mt-2 活动订单支持自由导入导出，管理活动更加方便。
+        div
+          .font-bold.icon-ticketing 出票通知
+          .feature-description.mt-2 可以通过微信通知、短信或邮件向购票用户发送出票信息。
+        div
+          .font-bold.icon-ticket 在线选座购票
+          .feature-description.mt-2 支持通过移动端和PC端进行购票，并且可以设置座位表实现在线选座。
+        div
+          .font-bold.icon-chart 数据报表
+          .feature-description.mt-2 订单数据将通过多种图表进行统计展示，轻松查看售票情况。
+        div
+          .font-bold.icon-bulb 多种营销工具
+          .feature-description.mt-2 内置了拼团、优惠、绑定微信服务号等多种营销工具，帮助活动更快传播。
+        div
+          .font-bold.icon-layout 模块化活动页面
+          .feature-description.mt-2 活动页面支持模块化设置，可以更加自由的设定你想要的页面。
+        div
+          .font-bold.icon-refund 自定义退款规则
+          .feature-description.mt-2 可自定义设置退款规则，让票种销售方式更加灵活。
+        div
+          .font-bold.icon-checkin 支持离线签到
+          .feature-description.mt-2 多个签到设备在离线状态下通过局域网自动同步签到状态，签到快且准。
+    .section.white-bg.mt-12
+      .container.weixin-frames
+        .frame.flex
+          div
+            .frame-title 灵活收集报名信息
+            .frame-subtitle 根据活动报名需求自定义报名表单，提升活动处理效率。
+            div.frame-icons.mt-8
+              div.mt-4.icon-forms
+                .font-bold 多种类型表单
+                .mt-1.text-sm 表单有单行文本、多行文本、单选项、多选项等多种类型
+              div.mt-4.icon-upload
+                .font-bold 可上传文件图片
+                .mt-1.text-sm 可收集文件或图片，图片支持在线裁剪
+              div.mt-4.icon-validation
+                .font-bold 提供信息校验
+                .mt-1.text-sm 手机号、身份证等多种信息可进行校验，避免错填
+              div.mt-4.icon-payment
+                .font-bold 支持逻辑控制
+                .mt-1.text-sm 可为不同票种设置不同表单，也可设置控制项，隐藏或显示系列表单
+          div
+            img(src="./img/event/form.svg")
+        .frame.flex.flex-row-reverse
+          div.pl-8
+            .frame-title 订单自由导入导出
+            .frame-subtitle 活动订单支持自由导入导出，方便管理活动人员。
+            div.frame-icons.mt-8
+              div.mt-4.icon-checkin
+                .font-bold 聚合签到
+                .mt-1.text-sm 导入订单可智能识别多个主流平台报名数据，实现统一管理签到
+              div.mt-4.icon-import
+                .font-bold 导入自定义信息
+                .mt-1.text-sm 导入订单可附加信息，方便现场签到时查看
+              div.mt-4.icon-eticket
+                .font-bold 批量发送电子票
+                .mt-1.text-sm 导入名单后，可以通过短信或邮件方式批量发送电子票
+              div.mt-4.icon-export
+                .font-bold 导出表单信息
+                .mt-1.text-sm 支持导出成 Excel 或 CSV 表单，轻松进行统计整理
+          div
+            img(src="./img/event/order.svg")
+        .frame.flex
+          div
+            .frame-title 多种通知消息提醒
+            .frame-subtitle 可以通过短信、邮件或微信通知发送通知消息。
+            div.frame-icons.mt-8
+              div.mt-4.icon-message
+                .font-bold 自定义出票通知
+                .mt-1.text-sm 出票短信、邮件和微信模板消息支持部分内容自定义，适用各种出票情景
+              div.mt-4.icon-batch
+                .font-bold 群发通知提醒
+                .mt-1.text-sm 如遇活动临期或改期等情况，可向所有购票者群发通知提醒
+              div.mt-4.icon-language
+                .font-bold 支持中英双语
+                .mt-1.text-sm 出票短信和邮件提供了中英两种语言模板，可同时使用双语通知
+              div.mt-4.icon-host
+                .font-bold 主办方消息提醒
+                .mt-1.text-sm 通过绑定微信，主办方可即时获取新增订单、待审核或即将售罄等活动变化信息提醒
+          div
+            img(src="./img/event/form.svg")
+    .section.white-bg.mt-12
+      .container
+        .title 多种营销方案 助力活动成功
+        .subtitle 多种营销工具获取更多客源
+        .mt-12.flex.flex-wrap.weixin-tools
+          .text-center
+            .icon-fission
+            .mt-4.font-bold.text-lg 裂变营销
+            .mt-2.text-gray-600 多人拼团，海报分享，快速裂变分享传播
+          .text-center
+            .icon-promotion
+            .mt-4.font-bold.text-lg 多样促销
+            .mt-2.text-gray-600 优惠券码、满折/满减、限时特惠等多样促销手段
+          .text-center
+            .icon-customer
+            .mt-4.font-bold.text-lg 客户留存
+            .mt-2.text-gray-600 微信消息推送，评价邀请，唤醒潜在用户，增强用户粘性
+    //- .section.white-bg.mt-12
+    //-   .container
+    //-     .title 超多成功案例 丰富行业经验
+    //-     .subtitle 丰富的成功案例让我们积累了更多行业经验
+    //-     .case-list.mt-12
+    .section.white-bg.mt-12.mb-12
+      include partials/_advisory.pug
+    .section.bg-blue-geo
+      .container.text-center
+        h2.mt-8.text-2xl 现在注册，立享 15 天免费试用和专属技术支持
+        .mt-6
+          a.btn(href="https://app.duohui.cn", target="_blank") 立即试用
+          a.btn.solid.ml-4(href="/compare") 查看定价
+    include partials/_footer.pug
