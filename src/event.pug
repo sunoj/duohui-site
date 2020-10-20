@@ -137,11 +137,31 @@ html
             .icon-customer
             .mt-4.font-bold.text-lg 客户留存
             .mt-2.text-gray-600 微信消息推送，评价邀请，唤醒潜在用户，增强用户粘性
-    //- .section.white-bg.mt-12
-    //-   .container
-    //-     .title 超多成功案例 丰富行业经验
-    //-     .subtitle 丰富的成功案例让我们积累了更多行业经验
-    //-     .case-list.mt-12
+    .section.white-bg.mt-12
+      .container
+        .title 超多成功案例 丰富行业经验
+        .subtitle 丰富的成功案例让我们积累了更多行业经验
+        .case-list.mt-12
+          .list-item.active
+            .item-avatar(style="background-image: url('./img/cases/service-luguhu.png')")
+            .item-main
+              .main-prev
+              .main-detail
+                .detail-title
+                  img(src="./img/cases/service-luguhu-logo.png")
+                  span 泸沽湖机场快线
+                .detail-description 泸沽湖机场快线由丽江女儿国旅游交通客运有限公司承运，于2015年10月12日正式开通。通过多会打造专属电子车票系统，工作人员通过手持设备即可轻松移动售票验票，子账户功能方便管理，数据统计全面详细。
+              .main-next
+          .list-item
+            .item-avatar(style="background-image: url('./img/cases/service-luguhu.png')")
+            .item-main
+              .main-prev
+              .main-detail
+                .detail-title
+                  img(src="./img/cases/service-luguhu-logo.png")
+                  span 泸沽湖机场快线2
+                .detail-description 泸沽湖机场快线由丽江女儿国旅游交通客运有限公司承运，于2015年10月12日正式开通。通过多会打造专属电子车票系统，工作人员通过手持设备即可轻松移动售票验票，子账户功能方便管理，数据统计全面详细。
+              .main-next
     .section.white-bg.mt-12.mb-12
       include partials/_advisory.pug
     .section.bg-blue-geo
@@ -151,3 +171,18 @@ html
           a.btn(href="https://app.duohui.cn", target="_blank") 立即试用
           a.btn.solid.ml-4(href="/compare") 查看定价
     include partials/_footer.pug
+    script(src='./vendor/vendor.js')
+    script.
+      $('body')
+        .on('click', '.case-list .main-prev, .case-list .main-next', function() {
+          const $this = $(this)
+          const isPrev = $this.hasClass('main-prev')
+          const currentIndex = $this.parents('.list-item').index()
+          const items = $this.parents('.case-list').find('.list-item')
+          const count = items.length
+          let showIndex = currentIndex + (isPrev ? -1 : 1)
+          if (showIndex > count - 1) showIndex = 0
+          if (showIndex < 0 ) showIndex = count - 1
+          items.removeClass('active')
+          $(items[showIndex]).addClass('active')
+        })

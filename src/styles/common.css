@@ -747,3 +747,83 @@ a.dropdown-item.is-active {
 .product-icons .icon-child {
   background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.125 12.167A4.125 4.125 0 0 1 14 8.042v-.917a4.125 4.125 0 0 1 8.25 0v.917a4.125 4.125 0 0 1-4.125 4.125zM9.417 17.667A3.667 3.667 0 0 1 5.75 14v-.917a3.667 3.667 0 0 1 7.333 0V14a3.667 3.667 0 0 1-3.666 3.667zM20.417 13.083h-4.584c-.314 0-.62.032-.916.093V14c0 1.235-.415 2.37-1.106 3.287a6.424 6.424 0 0 1 3.856 5.88V25h6.416c.506 0 .917-.41.917-.917v-6.416a4.584 4.584 0 0 0-4.583-4.584zM14.917 25h-11A.917.917 0 0 1 3 24.083v-.916a4.584 4.584 0 0 1 4.583-4.584h3.667a4.584 4.584 0 0 1 4.583 4.584v.916c0 .506-.41.917-.916.917z' fill='%23487EF0'/%3E%3C/svg%3E");
 }
+
+.case-list {
+  border: 1px solid #efefef;
+  border-radius: 12px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.case-list .list-item {
+  display: none;
+}
+
+.case-list .list-item.active {
+  display: flex;
+}
+
+.case-list .list-item .item-avatar {
+  flex-grow: 1;
+  width: 40%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.case-list .list-item .item-main {
+  flex-grow: 1;
+  display: flex;
+  width: 60%;
+}
+
+.case-list .list-item .item-main .main-prev,
+.case-list .list-item .item-main .main-next {
+  width: 16rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  cursor: pointer;
+}
+
+.case-list .list-item .item-main .main-prev:hover,
+.case-list .list-item .item-main .main-next:hover {
+  opacity: .7;
+}
+
+.case-list .list-item .item-main .main-prev {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.813 18.438L4.374 10l8.438-8.438' stroke='%238D9198' stroke-width='2.057' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.case-list .list-item .item-main .main-next {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.188 1.563L13.624 10l-8.438 8.438' stroke='%238D9198' stroke-width='2.057' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.case-list.single .list-item .item-main .main-prev,
+.case-list.single .list-item .item-main .main-next {
+  background: none;
+  cursor: default;
+}
+
+.case-list .list-item .item-main .main-detail .detail-title {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0 3rem 0;
+}
+
+.case-list .list-item .item-main .main-detail .detail-title img {
+  width: 60px;
+  height: 60px;
+}
+
+.case-list .list-item .item-main .main-detail .detail-title span {
+  margin-left: 1rem;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.case-list .list-item .item-main .main-detail .detail-description {
+  word-break: break-all;
+}
+
