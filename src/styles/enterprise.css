@@ -1,298 +1,55 @@
-.color-btn{
-  cursor: pointer;
-  user-select: none;
-  border: 1px solid transparent;
+.bg-black-geo {
+  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='619' viewBox='0 0 1440 619' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h1440v554H0V0z' fill='url(%23paint0_linear)'/%3E%3Ccircle opacity='.6' cx='1338.5' cy='-226.5' r='406.5' fill='url(%23paint1_linear)'/%3E%3Cpath opacity='.2' d='M16.756 240.234c5.123-13.269 21.49-17.993 32.895-9.495L345.22 450.952c14.252 10.618 10.194 32.961-6.881 37.889L-89.992 612.473c-17.076 4.928-32.415-11.816-26.014-28.395L16.756 240.234z' fill='url(%23paint2_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='579.5' y1='-23.8' x2='656.637' y2='435.39' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23292929'/%3E%3Cstop offset='1' stop-color='%23212121'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='1581.67' y1='97.5' x2='1191' y2='-100.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23fff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='.13'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear' x1='266.755' y1='366.234' x2='37.739' y2='630.805' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.076' stop-color='%23fff' stop-opacity='.3'/%3E%3Cstop offset='.598' stop-color='%23fff' stop-opacity='.25'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-position: center;
+}
+
+.bg-black-geo-large {
+  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='930' viewBox='0 0 1440 930' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='url(%23paint0_linear)' d='M0 0h1440v930H0z'/%3E%3Ccircle opacity='.28' cx='368.525' cy='327.756' r='60.5' transform='rotate(-178.349 368.525 327.756)' fill='url(%23paint1_linear)'/%3E%3Ccircle opacity='.28' cx='1342.06' cy='382.06' r='207.237' transform='rotate(-124.383 1342.06 382.06)' fill='url(%23paint2_linear)'/%3E%3Cpath opacity='.28' d='M201.049 143.626c4.621 8.029.31 18.252-8.665 20.547L-24.67 219.688c-11.214 2.868-20.866-8.337-16.369-19.003L64.257-49.006c4.498-10.666 19.26-11.576 25.034-1.544l111.758 194.176z' fill='url(%23paint3_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='881' y1='53.694' x2='963.261' y2='1147.45' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23292929'/%3E%3Cstop offset='1' stop-color='%233B3B3B'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='302.909' y1='247.818' x2='448.457' y2='319.452' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.076' stop-color='%23EEE' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23828282' stop-opacity='.73'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear' x1='1156.46' y1='254.981' x2='1465.32' y2='298.876' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.076' stop-color='%23EEE' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23828282' stop-opacity='.73'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='.73'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint3_linear' x1='243.592' y1='60.091' x2='15.061' y2='215.48' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.076' stop-color='%23fff' stop-opacity='.2'/%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='.18'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-position: center;
+}
+
+.tabs .tab:not(.bg-white):hover {
+  background: #fafafa;
+}
+
+.enterprise-icons [class*="icon-"] {
   display: inline-block;
-  border-radius: 4px;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.06);
-  text-decoration: none;
-  font-weight: normal;
-  font-size: 18px;
-  padding: 8px 32px;
+  padding-left: 36px;
+  height: 24px;
+  line-height: 24px;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
-.color-btn:hover{
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+.enterprise-icons .icon-mini {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23343434'/%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M4.8 14.026c.053-1.246 1.145-2.249 2.66-2.912.645-.286 1.256-.295 1.6.449.403.864-.283 1.148-.85 1.39-1.136.488-1.704 1.289-1.149 2.45.525 1.09 1.572 1.31 2.658.928.913-.321 1.288-1.047 1.266-2.037a116.406 116.406 0 0 1 0-4.851c.038-1.936.933-3.182 2.679-3.81 1.605-.58 3.618-.044 4.7 1.25 1.694 2.018.442 5.537-2.151 6.065-.569.114-1.058.009-1.307-.544-.227-.506.096-.885.45-1.197.171-.15.384-.246.58-.36.852-.5 1.55-1.13 1.127-2.221-.393-1.012-1.297-1.262-2.28-1.13-1.117.144-1.736.813-1.74 1.983-.01 1.79.055 3.585-.032 5.375-.096 2.003-2.222 3.788-4.274 3.719-2.198-.086-3.975-1.873-3.936-4.548' fill='%23fff'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' transform='translate(4.8 4.8)' d='M0 0h14.4v14.4H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
 
-.color-btn.black{
-  color: #282828;
-  background: #EBEBEB;
-  border-color: #333;
+.enterprise-icons .icon-server {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='9' fill='%23fff'/%3E%3Cpath d='M12 0c6.628 0 12 5.372 12 12s-5.372 12-12 12S0 18.628 0 12 5.372 0 12 0zm.288 6a2.93 2.93 0 0 0-1.774.588 2.52 2.52 0 0 0-.974 1.514c-.086.506-.172 1.29-.056 2.132.114.813.372 1.458.772 1.935.915 1.093.572 1.599.516 1.654-.658.841-1.545 1.038-2.404 1.233-.143.028-.316.084-.486.112-.342.084-.745.197-1.06.422-.428.308-.715.813-.801 1.513-.028.394-.028.757 0 .897h12.563c.03-.336.114-1.738-.83-2.383-.314-.225-.714-.336-1.03-.42-.171-.029-.343-.085-.515-.113-.858-.169-1.746-.364-2.405-1.234-.027-.055-.4-.56.516-1.654.402-.504.659-1.15.774-1.934.114-.842.027-1.626-.059-2.131a2.498 2.498 0 0 0-.973-1.544A2.923 2.923 0 0 0 12.288 6zm.012 8.19l.888 2.438-.888.87-.888-.87.888-2.439z' fill='%23343434'/%3E%3C/svg%3E");
 }
 
-.color-btn.yellow{
-  color: #d4a517;
-  background: #fffbed;
-  border-color: #f0c951;
+.enterprise-icons .icon-medium {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23343434'/%3E%3Cpath d='M16.631 10.391a.583.583 0 0 0-.514-.308H13.39l.955-3.34A.584.584 0 0 0 13.783 6H9.7a.584.584 0 0 0-.563.43l-1.75 6.417a.583.583 0 0 0 .563.736h2.801l-1.041 5.73a.583.583 0 0 0 1.06.427l5.833-8.75a.585.585 0 0 0 .028-.599z' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-.color-btn.blue{
-  color: #478BE5;
-  background: #D6F5FF;
-  border-color: #56CCF2;
+.enterprise-icons .icon-brand {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='12' fill='%23343434'/%3E%3Cpath d='M4.943 16.953l1.031.425v-6.915L4.116 14.95a1.54 1.54 0 0 0 .827 2.003zm14.942-2.842l-3.8-9.168a1.535 1.535 0 0 0-1.997-.828L8.445 6.452a1.536 1.536 0 0 0-.827 1.996l3.796 9.168a1.535 1.535 0 0 0 1.996.828l5.643-2.337a1.532 1.532 0 0 0 .832-1.996zM9.039 8.598a.768.768 0 0 1-.766-.767c0-.421.344-.766.766-.766.421 0 .766.345.766.766a.768.768 0 0 1-.766.767zm-1.533 8.428c0 .843.69 1.532 1.533 1.532h1.115l-2.648-6.39v4.858z' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-.color-btn + .color-btn{
-  margin-left: 36px;
-}
-
-.column.margin {
-  min-height: 1px;
-}
-
-.enterprise {
-  background: #F6F9FC;
-  text-align: center;
-}
-
-.enterprise .section-title{
-  font-size: 28px;
-  font-weight: normal;
-}
-
-.enterprise .section-desc{
-  font-size: 18px;
-  line-height: 1.6em;
-  margin: 18px auto;
-  max-width: 42em;
-}
-
-.feature-icons h4{
-  font-size: 18px;
-  font-weight: normal;
-  margin: 12px 0 24px;
-}
-
-.enterprise .header{
-  background: #fff;
-  padding: 20px 0;
-  line-break: 0;
-  border-bottom: 1px solid #eee;
-  }
-
-  .enterprise .header .logo img{
-    height: 42px;
-  }
-
-  .enterprise .header .nav {
-    margin: 0;
-    line-height: 0;
-  }
-
-  .enterprise .header .nav li {
-    line-height: 22px;
-    font-weight: normal;
-  }
-
-  .enterprise .header .logo {
-    line-height: 0;
-  }
-
-  .enterprise .header .logo a {
-    line-height: 0;
-    display: inline-block;
-  }
-
-  .enterprise .header .logo h1{
-    font-size: 26px;
-    font-weight: normal;
-    display: inline;
-    line-height: 42px;
-    vertical-align: top;
-    margin: 0 0 0 12px;
-  }
-
-
-.enterprise .hero{
-  background: linear-gradient(#35affc, #3a88fd);
-  border-bottom: 1px solid #eee;
-  color: #fff;
-}
-
-.enterprise .icon img {
-  background: #fff;
-  border-radius: 30px;
-  border: 1px #fff solid;
-}
-
-  .enterprise .hero .slogan h1{
-    font-size: 48px;
-    font-weight: normal;
-  }
-
-  .enterprise .hero .slogan h2{
-    font-weight: normal;
-    font-size: 24px;
-    margin-bottom: 48px;
-  }
-
-  .enterprise .hero .action{
-    margin-top: 48px;
-    margin-bottom: 24px;
-  }
-
-.enterprise .features{
-  border-bottom: 1px solid #EEE;
-  }
-  .enterprise .features .features-list{
-    margin-top: 42px;
-    border-top: 1px solid #EEE;
-    padding-top: 42px;
-  }
-  .enterprise .features .features-list h3{
-    font-size: 24px;
-    font-weight: normal;
-  }
-  .enterprise .features .features-list p {
-    font-size: 16px;
-    max-width: 24em;
-    margin: 12px auto 42px;
-  }
-
-.enterprise .pricing{
-  border-bottom: 1px solid #EEE;
-  }
-  .enterprise .pricing .price-box{
-    margin: 42px auto;
-    max-width: 380px;
-  }
-
-  .enterprise .sub-price{
-    color: #f3f3f3;
-    font-size: 12px;
-    font-weight: bold;
-    margin: 2px;
-  }
-
-  .enterprise .sub-price .value {
-    font-size: 14px;
-  }
- 
-  .contact-box {
-    text-align: left;
-    max-width: 660px;
-    background: #FFFFFF;
-    border: 1px solid #DDDDDD;
-    box-sizing: border-box;
-    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
-    border-radius: 6px;
-    padding: 12px 32px;
-    margin: 48px auto 24px;
-  }
-  .contact-box h3{
-    font-size: 24px;
-    font-weight: normal;
-  }
-  .contact-box .actions{
-    margin: 24px 0;
-  }
-  .contact-box .color-btn{
-    padding: 12px 32px;
-  }
-  .contact-box .tips{
-    color: #999;
-    font-size: 14px;
-    display: inline-block;
-    margin-left: 18px;
-  }
-  dd{
-    margin: 0;
-  }
-  .form-group dt{
-    margin-bottom: 12px;
-  }
-  .form-group label{
-    font-size: 18px;
-    font-weight: normal;
-  }
-  .form-control {
-    padding: 8px 10px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-  .form-group .form-control{
-    width: 100%;
-  }
-  .form-group textarea.form-control{
-    height: 120px;
-    min-height: 120px;
-  }
-
-.enterprise .self-host{
-  background: #E5E5E5;
-  border-top: 1px solid #DDD;
-  border-bottom: 1px solid #DDD;
-  }
-  .enterprise .self-host .feature-icons{
-    margin: 42px 0;
-  }
-  .enterprise .self-host .color-btn{
-    font-size: 20px;
-  }
-
-.enterprise .customers{
-  border-bottom: 1px solid #EEE;
-  }
-  .enterprise .customers .clients{
-    margin-top: 24px;
-    margin-bottom: 24px;
-  }
-  .enterprise .customers .action{
-    margin: 42px 0 24px;
-  }
-
-.enterprise .section.footer{
-  background: transparent !important;
-  text-align: left;
+.left-tick {
+  display: inline-block;
+  margin-right: 6px;
+  padding-left: 24px;
+  height: 20px;
+  line-height: 20px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.75 10l4.167 4.167 8.333-8.334' stroke='%23487EF0' stroke-width='2' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E");
 }
 
 @media screen and (max-width: 768px) {
-  .enterprise .header .nav {
-    display: none;
-  }
-  .enterprise .header{
-    padding: 20px 0 !important;
-  }
-  .enterprise .header .logo img{
-    margin-top: 0;
-  }
-  .enterprise .hero .slogan h1{
-    font-size: 36px;
-  }
-  .enterprise .hero .slogan h2{
-    font-size: 20px;
-    line-height: 1.8;
-  }
-  .enterprise .section-title{
-    font-size: 22px;
-  }
-  .enterprise .section-desc{
-    font-size: 16px;
-  }
-  .enterprise .feature-icons h4{
-    font-size: 16px;
-  }
-  .enterprise .features .features-list h3{
-    font-size: 18px;
-  }
-  .enterprise .features .features-list p{
-    font-size: 14px;
-    min-height: 90px;
-  }
-  .color-btn + .color-btn{
-    margin-left: 24px;
-  }
-}
 
-
-.contact .tips .phone {
-  color: #4893FF;
-}
-
-@media screen and (max-width: 767px) {
-  .col-0{
-    width: 0;
-    padding: 0;
-  }
 }

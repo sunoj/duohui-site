@@ -15,184 +15,124 @@ html
 
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/enterprise.css?v=<!--@echo curtime -->')
     meta(name='msapplication-tap-highlight', content='no')
-  body.enterprise
+  body
     include partials/_mixins.pug
-    .header.section
-      .container.clear
-        .logo
-          a(href="/"): img(src='/img/logo.png', srcset='/img/logo@2x.png 2x', alt='多会')
-          h1 企业版
-        ul.nav.clear
-          a(href='#features')
-            li 功能特征
-          a(href='#pricing')
-            li 价格费用
-          a(href='#contact')
-            li 联系咨询
-    
-    .section.hero
+    .bg-black-geo.text-white
       .container
-        .slogan
-          h1 专属线下活动平台
-          h2 多会企业版为主办方提供独立品牌的专属活动平台
-        .feature-icons
-          .columns
-            .column.col-md-2.col-0.margin
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-mini', '活动微信小程序')
-              h4 活动小程序
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-wechat-service', '活动微信服务号')
-              h4 微信服务号
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-payment', '独立收款渠道')
-              h4 独立收款渠道
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-label', '融合品牌风格')
-              h4 融合品牌风格
-        .action
-          a.color-btn.yellow(href='/app/') 立即试用
-          a.color-btn.blue(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
-    
-    .section.features
+        .py-4.flex.items-center
+          .flex.items-center
+            a(href="/"): img(src='/img/logo-light.png', srcset='/img/logo-light@2x.png 2x', alt='多会')
+            .ml-4.text-white 企业版
+          .flex-grow.text-center
+            a.mx-6.font-bold.text-white.no-underline(href="/compare") 产品列表
+            a.mx-6.font-bold.text-white.no-underline(href="/customers") 服务案例
+            a.mx-6.font-bold.text-white.no-underline(href="/support") 帮助支持
+          .flex
+            a.font-bold.text-white.no-underline(href='https://app.duohui.cn/signup') 注册
+            a.ml-4.font-bold.text-white.no-underline(href='https://app.duohui.cn/') 主办方后台
+        .mt-20.pb-24.text-center
+          .text-5xl.font-bold.text-white 专业主办方的活动管理平台
+          .text-white.mt-4 多会企业版为主办方提供独立品牌的专属活动平台
+          .mt-18
+            a(href="/compare").btn 查看定价
+            a(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank").btn.solid.ml-4 立即试用
+    .py-2.bg-gray-200.sticky.z-10.top-0
       .container
-        h2#features.section-title 企业级的线下活动解决方案
-        p.section-desc 多会企业版帮助企业用户快速配置专属的活动平台。通过微信小程序、微信服务号和网页等多种方式提供服务。使用主办方支付商户收款，票款快速到账，多会不收取手续费。活动报名签到体验更佳，效率更高。
-
-        .columns.features-list
-          .column.col-6
-            .icon: +icon('/img/enterprise/', 'icon-mini', '活动微信小程序')
-            h3 独立活动小程序
-            p 独立品牌，完全属于您的微信小程序。与公众号无缝衔接，提供与品牌融合一致的优质用户体验。
-          .column.col-6
-            .icon: +icon('/img/enterprise/', 'icon-wechat-service', '活动微信服务号')
-            h3 结合微信服务号
-            p 通过微信服务号直接售票给粉丝。购票即关注，活动宣传精准送达，提高转化率。
-          .column.col-6
-            .icon: +icon('/img/enterprise/', 'icon-payment', '独立收款渠道')
-            h3 实时专属收款渠道
-            p 通过主办方自有的微信支付或支付宝商户账号直接收款。资金即时到账，无须提现。
-          .column.col-6
-            .icon: +icon('/img/enterprise/', 'icon-label', '融合品牌风格')
-            h3 融合品牌风格
-            p 不仅隐藏多会品牌，还可配置匹配品牌风格的色彩和徽标。
-
-    .section.pricing.white-bg
+        .tabs.enterprise-icons.flex.justify-center
+          a(href="#mini").tab.mx-2.px-4.py-2.inline-block.rounded.text-black.cursor-pointer.select-none.bg-white
+            span.icon-mini 活动小程序
+          a(href="#server").tab.mx-2.px-4.py-2.inline-block.rounded.text-black.cursor-pointer.select-none
+            span.icon-server 微信服务号
+          a(href="#medium").tab.mx-2.px-4.py-2.inline-block.rounded.text-black.cursor-pointer.select-none
+            span.icon-medium 专属收款渠道
+          a(href="#brand").tab.mx-2.px-4.py-2.inline-block.rounded.text-black.cursor-pointer.select-none
+            span.icon-brand 独立品牌形象
+    .py-10
       .container
-        h2#pricing.section-title 简单的价格，专业的产品和服务
-        .price-box
-          .head 企业版
-          .body
-            p 独立微信小程序、公众号和网页版。微信支付、支付宝和 PayPal 实时到账。
-            .price ￥
-              span.value 9,999
-              span.pre-year 元 / 年 *
-            .promotion
-              span.money ￥13,996
-              span.discount 年付优惠
-            
-            a.btn(href="https://app.duohui.cn/signup") 免费试用15天
-            .tips
-              p.sub-price 按季度支付价格为：￥
-                span.value 3499
-                span.pre-year 元 / 季
-        .feature-icons
-          .columns
-            .column.col-md-2.col-0.margin
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-infinity', '活动场数无限')
-              h4 活动场数无限
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-auth', '子账号权限管理')
-              h4 子账号权限管理
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-refund', '30 天无理由退款')
-              h4 30 天无理由退款
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-call', '专属客户经理支持')
-              h4 专属客户经理支持
-    
-    .section.contact
+        .py-8.flex.items-center#mini
+          .w-half
+            .text-color-theme.text-3xl.font-bold 属于您的活动小程序
+            .mt-8.font-bold.text-2xl 微信流量红利轻松获客
+            .mt-4
+              span.left-tick 一体化营销
+              span.left-tick 微信专属入口
+              span.left-tick 微信自主收款
+            .mt-8.font-bold.text-2xl 一键搭建简单轻松
+            .mt-4
+              span.left-tick 无需开发
+              span.left-tick 自定义组件
+              span.left-tick 风格定制
+              span.left-tick 多种模板
+            .mt-10
+              a(href="/mini").btn 了解更多
+              a(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank").btn.solid.ml-4 立即试用
+          .w-half.px-8
+            img.max-w-full(src="./img/enterprise/mini.svg")
+        .py-8.flex.items-center.flex-row-reverse#server
+          .w-half
+            .text-color-theme.text-3xl.font-bold 支持绑定微信服务号
+            .mt-8.font-bold.text-2xl 更多粉丝和活动曝光
+            .mt-4
+              span.left-tick 购票即关注
+              span.left-tick 微信消息推送
+              span.left-tick 推文内嵌入活动小程序
+            .mt-8.font-bold.text-2xl 启用微信快捷功能
+            .mt-4
+              span.left-tick 票券添加至微信卡包
+              span.left-tick 订单动态通知
+              span.left-tick 服务号接入客服
+            .mt-10
+              a(href="/wechat").btn 了解更多
+              a(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank").btn.solid.ml-4 立即试用
+          .w-half.px-8
+            img.max-w-full(src="./img/enterprise/server.svg")
+        .py-8.flex.items-center#medium
+          .w-half
+            .text-color-theme.text-3xl.font-bold 专属收款渠道
+            .mt-8.font-bold.text-2xl 绑定自有支付渠道
+            .mt-4
+              span.left-tick 微信收款
+              span.left-tick 支付宝收款
+            .mt-8.font-bold.text-2xl 资金到账更迅速
+            .mt-4
+              span.left-tick 无需提现
+              span.left-tick 实时到账
+              span.left-tick 无手续费
+            .mt-10
+              a(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank").btn.solid 立即试用
+          .w-half.px-8
+            img.max-w-full(src="./img/enterprise/medium.svg")
+        .py-8.flex.items-center.flex-row-reverse#brand
+          .w-half
+            .text-color-theme.text-3xl.font-bold 自定义品牌形象
+            .mt-8.font-bold.text-2xl 和企业形象相互辉映
+            .mt-4
+              span.left-tick 隐藏多会品牌
+              span.left-tick 品牌LOGO露出
+            .mt-8.font-bold.text-2xl 增强报名者品牌认知
+            .mt-4
+              span.left-tick 活动页自定义布局
+              span.left-tick 活动页自定义色彩
+              span.left-tick 小程序自定义风格
+            .mt-10
+              a(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank").btn.solid 立即试用
+          .w-half.px-8
+            img.max-w-full(src="./img/enterprise/brand.svg")
+    .py-20.bg-black-geo-large
       .container
-        h2#contact.section-title 与我们联系
-        p.section-desc 需要了解更多关于多会企业版的信息？我们可以根据您的需求为您提供专属解决方案。
-        .contact-box
-          h3 咨询多会企业版服务
-          form(action="https://i.duotai.co/forms/vk43z" method="post" accept-charset="UTF-8")
-            dl.form-group
-              dt
-                label(for='form-name') 姓名
-              dd
-                input#form-name.form-control(type='text' name="name" placeholder="我们该怎么称呼您" required)
-            dl.form-group
-              dt
-                label(for='form-phone') 联系电话
-              dd
-                input#form-phone.form-control(type='text' name="phone" placeholder="请输入您的联系电话" required)
-            dl.form-group
-              dt
-                label(for='form-company') 公司
-              dd
-                input#form-company.form-control(type='text' name="company" placeholder="请输入您的公司名称" required)
-            dl.form-group
-              dt
-                label(for='form-details') 活动需求
-              dd
-                textarea#form-details.form-control(name="details" placeholder="请简单介绍一下您的活动需求，例如活动类型、规模和频次等")
-            .actions
-              button.color-btn.blue 提交咨询
-              p.tips 我们将在工作时间通过电话回复您的咨询
-        .tips 您亦可在工作时间直接致电：
-          span.phone 021-80370533
-    .section.self-host
-      .container
-        h2.section-title 多会企业独立部署版
-        p.section-desc 将多会企业版部署在自有的基础设施或云服务上。可确保数据的隐私性，同时可通过 API 和二次开发将多会企业版与自有业务模块融合。
-        .feature-icons
-          .columns
-            .column.col-md-2.col-0.margin
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-host', '独立部署')
-              h4 独立部署
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-secured-data', '数据私密')
-              h4 数据私密
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-custumization', '二次开发')
-              h4 二次开发
-            .column.col-md-2.col-6
-              .icon: +icon('/img/enterprise/', 'icon-training', '培训服务')
-              h4 培训服务
-        .action
-          a.color-btn.black(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
-
-    .section.customers.white-bg
-      .container
-        h2.section-title 与众多行业领袖一起使用多会
-        .logowall
-          .columns.i2.clients
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-2.png', srcset='./img/partners/clients-2@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-3.png', srcset='./img/partners/clients-3@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-4.png', srcset='./img/partners/clients-4@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-5.png', srcset='./img/partners/clients-5@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-6.png', srcset='./img/partners/clients-6@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
-
-        h2.section-title 免费获取 15 天多会企业版试用
-        .action
-          a.color-btn.yellow(href='/app/') 立即试用
-          a.color-btn.blue(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
-
+        .text-center
+          .text-white.text-2xl.font-bold 现在注册，立享 15 天免费试用和专属技术支持
+          .mt-8.mb-12
+            a(href="/compare").btn 查看定价
+            a(href="https://app.duohui.cn/signup", target="_blank").btn.solid.ml-4 立即注册
+        include partials/_advisory.pug
     include partials/_footer.pug
+    script(src='./vendor/vendor.js')
+    script.
+      $('body')
+        .on('click', '.tabs .tab', function() {
+          $(this).addClass('bg-white').siblings().removeClass('bg-white')
+        })

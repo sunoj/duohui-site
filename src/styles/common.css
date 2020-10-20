@@ -49,6 +49,14 @@ ul{
   box-sizing: border-box;
 }
 
+.text-color-theme {
+  color: #176BE8;
+}
+
+.w-half {
+  width: 50%;
+}
+
 .btn {
   position: relative;
   cursor: pointer;
