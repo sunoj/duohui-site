@@ -788,7 +788,7 @@ a.dropdown-item.is-active {
 
 .case-list .list-item .item-main .main-prev,
 .case-list .list-item .item-main .main-next {
-  width: 16rem;
+  width: 10%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 18px;
@@ -814,6 +814,10 @@ a.dropdown-item.is-active {
   cursor: default;
 }
 
+.case-list .list-item .item-main .main-detail {
+  width: 80%;
+}
+
 .case-list .list-item .item-main .main-detail .detail-title {
   display: flex;
   align-items: center;
@@ -821,12 +825,12 @@ a.dropdown-item.is-active {
 }
 
 .case-list .list-item .item-main .main-detail .detail-title img {
+  margin-right: 1rem;
   width: 60px;
   height: 60px;
 }
 
 .case-list .list-item .item-main .main-detail .detail-title span {
-  margin-left: 1rem;
   font-size: 24px;
   font-weight: 600;
 }
