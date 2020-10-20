@@ -63,7 +63,7 @@ html
           .feature-description.mt-2 订单数据将通过多种图表进行统计展示，轻松查看售票情况。
     .section.white-bg.mt-12
       .container.service-frames
-        .frame.flex.flex-row-reverse
+        .frame.flex.items-center.flex-row-reverse
           div
             .frame-title 一次购票多次核销
             .frame-subtitle 可根据实际需求，自由设定电子票可用次数
@@ -79,7 +79,7 @@ html
                 .mt-1.text-sm 电子票除验票使用，还可以作为其他项目兑换凭证
           div
             img(src="./img/service/ticket.svg")
-        .frame.flex
+        .frame.flex.items-center
           div.pl-8
             .frame-title 库存设置灵活
             .frame-subtitle 可为不同日期设置不同库存，库存余量实时显示，简单直观。
@@ -95,7 +95,7 @@ html
                 .mt-1.text-sm 可同时设置多个场次，并按场次分别设置库存，以便控制场次人数
           div
             img(src="./img/service/calendar.svg")
-        .frame.flex.flex-row-reverse
+        .frame.flex.items-center.flex-row-reverse
           div
             .frame-title 自定义退款规则
             .frame-subtitle 可自定义退款规则，支持部分退款，减少退单损失。
@@ -114,36 +114,82 @@ html
     .section.white-bg.mt-12
       .container
         .title.mb-4 满足多个行业场景需求
-        input(name="tab", type="radio", checked="true").hidden.tool-tab#casual
-        label(for="casual") 休闲健身
-        input(name="tab", type="radio").hidden.tool-tab#bus
-        label(for="bus") 客运巴士
-        .mt-12.flex.flex-wrap.service-tools.casual
-          .text-center
-            .icon-cards
-            .mt-4.font-bold.text-lg 年卡月卡次卡
-            .mt-2.text-gray-600 支持设置单张电子票使用次数，单次购票，可多次核销。
-          .text-center
-            .icon-card
-            .mt-4.font-bold.text-lg 绑定实体卡
-            .mt-2.text-gray-600 支持自定义票码，可导入实体卡号，电子票码可与实体卡保持一致。
-          .text-center
-            .icon-lesson
-            .mt-4.font-bold.text-lg 选课预约
-            .mt-2.text-gray-600 支持多场次功能，可灵活设置库存，方便进行选课预约。
-        .mt-12.flex.flex-wrap.service-tools.bus
-          .text-center
-            .icon-cards
-            .mt-4.font-bold.text-lg 移动验票
-            .mt-2.text-gray-600 提供多种验票方案，包括专用手持设备，以及手机验票APP，随时随地轻松验票。
-          .text-center
-            .icon-card
-            .mt-4.font-bold.text-lg 车次选择
-            .mt-2.text-gray-600 支持多场次功能，可灵活设置库存，方便进行车次选择。
-          .text-center
-            .icon-lesson
-            .mt-4.font-bold.text-lg 多种收款方式
-            .mt-2.text-gray-600 支持多种收款方式，包括支付宝、微信支付以及现金付款等。
+        .text-center
+          input(name="tab", type="radio", checked="true").hidden.tool-tab#casual
+          label(for="casual") 休闲健身
+          input(name="tab", type="radio").hidden.tool-tab#bus
+          label(for="bus") 客运巴士
+          input(name="tab", type="radio").hidden.tool-tab#tour
+          label(for="tour") 景区旅游
+          input(name="tab", type="radio").hidden.tool-tab#room
+          label(for="room") 密室逃脱
+          input(name="tab", type="radio").hidden.tool-tab#class
+          label(for="class") 自习室
+          .mt-12.flex.flex-wrap.service-tools.casual
+            .text-center
+              .icon-cards
+              .mt-4.font-bold.text-lg 年卡月卡次卡
+              .mt-2.text-gray-600 支持设置单张电子票使用次数，单次购票，可多次核销。
+            .text-center
+              .icon-card
+              .mt-4.font-bold.text-lg 绑定实体卡
+              .mt-2.text-gray-600 支持自定义票码，可导入实体卡号，电子票码可与实体卡保持一致。
+            .text-center
+              .icon-lesson
+              .mt-4.font-bold.text-lg 选课预约
+              .mt-2.text-gray-600 支持多场次功能，可灵活设置库存，方便进行选课预约。
+          .mt-12.flex.flex-wrap.service-tools.bus
+            .text-center
+              .icon-mobile
+              .mt-4.font-bold.text-lg 移动验票
+              .mt-2.text-gray-600 提供多种验票方案，包括专用手持设备，以及手机验票APP，随时随地轻松验票。
+            .text-center
+              .icon-shift
+              .mt-4.font-bold.text-lg 车次选择
+              .mt-2.text-gray-600 支持多场次功能，可灵活设置库存，方便进行车次选择。
+            .text-center
+              .icon-payment
+              .mt-4.font-bold.text-lg 多种收款方式
+              .mt-2.text-gray-600 支持多种收款方式，包括支付宝、微信支付以及现金付款等。
+          .mt-12.flex.flex-wrap.service-tools.tour
+            .text-center
+              .icon-id
+              .mt-4.font-bold.text-lg 支持身份证核验
+              .mt-2.text-gray-600 支持绑定身份证入场，降低检票成本，提升入场效率。
+            .text-center
+              .icon-turn
+              .mt-4.font-bold.text-lg 联动闸机检票
+              .mt-2.text-gray-600 可与闸机设备进行对接，方便闸机检票，降低换代成本。
+            .text-center
+              .icon-external
+              .mt-4.font-bold.text-lg 外部订单导入
+              .mt-2.text-gray-600 外部报名记录可直接导入，汇集一处统一管理，保证数据一致性。
+          .mt-12.flex.flex-wrap.service-tools.room
+            .text-center
+              .icon-group
+              .mt-4.font-bold.text-lg 拼场拼团
+              .mt-2.text-gray-600 支持社交分享进行拼场拼团，降低开场门槛，提高密室接单率
+            .text-center
+              .icon-scene
+              .mt-4.font-bold.text-lg 场次选择
+              .mt-2.text-gray-600 可以设置多个时间场次，无需二次预约，下单更加直观高效
+            .text-center
+              .icon-promotion
+              .mt-4.font-bold.text-lg 优惠活动
+              .mt-2.text-gray-600 支持设置优惠促销活动，满折、满减、优惠券码等多种优惠方式
+          .mt-12.flex.flex-wrap.service-tools.class
+            .text-center
+              .icon-seats
+              .mt-4.font-bold.text-lg 在线选座
+              .mt-2.text-gray-600 可自定义选座界面，方便顾客灵活进行时间和座位的预约
+            .text-center
+              .icon-calendar-cards
+              .mt-4.font-bold.text-lg 日卡月卡年卡
+              .mt-2.text-gray-600 可设置电子票券使用时长，满足用户的多样需求
+            .text-center
+              .icon-timer
+              .mt-4.font-bold.text-lg 自动计时
+              .mt-2.text-gray-600 支持自助扫码开桌，系统自动计时，实现24小时开放低成本管理
     //- .section.white-bg.mt-12
     //-   .container
     //-     .title 超多成功案例 丰富行业经验
