@@ -669,6 +669,16 @@ a.dropdown-item.is-active {
   color: #487EF0;
 }
 
+.bg-green-geo {
+  height: 240px;
+  background-image: url("data:image/svg+xml,%3Csvg width='1440' height='247' viewBox='0 0 1440 247' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ECF8F1' d='M0 0h1440v247H0z'/%3E%3Ccircle opacity='.6' cx='423.5' cy='243.5' r='60.5' fill='url(%23paint0_linear)'/%3E%3Ccircle opacity='.6' cx='1249.25' cy='200.718' r='136.761' transform='rotate(-12.23 1249.25 200.718)' fill='url(%23paint1_linear)'/%3E%3Cpath opacity='.6' d='M271.783 91.131c4.621 8.03.31 18.252-8.665 20.547L84.022 157.485c-11.214 2.868-20.866-8.338-16.369-19.003l86.882-206.026c4.498-10.666 19.26-11.576 25.034-1.544l92.214 160.22z' fill='url(%23paint2_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='464.857' y1='166.693' x2='348.82' y2='290.529' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.076' stop-color='%23A2E3B4' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23DAF5E1'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='1342.74' y1='27.096' x2='1080.43' y2='307.029' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.076' stop-color='%23A2E3B4' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23DAF5E1'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear' x1='266.685' y1='204.953' x2='91.717' y2='-40.694' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.076' stop-color='%23A2E3B4' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23DAF5E1'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-position: center;
+}
+
+.bg-green-geo h2 {
+  color: #2AB751;
+}
+
 .product-icons [class*="icon-"] {
   display: inline-block;
   padding-left: 36px;
