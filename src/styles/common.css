@@ -53,7 +53,7 @@ ul{
   color: #176BE8;
 }
 
-.text-color-weixin {
+.text-color-green {
   color: #2AB751;
 }
 
@@ -75,14 +75,24 @@ ul{
   text-decoration: none;
   border: 2px solid #4893ff;
   background-color: transparent;
-  color: #4893FF;  
+  color: #4893FF;
   transition: all 0.3s;
 }
 
-.btn.solid{
+.btn.green {
+  color: #2AB751;
+  border: 2px solid #2AB751;
+}
+
+.btn.solid {
 	border: 2px solid #4893ff;
   background-color: #4893ff;
   color: #fff; 
+}
+
+.btn.solid.green {
+  border: 2px solid #2AB751;
+  background-color: #2AB751;
 }
 
 .btn:hover{
@@ -681,6 +691,10 @@ a.dropdown-item.is-active {
 
 .bg-green-geo h2 {
   color: #2AB751;
+}
+
+.border-left-white {
+  border-left: 1px solid #fff;
 }
 
 .product-icons [class*="icon-"] {
