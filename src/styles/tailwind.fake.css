@@ -23,6 +23,10 @@
   flex-direction: row-reverse;
 }
 
+.justify-start {
+  justify-content: start;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -115,6 +119,51 @@
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+
+.mr-1 {
+  margin-right: .25rem;
+}
+
+.mr-2 {
+  margin-right: .5rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mr-6 {
+  margin-right: 1rem;
+}
+
+.mr-8 {
+  margin-right: 2rem;
+}
+
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
+.mr-12 {
+  margin-right: 3rem;
+}
+
+.mr-14 {
+  margin-right: 3.5rem;
+}
+
+.mr-16 {
+  margin-right: 4rem;
+}
+
+.mr-18 {
+  margin-right: 4.5rem;
+}
+
+.mr-20 {
+  margin-right: 5rem;
 }
 
 .mb-2 {

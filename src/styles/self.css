@@ -8,33 +8,6 @@
   background-position: center;
 }
 
-.self-icons [class*="icon-"] {
-  display: inline-block;
-  padding-left: 36px;
-  height: 24px;
-  line-height: 24px;
-  background-size: 24px;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.self-icons .icon-mini {
-  background-image: url("");
-}
-
-.self-icons .icon-server {
-  background-image: url("");
-}
-
-.self-icons .icon-medium {
-  background-image: url("");
-}
-
-.self-icons .icon-brand {
-  background-image: url("");
-}
-
-
 .self-tools > div {
   margin-bottom: 3rem;
   padding: 0 2rem;
