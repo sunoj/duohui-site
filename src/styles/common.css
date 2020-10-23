@@ -79,6 +79,11 @@ ul{
   padding: 10px 32px;
 }
 
+.btn.white {
+  color: #fff;
+  border: 2px solid #fff;
+}
+
 .green-btn-box .btn,
 .btn.green {
   color: #2AB751;
@@ -890,4 +895,21 @@ a.dropdown-item.is-active {
 
 .case-list .list-item .item-main .main-detail .detail-description {
   word-break: break-all;
+}
+
+@media screen and (max-width: 768px) {
+  .case-list {
+    height: 600px;
+  }
+  .case-list .list-item {
+    flex-wrap: wrap;
+  }
+  .case-list .list-item .item-avatar,
+  .case-list .list-item .item-main {
+    width: 100%;
+    height: 300px;
+  }
+  .case-list .list-item .item-main .main-detail .detail-title {
+    margin: 2rem 0;
+  }
 }
