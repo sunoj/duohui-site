@@ -73,10 +73,14 @@ ul{
   touch-action: manipulation;
   font-weight: 700;
   text-decoration: none;
-  border: 2px solid #4893ff;
+  border: 2px solid #176BE8;
   background-color: transparent;
-  color: #4893FF;
+  color: #176BE8;
   transition: all 0.3s;
+}
+
+.btn.large {
+  padding: 10px 40px;
 }
 
 .green-btn-box .btn,
@@ -92,8 +96,8 @@ ul{
 }
 
 .btn.solid {
-	border: 2px solid #4893ff;
-  background-color: #4893ff;
+  border: 2px solid #176BE8;
+  background-color: #176BE8;
   color: #fff; 
 }
 
@@ -885,4 +889,3 @@ a.dropdown-item.is-active {
 .case-list .list-item .item-main .main-detail .detail-description {
   word-break: break-all;
 }
-
