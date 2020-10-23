@@ -1,19 +1,5 @@
-.slogan-demo > div {
-  width: 50%;
-}
-
-.slogan-demo .slogan {
-  padding-right: 2rem;
-}
-
-.slogan-demo .demo img {
-  max-width: 100%;
-}
-
 .event-tools > div {
   margin-bottom: 3rem;
-  padding: 0 2rem;
-  width: 33.33%;
 }
 
 .event-tools [class*="icon-"] {
@@ -40,7 +26,6 @@
 .event-features > div {
   margin-bottom: 3rem;
   padding: 0 2rem;
-  width: 33.33%;
 }
 
 .feature-description {
@@ -49,10 +34,6 @@
 
 .event-frames .frame {
   margin-bottom: 40px;
-}
-
-.event-frames .frame > div {
-  width: 50%;
 }
 
 .event-frames .frame > div img {

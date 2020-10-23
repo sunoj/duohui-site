@@ -14,40 +14,41 @@ html
   body
     include partials/_header.pug
     .pt-10(style="background:#ECF8F1;")
-      .slogan-demo.container.pt-12.flex.items-center
-        .slogan
-          .hello
+      .container.pt-12.md_py-10.flex.items-center
+        .pr-8.md_pr-0
+          .pb-8
             h1.mt-0.mb-0 多会小程序
             p.mt-2 为每个主办方提供专属小程序
+            img.mt-8.max-w-full.hidden.md_block(src='./img/banner/mini.svg', alt='home')
           .mt-6.flex
-            .mr-4.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
+            .mr-4.md_mr-1.md_text-xs.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
               span.text-color-green 无需开发
               img.ml-1(src="data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 0C3.14 0 0 3.14 0 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm-.583 1.75h1.166V3.5H6.417V1.75zM3.5 7.583H1.75V6.417H3.5v1.166zM7 8.75c-.965 0-1.75-.785-1.75-1.75 0-.27.066-.521.175-.75L2.864 3.688l.824-.824L6.25 5.426c.229-.11.48-.176.75-.176.965 0 1.75.785 1.75 1.75S7.965 8.75 7 8.75zm2.063-4.638L10.3 2.875l.825.825-1.238 1.237-.824-.825zM10.5 7.583V6.417h1.75v1.166H10.5z' fill='%232AB751'/%3E%3C/svg%3E")
-            .mr-4.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
+            .mr-4.md_mr-1.md_text-xs.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
               span.text-color-green 自定义布局
               img.ml-1(src="data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.417 3.5V1.167a.583.583 0 0 0-.583-.584H1.167a.583.583 0 0 0-.584.584V3.5h12.834zM.583 4.667v8.166a.583.583 0 0 0 .584.583h2.917v-8.75h-3.5zM5.25 13.416h7.583a.583.583 0 0 0 .584-.583V4.667H5.25v8.75z' fill='%232AB751'/%3E%3C/svg%3E")
-            .mr-4.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
+            .mr-4.md_mr-1.md_text-xs.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
               span.text-color-green 操作简单
               img.ml-1(src="data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.333 2.917H1.166V.583c0-.322.262-.583.584-.583h2.333v1.167h-1.75v1.75zM11.667 2.917H10.5v-1.75H8.75V0h2.333c.322 0 .584.26.584.583v2.334zM12.25 14V7.583c0-.644-.522-1.166-1.167-1.166h-3.5v-3.5a1.167 1.167 0 0 0-2.333 0v6.416L2.784 7.36A1.061 1.061 0 0 0 1.19 8.697L4.083 14h8.167z' fill='%232AB751'/%3E%3C/svg%3E")
           .action.mt-12
             a.btn.green(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
             a.btn.solid.green(href='https://app.duohui.cn') 立即试用
-        .demo(style="font-size:0;")
-          img(src="./img/banner/mini.svg", alt="banner")
+        .md_hidden.text-zero
+          img.max-w-full(src="./img/banner/mini.svg", alt="banner")
     .py-20
       .container
         .title 聚集微信流量 助您轻松获客 
         .subtitle 流量红利助你轻松获客、裂变、复购
-        .mt-12.flex.flex-wrap.weixin-tools
-          .text-center
+        .mt-12.flex.justify-center.flex-wrap.weixin-tools
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-mp
             .mt-4.font-bold.text-lg 专属入口
             .mt-2.text-gray-600 小程序卡片、下拉菜单、发现页等多种专属入口轻松获客
-          .text-center
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-marketing
             .mt-4.font-bold.text-lg 一体化营销
             .mt-2.text-gray-600 公众号、小程序、微信群互联互通，流量转化快速高效
-          .text-center
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-pay
             .mt-4.font-bold.text-lg 自有支付
             .mt-2.text-gray-600 配置自有微信支付商户账户，自主收款，资金直接到账
@@ -55,8 +56,8 @@ html
       .container
         .title 多种模版组件 一键快速搭建
         .subtitle 快速搭建的同时满足您多样的需求
-        .flex.items-center.mt-12
-          .vertical-tabs.w-half.pr-8
+        .flex.flex-wrap.items-center.mt-12
+          .vertical-tabs.md_border-none.w-1_2.md_w-full.pr-8.md_pr-0
             .tab.rounded.mb-2.p-4.cursor-pointer.select-none.active
               .text-lg.font-bold.icon-template 多种模版
               .tab-desc.mt-2.text-sm 一键使用行业模板，快速上线更省心
@@ -72,7 +73,7 @@ html
             .tab.rounded.mb-2.p-4.cursor-pointer.select-none
               .text-lg.font-bold.icon-module 可拓展模块
               .tab-desc.mt-2.text-sm 拼团、评价收集等模块，拓展营销方式
-          .w-half.flex.justify-center.items-center
+          .w-1_2.md_w-full.flex.justify-center.items-center
             img.vertical-tab-img.max-w-full.active(src="./img/mini/template.svg", alt="1")
             img.vertical-tab-img.max-w-full(src="./img/mini/component.svg", alt="2")
             img.vertical-tab-img.max-w-full(src="./img/mini/style.svg", alt="3")
@@ -84,19 +85,19 @@ html
         .title 多样营销方案 获取更多客源
         .subtitle 强大的营销功能助力商家成功
         .mt-12.flex.flex-wrap.bottom-tools
-          .text-center
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
             .icon-share
             .mt-4.font-bold.text-lg 裂变营销
             .mt-2.text-gray-600 多人拼团，海报分享，快速裂变分享传播
-          .text-center
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
             .icon-promotion
             .mt-4.font-bold.text-lg 多样促销
             .mt-2.text-gray-600 优惠券码、满折/满减、限时特惠等多样促销手段
-          .text-center
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
             .icon-vip
             .mt-4.font-bold.text-lg 会员复购
             .mt-2.text-gray-600 会员年卡/季卡/月卡，多样会员玩法，提高复购率
-          .text-center
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
             .icon-customer
             .mt-4.font-bold.text-lg 客户留存
             .mt-2.text-gray-600 微信消息推送，评价邀请，唤醒潜在用户，增强用户粘性

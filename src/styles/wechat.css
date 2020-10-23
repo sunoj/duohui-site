@@ -1,24 +1,6 @@
-.slogan-demo > div {
-  width: 50%;
-}
-
-.slogan-demo .slogan {
-  padding-right: 2rem;
-}
-
-.slogan-demo .demo img {
-  max-width: 100%;
-}
-
 .bottom-tools > div,
 .weixin-tools > div {
   margin-bottom: 3rem;
-  padding: 0 2rem;
-  width: 25%;
-}
-
-.bottom-tools > div {
-  width: 33.33%;
 }
 
 .bottom-tools [class*="icon-"],

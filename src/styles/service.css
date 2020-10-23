@@ -1,15 +1,3 @@
-.slogan-demo > div {
-  width: 50%;
-}
-
-.slogan-demo .slogan {
-  padding-right: 2rem;
-}
-
-.slogan-demo .demo img {
-  max-width: 100%;
-}
-
 .tool-tab + label {
   display: inline-block;
   padding: 10px 20px;
@@ -37,8 +25,6 @@
 
 .service-tools > div {
   margin-bottom: 3rem;
-  padding: 0 2rem;
-  width: 33.33%;
 }
 
 .service-tools [class*="icon-"] {
@@ -113,7 +99,6 @@
 .service-features > div {
   margin-bottom: 3rem;
   padding: 0 2rem;
-  width: 33.33%;
 }
 
 .feature-description {
@@ -122,10 +107,6 @@
 
 .service-frames .frame {
   margin-bottom: 40px;
-}
-
-.service-frames .frame > div {
-  width: 50%;
 }
 
 .service-frames .frame > div img {

@@ -22,22 +22,23 @@ html
     include partials/_header.pug
     include partials/_poster_block.pug
     .section.intro
-      .slogan-demo.container.pt-12.flex.items-center
-        .slogan
+      .container.pt-12.md_pt-0.flex.items-center
+        .pr-8.md_pr-0
           .pb-8
             h1.mt-0.mb-0 新一代活动管理系统
             p.mt-2 售票功能强大，适用于多种活动与服务场景，线上线下可同步售票。
+            img.mt-8.max-w-full.hidden.md_block(src='./img/banner/home.svg', alt='home')
           .action
             a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
             a.btn.solid(href='https://app.duohui.cn') 立即试用
-        .demo
-          img(src='./img/banner/home.svg', alt='home')
+        .md_hidden
+          img.max-w-full(src='./img/banner/home.svg', alt='home')
     .section.white-bg.mt-12
       .container
         .title 多种产品，满足众多活动形式
         .subtitle 可根据使用场景选择最适合的产品
-        .mt-12.flex
-          table.products-table.product-icons
+        .mt-12.flex.flex-wrap
+          table.products-table.product-icons.mr-8.md_mr-0
             thead
               tr
               th(colspan="2")
@@ -68,7 +69,7 @@ html
               tr
                 td(colspan="2")
                   a.btn.large(href="/event") 了解更多
-          table.products-table.product-icons
+          table.products-table.product-icons.md_mt-8
             thead
               tr
               th(colspan="2")
@@ -104,27 +105,27 @@ html
         .title 为每个主办方提供专属微信营销工具
         .subtitle 快速搭建小程序，获取微信流量红利
         .mt-12.flex.flex-wrap.weixin-tools
-          .text-center
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-mp
             .mt-4.font-bold.text-lg 专属小程序
             .mt-2.text-gray-600 小程序卡片、下拉菜单、发现页等多种专属入口轻松获客
-          .text-center
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-marketing
             .mt-4.font-bold.text-lg 一体化营销
             .mt-2.text-gray-600 公众号、小程序、微信群互联互通，流量转化快速高效
-          .text-center
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-pay
             .mt-4.font-bold.text-lg 自有支付
             .mt-2.text-gray-600 配置自有微信支付商户账户，自主收款，资金直接到账
-          .text-center
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-notification
             .mt-4.font-bold.text-lg 实时推送购票信息
             .mt-2.text-gray-600 用户可在微信上实时收取订单和票种的动态信息
-          .text-center
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-pocket
             .mt-4.font-bold.text-lg 支持微信卡包
             .mt-2.text-gray-600 支持微信卡包
-          .text-center
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-server
             .mt-4.font-bold.text-lg 智能客服
             .mt-2.text-gray-600 可在服务号添加智能客服，提高和顾客的沟通效率

@@ -1,25 +1,9 @@
-.slogan-demo > div {
-  width: 50%;
-}
-
-.slogan-demo .slogan {
-  padding-right: 2rem;
-}
-
-.slogan-demo .demo img {
-  max-width: 100%;
-}
-
 .products-table {
-  width: 48%;
   overflow: hidden;
+  flex-grow: 1;
   border-collapse: collapse;
   border-radius: 6px;
   box-shadow: 0px 4px 32px rgba(0, 0, 0, .1);
-}
-
-.products-table + .products-table {
-  margin-left: 4%;
 }
 
 .products-table thead tr th {
@@ -45,8 +29,6 @@
 
 .weixin-tools > div {
   margin-bottom: 3rem;
-  padding: 0 2rem;
-  width: 33.33%;
 }
 
 .weixin-tools [class*="icon-"] {

@@ -57,10 +57,6 @@ ul{
   color: #2AB751;
 }
 
-.w-half {
-  width: 50%;
-}
-
 .btn {
   position: relative;
   cursor: pointer;
@@ -80,7 +76,7 @@ ul{
 }
 
 .btn.large {
-  padding: 10px 40px;
+  padding: 10px 32px;
 }
 
 .green-btn-box .btn,
@@ -651,6 +647,12 @@ a.dropdown-item.is-active {
   border: 1px solid #eeeeee;
   border-radius: 6px;
   padding: 12px 16px;
+}
+
+.outline-link-white {
+  border: 1.4px solid #fff;
+  border-radius: 4px;
+  padding: 4px 8px;
 }
 
 @media screen and (max-width: 768px) {

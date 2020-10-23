@@ -22,49 +22,50 @@ html
     include partials/_header.pug
     include partials/_poster_block.pug
     .section.intro
-      .slogan-demo.container.pt-12.flex.items-center
-        .slogan
-          .hello
+      .container.pt-12.md_pt-0.flex.items-center
+        .pr-8.md_pr-0
+          .pb-8
             h1.mt-0.mb-0 专业易用的活动票务系统
             p.mt-2 支持娱乐演出、会议展览、剧场剧院等各场景活动
+            img.mt-8.max-w-full.hidden.md_block(src='./img/banner/event.svg', alt='home')
           .action
             a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
             a.btn.solid(href='https://app.duohui.cn') 立即试用
-        .demo
-          img(src='./img/banner/event.svg', alt='体验购票')
+        .md_hidden
+          img.max-w-full(src='./img/banner/event.svg', alt='体验购票')
     .section.white-bg.mt-12
       .container.flex.flex-wrap.event-features.product-icons
-        div
+        .w-1_3.md_w-full
           .font-bold.icon-form 自定义报名表单
           .feature-description.mt-2 根据活动报名需求自定义报名表单，支持文本、图片、选择等多种表单项。
-        div
+        .w-1_3.md_w-full
           .font-bold.icon-order 订单导入导出
           .feature-description.mt-2 活动订单支持自由导入导出，管理活动更加方便。
-        div
+        .w-1_3.md_w-full
           .font-bold.icon-ticketing 出票通知
           .feature-description.mt-2 可以通过微信通知、短信或邮件向购票用户发送出票信息。
-        div
+        .w-1_3.md_w-full
           .font-bold.icon-ticket 在线选座购票
           .feature-description.mt-2 支持通过移动端和PC端进行购票，并且可以设置座位表实现在线选座。
-        div
+        .w-1_3.md_w-full
           .font-bold.icon-chart 数据报表
           .feature-description.mt-2 订单数据将通过多种图表进行统计展示，轻松查看售票情况。
-        div
+        .w-1_3.md_w-full
           .font-bold.icon-bulb 多种营销工具
           .feature-description.mt-2 内置了拼团、优惠、绑定微信服务号等多种营销工具，帮助活动更快传播。
-        div
+        .w-1_3.md_w-full
           .font-bold.icon-layout 模块化活动页面
           .feature-description.mt-2 活动页面支持模块化设置，可以更加自由的设定你想要的页面。
-        div
+        .w-1_3.md_w-full
           .font-bold.icon-refund 自定义退款规则
           .feature-description.mt-2 可自定义设置退款规则，让票种销售方式更加灵活。
-        div
+        .w-1_3.md_w-full
           .font-bold.icon-checkin 支持离线签到
           .feature-description.mt-2 多个签到设备在离线状态下通过局域网自动同步签到状态，签到快且准。
     .section.white-bg.mt-12
       .container.event-frames
-        .frame.flex.items-center
-          div
+        .frame.flex.flex-wrap.items-center
+          .w-1_2.md_w-full
             .frame-title 灵活收集报名信息
             .frame-subtitle 根据活动报名需求自定义报名表单，提升活动处理效率。
             div.frame-icons.mt-8
@@ -80,10 +81,10 @@ html
               div.mt-4.icon-payment
                 .font-bold 支持逻辑控制
                 .mt-1.text-sm 可为不同票种设置不同表单，也可设置控制项，隐藏或显示系列表单
-          div
+          .w-1_2.md_w-full.flex.justify-center.items-center
             img(src="./img/event/form.svg")
-        .frame.flex.items-center.flex-row-reverse
-          div.pl-8
+        .frame.flex.flex-wrap.items-center.flex-row-reverse
+          .w-1_2.md_w-full.pl-8.md_pl-0
             .frame-title 订单自由导入导出
             .frame-subtitle 活动订单支持自由导入导出，方便管理活动人员。
             div.frame-icons.mt-8
@@ -99,10 +100,10 @@ html
               div.mt-4.icon-export
                 .font-bold 导出表单信息
                 .mt-1.text-sm 支持导出成 Excel 或 CSV 表单，轻松进行统计整理
-          div
+          .w-1_2.md_w-full.flex.justify-center.items-center
             img(src="./img/event/order.svg")
-        .frame.flex.items-center
-          div
+        .frame.flex.flex-wrap.items-center
+          .w-1_2.md_w-full
             .frame-title 多种通知消息提醒
             .frame-subtitle 可以通过短信、邮件或微信通知发送通知消息。
             div.frame-icons.mt-8
@@ -118,22 +119,22 @@ html
               div.mt-4.icon-host
                 .font-bold 主办方消息提醒
                 .mt-1.text-sm 通过绑定微信，主办方可即时获取新增订单、待审核或即将售罄等活动变化信息提醒
-          div
+          .w-1_2.md_w-full.flex.justify-center.items-center
             img(src="./img/event/form.svg")
     .section.white-bg.mt-12
       .container
         .title 多种营销方案 助力活动成功
         .subtitle 多种营销工具获取更多客源
-        .mt-12.flex.flex-wrap.event-tools
-          .text-center
+        .mt-12.flex.justify-center.flex-wrap.event-tools
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-fission
             .mt-4.font-bold.text-lg 裂变营销
             .mt-2.text-gray-600 多人拼团，海报分享，快速裂变分享传播
-          .text-center
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-promotion
             .mt-4.font-bold.text-lg 多样促销
             .mt-2.text-gray-600 优惠券码、满折/满减、限时特惠等多样促销手段
-          .text-center
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
             .icon-customer
             .mt-4.font-bold.text-lg 客户留存
             .mt-2.text-gray-600 微信消息推送，评价邀请，唤醒潜在用户，增强用户粘性

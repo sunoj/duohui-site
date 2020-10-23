@@ -19,18 +19,24 @@ html
         .top-tile.text-center
           h2 选择合适的多会产品
           p 多会为不同的应用场景设计了专属的产品方案
-        table.comparison-table.shadow-lg.rounded-2xl
+        .py-4
+          .comparison-table-tabs.text-center
+            span.tab.mx-2.cursor-pointer(data-plan="standard").active 标准版
+            span.tab.mx-2.cursor-pointer(data-plan="prime") 高级版
+            span.tab.mx-2.cursor-pointer(data-plan="enterprise") 企业版
+        table.comparison-table.shadow-lg.rounded-2xl(data-show="standard")
           thead
             tr
-              td(rowspan="2", style="vertical-align: center;")
-                .phone-call
-                .pt-2.text-sm 您还可以拨打
-                .py-2.font-bold 021 - 8037 0533
-                .text-sm 咨询套餐详情和更多信息
+              td(style="border-bottom: none;")
               td.font-bold 标准版
               td.font-bold 高级版
               td.font-bold 企业版
             tr
+              td(style="vertical-align: center;border-top: none;")
+                .phone-call
+                .pt-2.text-sm 您还可以拨打
+                .py-2.font-bold 021 - 8037 0533
+                .text-sm 咨询套餐详情和更多信息
               td
                 .p-4
                   .content-switch
@@ -444,51 +450,55 @@ html
     .section.function.white-bg
       .container
         h1.chtitle 根据功能需求为我推荐产品
-        .checkers
-          .columns
-            .column.col-md-6.col-12
-              .item
-                h3 资金实时到帐，无需提现
-                p 使用自有的收款账号，费率更低，实时到帐。
-                .checkbox.js-toggle(data-cantuse='std,premier')
-            .column.col-md-6.col-12
-              .item
-                h3 独立品牌展示
-                p 隐藏多会品牌，完整独立的品牌展示。
-                .checkbox.js-toggle(data-cantuse='std,premier')
-          .columns
-            .column.col-md-6.col-12
-              .item
-                h3 活动开始短信提醒
-                p 在活动开始前向参与者群发短信提醒。
-                .checkbox.js-toggle(data-cantuse='')
-            .column.col-md-6.col-12
-              .item
-                h3 离线快速签到
-                p 提供专用签到 APP，没有网络同样快速签到。
-                .checkbox.js-toggle(data-cantuse='')
-          .columns
-            .column.col-md-6.col-12
-              .item
-                h3 在线选座
-                p 上传座位表，购票时可直接在线选座。
-                .checkbox.js-toggle(data-cantuse='std')
-            .column.col-md-6.col-12
-              .item
-                h3 报名时关注公众号
-                p 生产专属报名二维码，先关注后报名。
-                .checkbox.js-toggle(data-cantuse='premier,mini,std')
-          .columns
-            .column.col-md-6.col-12
-              .item
-                h3 子账号权限管理
-                p 为其他团队成员创建子账号，设置管理权限。
-                .checkbox.js-toggle(data-cantuse='std')
-            .column.col-md-6.col-12
-              .item
-                h3 分渠道统计
-                p 创建活动发布渠道，设置渠道专属票，生成统计。
-                .checkbox.js-toggle(data-cantuse='std')
+        .checkers.flex.flex-wrap
+          .w-1_2.md_w-full.flex.items-center
+            .flex-grow
+              h3 资金实时到帐，无需提现
+              p 使用自有的收款账号，费率更低，实时到帐。
+            .pr-4
+              .checkbox.js-toggle(data-cantuse='std,premier')
+          .w-1_2.md_w-full.flex.items-center
+            .flex-grow
+              h3 独立品牌展示
+              p 隐藏多会品牌，完整独立的品牌展示。
+            .pr-4
+              .checkbox.js-toggle(data-cantuse='std,premier')
+          .w-1_2.md_w-full.flex.items-center
+            .flex-grow
+              h3 活动开始短信提醒
+              p 在活动开始前向参与者群发短信提醒。
+            .pr-4
+              .checkbox.js-toggle(data-cantuse='')
+          .w-1_2.md_w-full.flex.items-center
+            .flex-grow
+              h3 离线快速签到
+              p 提供专用签到 APP，没有网络同样快速签到。
+            .pr-4
+              .checkbox.js-toggle(data-cantuse='')
+          .w-1_2.md_w-full.flex.items-center
+            .flex-grow
+              h3 在线选座
+              p 上传座位表，购票时可直接在线选座。
+            .pr-4
+              .checkbox.js-toggle(data-cantuse='std')
+          .w-1_2.md_w-full.flex.items-center
+            .flex-grow
+              h3 报名时关注公众号
+              p 生产专属报名二维码，先关注后报名。
+            .pr-4
+              .checkbox.js-toggle(data-cantuse='premier,mini,std')
+          .w-1_2.md_w-full.flex.items-center
+            .flex-grow
+              h3 子账号权限管理
+              p 为其他团队成员创建子账号，设置管理权限。
+            .pr-4
+              .checkbox.js-toggle(data-cantuse='std')
+          .w-1_2.md_w-full.flex.items-center
+            .flex-grow
+              h3 分渠道统计
+              p 创建活动发布渠道，设置渠道专属票，生成统计。
+            .pr-4
+              .checkbox.js-toggle(data-cantuse='std')
         .answer
           p 以下产品符合您选择的功能需求：
           .products
@@ -662,11 +672,15 @@ html
         });
 
         $('body')
-          // 表格收起/展开
+          .on('click', '.comparison-table-tabs .tab', function() {
+            const $tab = $(this)
+            const plan = $tab.data('plan')
+            $tab.addClass('active').siblings().removeClass('active')
+            $('.comparison-table').attr('data-show', plan)
+          })
           .on('click', '.comparison-table .secondary-header', function() {
             $(this).toggleClass('close').find('~ tr').toggle()
           })
-          // content-switch
           .on('click', '.content-switch .switchers .switcher', function() {
             $switch = $(this)
             const index = $switch.index()
