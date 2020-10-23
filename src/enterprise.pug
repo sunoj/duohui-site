@@ -20,7 +20,7 @@ html
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_mixins.pug
-    .bg-black-geo.text-white
+    .bg-black-geo.text-white#top-banner
       .container
         .py-4.flex.items-center
           .flex.items-center
@@ -39,10 +39,14 @@ html
           .mt-18
             a(href="/compare").btn 查看定价
             a(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank").btn.solid.ml-4 立即试用
-    .py-2.bg-gray-200.sticky.z-10.top-0
-      .container
+    .py-2.bg-gray-200.sticky.z-10.top-0#top-tabs
+      .container.flex.justify-center.items-center
+        #tabs-logo
+          .flex.items-center.mr-8(style="width:160px;")
+            a(href="/"): img(src='/img/logo-dark.png', srcset='/img/logo-dark@2x.png 2x', alt='多会')
+            .ml-4.pl-4.border-left-black 企业版
         .tabs.enterprise-icons.flex.justify-center
-          a(href="#mini").tab.mx-2.px-4.py-2.inline-block.rounded.text-black.cursor-pointer.select-none.bg-white
+          a(href="#mini").tab.mx-2.px-4.py-2.inline-block.rounded.text-black.cursor-pointer.select-none.active
             span.icon-mini 活动小程序
           a(href="#server").tab.mx-2.px-4.py-2.inline-block.rounded.text-black.cursor-pointer.select-none
             span.icon-server 微信服务号
@@ -135,5 +139,25 @@ html
     script.
       $('body')
         .on('click', '.tabs .tab', function() {
-          $(this).addClass('bg-white').siblings().removeClass('bg-white')
+          $(this).addClass('active').siblings().removeClass('active')
         })
+        .on('init', () => {
+          const $window = $(window)
+          const $tabs = $('#top-tabs')
+          const height = $('#top-banner').height()
+          let timer = null
+          $window.on('scroll', () => {
+            if (!timer) {
+              timer = setTimeout(() => {
+                const topTouched = $window.scrollTop() > height
+                if (topTouched) {
+                  $tabs.addClass('top-touched')
+                } else {
+                  $tabs.removeClass('top-touched')
+                }
+                timer = 0
+              }, 200)
+            }
+          })
+        })
+        .trigger('init')
