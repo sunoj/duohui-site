@@ -94,7 +94,8 @@ html
           .text-white.text-2xl.font-bold 咨询后可免费试用，企业采购更安心
           .mt-8.mb-12
             a(href="javascript:void(0)" onclick="window.$youke('open')").btn.solid 现在咨询
-        include partials/_advisory.pug
+        .black-btn-box
+          include partials/_advisory.pug
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
     script.
