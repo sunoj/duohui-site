@@ -106,11 +106,7 @@
 }
 
 .service-frames .frame {
-  margin-bottom: 40px;
-}
-
-.service-frames .frame > div img {
-  max-width: 100%;
+  margin-bottom: 80px;
 }
 
 .service-frames .frame .frame-title {

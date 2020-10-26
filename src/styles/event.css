@@ -33,11 +33,7 @@
 }
 
 .event-frames .frame {
-  margin-bottom: 40px;
-}
-
-.event-frames .frame > div img {
-  max-width: 100%;
+  margin-bottom: 80px;
 }
 
 .event-frames .frame .frame-title {

@@ -34,34 +34,35 @@ html
         .md_hidden
           img.max-w-full(src='./img/banner/service.svg', alt='体验购票')
     .section.white-bg.mt-12
-      .container.flex.flex-wrap.service-features.product-icons
-        .w-1_3.md_w-full
-          .font-bold.icon-writeoff 多次核销功能
-          .feature-description.mt-2 单次购票，可多次核销，简单设置即可出售次卡、月卡、年卡。
-        .w-1_3.md_w-full
-          .font-bold.icon-child 子账户权限
-          .feature-description.mt-2 支持创建多个子账户，可为子账户授予不同项目权限。
-        .w-1_3.md_w-full
-          .font-bold.icon-code 自定义票码
-          .feature-description.mt-2 支持自定义票码。如导入实体卡号，电子票码可与实体卡保持一致。
-        .w-1_3.md_w-full
-          .font-bold.icon-scene 多场次功能
-          .feature-description.mt-2 单个票种可绑定多个场次，购票时可进行场次选择。
-        .w-1_3.md_w-full
-          .font-bold.icon-entrance 多种入口
-          .feature-description.mt-2 提供网页链接、二维码、小程序码等多种入口，适应多种推广形式。
-        .w-1_3.md_w-full
-          .font-bold.icon-medium 渠道功能
-          .feature-description.mt-2 通过渠道功能统计订单来源，还可为某一渠道设置渠道专属票。
-        .w-1_3.md_w-full
-          .font-bold.icon-refund 自定义退款规则
-          .feature-description.mt-2 灵活的退款规则，支持部分退款，保护商家权益。
-        .w-1_3.md_w-full
-          .font-bold.icon-coupon 优惠促销
-          .feature-description.mt-2 提供优惠券、限时特价、拼团等多种优惠促销功能。
-        .w-1_3.md_w-full
-          .font-bold.icon-data 服务数据统计
-          .feature-description.mt-2 订单数据将通过多种图表进行统计展示，轻松查看售票情况。
+      .container
+        .flex.flex-wrap.-mx-8.service-features.product-icons
+          .w-1_3.md_w-full
+            .font-bold.icon-writeoff 多次核销功能
+            .feature-description.mt-2 单次购票，可多次核销，简单设置即可出售次卡、月卡、年卡。
+          .w-1_3.md_w-full
+            .font-bold.icon-child 子账户权限
+            .feature-description.mt-2 支持创建多个子账户，可为子账户授予不同项目权限。
+          .w-1_3.md_w-full
+            .font-bold.icon-code 自定义票码
+            .feature-description.mt-2 支持自定义票码。如导入实体卡号，电子票码可与实体卡保持一致。
+          .w-1_3.md_w-full
+            .font-bold.icon-scene 多场次功能
+            .feature-description.mt-2 单个票种可绑定多个场次，购票时可进行场次选择。
+          .w-1_3.md_w-full
+            .font-bold.icon-entrance 多种入口
+            .feature-description.mt-2 提供网页链接、二维码、小程序码等多种入口，适应多种推广形式。
+          .w-1_3.md_w-full
+            .font-bold.icon-medium 渠道功能
+            .feature-description.mt-2 通过渠道功能统计订单来源，还可为某一渠道设置渠道专属票。
+          .w-1_3.md_w-full
+            .font-bold.icon-refund 自定义退款规则
+            .feature-description.mt-2 灵活的退款规则，支持部分退款，保护商家权益。
+          .w-1_3.md_w-full
+            .font-bold.icon-coupon 优惠促销
+            .feature-description.mt-2 提供优惠券、限时特价、拼团等多种优惠促销功能。
+          .w-1_3.md_w-full
+            .font-bold.icon-data 服务数据统计
+            .feature-description.mt-2 订单数据将通过多种图表进行统计展示，轻松查看售票情况。
     .section.white-bg.mt-12
       .container.service-frames
         .frame.flex.flex-wrap.items-center.flex-row-reverse
@@ -78,7 +79,7 @@ html
               div.mt-4.icon-multiple
                 .font-bold 一票多用
                 .mt-1.text-sm 电子票除验票使用，还可以作为其他项目兑换凭证
-          .w-1_2.md_w-full.flex.justify-center.items-center
+          .w-1_2.md_w-full.flex.items-center.justify-img-left
             img(src="./img/service/ticket.svg")
         .frame.flex.flex-wrap.items-center
           .w-1_2.md_w-full.pl-8.md_pl-0
@@ -94,7 +95,7 @@ html
               div.mt-4.icon-scene-stock
                 .font-bold 场次库存
                 .mt-1.text-sm 可同时设置多个场次，并按场次分别设置库存，以便控制场次人数
-          .w-1_2.md_w-full.flex.justify-center.items-center
+          .w-1_2.md_w-full.flex.items-center.justify-img-right
             img(src="./img/service/calendar.svg")
         .frame.flex.flex-wrap.items-center.flex-row-reverse
           .w-1_2.md_w-full
@@ -110,7 +111,7 @@ html
               div.mt-4.icon-limit
                 .font-bold 退款时限
                 .mt-1.text-sm 设置退款时限，比如仅允许在预约时间48小时之前申请退款
-          .w-1_2.md_w-full.flex.justify-center.items-center
+          .w-1_2.md_w-full.flex.items-center.justify-img-left
             img(src="./img/service/refund.svg")
     .section.white-bg.mt-12
       .container
@@ -126,7 +127,7 @@ html
           label(for="room") 密室逃脱
           input(name="tab", type="radio").hidden.tool-tab#class
           label(for="class") 自习室
-          .mt-12.flex.justify-center.flex-wrap.service-tools.casual
+          .mt-12.flex.justify-center.flex-wrap.-mx-8.service-tools.casual
             .px-8.md_px-4.w-1_3.md_w-1_2.text-center
               .icon-cards
               .mt-4.font-bold.text-lg 年卡月卡次卡
