@@ -182,7 +182,9 @@
   border-radius: 3px;
   border: 1px solid #4893ff;
   padding: 20px;
-  min-width: 400px;
+  width: 48%;
+  margin-right: 2%;
+  margin-bottom: 2%;
 }
 
 .products.outline .product .main {
@@ -410,6 +412,7 @@
   .comparison-table[data-show="enterprise"] tr td:nth-child(3) {
     display: none;
   }
+  .products.outline .product,
   .js-toggle {
     width: 100%;
     margin-right: 0;
