@@ -1,70 +1,63 @@
-var gulp = require('gulp');
 var preprocess = require('gulp-preprocess');
-var browserSync = require("browser-sync").create();
 var pug = require('gulp-pug');
 var shell = require('gulp-shell');
 var del = require('del');
 var rsync = require('gulp-rsync');
-var runSequence = require('run-sequence');
+const { watch, dest, src, series, parallel } = require('gulp')
 
-gulp.task('html', function() {
-  gulp.src('./src/*.pug')
+const html = function() {
+  return src('./src/*.pug')
     .pipe(preprocess({ context: { curtime: Date.now() } }))
     .pipe(pug())
-    .pipe(gulp.dest('./dist/'))
-});
+    .pipe(dest('./dist/'))
+}
 
-gulp.task('scripts', function() {
-  gulp.src(['./src/**/*.js'])
+const scripts = function() {
+  return src(['./src/**/*.js'])
     .pipe(preprocess())
-    .pipe(gulp.dest('./dist/'))
-});
+    .pipe(dest('./dist/'))
+}
 
-gulp.task('css', function() {
-  gulp.src('./src/**/*.css')
+const css = function() {
+  return src('./src/**/*.css')
     .pipe(preprocess({context: { NODE_ENV: 'production', DEBUG: true}}))
-    .pipe(gulp.dest('./dist/'))
-});
+    .pipe(dest('./dist/'))
+}
 
-gulp.task('static', function() {
-  gulp.src('./static/**/*.*')
-    .pipe(gulp.dest('./dist/'))
-});
+const static = function() {
+  return src('./static/**/*.*')
+    .pipe(dest('./dist/'))
+}
 
-gulp.task('serve', function(done) {
+
+function serve() {
+  const browserSync = require('browser-sync').create()
+  watch('./src/**/*.js', scripts)
+  watch('./src/**/*.css', css)
+  watch('./src/**/*.pug', html)
+  watch('./static/**/*.*', static)
+
   browserSync.init({
     server: {
-      baseDir: './dist',
+      baseDir: "dist",
       serveStaticOptions: {
-        extensions: ['html'] // pretty urls
+        extensions: ["html"]
       }
     },
-  });
-  done();
-})
+    ui: false,
+    
+  })
+  watch('dist/**/*.*').on('change', browserSync.reload)
+}
 
-gulp.task('reload', function (done) {
-  setTimeout(function(){
-    browserSync.reload();
-    done();
-  }, 300)
-});
+exports.dev = series(scripts, css, html, static, serve)
 
-gulp.task('dev', ['scripts', 'css', 'html', 'static', 'serve'], function(cb) {
-  gulp.watch('./src/**/*.js', ['scripts']);
-  gulp.watch('./src/**/*.css', ['css']);
-  gulp.watch('./src/**/*.pug', ['html']);
-  gulp.watch('./static/**/*.*', ['static']);
+exports.clean = () => del(['dist/*'], { dot: true });
 
-  gulp.watch('./dist/**/*.*', ['reload']);
-});
+exports.build = parallel(scripts, css, html, static)
 
-gulp.task('clean', () => del(['dist/*'], { dot: true }));
-
-gulp.task('build', ['scripts', 'css', 'html', 'static'])
-
-gulp.task('rsync', function () {
-  return gulp.src(['dist/**/*.*'])
+const syncToServer = function () {
+  return src(['dist/**/*.*'])
     .pipe(rsync({
       root: './dist',
       username: 'deploy',
@@ -72,18 +65,14 @@ gulp.task('rsync', function () {
       destination: '/home/deploy/www/duohui-web',
       incremental: true
     }))
-})
+}
 
-gulp.task('sandbox', function () {
+exports.sandbox = function () {
   return deploy('sandbox')
-});
+}
 
-gulp.task('sync_to_instances', shell.task("ssh -t deploy@2.tinyservices.net ./plant-web-admin push duohui-web 10.154.57.202 10.105.55.246 10.105.242.113"));
+const sync_to_instances = shell.task("ssh -t deploy@2.tinyservices.net ./plant-web-admin push duohui-web 10.154.57.202 10.105.55.246 10.105.242.113")
 
-gulp.task('deploy', function (cb) {
-  return runSequence(
-    'rsync',
-    'sync_to_instances',
-    cb
-  )
-});
+const deploy = function (cb) {
+  return series(syncToServer, sync_to_instances, cb)
+}
