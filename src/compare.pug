@@ -318,7 +318,7 @@ html
         h1#price-cal.chtitle.text-center 版本智能推荐
         .p-8.center-shadow.rounded-2xl
           h2 根据用量为我推荐产品
-          h3.mt-8 预计用量
+          h4.mt-8 预计用量
           .calc
             span 我们每个月举办
               select.calc-select.mx-2(name="calc_time")
@@ -343,7 +343,7 @@ html
                 option(value="300") 100~500
                 option(value="1000") 500+
               | 元。
-            .answer.mt-12
+            .answer.usage.mt-12
               .text-color-theme.font-semibold 我们推荐您使用
               .products.outline.mt-4
                 .product.std
@@ -359,7 +359,6 @@ html
                     .main-right.mt-2
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
                       .mt-1.text-center
-                        //- span.show_calc_detail.cursor-pointer 查看详情
                         a(href="/standard").text-gray-600.text-sm 查看详情
                 .product.premier(style="display:inline-block;")
                   .font-bold 多会高级版
@@ -374,7 +373,6 @@ html
                     .main-right.mt-2
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
                       .mt-1.text-center
-                        //- span.show_calc_detail.cursor-pointer 查看详情
                         a(href="/prime").text-gray-600.text-sm 查看详情
                 .product.enterprise
                   .font-bold 多会企业版
@@ -389,134 +387,175 @@ html
                     .main-right.mt-2
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
                       .mt-1.text-center
-                        //- span.show_calc_detail.cursor-pointer 查看详情
                         a(href="/enterprise").text-gray-600.text-sm 查看详情
-          
-          //- h2 根据功能需求为我推荐产品
-          //- h3.mt-8 所需功能
-        .calc_detail_modal
-          .calc_detail
-            .p-8.bg-white
-              div.hide_calc_detail.cursor-pointer 关闭
-              p#js-compare-save 对比其他活动平台，预计每月可以节省
-                span.clac_save --
-                | 元！
-              .columns
-                .column.col-md-6.col-12.byus
-                  .group.byus
-                    h3.group-title.line 多会成本预计
-                    .line.hr.clear(data-item="poundage")
-                      .left
-                        h4.item-title 交易手续费
-                        pre.exp --
-                      .right.result --
-                    .line.hr.clear(data-item="fee_per_month")
-                      .left
-                        h4.item-title 月费
-                        pre.exp --
-                      .right.result --
-                    .line.hr.clear(data-item="sms")
-                      .left
-                        h4.item-title 短信费
-                        pre.exp --
-                      .right.result --
-                    .line.total.clear(data-item="total")
-                      .left
-                        h4.item-title 总计
-                      .right.result --
-                .column.col-md-6.col-12.byother
-                  .group.byother
-                    h3.group-title.line 活动行成本预计
-                    .line.hr.clear(data-item="poundage")
-                      .left
-                        h4.item-title 交易手续费
-                        pre.exp --
-                      .right.result --
-                    .line.hr.clear(data-item="fee_per_month")
-                      .left
-                        h4.item-title 月费
-                        pre.exp --
-                      .right.result --
-                    .line.hr.clear(data-item="sms")
-                      .left
-                        h4.item-title 短信费
-                        pre.exp --
-                      .right.result --
-                    .line.total.clear(data-item="total")
-                      .left
-                        h4.item-title 总计
-                      .right.result --
-
-    .section.function.white-bg
-      .container
-        h1.chtitle 根据功能需求为我推荐产品
-        .checkers.flex.flex-wrap
-          .w-1_2.md_w-full.flex.items-center
-            .flex-grow
-              h3 资金实时到帐，无需提现
-              p 使用自有的收款账号，费率更低，实时到帐。
-            .pr-4
-              .checkbox.js-toggle(data-cantuse='std,premier')
-          .w-1_2.md_w-full.flex.items-center
-            .flex-grow
-              h3 独立品牌展示
-              p 隐藏多会品牌，完整独立的品牌展示。
-            .pr-4
-              .checkbox.js-toggle(data-cantuse='std,premier')
-          .w-1_2.md_w-full.flex.items-center
-            .flex-grow
-              h3 活动开始短信提醒
-              p 在活动开始前向参与者群发短信提醒。
-            .pr-4
-              .checkbox.js-toggle(data-cantuse='')
-          .w-1_2.md_w-full.flex.items-center
-            .flex-grow
-              h3 离线快速签到
-              p 提供专用签到 APP，没有网络同样快速签到。
-            .pr-4
-              .checkbox.js-toggle(data-cantuse='')
-          .w-1_2.md_w-full.flex.items-center
-            .flex-grow
-              h3 在线选座
-              p 上传座位表，购票时可直接在线选座。
-            .pr-4
-              .checkbox.js-toggle(data-cantuse='std')
-          .w-1_2.md_w-full.flex.items-center
-            .flex-grow
-              h3 报名时关注公众号
-              p 生产专属报名二维码，先关注后报名。
-            .pr-4
-              .checkbox.js-toggle(data-cantuse='premier,mini,std')
-          .w-1_2.md_w-full.flex.items-center
-            .flex-grow
-              h3 子账号权限管理
-              p 为其他团队成员创建子账号，设置管理权限。
-            .pr-4
-              .checkbox.js-toggle(data-cantuse='std')
-          .w-1_2.md_w-full.flex.items-center
-            .flex-grow
-              h3 分渠道统计
-              p 创建活动发布渠道，设置渠道专属票，生成统计。
-            .pr-4
-              .checkbox.js-toggle(data-cantuse='std')
-        .answer
-          p 以下产品符合您选择的功能需求：
-          .products
-            a.btn.product.std(href="/standard") 多会标准版
-            a.btn.product.premier(href="/prime") 多会高级版
-            a.btn.product.mini(href="/mini") 多会活动小程序
-            a.btn.product.wechat(href="/wechat") 多会活动服务号
+          .my-8.border-t.border-gray-600
+          h2 根据功能需求为我推荐产品
+          h4.mt-8 所需功能
+          .function
+            .checkers.flex.flex-wrap
+              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='std,premier')
+                .flex-grow
+                  h3 资金实时到帐，无需提现
+                  p 使用自有的收款账号，费率更低，实时到帐。
+                div
+                  .checkbox
+              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='std,premier')
+                .flex-grow
+                  h3 独立品牌展示
+                  p 隐藏多会品牌，完整独立的品牌展示。
+                div
+                  .checkbox
+              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='')
+                .flex-grow
+                  h3 活动开始短信提醒
+                  p 在活动开始前向参与者群发短信提醒。
+                div
+                  .checkbox
+              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='')
+                .flex-grow
+                  h3 离线快速签到
+                  p 提供专用签到 APP，没有网络同样快速签到。
+                div
+                  .checkbox
+              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='std')
+                .flex-grow
+                  h3 在线选座
+                  p 上传座位表，购票时可直接在线选座。
+                div
+                  .checkbox
+              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='premier,mini,std')
+                .flex-grow
+                  h3 报名时关注公众号
+                  p 生产专属报名二维码，先关注后报名。
+                div
+                  .checkbox
+              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='std')
+                .flex-grow
+                  h3 子账号权限管理
+                  p 为其他团队成员创建子账号，设置管理权限。
+                div
+                  .checkbox
+              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='std')
+                .flex-grow
+                  h3 分渠道统计
+                  p 创建活动发布渠道，设置渠道专属票，生成统计。
+                div
+                  .checkbox
+            .answer.feature.mt-12
+              .text-color-theme.font-semibold 我们推荐您使用
+              .products.outline.mt-4
+                .product.std.mr-4.mb-4(style="display:inline-block;")
+                  .font-bold 多会标准版
+                  .main
+                    .main-left
+                      span
+                        span.text-3xl 299
+                        span 元/年
+                      div.price-origin
+                        span.promotion-tag.text-sm 年付优惠
+                        span.line-through 708 元/年
+                    .main-right.mt-2
+                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
+                      .mt-1.text-center
+                        a(href="/standard").text-gray-600.text-sm 查看详情
+                .product.premier.mr-4.mb-4(style="display:inline-block;")
+                  .font-bold 多会高级版
+                  .main
+                    .main-left
+                      span
+                        span.text-3xl 1,799
+                        span 元/年
+                      div.price-origin
+                        span.promotion-tag.text-sm 年付优惠
+                        span.line-through 3,588 元/年
+                    .main-right.mt-2
+                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
+                      .mt-1.text-center
+                        a(href="/prime").text-gray-600.text-sm 查看详情
+                .product.enterprise.mr-4.mb-4(style="display:inline-block;")
+                  .font-bold 多会企业版
+                  .main
+                    .main-left
+                      span
+                        span.text-3xl 9,999
+                        span 元/年
+                      div.price-origin
+                        span.promotion-tag.text-sm 年付优惠
+                        span.line-through 17,988 元/年
+                    .main-right.mt-2
+                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
+                      .mt-1.text-center
+                        a(href="/enterprise").text-gray-600.text-sm 查看详情
+              //- .products.mt-4
+              //-   a.btn.product.std(href="/standard") 多会标准版
+              //-   a.btn.product.premier(href="/prime") 多会高级版
+              //-   a.btn.product.mini(href="/mini") 多会活动小程序
+              //-   a.btn.product.wechat(href="/wechat") 多会活动服务号
+        //- .calc_detail_modal
+        //-   .calc_detail
+        //-     .p-8.bg-white
+        //-       div.hide_calc_detail.cursor-pointer 关闭
+        //-       p#js-compare-save 对比其他活动平台，预计每月可以节省
+        //-         span.clac_save --
+        //-         | 元！
+        //-       .columns
+        //-         .column.col-md-6.col-12.byus
+        //-           .group.byus
+        //-             h3.group-title.line 多会成本预计
+        //-             .line.hr.clear(data-item="poundage")
+        //-               .left
+        //-                 h4.item-title 交易手续费
+        //-                 pre.exp --
+        //-               .right.result --
+        //-             .line.hr.clear(data-item="fee_per_month")
+        //-               .left
+        //-                 h4.item-title 月费
+        //-                 pre.exp --
+        //-               .right.result --
+        //-             .line.hr.clear(data-item="sms")
+        //-               .left
+        //-                 h4.item-title 短信费
+        //-                 pre.exp --
+        //-               .right.result --
+        //-             .line.total.clear(data-item="total")
+        //-               .left
+        //-                 h4.item-title 总计
+        //-               .right.result --
+        //-         .column.col-md-6.col-12.byother
+        //-           .group.byother
+        //-             h3.group-title.line 活动行成本预计
+        //-             .line.hr.clear(data-item="poundage")
+        //-               .left
+        //-                 h4.item-title 交易手续费
+        //-                 pre.exp --
+        //-               .right.result --
+        //-             .line.hr.clear(data-item="fee_per_month")
+        //-               .left
+        //-                 h4.item-title 月费
+        //-                 pre.exp --
+        //-               .right.result --
+        //-             .line.hr.clear(data-item="sms")
+        //-               .left
+        //-                 h4.item-title 短信费
+        //-                 pre.exp --
+        //-               .right.result --
+        //-             .line.total.clear(data-item="total")
+        //-               .left
+        //-                 h4.item-title 总计
+        //-               .right.result --
     .section.white-bg
       .container
-        h1.text-center 还未决定？我们的活动专家可以帮助你
+        h1.text-center.my-8 还未决定？我们的活动专家可以帮助你
       include partials/_advisory.pug
 
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
     script.
       $(document).ready(function() {
-        $('.js-toggle').minitoggle();
-        $('.js-toggle').on("toggle", function(e){
+        //- $('.js-toggle').minitoggle();
+        //- $('.js-toggle').on("toggle", function(e){
+        $('.js-toggle').on('click', function(){
+          $(this).toggleClass('active')
           selectFunction();
         });
         calcPrice();
@@ -549,16 +588,22 @@ html
       }
       function selectFunction() {
         var selected = [];
-        $(".function .checkers .minitoggle.active").each(function() {
-          var data = $(this).parent('.js-toggle').data('cantuse').split(',');
+        //- $(".function .checkers .minitoggle.active").each(function() {
+        //-   var data = $(this).parent('.js-toggle').data('cantuse').split(',');
+        //-   if (data[0] != '') {
+        //-     selected = selected.concat(data);
+        //-   }
+        //- });
+        $('.function .checkers .js-toggle.active').each(function() {
+          var data = $(this).data('cantuse').split(',');
           if (data[0] != '') {
             selected = selected.concat(data);
           }
         });
         selected = selected.unique();
-        $(".function .answer .products .product").removeClass('unable');
+        $(".function .answer.feature .products .product").css('display', 'inline-block');
         for (var i=0;i<selected.length;i++) {
-          $(".function .answer .products .product."+selected[i]).addClass('unable');
+          $(".function .answer.feature .products .product."+selected[i]).css('display', 'none');
         };
       }
       function calcPrice(){
@@ -653,8 +698,8 @@ html
         }
 
         // dom产品
-        $(".quota .answer .products .product").css('display','none');
-        $(".quota .answer .products ."+min_data.type).css('display','inline-block');
+        $(".quota .answer.usage .products .product").css('display','none');
+        $(".quota .answer.usage .products ."+min_data.type).css('display','inline-block');
         // dom节省价格
         var cacl_save = feeRates.other.result.total - min_data.total;
         $(".clac_save").text(cacl_save.toFixed(0));
@@ -693,10 +738,10 @@ html
               .addClass('active')
               .siblings().removeClass('active')
           })
-          .on('click', '.show_calc_detail', () => {
-            $('.calc_detail_modal').show()
-          })
-          .on('click', '.hide_calc_detail', () => {
-            $('.calc_detail_modal').hide()
-          })
+          //- .on('click', '.show_calc_detail', () => {
+          //-   $('.calc_detail_modal').show()
+          //- })
+          //- .on('click', '.hide_calc_detail', () => {
+          //-   $('.calc_detail_modal').hide()
+          //- })
       }

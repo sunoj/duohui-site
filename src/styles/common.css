@@ -278,13 +278,6 @@ a.btn.product{
   max-width: 300px;
   overflow: hidden;
 }
-a.btn.product.unable{
-  opacity: .3;
-  max-width: 0;
-  padding: 6px 0px;
-  border: 0;
-  margin-right: 0!important;
-}
 a.btn.product:before{
   content: "";
   float: left;
@@ -658,6 +651,10 @@ a.dropdown-item.is-active {
   border: 1.4px solid #fff;
   border-radius: 4px;
   padding: 4px 8px;
+}
+
+.border-t.border-gray-600 {
+  border-top: 1px solid #efefef;
 }
 
 @media screen and (max-width: 768px) {
