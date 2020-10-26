@@ -1,42 +1,148 @@
-extends partials/_product.pug
-
-block vars
-  -
-    var product = {
-      code: "wechat",
-      name: "活动服务号",
-      subscript: "由多会企业版提供",
-      title: "多会活动服务号 - 报名即关注，微信活动票务解决方案",
-      tagline: "结合微信公众号，报名即关注",
-      desc: "使用多会企业版，获得专属于您的线下活动服务号，直接售票给公众号粉丝。还可创建专属二维码，报名即关注。",
-      features: [
-        {'icon': 'fast', 'titile': '资金即刻到账', 'desc': '使用自有的收款商户账号。售票资金即刻到账，无需提现、无平台账期。'},
-        {'icon': 'sms', 'titile': '免费短信通知', 'desc': '购票后系统自动发送出票短信通知。企业版用户每月免费获赠 1000 条短信额度。'},
-        {'icon': 'brand', 'titile': '隐藏多会品牌', 'desc': '完全隐藏多会品牌元素。为用户提供完整统一的使用体验。'},
-        {'icon': 'coupon', 'titile': '配置优惠券', 'desc': '为活动设置优惠券。可指定折扣方式，限制优惠券的可用票种，限制优惠券使用次数等。'},
-        {'icon': 'embed', 'titile': '嵌入网页购票', 'desc': '将活动购票功能嵌入到活动网页，实现无缝式的购票体验。'},
-        {'icon': 'payment', 'titile': '多种支付方式', 'desc': '支持支付宝和微信支付。另外还可通过 PayPal 接收美元付款。'},
-        {'icon': 'lang', 'titile': '多语言支持', 'desc': '为活动创建中英文版本，并可根据用户的设备语言自动选择。'},
-        {'icon': 'form', 'titile': '自定义报名表', 'desc': '根据活动报名需求自定义报名表单，支持文本、图片、单选、多选等多种表单项。'},
-        {'icon': 'export', 'titile': '导出报名表', 'desc': '可导出完整的报名数据，支持 Excel 和 CSV 格式。'},
-      ],
-      price: {
-        basic: "9,999 <span>元 / 年</span>",
-        monthly: "4999 <span>元 / 季</span>",
-        basic_desc: "包含所有高级功能，包括无限制的活动发布、渠道、隐藏多会品牌等。",
-        fee: "无",
-        fee_desc: "多会不收取手续费，由支付渠道直接收取 0.6% 的支付手续费。",
-        save_percent: 47
-      },
-      faqs: [
-        {'q': '企业版到期之后活动还能访问吗？', 'a': '可以的。企业版到期不会影响您的数据和用户访问，我们只会对新建活动进行限制，其他功能不会做限制。'},
-        {'q': '免费的短信额度用完之后还能发短信吗？', 'a': '当然可以。我们为企业版用户每月免费赠送 1000 条短信额度。如果免费额度用完之后，可以按 0.1 元／条短信的价格购买短信额度。'},
-        {'q': '用户退票会产生费用吗？', 'a': '不会。用户支付的款项将原路退回，不会产生任何费用。退款操作直接通过支付渠道的退款接口完成，一般会即刻处理。'},
-        {'q': '我可以试用多会企业版吗？', 'a': '可以。我们为客户提供 15 天的多会企业版免费试用，您可以联系在线客服获取试用资格。'},
-      ],
-      cases: [
-        {'img': 'coart.png', 'event': "阿拉善 COART 嘉年华", 'logo': 'coart', 'tags': [{'name': '音乐', 'style': 'design'}, {'name': '演唱会', 'style': 'solid'}]},
-        {'img': 'kxsy.jpg', 'event': '理性的力量', 'logo': 'voiceofscience', 'tags': [{'name': '科普', 'style': 'design'}, {'name': '演讲', 'style': 'lined'}]},
-        {'img': 'girlscodingday.jpg', 'event': 'Girls Coding Day', 'logo': 'cgc', 'tags': [{'name': '公益', 'style': 'lined'}, {'name': '教育', 'style': 'sport'}]}
-      ]
-    }
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
+    title 多会 - 专业活动管理系统
+    meta(name='description', content='通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css')
+    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css')
+    link(rel='stylesheet', type='text/css', href='./styles/wechat.css')
+    meta(name='msapplication-tap-highlight', content='no')
+  body
+    include partials/_header.pug
+    .pt-10(style="background:#ECF8F1;")
+      .container.pt-12.md_py-10.flex.items-center
+        .pr-8.md_pr-0
+          .pb-8
+            h1.mt-0.mb-0 活动服务号
+            p.mt-2 结合微信公众号，直接售票给微信公众号粉丝，报名即关注。
+            img.mt-8.max-w-full.hidden.md_block(src='./img/banner/wechat.svg', alt='home')
+          .action.mt-12
+            a.btn.green(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
+            a.btn.solid.green(href='https://app.duohui.cn') 立即试用
+        .md_hidden.text-zero
+          img.max-w-full(src="./img/banner/wechat.svg", alt="banner")
+    .py-20
+      .container
+        .title 聚集微信流量 助您轻松获客 
+        .subtitle 流量红利助你轻松获客、裂变、复购
+        .mt-12.flex.flex-wrap.weixin-tools
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+            .icon-fans
+            .mt-4.font-bold.text-lg 快速涨粉
+            .mt-2.text-gray-600 用户购票时关注公众号，为公众平台吸粉，沉淀粉丝
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+            .icon-send
+            .mt-4.font-bold.text-lg 实时推送购票信息
+            .mt-2.text-gray-600 用户可在微信上实时收取订单和票种动态信息
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+            .icon-card
+            .mt-4.font-bold.text-lg 支持微信卡包
+            .mt-2.text-gray-600 票券、会员卡可添加至微信卡包，核销使用更快捷
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+            .icon-talk
+            .mt-4.font-bold.text-lg 智能客服
+            .mt-2.text-gray-600 可在服务号添加智能客服，方便与用户沟通
+    .py-20
+      .container
+        .title 绑定微信服务号，启用更多快捷功能
+        .subtitle 用户购票更快捷并提升流量转化
+        .flex.flex-wrap.items-center.mt-12
+          .vertical-tabs.md_border-none.w-1_2.md_w-full.pr-8.md_pr-0
+            .tab.rounded.mb-2.p-4.cursor-pointer.select-none.active
+              .text-lg.font-bold.icon-template 订单动态通知
+              .tab-desc.mt-2.text-sm 订单动态直接推送至用户微信
+            .tab.rounded.mb-2.p-4.cursor-pointer.select-none
+              .text-lg.font-bold.icon-component 推文嵌入活动小程序
+              .tab-desc.mt-2.text-sm 推文可无缝直达购票页面
+            .tab.rounded.mb-2.p-4.cursor-pointer.select-none
+              .text-lg.font-bold.icon-style 服务号菜单入口
+              .tab-desc.mt-2.text-sm 支持在服务号菜单内设置多种功能入口
+            .tab.rounded.mb-2.p-4.cursor-pointer.select-none
+              .text-lg.font-bold.icon-navigation 购票后关注公众号
+              .tab-desc.mt-2.text-sm 购票即关注，获取更多粉丝流量
+          .w-1_2.md_w-full.flex.justify-center.items-center
+            img.vertical-tab-img.max-w-full.active(src="./img/wechat/notification.svg", alt="1")
+            img.vertical-tab-img.max-w-full(src="./img/wechat/mini.svg", alt="2")
+            img.vertical-tab-img.max-w-full(src="./img/wechat/entrance.svg", alt="3")
+            img.vertical-tab-img.max-w-full(src="./img/wechat/focus.svg", alt="4")
+            
+    .py-20
+      .container
+        .title 多样营销方案 获取更多客源
+        .subtitle 强大的营销功能助力商家成功
+        .mt-12.flex.justify-center.flex-wrap.bottom-tools
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-entrance
+            .mt-4.font-bold.text-lg 专属入口
+            .mt-2.text-gray-600 小程序卡片、下拉菜单、发现页等多种专属入口轻松获客
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-market
+            .mt-4.font-bold.text-lg 一体化营销
+            .mt-2.text-gray-600 公众号、小程序、微信群互联互通，流量转化快速高效
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-pay
+            .mt-4.font-bold.text-lg 自有支付
+            .mt-2.text-gray-600 配置自有微信支付商户账户，自主收款，资金直接到账
+    .section.white-bg.mt-12
+      .container
+        .title 超多成功案例 丰富行业经验
+        .subtitle 丰富的成功案例让我们积累了更多行业经验
+        .case-list.mt-12
+          .list-item.active
+            .item-avatar(style="background-image: url('./img/cases/zxqh.png')")
+            .item-main
+              .main-prev
+              .main-detail
+                .detail-title
+                  //- img(src="./img/cases/.png")
+                  span 中信期货
+                .detail-description
+                  p 中信期货有限公司成立于1993年3月30日。公司业务范围包括商品期货经纪、金融期货经纪、期货投资咨询、资产管理、基金销售。公司总部设在深圳，在北京、上海、广州、杭州等大中城市设有47家分支机构，同时拥有356家证券IB服务网点，业务范围覆盖全国。
+                  p 2018年4月至今，中信各地分支机构举办了数百场活动，多会为其提供了稳定高效的活动管理系统技术支持。
+              .main-next
+          .list-item
+            .item-avatar(style="background-image: url('./img/cases/saidou.jpg')")
+            .item-main
+              .main-prev
+              .main-detail
+                .detail-title
+                  //- img(src="./img/cases/.png")
+                  span 赛豆青年赛事平台
+                .detail-description
+                  p 赛豆是【西瓜创客】旗下的赛事平台，专注 6~16 岁青少年教育部认可、行业内权威、国际认证等国内外优质赛事。赛豆的主要任务是帮助选择有价值的国内外比赛，为小创客们提供赛事的资讯和参加方式，以便小创客们可以有效地获得更高价值的编程赛事证书。
+                  p 多会为其提供报名系统，自定义表单功能支持多种类型报名表单，关联服务号轻松管理赛事报名。
+              .main-next
+    .section.white-bg.mt-12.mb-12.green-btn-box
+      include partials/_advisory.pug
+    .section.bg-green-geo
+      .container.text-center
+        h2.mt-8.text-2xl 现在注册，立享 15 天免费试用和专属技术支持
+        .mt-6
+          a.btn.green(href="https://app.duohui.cn", target="_blank") 立即试用
+          a.btn.solid.green.ml-4(href="/compare") 查看定价
+    include partials/_footer.pug
+    script(src='./vendor/vendor.js')
+    script.
+      $('body')
+        .on('click', '.case-list .main-prev, .case-list .main-next', function() {
+          const $this = $(this)
+          const isPrev = $this.hasClass('main-prev')
+          const currentIndex = $this.parents('.list-item').index()
+          const items = $this.parents('.case-list').find('.list-item')
+          const count = items.length
+          let showIndex = currentIndex + (isPrev ? -1 : 1)
+          if (showIndex > count - 1) showIndex = 0
+          if (showIndex < 0 ) showIndex = count - 1
+          items.removeClass('active')
+          $(items[showIndex]).addClass('active')
+        })
+        .on('click', '.vertical-tabs .tab', function() {
+          const $this = $(this)
+          const index = $this.index()
+          $this.addClass('active').siblings().removeClass('active')
+          $('.vertical-tab-img').eq(index).addClass('active').siblings().removeClass('active')
+        })

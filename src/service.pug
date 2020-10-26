@@ -1,0 +1,240 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
+    title 多会 - 新一代活动管理系统
+    meta(name='description', content='多会是新一代的活动票务系统。通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
+
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="多会")
+    meta(property="og:description" content="新一代的活动票务系统")
+    meta(property="og:image" content="https://www.duohui.cn/img/thumbnail.png")
+    meta(property="og:url" content="https://www.duohui.cn/")
+
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/service.css?v=<!--@echo curtime -->')
+    meta(name='msapplication-tap-highlight', content='no')
+  body
+    include partials/_header.pug
+    include partials/_poster_block.pug
+    .section.intro
+      .container.pt-12.md_pt-0.flex.items-center
+        .pr-8.md_pr-0
+          .pb-8
+            h1.mt-0.mb-0 多种服务 轻松售票
+            p.mt-2 售票功能强大，适用于多种服务场景，线上线下可同步售票。
+            img.mt-8.max-w-full.hidden.md_block(src='./img/banner/service.svg', alt='home')
+          .action
+            a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
+            a.btn.solid(href='https://app.duohui.cn') 立即试用
+        .md_hidden
+          img.max-w-full(src='./img/banner/service.svg', alt='体验购票')
+    .section.white-bg.mt-12
+      .container.flex.flex-wrap.service-features.product-icons
+        .w-1_3.md_w-full
+          .font-bold.icon-writeoff 多次核销功能
+          .feature-description.mt-2 单次购票，可多次核销，简单设置即可出售次卡、月卡、年卡。
+        .w-1_3.md_w-full
+          .font-bold.icon-child 子账户权限
+          .feature-description.mt-2 支持创建多个子账户，可为子账户授予不同项目权限。
+        .w-1_3.md_w-full
+          .font-bold.icon-code 自定义票码
+          .feature-description.mt-2 支持自定义票码。如导入实体卡号，电子票码可与实体卡保持一致。
+        .w-1_3.md_w-full
+          .font-bold.icon-scene 多场次功能
+          .feature-description.mt-2 单个票种可绑定多个场次，购票时可进行场次选择。
+        .w-1_3.md_w-full
+          .font-bold.icon-entrance 多种入口
+          .feature-description.mt-2 提供网页链接、二维码、小程序码等多种入口，适应多种推广形式。
+        .w-1_3.md_w-full
+          .font-bold.icon-medium 渠道功能
+          .feature-description.mt-2 通过渠道功能统计订单来源，还可为某一渠道设置渠道专属票。
+        .w-1_3.md_w-full
+          .font-bold.icon-refund 自定义退款规则
+          .feature-description.mt-2 灵活的退款规则，支持部分退款，保护商家权益。
+        .w-1_3.md_w-full
+          .font-bold.icon-coupon 优惠促销
+          .feature-description.mt-2 提供优惠券、限时特价、拼团等多种优惠促销功能。
+        .w-1_3.md_w-full
+          .font-bold.icon-data 服务数据统计
+          .feature-description.mt-2 订单数据将通过多种图表进行统计展示，轻松查看售票情况。
+    .section.white-bg.mt-12
+      .container.service-frames
+        .frame.flex.flex-wrap.items-center.flex-row-reverse
+          .w-1_2.md_w-full
+            .frame-title 一次购票多次核销
+            .frame-subtitle 可根据实际需求，自由设定电子票可用次数
+            div.frame-icons.mt-8
+              div.mt-4.icon-card
+                .font-bold 次卡、月卡、年卡
+                .mt-1.text-sm 电子票可设置可用次数，实现次卡、月卡、年卡功能
+              div.mt-4.icon-person
+                .font-bold 一人购票，多人入场
+                .mt-1.text-sm 可出售多人团体票，一人购票，多人入场
+              div.mt-4.icon-multiple
+                .font-bold 一票多用
+                .mt-1.text-sm 电子票除验票使用，还可以作为其他项目兑换凭证
+          .w-1_2.md_w-full.flex.justify-center.items-center
+            img(src="./img/service/ticket.svg")
+        .frame.flex.flex-wrap.items-center
+          .w-1_2.md_w-full.pl-8.md_pl-0
+            .frame-title 库存设置灵活
+            .frame-subtitle 可为不同日期设置不同库存，库存余量实时显示，简单直观。
+            div.frame-icons.mt-8
+              div.mt-4.icon-ticket-stock
+                .font-bold 票种库存
+                .mt-1.text-sm 可同时设置多个票种，并按票种分别设置库存，方便管理购票总量
+              div.mt-4.icon-daily-stock
+                .font-bold 每日库存
+                .mt-1.text-sm 可根据实际情况，设置并调整某日库存，轻松管理单日顾客人数
+              div.mt-4.icon-scene-stock
+                .font-bold 场次库存
+                .mt-1.text-sm 可同时设置多个场次，并按场次分别设置库存，以便控制场次人数
+          .w-1_2.md_w-full.flex.justify-center.items-center
+            img(src="./img/service/calendar.svg")
+        .frame.flex.flex-wrap.items-center.flex-row-reverse
+          .w-1_2.md_w-full
+            .frame-title 自定义退款规则
+            .frame-subtitle 可自定义退款规则，支持部分退款，减少退单损失。
+            div.frame-icons.mt-8
+              div.mt-4.icon-review
+                .font-bold 退款审核
+                .mt-1.text-sm 可设置退款审核规则，购票者发起退款后需主办方审核
+              div.mt-4.icon-refund
+                .font-bold 按比例退款
+                .mt-1.text-sm 可设置比例退款规则，按比例收取手续费后进行退款
+              div.mt-4.icon-limit
+                .font-bold 退款时限
+                .mt-1.text-sm 设置退款时限，比如仅允许在预约时间48小时之前申请退款
+          .w-1_2.md_w-full.flex.justify-center.items-center
+            img(src="./img/service/refund.svg")
+    .section.white-bg.mt-12
+      .container
+        .title.mb-4 满足多个行业场景需求
+        .text-center.mt-8
+          input(name="tab", type="radio", checked="true").hidden.tool-tab#casual
+          label(for="casual") 休闲健身
+          input(name="tab", type="radio").hidden.tool-tab#bus
+          label(for="bus") 客运巴士
+          input(name="tab", type="radio").hidden.tool-tab#tour
+          label(for="tour") 景区旅游
+          input(name="tab", type="radio").hidden.tool-tab#room
+          label(for="room") 密室逃脱
+          input(name="tab", type="radio").hidden.tool-tab#class
+          label(for="class") 自习室
+          .mt-12.flex.justify-center.flex-wrap.service-tools.casual
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-cards
+              .mt-4.font-bold.text-lg 年卡月卡次卡
+              .mt-2.text-gray-600 支持设置单张电子票使用次数，单次购票，可多次核销。
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-card
+              .mt-4.font-bold.text-lg 绑定实体卡
+              .mt-2.text-gray-600 支持自定义票码，可导入实体卡号，电子票码可与实体卡保持一致。
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-lesson
+              .mt-4.font-bold.text-lg 选课预约
+              .mt-2.text-gray-600 支持多场次功能，可灵活设置库存，方便进行选课预约。
+          .mt-12.flex.justify-center.flex-wrap.service-tools.bus
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-mobile
+              .mt-4.font-bold.text-lg 移动验票
+              .mt-2.text-gray-600 提供多种验票方案，包括专用手持设备，以及手机验票APP，随时随地轻松验票。
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-shift
+              .mt-4.font-bold.text-lg 车次选择
+              .mt-2.text-gray-600 支持多场次功能，可灵活设置库存，方便进行车次选择。
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-payment
+              .mt-4.font-bold.text-lg 多种收款方式
+              .mt-2.text-gray-600 支持多种收款方式，包括支付宝、微信支付以及现金付款等。
+          .mt-12.flex.justify-center.flex-wrap.service-tools.tour
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-id
+              .mt-4.font-bold.text-lg 支持身份证核验
+              .mt-2.text-gray-600 支持绑定身份证入场，降低检票成本，提升入场效率。
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-turn
+              .mt-4.font-bold.text-lg 联动闸机检票
+              .mt-2.text-gray-600 可与闸机设备进行对接，方便闸机检票，降低换代成本。
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-external
+              .mt-4.font-bold.text-lg 外部订单导入
+              .mt-2.text-gray-600 外部报名记录可直接导入，汇集一处统一管理，保证数据一致性。
+          .mt-12.flex.justify-center.flex-wrap.service-tools.room
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-group
+              .mt-4.font-bold.text-lg 拼场拼团
+              .mt-2.text-gray-600 支持社交分享进行拼场拼团，降低开场门槛，提高密室接单率
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-scene
+              .mt-4.font-bold.text-lg 场次选择
+              .mt-2.text-gray-600 可以设置多个时间场次，无需二次预约，下单更加直观高效
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-promotion
+              .mt-4.font-bold.text-lg 优惠活动
+              .mt-2.text-gray-600 支持设置优惠促销活动，满折、满减、优惠券码等多种优惠方式
+          .mt-12.flex.justify-center.flex-wrap.service-tools.class
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-seats
+              .mt-4.font-bold.text-lg 在线选座
+              .mt-2.text-gray-600 可自定义选座界面，方便顾客灵活进行时间和座位的预约
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-calendar-cards
+              .mt-4.font-bold.text-lg 日卡月卡年卡
+              .mt-2.text-gray-600 可设置电子票券使用时长，满足用户的多样需求
+            .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+              .icon-timer
+              .mt-4.font-bold.text-lg 自动计时
+              .mt-2.text-gray-600 支持自助扫码开桌，系统自动计时，实现24小时开放低成本管理
+    .section.white-bg.mt-12
+      .container
+        .title 超多成功案例 丰富行业经验
+        .subtitle 丰富的成功案例让我们积累了更多行业经验
+        .case-list.mt-12
+          .list-item.active
+            .item-avatar(style="background-image: url('./img/cases/service-luguhu.png')")
+            .item-main
+              .main-prev
+              .main-detail
+                .detail-title
+                  img(src="./img/cases/service-luguhu-logo.png")
+                  span 泸沽湖机场快线
+                .detail-description 泸沽湖机场快线由丽江女儿国旅游交通客运有限公司承运，于2015年10月12日正式开通。通过多会打造专属电子车票系统，工作人员通过手持设备即可轻松移动售票验票，子账户功能方便管理，数据统计全面详细。
+              .main-next
+    .section.white-bg.mt-12.mb-12
+      include partials/_advisory.pug
+    .section.bg-blue-geo
+      .container.text-center
+        h2.mt-8.text-2xl 现在注册，立享 15 天免费试用和专属技术支持
+        .mt-6
+          a.btn(href="https://app.duohui.cn", target="_blank") 立即试用
+          a.btn.solid.ml-4(href="/compare") 查看定价
+    include partials/_footer.pug
+    script(src='./vendor/vendor.js')
+    script.
+      $('body')
+        .on('click', '.case-list .main-prev, .case-list .main-next', function() {
+          const $this = $(this)
+          const isPrev = $this.hasClass('main-prev')
+          const currentIndex = $this.parents('.list-item').index()
+          const items = $this.parents('.case-list').find('.list-item')
+          const count = items.length
+          let showIndex = currentIndex + (isPrev ? -1 : 1)
+          if (showIndex > count - 1) showIndex = 0
+          if (showIndex < 0 ) showIndex = count - 1
+          items.removeClass('active')
+          $(items[showIndex]).addClass('active')
+        })
+        .on('case-check', function() {
+          $('.case-list').each(function() {
+            const $this = $(this)
+            const count = $this.find('.list-item').length
+            if (count === 1) $this.addClass('single')
+          })
+        })
+        .trigger('case-check')

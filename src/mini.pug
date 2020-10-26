@@ -1,42 +1,162 @@
-extends partials/_product.pug
-
-block vars
-  -
-    var product = {
-      code: "mini",
-      name: "活动小程序",
-      subscript: "由多会企业版提供",
-      title: "多会活动小程序 - 一键生成活动微信小程序",
-      tagline: "让您的线下活动领先潮流一小步",
-      desc: "使用多会企业版，获得专属于您的线下活动小程序，为用户提供超群的购票新体验。",
-      features: [
-        {'icon': 'fast', 'titile': '资金即刻到账', 'desc': '使用自有的收款商户账号。售票资金即刻到账，无需提现、无平台账期。'},
-        {'icon': 'sms', 'titile': '免费短信通知', 'desc': '购票后系统自动发送出票短信通知。标准版用户每月免费获赠 500 条短信额度。'},
-        {'icon': 'brand', 'titile': '隐藏多会品牌', 'desc': '完全隐藏多会品牌元素。为用户提供完整统一的使用体验。'},
-        {'icon': 'coupon', 'titile': '配置优惠券', 'desc': '为活动设置优惠券。可指定折扣方式，限制优惠券的可用票种，限制优惠券使用次数等。'},
-        {'icon': 'embed', 'titile': '嵌入网页购票', 'desc': '将活动购票功能嵌入到活动网页，实现无缝式的购票体验。'},
-        {'icon': 'payment', 'titile': '多种支付方式', 'desc': '支持支付宝和微信支付。另外还可通过 PayPal 接收美元付款。'},
-        {'icon': 'lang', 'titile': '多语言支持', 'desc': '为活动创建中英文版本，并可根据用户的设备语言自动选择。'},
-        {'icon': 'form', 'titile': '自定义报名表', 'desc': '根据活动报名需求自定义报名表单，支持文本、图片、单选、多选等多种表单项。'},
-        {'icon': 'export', 'titile': '导出报名表', 'desc': '可导出完整的报名数据，支持 Excel 和 CSV 格式。'},
-      ],
-      price: {
-        basic: "9,999 <span>元 / 年</span>",
-        monthly: "3499 <span>元 / 季</span>",
-        basic_desc: "包含所有高级功能，包括无限制的活动发布、渠道、隐藏多会品牌等。",
-        fee: "无",
-        fee_desc: "多会不收取手续费，但微信支付收取 0.6% 的支付手续费。",
-        save_percent: 23
-      },
-      faqs: [
-        {'q': '企业版到期之后活动还能访问吗？', 'a': '可以的。企业版到期不会影响您的数据和用户访问，我们只会对新建活动进行限制，其他功能不会做限制。'},
-        {'q': '免费的短信额度用完之后还能发短信吗？', 'a': '当然可以。我们为企业版用户每月免费赠送 1000 条短信额度。如果免费额度用完之后，可以按 0.1 元／条短信的价格购买短信额度。'},
-        {'q': '用户退票会产生费用吗？', 'a': '不会。用户支付的款项将原路退回，不会产生任何费用。退款操作直接通过支付渠道的退款接口完成，一般会即刻处理。'},
-        {'q': '我可以试用多会企业版吗？', 'a': '可以。我们为客户提供 15 天的多会企业版免费试用，您可以联系在线客服获取试用资格。'},
-      ],
-      cases: [
-        {'img': 'sketchmeetup.jpg', 'event': 'Sketch Meetup', 'logo': 'dex', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]},
-        {'img': 'teambitionevent.jpg', 'event': '敏捷创新之旅', 'logo': 'teambition', 'tags': [{'name': '运营', 'style': 'design'}, {'name': '品牌活动', 'style': 'lined'}]},
-        {'img': 'pingtalk.jpg', 'event': 'Ping-Talk', 'logo': 'pingwest', 'tags': [{'name': '分享会', 'style': 'lined'}, {'name': '品牌活动', 'style': 'sport'}]}
-      ]
-    }
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
+    title 多会 - 专业活动管理系统
+    meta(name='description', content='通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css')
+    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css')
+    link(rel='stylesheet', type='text/css', href='./styles/mini.css')
+    meta(name='msapplication-tap-highlight', content='no')
+  body
+    include partials/_header.pug
+    .pt-10(style="background:#ECF8F1;")
+      .container.pt-12.md_py-10.flex.items-center
+        .pr-8.md_pr-0
+          .pb-8
+            h1.mt-0.mb-0 多会小程序
+            p.mt-2 为每个主办方提供专属小程序
+            img.mt-8.max-w-full.hidden.md_block(src='./img/banner/mini.svg', alt='home')
+          .mt-6.flex
+            .mr-4.md_mr-1.md_text-xs.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
+              span.text-color-green 无需开发
+              img.ml-1(src="data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 0C3.14 0 0 3.14 0 7s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm-.583 1.75h1.166V3.5H6.417V1.75zM3.5 7.583H1.75V6.417H3.5v1.166zM7 8.75c-.965 0-1.75-.785-1.75-1.75 0-.27.066-.521.175-.75L2.864 3.688l.824-.824L6.25 5.426c.229-.11.48-.176.75-.176.965 0 1.75.785 1.75 1.75S7.965 8.75 7 8.75zm2.063-4.638L10.3 2.875l.825.825-1.238 1.237-.824-.825zM10.5 7.583V6.417h1.75v1.166H10.5z' fill='%232AB751'/%3E%3C/svg%3E")
+            .mr-4.md_mr-1.md_text-xs.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
+              span.text-color-green 自定义布局
+              img.ml-1(src="data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.417 3.5V1.167a.583.583 0 0 0-.583-.584H1.167a.583.583 0 0 0-.584.584V3.5h12.834zM.583 4.667v8.166a.583.583 0 0 0 .584.583h2.917v-8.75h-3.5zM5.25 13.416h7.583a.583.583 0 0 0 .584-.583V4.667H5.25v8.75z' fill='%232AB751'/%3E%3C/svg%3E")
+            .mr-4.md_mr-1.md_text-xs.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
+              span.text-color-green 操作简单
+              img.ml-1(src="data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.333 2.917H1.166V.583c0-.322.262-.583.584-.583h2.333v1.167h-1.75v1.75zM11.667 2.917H10.5v-1.75H8.75V0h2.333c.322 0 .584.26.584.583v2.334zM12.25 14V7.583c0-.644-.522-1.166-1.167-1.166h-3.5v-3.5a1.167 1.167 0 0 0-2.333 0v6.416L2.784 7.36A1.061 1.061 0 0 0 1.19 8.697L4.083 14h8.167z' fill='%232AB751'/%3E%3C/svg%3E")
+          .action.mt-12
+            a.btn.green(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
+            a.btn.solid.green(href='https://app.duohui.cn') 立即试用
+        .md_hidden.text-zero
+          img.max-w-full(src="./img/banner/mini.svg", alt="banner")
+    .py-20
+      .container
+        .title 聚集微信流量 助您轻松获客 
+        .subtitle 流量红利助你轻松获客、裂变、复购
+        .mt-12.flex.justify-center.flex-wrap.weixin-tools
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-mp
+            .mt-4.font-bold.text-lg 专属入口
+            .mt-2.text-gray-600 小程序卡片、下拉菜单、发现页等多种专属入口轻松获客
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-marketing
+            .mt-4.font-bold.text-lg 一体化营销
+            .mt-2.text-gray-600 公众号、小程序、微信群互联互通，流量转化快速高效
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-pay
+            .mt-4.font-bold.text-lg 自有支付
+            .mt-2.text-gray-600 配置自有微信支付商户账户，自主收款，资金直接到账
+    .py-20
+      .container
+        .title 多种模版组件 一键快速搭建
+        .subtitle 快速搭建的同时满足您多样的需求
+        .flex.flex-wrap.items-center.mt-12
+          .vertical-tabs.md_border-none.w-1_2.md_w-full.pr-8.md_pr-0
+            .tab.rounded.mb-2.p-4.cursor-pointer.select-none.active
+              .text-lg.font-bold.icon-template 多种模版
+              .tab-desc.mt-2.text-sm 一键使用行业模板，快速上线更省心
+            .tab.rounded.mb-2.p-4.cursor-pointer.select-none
+              .text-lg.font-bold.icon-component 自定义组件
+              .tab-desc.mt-2.text-sm 多种自定义组件，可灵活配置小程序页面
+            .tab.rounded.mb-2.p-4.cursor-pointer.select-none
+              .text-lg.font-bold.icon-style 风格定制
+              .tab-desc.mt-2.text-sm 主题LOGO、背景样式、图标色自由搭配
+            .tab.rounded.mb-2.p-4.cursor-pointer.select-none
+              .text-lg.font-bold.icon-navigation 分类导航
+              .tab-desc.mt-2.text-sm 自定义底菜单、图片导航，分类展示
+            .tab.rounded.mb-2.p-4.cursor-pointer.select-none
+              .text-lg.font-bold.icon-module 可拓展模块
+              .tab-desc.mt-2.text-sm 拼团、评价收集等模块，拓展营销方式
+          .w-1_2.md_w-full.flex.justify-center.items-center
+            img.vertical-tab-img.max-w-full.active(src="./img/mini/template.svg", alt="1")
+            img.vertical-tab-img.max-w-full(src="./img/mini/component.svg", alt="2")
+            img.vertical-tab-img.max-w-full(src="./img/mini/style.svg", alt="3")
+            img.vertical-tab-img.max-w-full(src="./img/mini/navigation.svg", alt="4")
+            img.vertical-tab-img.max-w-full(src="./img/mini/module.svg", alt="5")
+            
+    .py-20
+      .container
+        .title 多样营销方案 获取更多客源
+        .subtitle 强大的营销功能助力商家成功
+        .mt-12.flex.flex-wrap.bottom-tools
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+            .icon-share
+            .mt-4.font-bold.text-lg 裂变营销
+            .mt-2.text-gray-600 多人拼团，海报分享，快速裂变分享传播
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+            .icon-promotion
+            .mt-4.font-bold.text-lg 多样促销
+            .mt-2.text-gray-600 优惠券码、满折/满减、限时特惠等多样促销手段
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+            .icon-vip
+            .mt-4.font-bold.text-lg 会员复购
+            .mt-2.text-gray-600 会员年卡/季卡/月卡，多样会员玩法，提高复购率
+          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+            .icon-customer
+            .mt-4.font-bold.text-lg 客户留存
+            .mt-2.text-gray-600 微信消息推送，评价邀请，唤醒潜在用户，增强用户粘性
+    .section.white-bg.mt-12
+      .container
+        .title 超多成功案例 丰富行业经验
+        .subtitle 丰富的成功案例让我们积累了更多行业经验
+        .case-list.mt-12
+          .list-item.active
+            .item-avatar(style="background-image: url('./img/cases/event-jidian.png')")
+            .item-main
+              .main-prev
+              .main-detail
+                .detail-title
+                  //- img(src="./img/cases/event-jidian-logo.png")
+                  span 奇点艺术节2019·广州站
+                .detail-description
+                  p 「奇点计划®️」启动于2017年，前身是2013年开始推广和普及国内外独立艺术创作的「大脑热气球」。奇点计划®️主要的艺术项目有奇点艺术节、singularityplan.com、奇点计划基地、奇点计划玩具厂牌。
+                  p 2019年11月，奇点艺术节·广州站在广州开展。活动引爆艺术圈，活动票A票开票即售罄。在本次活动中多会作为技术支持，为奇点️提供了全流程的线上线下服务支持。
+              .main-next
+          .list-item
+            .item-avatar(style="background-image: url('./img/cases/event-huxiu.jpg')")
+            .item-main
+              .main-prev
+              .main-detail
+                .detail-title
+                  //- img(src="./img/cases/event-huxiu-logo.png")
+                  span 2019虎嗅F&M创新节
+                .detail-description
+                  p 虎嗅是聚焦科技与创新的知名资讯平台，致力于为一切热爱思考与发现的用户，提供有效率的信息服务。
+                  p 2019年第七届虎嗅F&M创新节在北京751 D.Park开展，活动共吸引了24000+ 好奇分子，600+ 创新领袖，1000+ 虎嗅作者，800+ 合作伙伴。多会作为活动的技术支持，为虎嗅提供了一整套技术服务，从在线售票到线下签到，多会全程陪伴支持。
+              .main-next
+    .section.white-bg.mt-12.mb-12.green-btn-box
+      include partials/_advisory.pug
+    .section.bg-green-geo
+      .container.text-center
+        h2.mt-8.text-2xl 现在注册，立享 15 天免费试用和专属技术支持
+        .mt-6
+          a.btn.green(href="https://app.duohui.cn", target="_blank") 立即试用
+          a.btn.solid.green.ml-4(href="/compare") 查看定价
+    include partials/_footer.pug
+    script(src='./vendor/vendor.js')
+    script.
+      $('body')
+        .on('click', '.case-list .main-prev, .case-list .main-next', function() {
+          const $this = $(this)
+          const isPrev = $this.hasClass('main-prev')
+          const currentIndex = $this.parents('.list-item').index()
+          const items = $this.parents('.case-list').find('.list-item')
+          const count = items.length
+          let showIndex = currentIndex + (isPrev ? -1 : 1)
+          if (showIndex > count - 1) showIndex = 0
+          if (showIndex < 0 ) showIndex = count - 1
+          items.removeClass('active')
+          $(items[showIndex]).addClass('active')
+        })
+        .on('click', '.vertical-tabs .tab', function() {
+          const $this = $(this)
+          const index = $this.index()
+          $this.addClass('active').siblings().removeClass('active')
+          $('.vertical-tab-img').eq(index).addClass('active').siblings().removeClass('active')
+        })

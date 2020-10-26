@@ -1,98 +1,67 @@
-.why {}
-
-.why ul {
-  padding-left: 14px;
+.products-table {
+  overflow: hidden;
+  flex-grow: 1;
+  border-collapse: collapse;
+  border-radius: 6px;
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, .1);
 }
 
-.why ul li {
-  list-style: none;
-  position: relative;
-  padding: .5em 0;
-  font-size: 16px;
+.products-table thead tr th {
+  padding: 20px;
+  text-align: left;
+  color: #fff;
+  background: linear-gradient(249.28deg, #459BF1 12.4%, #2C7AEF 63.5%);
 }
 
-.why ul li::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -14px;
-  display: block;
-  width: 4px;
-  height: 4px;
-  margin-top: -2px;
-  border-radius: 100%;
-  background-color: #35AFFB;
+.products-table tbody td {
+  padding: 20px;
+  border-bottom: 1px dashed #eee;
 }
 
-.why .trait h2 {
-  font-size: 20px;
-  padding: 0;
+.products-table tbody tr td:nth-child(1) {
+  border-right: 1px dashed #eee;
+}
+
+.products-table tfoot td {
+  padding: 24px;
+  text-align: center;
+}
+
+.weixin-tools > div {
+  margin-bottom: 3rem;
+}
+
+.weixin-tools [class*="icon-"] {
   display: inline-block;
-  line-height: 72px;
-  margin: 6px 12px;
-  vertical-align: top;
+  width: 65px;
+  height: 65px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65px;
 }
 
-.why .learn-more,
-.products .learn-more {
-  float: right;
-  font-size: 16px;
-  padding: 6px 12px 5px;
-  background: #FFF;
-  color: #4893ff;
-  border-radius: 4px;
-  border: 1px solid;
+.weixin-tools .icon-mp {
+  background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40.536 39.744c-3.592-1.214-5.437-3.862-6.374-5.997 5.174-3.103 7.867-10.467 7.867-16.063 0-7.272-5.894-13.165-13.166-13.165s-13.166 5.893-13.166 13.165c0 5.6 2.695 12.969 7.875 16.067-.932 2.153-2.773 4.82-6.357 5.984-6.32 2.047-12.49 2.716-12.49 13.058v4.389H53v-4.389c0-10.188-5.896-10.831-12.464-13.05z' fill='%23B4CFF6'/%3E%3Ccircle cx='46.055' cy='44.695' r='16.695' fill='%23F9FBFD'/%3E%3Cpath d='M46.055 31.578c7.245 0 13.118 5.873 13.118 13.117 0 7.245-5.873 13.118-13.118 13.118-7.244 0-13.117-5.873-13.117-13.118 0-7.244 5.873-13.117 13.117-13.117zm2.714 6.87c-.674 0-1.317.18-1.863.54a3.628 3.628 0 0 0-1.67 3.05v5.35c0 .97-.835 1.759-1.862 1.759-1.028 0-1.863-.79-1.863-1.76 0-.718.417-1.291 1.028-1.579.031-.036.096-.072.128-.072.385-.18.707-.502.835-.897.16-.539-.16-1.005-.77-1.005-.162 0-.29.036-.45.072l-.108.037c-.818.3-1.485.893-1.916 1.65a3.643 3.643 0 0 0-.45 1.759c0 1.974 1.574 3.59 3.533 3.59.675 0 1.317-.18 1.863-.539a3.628 3.628 0 0 0 1.67-3.051v-5.35c0-.969.835-1.758 1.863-1.758 1.027 0 1.862.79 1.862 1.759 0 .718-.449 1.328-1.123 1.615a1.48 1.48 0 0 0-.9.898c-.16.538.161 1.005.771 1.005.16 0 .289-.036.417-.072.033-.036.033-.036.065-.036a3.662 3.662 0 0 0 2.023-1.687c.29-.539.45-1.113.45-1.687 0-1.975-1.574-3.59-3.533-3.59z' fill='%23176BE8'/%3E%3C/svg%3E");
 }
 
-.why .tryout{
-  float: right;
-  text-decoration: none;
+.weixin-tools .icon-marketing {
+  background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.39 56.32c-1.14 0-2.19-1.14-2.19-2.381V40.22c0-1.254 1.784-2.014 3.165-1.085l6.39 4.052c.868.805 2.268.646 3.054-.449l6.489-7.693c.877-1.092 1.364-1.147 2.394-.64l7.759 5.11c.874.8 2.134 1.027 2.98-.11l15.006-18.929c1.27-1.754 4.747-1.442 4.747 1.144v32.318c0 1.24-.981 2.381-2.122 2.381H7.39z' fill='%23B5CFF6'/%3E%3Cpath d='M32.895 31.748c-1.732-1.238-5.101-3.477-6.499-4.558-.61-.472-1.884-.696-2.673.325-1.527 1.972-6.443 7.895-6.443 7.895-1.235 1.413-2.307 1.244-3.295.487l-7.472-5.588c-1.485-1.173-1.07-3.145-.312-4.237.757-1.095 2.424-1.472 3.908-.292l4.874 3.798 7.83-8.922c.819-.842 1-1.121 1.946-1.222.952-.104 1.293.403 2.252.975l7.203 5.124 10.13-12.12-3.015-2.442c-1.3-1.215-.406-2.824 1.03-3.08L53.3 6.933c1.734 0 2.167.867 1.734 2.167 0 0-13.351 16.332-18.56 22.323-.308.357-.821.91-1.656.926a2.928 2.928 0 0 1-1.923-.601zM51.566 59.8c6.462 0 11.7-5.238 11.7-11.7 0-6.462-5.238-11.7-11.7-11.7-6.462 0-11.7 5.238-11.7 11.7 0 6.462 5.239 11.7 11.7 11.7z' fill='%23176BE8'/%3E%3Cpath d='M53.6 42.467h-3.294c-.347 0-.694.26-.867.607l-1.733 6.066c-.174.607.26 1.127.78 1.127h3.207l-1.3 6.066 3.163-4.073 3.163-4.073c.434-.52 0-1.387-.693-1.387h-2.6l.953-3.206c.174-.607-.26-1.127-.78-1.127z' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-.why .tryout .dropdown-menu{
-  padding: 10px;
+.weixin-tools .icon-pay {
+  background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='11.267' y='2.6' width='42.467' height='58.933' rx='3.72' fill='%23B5CFF6'/%3E%3Cpath d='M32.5 58.067a3.033 3.033 0 1 0 0-6.067 3.033 3.033 0 0 0 0 6.067z' fill='%23CFE1FC'/%3E%3Crect x='17.333' y='7.8' width='30.333' height='40.733' rx='2.6' fill='%23176BE8'/%3E%3Cpath d='M26.52 17.602l5.937 7.915 5.936-7.915M32.457 25.517V36.4M26.52 26.506h11.873M26.52 32.067h11.873' stroke='%23CFE1FC' stroke-width='2.968' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-.why .tryout .dropdown-menu img{
-  width: 170px;
-  margin-left: -35px;
-  padding: 5px;
-  border: 1px solid #eee;
-  background: #fff;
+.weixin-tools .icon-notification {
+  background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M51.435 12.396H8.615a4.282 4.282 0 0 0-4.282 4.281v27.834a4.282 4.282 0 0 0 4.282 4.282h14.073l7.337 8.407 7.337-8.407h14.073a4.282 4.282 0 0 0 4.282-4.282V16.677a4.282 4.282 0 0 0-4.282-4.281z' fill='%23176BE8'/%3E%3Ccircle cx='53.733' cy='14.693' r='8.903' fill='%23B4CFF6' stroke='%23F9FBFD' stroke-width='4.021'/%3E%3Ccircle cx='17.22' cy='31.426' r='3.222' fill='%23B4CFF6'/%3E%3Ccircle cx='30.107' cy='31.426' r='3.222' fill='%23B4CFF6'/%3E%3Ccircle cx='42.993' cy='31.426' r='3.222' fill='%23B4CFF6'/%3E%3C/svg%3E");
 }
 
-.products .learn-more img {
-  margin-right: 12px;
-}
-.why .learn-more img{
-  margin-right: 7px;
-  margin-bottom: -2px;
+.weixin-tools .icon-pocket {
+  background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M59.1 17.896V9.66c0-1.5-1.228-2.727-2.728-2.727L6.755 12.987l52.344 4.91z' fill='%23B4CFF6'/%3E%3Cpath d='M57.677 58.566l-49.75-4.582A2.735 2.735 0 0 1 5.2 51.256V21.138c0-1.5 1.228-2.727 2.728-2.727l49.749 4.582c1.5 0 2.727 1.227 2.727 2.727v30.118c0 1.5-1.227 2.728-2.727 2.728z' fill='%23176BE8'/%3E%3Cpath d='M10.42 32.023a2.593 2.593 0 0 1 2.887-2.576l40.487 4.627a2.593 2.593 0 0 1-.589 5.153L12.72 34.6a2.593 2.593 0 0 1-2.3-2.577z' fill='%23B4CFF6'/%3E%3Ccircle cx='33.256' cy='36.294' r='4.567' fill='%23B4CFF6'/%3E%3C/svg%3E");
 }
 
-.why ul a {
-  color: #35AFFB;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-
-.inmini .why .tryout {
-  display: none;
-}
-
-.partners {}
-
-.partners .fbox {
-  align-items: center;
-}
-
-.partners .fbox::after {
-  content: '';
-  flex: auto;
-}
-
-.partners .mobile {
-  display: none;
+.weixin-tools .icon-server {
+  background-image: url("data:image/svg+xml,%3Csvg width='65' height='65' viewBox='0 0 65 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M58.355 5.2H30.622a2.312 2.312 0 0 0-2.311 2.311v20.984c0 1.789 2.069 2.783 3.466 1.666l8.09-6.472h18.488a2.312 2.312 0 0 0 2.311-2.311V7.511a2.312 2.312 0 0 0-2.311-2.31z' fill='%23B4CFF6'/%3E%3Cpath d='M28.043 50.264c-1.99-1.58-5.364-3.464-10.132-3.464s-8.142 1.883-10.13 3.462c-1.64 1.301-2.58 3.268-2.58 5.403V59.6c0 .589.477 1.066 1.066 1.066h23.289c.589 0 1.066-.477 1.066-1.066v-3.935c0-2.135-.94-4.102-2.579-5.4zM17.911 44.489a8.089 8.089 0 1 0 0-16.178 8.089 8.089 0 0 0 0 16.178zM58.087 50.264c-1.99-1.58-5.364-3.464-10.132-3.464s-8.142 1.883-10.13 3.462c-1.64 1.301-2.58 3.268-2.58 5.403V59.6c0 .589.477 1.066 1.066 1.066H59.6c.589 0 1.066-.477 1.066-1.066v-3.935c0-2.135-.94-4.102-2.579-5.4zM47.955 44.489a8.089 8.089 0 1 0 0-16.178 8.089 8.089 0 0 0 0 16.178z' fill='%23176BE8'/%3E%3C/svg%3E");
 }
 
 @media screen and (max-width: 768px) {

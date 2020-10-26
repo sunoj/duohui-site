@@ -4,7 +4,7 @@ html
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=Edge')
     meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
-    title 多会 - 新一代活动票务系统
+    title 多会 - 新一代活动管理系统
     meta(name='description', content='多会是新一代的活动票务系统。通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
 
     meta(property="og:type" content="website")
@@ -15,113 +15,128 @@ html
 
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/index.css?v=<!--@echo curtime -->')
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_header.pug
     include partials/_poster_block.pug
     .section.intro
+      .container.pt-12.md_pt-0.flex.items-center
+        .pr-8.md_pr-0
+          .pb-8
+            h1.mt-0.mb-0 新一代活动管理系统
+            p.mt-2 售票功能强大，适用于多种活动与服务场景，线上线下可同步售票。
+            img.mt-8.max-w-full.hidden.md_block(src='./img/banner/home.svg', alt='home')
+          .action
+            a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
+            a.btn.solid(href='https://app.duohui.cn') 立即试用
+        .md_hidden
+          img.max-w-full(src='./img/banner/home.svg', alt='home')
+    .section.white-bg.mt-12
       .container
-        .hello
-          h1 新一代活动票务系统
-          p 多会是领先的活动票务系统，为线下活动提供报名售票、现场签到等技术解决方案。
-        .action
-          a.btn(href="javascript:void(0)" onclick="window.openYoukeChatbox()") 联系销售
-          a.btn.solid(href='https://app.duohui.cn') 立即试用
-    .section.why.white-bg
+        .title 多种产品，满足众多活动形式
+        .subtitle 可根据使用场景选择最适合的产品
+        .mt-12.flex.flex-wrap
+          table.products-table.product-icons.mr-8.md_mr-0
+            thead
+              tr
+              th(colspan="2")
+                .mb-2.text-2xl.icon-tickets 活动票务
+                div 支持音乐演出、会议展览、剧场剧院等多场景售票
+            tbody
+              tr
+                td
+                  span.icon-ticket 在线选座购票
+                td
+                  span.icon-layout 模块化活动页面
+              tr
+                td
+                  span.icon-checkin 离线签到
+                td
+                  span.icon-chart 数据报表
+              tr
+                td
+                  span.icon-form 自定义报名表单
+                td
+                  span.icon-bulb 多种营销工具
+              tr
+                td
+                  span.icon-order 订单导入导出
+                td
+                  span.icon-refund 自定义退款规则
+            tfoot
+              tr
+                td(colspan="2")
+                  a.btn.large(href="/event") 了解更多
+          table.products-table.product-icons.md_mt-8
+            thead
+              tr
+              th(colspan="2")
+                .mb-2.text-2xl.icon-pin 服务预订
+                div 专为休闲健身、景区旅游等日常服务场景设计
+            tbody
+              tr
+                td
+                  span.icon-useage 自定票种使用次数
+                td
+                  span.icon-scene 多场次功能
+              tr
+                td
+                  span.icon-entrance 多种入口
+                td
+                  span.icon-medium 渠道功能
+              tr
+                td
+                  span.icon-code 自定义票码
+                td
+                  span.icon-writeoff 多次核销功能
+              tr
+                td
+                  span.icon-coupon 优惠促销
+                td
+                  span.icon-data 服务数据统计
+            tfoot
+              tr
+                td(colspan="2")
+                  a.btn.large(href="/service") 了解更多
+    .section.white-bg.mt-12
       .container
-        h1.chtitle 为什么选择多会
-          a.tryout(href="https://wx.duohui.co/event/1161" target="_blank")
-            .dropdown.is-hoverable
-              span.learn-more
-                img(src='./img/icon/ticket-icon.png', srcset='./img/icon/ticket-icon@2x.png 2x', alt='体验购票')
-                | 体验购票
-              .dropdown-menu
-                img(src="./img/qrcode/try.jpg", alt="二维码")
-        .columns
-          .column.col-md-4.col-12.trait
-            img(src='./img/why/features-icon-cheap.png', srcset='./img/why/features-icon-cheap@2x.png 2x')
-            h2 成本更低
-            ul
-              li 所有版本按订阅计费，<strong>不限活动场次</strong>
-              li 微信零钱 <strong>提现免费</strong>
-              li 企业版资金 <strong>实时到账</strong> ，手续费低至 0.6%
-              li 极具价格优势的
-                a(href="/checkin") 专用签到设备
-
-          .column.col-md-4.col-12.trait
-            img(src='./img/why/features-icon-pro.png', srcset='./img/why/features-icon-pro@2x.png 2x')
-            h2 服务专业
-            ul
-              li 独立的品牌形象，隐藏多会品牌
-              li 直接在您的公众号和网站完成购票
-              li 获得
-                a(href="/mini") 专属活动小程序
-              li 自定义出票短信和通知邮件等
-          .column.col-md-4.col-12.trait
-            img(src='./img/why/features-icon-tech.png', srcset='./img/why/features-icon-tech@2x.png 2x')
-            h2 技术领先
-            ul
-              li 扎实的技术基础，<strong>领先的软硬件方案</strong>
-              li 支持自有支付宝，微信支付 和 PayPal 商户
-              li 支持<strong>私有部署</strong>，数据隐私有保障
-              li 提供功能定制服务
-    .section.products
+        .title 为每个主办方提供专属微信营销工具
+        .subtitle 快速搭建小程序，获取微信流量红利
+        .mt-12.flex.flex-wrap.weixin-tools
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-mp
+            .mt-4.font-bold.text-lg 专属小程序
+            .mt-2.text-gray-600 小程序卡片、下拉菜单、发现页等多种专属入口轻松获客
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-marketing
+            .mt-4.font-bold.text-lg 一体化营销
+            .mt-2.text-gray-600 公众号、小程序、微信群互联互通，流量转化快速高效
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-pay
+            .mt-4.font-bold.text-lg 自有支付
+            .mt-2.text-gray-600 配置自有微信支付商户账户，自主收款，资金直接到账
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-notification
+            .mt-4.font-bold.text-lg 实时推送购票信息
+            .mt-2.text-gray-600 用户可在微信上实时收取订单和票种的动态信息
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-pocket
+            .mt-4.font-bold.text-lg 支持微信卡包
+            .mt-2.text-gray-600 支持微信卡包
+          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+            .icon-server
+            .mt-4.font-bold.text-lg 智能客服
+            .mt-2.text-gray-600 可在服务号添加智能客服，提高和顾客的沟通效率
+        .text-center
+          a.btn.solid.large(href="https://app.duohui.cn", target="_blank") 立即试用
+          a.btn.large.ml-4(href="/mini") 了解更多
+    .section.white-bg.mt-12
       .container
-        h1.chtitle 多会的产品
-          a(href="/compare")
-            span.learn-more
-              img(src='./img/icon/compare-icon.png', srcset='./img/icon/compare-icon@2x.png 2x', alt='产品对比')
-              | 产品对比
-        .columns
-          .column.col-md-4.col-12
-            .product.price-box.gray
-              .head 标准版
-              .body
-                p 轻松易用。通过微信小程序、公众号和网页版快速售票。
-                .price ￥
-                  span.value 299
-                  span.pre-year 每年
-                .promotion
-                  span.money ￥588
-                  span.discount 年付优惠
-                .columns
-                  .column.col-6: a.btn(href="/standard") 了解详情
-                  .column.col-6: a.btn(href="https://app.duohui.cn/signup") 免费试用
-
-          .column.col-md-4.col-12
-            .product.price-box.yellow
-              .head 高级版
-              .body
-                p 更多高级功能。支持在线选座、优惠券和渠道统计等。
-                .price ￥
-                  span.value 1,799
-                  span.pre-year 每年
-                .promotion
-                  span.money ￥3,588
-                  span.discount 年付优惠
-                .columns
-                  .column.col-6: a.btn(href="/prime") 了解详情
-                  .column.col-6: a.btn(href="https://app.duohui.cn/signup") 免费试用
-          .column.col-md-4.col-12
-            .product.price-box
-              .head 企业版
-              .body
-                p 独立微信小程序、公众号和网页版。微信支付、支付宝和 PayPal 实时到账。
-                .price ￥
-                  span.value 9,999
-                  span.pre-year 每年
-                .promotion
-                  span.money ￥13,996
-                  span.discount 年付优惠
-                .columns
-                  .column.col-6: a.btn(href="/enterprise") 了解详情
-                  .column.col-6: a.btn(href="https://app.duohui.cn/signup") 免费试用
-
-    .section.partners.white-bg
-      .container
-        h1.chtitle 多会的客户
-        .logowall
+        .title 超多成功案例，丰富行业经验
+        .subtitle 丰富的成功案例让我们积累了更多行业经验
+        .logowall.mt-12
           .columns.i2.clients
             .column.col-md-6.col-12
               img(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
@@ -139,21 +154,29 @@ html
               img(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
             .column.col-md-6.col-12
               img(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
-    .section.events
-      .container
-        h1.chtitle 服务案例
-        -
-          var events = [
-            {"poster": "pingwest-hay.png", "title": "HAY! 17 PingWest 年度数字嘉年华", "date": "12月16日", "location": "北京", "link": "http://hay.pingwest.com/"},
-            {"poster": "gnome.png", "title": "GNOME Asia 2017 亚洲峰会", "date": "10月14日", "location": "重庆", "link": "https://wx.duohui.co/event/1390"},
-            {"poster": "rubyconf.png", "title": "RubyConf China 2017", "date": "09月16日", "location": "杭州", "link": "https://wx.duohui.co/event/1251"},
-          ]
-        .columns
-          each event in events
-            .column.col-md-4.col-12
-              +poster(event)
+    .section.white-bg.mt-12.mb-12
+      include partials/_advisory.pug
+    .section.bg-blue-geo
+      .container.text-center
+        h2.mt-8.text-2xl 现在注册，立享 15 天免费试用和专属技术支持
+        .mt-6
+          a.btn(href="https://app.duohui.cn", target="_blank") 立即试用
+          a.btn.solid.ml-4(href="/compare") 查看定价
+    //- .section.events
+    //-   .container
+    //-     h1.chtitle 服务案例
+    //-     -
+    //-       var events = [
+    //-         {"poster": "pingwest-hay.png", "title": "HAY! 17 PingWest 年度数字嘉年华", "date": "12月16日", "location": "北京", "link": "http://hay.pingwest.com/"},
+    //-         {"poster": "gnome.png", "title": "GNOME Asia 2017 亚洲峰会", "date": "10月14日", "location": "重庆", "link": "https://wx.duohui.co/event/1390"},
+    //-         {"poster": "rubyconf.png", "title": "RubyConf China 2017", "date": "09月16日", "location": "杭州", "link": "https://wx.duohui.co/event/1251"},
+    //-       ]
+    //-     .columns
+    //-       each event in events
+    //-         .column.col-md-4.col-12
+    //-           +poster(event)
 
-        a.more-events(href='/customers') 查看更多服务案例
+    //-     a.more-events(href='/customers') 查看更多服务案例
     include partials/_footer.pug
     //- TODO: need sign
     //- script(src="//res.wx.qq.com/open/js/jweixin-1.0.0.js")
