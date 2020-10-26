@@ -3,3 +3,4 @@
 /deploy
 /.netlify
 .DS_Store
+.vercel

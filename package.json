@@ -2,7 +2,11 @@
   "scripts": {
     "start": "set NODE_ENV=development && ./node_modules/.bin/gulp",
     "dev": "set NODE_ENV=development && ./node_modules/.bin/gulp dev",
+    "build": "set NODE_ENV=production && ./node_modules/.bin/gulp build",
     "deploy": "set NODE_ENV=production && ./node_modules/.bin/gulp build && ./node_modules/.bin/gulp deploy"
+  },
+  "engines": {
+    "node": "8.x"
   },
   "dependencies": {
     "browser-sync": "^2.18.13",
