@@ -15,58 +15,57 @@ html
 
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
-    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/event.css?v=<!--@echo curtime -->')
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_header.pug
     include partials/_poster_block.pug
     .section.intro
-      .container.pt-12.md_pt-0.flex.items-center
-        .pr-8.md_pr-0
+      .container.pt-0.md_pt-12.flex.items-center
+        .pr-0.md_pr-8.flex-grow
           .pb-8
-            h1.mt-0.mb-0 专业易用的活动票务系统
-            p.mt-2 支持娱乐演出、会议展览、剧场剧院等各场景活动
-            img.mt-8.max-w-full.hidden.md_block(src='./img/banner/event.svg', alt='home')
+            .text-4xl.font-semibold 专业易用的活动票务系统
+            .mt-4.text-xl.text-gray-600 支持娱乐演出、会议展览、剧场剧院等各场景活动
+            img.mt-8.max-w-full.block.md_hidden(src='./img/banner/event.svg', alt='home')
           .action
             a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
             a.btn.solid(href='https://app.duohui.cn') 立即试用
-        .md_hidden
+        .hidden.md_block
           img.max-w-full(src='./img/banner/event.svg', alt='体验购票')
     .section.white-bg.mt-12
       .container
         .flex.flex-wrap.-mx-8.event-features.product-icons
-          .w-1_3.md_w-full
+          .w-full.md_w-1_3
             .font-bold.icon-form 自定义报名表单
             .feature-description.mt-2 根据活动报名需求自定义报名表单，支持文本、图片、选择等多种表单项。
-          .w-1_3.md_w-full
+          .w-full.md_w-1_3
             .font-bold.icon-order 订单导入导出
             .feature-description.mt-2 活动订单支持自由导入导出，管理活动更加方便。
-          .w-1_3.md_w-full
+          .w-full.md_w-1_3
             .font-bold.icon-ticketing 出票通知
             .feature-description.mt-2 可以通过微信通知、短信或邮件向购票用户发送出票信息。
-          .w-1_3.md_w-full
+          .w-full.md_w-1_3
             .font-bold.icon-ticket 在线选座购票
             .feature-description.mt-2 支持通过移动端和PC端进行购票，并且可以设置座位表实现在线选座。
-          .w-1_3.md_w-full
+          .w-full.md_w-1_3
             .font-bold.icon-chart 数据报表
             .feature-description.mt-2 订单数据将通过多种图表进行统计展示，轻松查看售票情况。
-          .w-1_3.md_w-full
+          .w-full.md_w-1_3
             .font-bold.icon-bulb 多种营销工具
             .feature-description.mt-2 内置了拼团、优惠、绑定微信服务号等多种营销工具，帮助活动更快传播。
-          .w-1_3.md_w-full
+          .w-full.md_w-1_3
             .font-bold.icon-layout 模块化活动页面
             .feature-description.mt-2 活动页面支持模块化设置，可以更加自由的设定你想要的页面。
-          .w-1_3.md_w-full
+          .w-full.md_w-1_3
             .font-bold.icon-refund 自定义退款规则
             .feature-description.mt-2 可自定义设置退款规则，让票种销售方式更加灵活。
-          .w-1_3.md_w-full
+          .w-full.md_w-1_3
             .font-bold.icon-checkin 支持离线签到
             .feature-description.mt-2 多个签到设备在离线状态下通过局域网自动同步签到状态，签到快且准。
     .section.white-bg.mt-12
       .container.event-frames
         .frame.flex.flex-wrap.items-center
-          .w-1_2.md_w-full
+          .w-full.md_w-1_2
             .frame-title 灵活收集报名信息
             .frame-subtitle 根据活动报名需求自定义报名表单，提升活动处理效率。
             div.frame-icons.mt-8
@@ -82,10 +81,10 @@ html
               div.mt-4.icon-payment
                 .font-bold 支持逻辑控制
                 .mt-1.text-sm 可为不同票种设置不同表单，也可设置控制项，隐藏或显示系列表单
-          .w-1_2.md_w-full.flex.items-center.justify-img-right
+          .w-full.md_w-1_2.flex.items-center.justify-img-right
             img(src="./img/event/form.svg")
         .frame.flex.flex-wrap.items-center.flex-row-reverse
-          .w-1_2.md_w-full.pl-8.md_pl-0
+          .w-full.md_w-1_2.pl-0.md_pl-8
             .frame-title 订单自由导入导出
             .frame-subtitle 活动订单支持自由导入导出，方便管理活动人员。
             div.frame-icons.mt-8
@@ -101,10 +100,10 @@ html
               div.mt-4.icon-export
                 .font-bold 导出表单信息
                 .mt-1.text-sm 支持导出成 Excel 或 CSV 表单，轻松进行统计整理
-          .w-1_2.md_w-full.flex.items-center.justify-img-left
+          .w-full.md_w-1_2.flex.items-center.justify-img-left
             img(src="./img/event/order.svg")
         .frame.flex.flex-wrap.items-center
-          .w-1_2.md_w-full
+          .w-full.md_w-1_2
             .frame-title 多种通知消息提醒
             .frame-subtitle 可以通过短信、邮件或微信通知发送通知消息。
             div.frame-icons.mt-8
@@ -120,29 +119,29 @@ html
               div.mt-4.icon-host
                 .font-bold 主办方消息提醒
                 .mt-1.text-sm 通过绑定微信，主办方可即时获取新增订单、待审核或即将售罄等活动变化信息提醒
-          .w-1_2.md_w-full.flex.items-center.justify-img-right
+          .w-full.md_w-1_2.flex.items-center.justify-img-right
             img(src="./img/event/form.svg")
     .section.white-bg.mt-12
       .container
-        .title 多种营销方案 助力活动成功
-        .subtitle 多种营销工具获取更多客源
+        .text-center.text-4xl.font-semibold 多种营销方案 助力活动成功
+        .mt-4.text-center.text-xl.text-gray-600 多种营销工具获取更多客源
         .mt-12.flex.justify-center.flex-wrap.-mx-8.event-tools
-          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-fission
             .mt-4.font-bold.text-lg 裂变营销
             .mt-2.text-gray-600 多人拼团，海报分享，快速裂变分享传播
-          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-promotion
             .mt-4.font-bold.text-lg 多样促销
             .mt-2.text-gray-600 优惠券码、满折/满减、限时特惠等多样促销手段
-          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-customer
             .mt-4.font-bold.text-lg 客户留存
             .mt-2.text-gray-600 微信消息推送，评价邀请，唤醒潜在用户，增强用户粘性
     .section.white-bg.mt-12
       .container
-        .title 超多成功案例 丰富行业经验
-        .subtitle 丰富的成功案例让我们积累了更多行业经验
+        .text-center.text-4xl.font-semibold 超多成功案例 丰富行业经验
+        .mt-4.text-center.text-xl.text-gray-600 丰富的成功案例让我们积累了更多行业经验
         .case-list.mt-12
           .list-item.active
             .item-avatar(style="background-image: url('./img/cases/linxiang.png')")

@@ -8,50 +8,49 @@ html
     meta(name='description', content='通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
     link(rel='stylesheet', type='text/css', href='./styles/common.css')
-    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css')
     link(rel='stylesheet', type='text/css', href='./styles/wechat.css')
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_header.pug
     .pt-10(style="background:#ECF8F1;")
       .container.pt-12.md_py-10.flex.items-center
-        .pr-8.md_pr-0
+        .pr-0.md_pr-8.flex-grow
           .pb-8
-            h1.mt-0.mb-0 活动服务号
-            p.mt-2 结合微信公众号，直接售票给微信公众号粉丝，报名即关注。
-            img.mt-8.max-w-full.hidden.md_block(src='./img/banner/wechat.svg', alt='home')
+            .text-4xl.font-semibold 活动服务号
+            .mt-4.text-xl.text-gray-600 结合微信公众号，直接售票给微信公众号粉丝，报名即关注。
+            img.mt-8.max-w-full.block.md_hidden(src='./img/banner/wechat.svg', alt='home')
           .action.mt-12
             a.btn.green(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
             a.btn.solid.green(href='https://app.duohui.cn') 立即试用
-        .md_hidden.text-zero
+        .hidden.md_block.text-zero
           img.max-w-full(src="./img/banner/wechat.svg", alt="banner")
     .py-20
       .container
-        .title 聚集微信流量 助您轻松获客 
-        .subtitle 流量红利助你轻松获客、裂变、复购
+        .text-center.text-4xl.font-semibold 聚集微信流量 助您轻松获客 
+        .mt-4.text-center.text-xl.text-gray-600 流量红利助你轻松获客、裂变、复购
         .mt-12.-mx-8.flex.flex-wrap.weixin-tools
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-fans
             .mt-4.font-bold.text-lg 快速涨粉
             .mt-2.text-gray-600 用户购票时关注公众号，为公众平台吸粉，沉淀粉丝
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-send
             .mt-4.font-bold.text-lg 实时推送购票信息
             .mt-2.text-gray-600 用户可在微信上实时收取订单和票种动态信息
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-card
             .mt-4.font-bold.text-lg 支持微信卡包
             .mt-2.text-gray-600 票券、会员卡可添加至微信卡包，核销使用更快捷
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-talk
             .mt-4.font-bold.text-lg 智能客服
             .mt-2.text-gray-600 可在服务号添加智能客服，方便与用户沟通
     .py-20
       .container
-        .title 绑定微信服务号，启用更多快捷功能
-        .subtitle 用户购票更快捷并提升流量转化
+        .text-center.text-4xl.font-semibold 绑定微信服务号，启用更多快捷功能
+        .mt-4.text-center.text-xl.text-gray-600 用户购票更快捷并提升流量转化
         .flex.flex-wrap.items-center.mt-12
-          .vertical-tabs.md_border-none.w-1_2.md_w-full.pr-8.md_pr-0
+          .vertical-tabs.md_border-none.w-full.md_w-1_2.pr-0.md_pr-8
             .tab.rounded.mb-2.p-4.cursor-pointer.select-none.active
               .text-lg.font-bold.icon-template 订单动态通知
               .tab-desc.mt-2.text-sm 订单动态直接推送至用户微信
@@ -64,7 +63,7 @@ html
             .tab.rounded.mb-2.p-4.cursor-pointer.select-none
               .text-lg.font-bold.icon-navigation 购票后关注公众号
               .tab-desc.mt-2.text-sm 购票即关注，获取更多粉丝流量
-          .w-1_2.md_w-full.flex.items-center.justify-img-right
+          .w-full.md_w-1_2.flex.items-center.justify-img-right
             img.vertical-tab-img.max-w-full.active(src="./img/wechat/notification.svg", alt="1")
             img.vertical-tab-img.max-w-full(src="./img/wechat/mini.svg", alt="2")
             img.vertical-tab-img.max-w-full(src="./img/wechat/entrance.svg", alt="3")
@@ -72,25 +71,25 @@ html
             
     .py-20
       .container
-        .title 多样营销方案 获取更多客源
-        .subtitle 强大的营销功能助力商家成功
+        .text-center.text-4xl.font-semibold 多样营销方案 获取更多客源
+        .mt-4.text-center.text-xl.text-gray-600 强大的营销功能助力商家成功
         .mt-12.-mx-8.flex.justify-center.flex-wrap.bottom-tools
-          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-entrance
             .mt-4.font-bold.text-lg 专属入口
             .mt-2.text-gray-600 小程序卡片、下拉菜单、发现页等多种专属入口轻松获客
-          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-market
             .mt-4.font-bold.text-lg 一体化营销
             .mt-2.text-gray-600 公众号、小程序、微信群互联互通，流量转化快速高效
-          .px-8.md_px-4.w-1_3.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-pay
             .mt-4.font-bold.text-lg 自有支付
             .mt-2.text-gray-600 配置自有微信支付商户账户，自主收款，资金直接到账
     .section.white-bg.mt-12
       .container
-        .title 超多成功案例 丰富行业经验
-        .subtitle 丰富的成功案例让我们积累了更多行业经验
+        .text-center.text-4xl.font-semibold 超多成功案例 丰富行业经验
+        .mt-4.text-center.text-xl.text-gray-600 丰富的成功案例让我们积累了更多行业经验
         .case-list.mt-12
           .list-item.active
             .item-avatar(style="background-image: url('./img/cases/zxqh.png')")

@@ -27,28 +27,27 @@ html
 
     .section.partners.white-bg
       .container
-        .logowall
-          .columns.i2.clients
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-2.png', srcset='./img/partners/clients-2@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-3.png', srcset='./img/partners/clients-3@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-4.png', srcset='./img/partners/clients-4@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-5.png', srcset='./img/partners/clients-5@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-6.png', srcset='./img/partners/clients-6@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
-            .column.col-md-6.col-12
-              img(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
+        .flex.flex-wrap
+          .w-full.md_w-1_2
+            img(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
+          .w-full.md_w-1_2
+            img(src='./img/partners/clients-2.png', srcset='./img/partners/clients-2@2x.png 2x', alt='多会客户列表')
+          .w-full.md_w-1_2
+            img(src='./img/partners/clients-3.png', srcset='./img/partners/clients-3@2x.png 2x', alt='多会客户列表')
+          .w-full.md_w-1_2
+            img(src='./img/partners/clients-4.png', srcset='./img/partners/clients-4@2x.png 2x', alt='多会客户列表')
+          .w-full.md_w-1_2
+            img(src='./img/partners/clients-5.png', srcset='./img/partners/clients-5@2x.png 2x', alt='多会客户列表')
+          .w-full.md_w-1_2
+            img(src='./img/partners/clients-6.png', srcset='./img/partners/clients-6@2x.png 2x', alt='多会客户列表')
+          .w-full.md_w-1_2
+            img(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
+          .w-full.md_w-1_2
+            img(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
 
     .section.events
       .container
-        h1.chtitle 大型会议
+        h1 大型会议
         -
           var events = [
             {"poster": "nicc.png", "title": "NICC 中国新三板投资者大会", "date": "09月17日", "location": "上海"},
@@ -61,7 +60,7 @@ html
               +poster(event)
     
     .section.customers.product-cases.white-bg: .container
-      h1.chtitle 聚会沙龙
+      h1 聚会沙龙
       -
         var cases = [
           {'img': 'sketchmeetup.jpg', 'event': 'Sketch Meetup', 'logo': 'dex', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]},
@@ -84,7 +83,7 @@ html
             +event(usecase)
 
     .section.customers.product-cases: .container
-      h1.chtitle 演出娱乐
+      h1 演出娱乐
       -
         var cases = [
           {'img': 'coart.png', 'event': "阿拉善 COART 嘉年华", 'logo': 'coart', 'tags': [{'name': '音乐', 'style': 'design'}, {'name': '演唱会', 'style': 'solid'}]},
@@ -97,7 +96,7 @@ html
             +event(usecase)
     
     .section.customers.product-cases.white-bg: .container
-      h1.chtitle 文化体育
+      h1 文化体育
       -
         var cases = [
           {'img': 'zizai.png', 'event': '字在生活节', 'logo': 'china30s', 'tags': [{'name': '分享', 'style': 'design'}, {'name': '市集', 'style': 'solid'}]},
@@ -110,7 +109,7 @@ html
             +event(usecase)
 
     .section.customers.product-cases: .container
-      h1.chtitle 教育公益
+      h1 教育公益
       -
         var cases = [
           {'img': 'poster-speakout.jpg', 'event': 'SPEAKOUT 2017 ', 'logo': 'speakout', 'tags': [{'name': '公益', 'style': 'design'}, {'name': '演讲会', 'style': 'solid'}]},

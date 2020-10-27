@@ -8,7 +8,6 @@ html
     meta(name='description', content='通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
     link(rel='stylesheet', type='text/css', href='./styles/common.css')
-    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css')
     link(rel='stylesheet', type='text/css', href='./styles/compare.css')
     meta(name='msapplication-tap-highlight', content='no')
   body
@@ -16,9 +15,9 @@ html
     .section.bg-geo
     .section.bg-white
       .container.comparison-table-wrapper
-        .top-tile.text-center
-          h2 选择合适的多会产品
-          p 多会为不同的应用场景设计了专属的产品方案
+        .top-tile.py-8.text-center
+          .text-4xl.font-semibold 选择合适的多会产品
+          .mt-4.text-xl.text-gray-600 多会为不同的应用场景设计了专属的产品方案
         .py-4
           .comparison-table-tabs.text-center
             span.tab.mx-2.cursor-pointer(data-plan="standard").active 标准版
@@ -299,7 +298,6 @@ html
               td
               td
               td.tick
-
           tfoot
             tr
               td
@@ -312,13 +310,12 @@ html
               td
                 .p-4
                   a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 试用企业版
-
     .section.bg-white.quota
       .container
-        h1#price-cal.chtitle.text-center 版本智能推荐
+        .mb-12.text-4xl.font-semibold.text-center#price-cal 版本智能推荐
         .p-8.center-shadow.rounded-2xl
-          h2 根据用量为我推荐产品
-          h4.mt-8 预计用量
+          .text-2xl.font-semibold 根据用量为我推荐产品
+          .text-lg.font-semibold.mt-8 预计用量
           .calc
             span 我们每个月举办
               select.calc-select.p-1.text-lg.mx-2(name="calc_time")
@@ -389,56 +386,56 @@ html
                       .mt-1.text-center
                         a(href="/enterprise").text-gray-600.text-sm 查看详情
           .my-8.border-t.border-gray-600
-          h2 根据功能需求为我推荐产品
-          h4.mt-8 所需功能
-          .function
+          .text-2xl.font-semibold 根据功能需求为我推荐产品
+          .text-lg.font-semibold.mt-8 所需功能
+          .function.mt-2
             .checkers.flex.flex-wrap
-              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='std,premier')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='std,premier')
                 .flex-grow
-                  h3 资金实时到帐，无需提现
-                  p 使用自有的收款账号，费率更低，实时到帐。
+                  .text-xl.font-semibold 资金实时到帐，无需提现
+                  .text-gray-600 使用自有的收款账号，费率更低，实时到帐。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='std,premier')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='std,premier')
                 .flex-grow
-                  h3 独立品牌展示
-                  p 隐藏多会品牌，完整独立的品牌展示。
+                  .text-xl.font-semibold 独立品牌展示
+                  .text-gray-600 隐藏多会品牌，完整独立的品牌展示。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='')
                 .flex-grow
-                  h3 活动开始短信提醒
-                  p 在活动开始前向参与者群发短信提醒。
+                  .text-xl.font-semibold 活动开始短信提醒
+                  .text-gray-600 在活动开始前向参与者群发短信提醒。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='')
                 .flex-grow
-                  h3 离线快速签到
-                  p 提供专用签到 APP，没有网络同样快速签到。
+                  .text-xl.font-semibold 离线快速签到
+                  .text-gray-600 提供专用签到 APP，没有网络同样快速签到。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='std')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='std')
                 .flex-grow
-                  h3 在线选座
-                  p 上传座位表，购票时可直接在线选座。
+                  .text-xl.font-semibold 在线选座
+                  .text-gray-600 上传座位表，购票时可直接在线选座。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='premier,mini,std')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='premier,mini,std')
                 .flex-grow
-                  h3 报名时关注公众号
-                  p 生产专属报名二维码，先关注后报名。
+                  .text-xl.font-semibold 报名时关注公众号
+                  .text-gray-600 生产专属报名二维码，先关注后报名。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='std')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='std')
                 .flex-grow
-                  h3 子账号权限管理
-                  p 为其他团队成员创建子账号，设置管理权限。
+                  .text-xl.font-semibold 子账号权限管理
+                  .text-gray-600 为其他团队成员创建子账号，设置管理权限。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.js-toggle(data-cantuse='std')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='std')
                 .flex-grow
-                  h3 分渠道统计
-                  p 创建活动发布渠道，设置渠道专属票，生成统计。
+                  .text-xl.font-semibold 分渠道统计
+                  .text-gray-600 创建活动发布渠道，设置渠道专属票，生成统计。
                 div
                   .checkbox
             .answer.feature.mt-12
@@ -545,7 +542,7 @@ html
         //-               .right.result --
     .section.white-bg
       .container
-        h1.text-center.my-8 还未决定？我们的活动专家可以帮助你
+        .mb-12.text-4xl.font-semibold.text-center 还未决定？我们的活动专家可以帮助你
       include partials/_advisory.pug
 
     include partials/_footer.pug

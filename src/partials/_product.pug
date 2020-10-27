@@ -35,7 +35,7 @@ html
           a.btn.solid.try(href='/app/') 立即试用
 
     .section.product-features: .container
-      h1#features.chtitle 功能特征
+      h1#features 功能特征
       .columns
         each feature in product.features
           .column.col-md-4.col-12.feature.fbox
@@ -46,7 +46,7 @@ html
               p.description=feature.desc
 
     .section.product-pricing.white-bg: .container
-      h1#pricing.chtitle 价格费用
+      h1#pricing 价格费用
         a(href="/compare")
           span.learn-more
             img(src='./img/icon/compare-icon.png', srcset='./img/icon/compare-icon@2x.png 2x', alt='产品对比')
@@ -63,7 +63,7 @@ html
           .price-desc= product.price.fee_desc
         if product.code == 'checkin'
           .column.col-md-4.col-12: .save.pricing
-            h3.title 小型活动签到
+            .text-center.text-4xl.font-semibold 小型活动签到
             .price-tag 免费*
             .price-desc 小型活动可使用多会签到应用或公众号完成现场签到。
         else
@@ -76,14 +76,14 @@ html
       if product.code == 'checkin'
         p.tips(style="font-size: 14px; color: #666; text-align: right; margin-top: 24px;") * 签到 App 和功能无需额外付费，但需购买标准版、高级版或企业版账号方可使用。
     .section.product-faq.product-cases: .container
-      h1#faq.chtitle 常见问题
+      h1#faq 常见问题
       .columns
         each qa in product.faqs
           .column.col-md-6.col-12.qa
             h3.question= qa.q
             p.answer= qa.a
 
-      h1#cases.chtitle.examples 应用案例
+      h1#cases.examples 应用案例
       include _event_block.pug
       .columns
         each usecase in product.cases

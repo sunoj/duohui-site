@@ -15,7 +15,6 @@ html
 
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
-    link(rel='stylesheet', type='text/css', href='./styles/tailwind.fake.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/self.css?v=<!--@echo curtime -->')
     meta(name='msapplication-tap-highlight', content='no')
   body
@@ -27,7 +26,7 @@ html
             a.text-zero(href="/"): img(src='/img/logo-light.png', srcset='/img/logo-light@2x.png 2x', alt='多会')
             .ml-2.pl-2.text-white.border-left-white(style="line-height:14px;") 私有化部署
           .flex-grow.text-center
-            .md_hidden
+            .hidden.md_block
               a.mx-6.font-bold.text-white.no-underline(href="/compare") 产品列表
               a.mx-6.font-bold.text-white.no-underline(href="/customers") 服务案例
               a.mx-6.font-bold.text-white.no-underline(href="/support") 帮助支持
@@ -38,54 +37,54 @@ html
           .text-5xl.font-bold.text-white 多会私有化部署版
           .text-white.mt-4 助力企业搭建高效自主的活动管理平台
           .mt-6.flex.justify-center
-            .mx-2.md_mx-1.md_text-xs.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
+            .mx-1.md_mx-2.text-xs.md_text-sm.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
               span 专属服务器
               img.ml-1(src="data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 1H1a.545.545 0 0 0-.545.545V5.91A.545.545 0 0 0 1 6.455h12a.545.545 0 0 0 .546-.546V1.545A.545.545 0 0 0 13 1zM5.91 4.273H2.635V3.182H5.91v1.09zm4.908 0a.545.545 0 1 1 0-1.09.545.545 0 0 1 0 1.09zM13 7.545H1a.545.545 0 0 0-.545.546v4.364A.545.545 0 0 0 1 13h12a.545.545 0 0 0 .546-.546V8.091A.545.545 0 0 0 13 7.545zm-7.09 3.273H2.635v-1.09H5.91v1.09zm4.908 0a.546.546 0 1 1 0-1.09.546.546 0 0 1 0 1.09z' fill='%23444'/%3E%3C/svg%3E")
-            .mx-2.md_mx-1.md_text-xs.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
+            .mx-1.md_mx-2.text-xs.md_text-sm.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
               span 安全稳定
               img.ml-1(src="data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.926 4.391a.633.633 0 0 0-.551-.308H8.454L9.476.743a.553.553 0 0 0-.102-.51.641.641 0 0 0-.5-.233H4.5a.62.62 0 0 0-.603.43L2.022 6.847a.553.553 0 0 0 .106.507c.119.144.302.23.497.23h3.001L4.51 13.311a.577.577 0 0 0 .38.645.659.659 0 0 0 .756-.217l6.25-8.75a.551.551 0 0 0 .03-.599z' fill='%23444'/%3E%3C/svg%3E")
-            .mx-2.md_mx-1.md_text-xs.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
+            .mx-1.md_mx-2.text-xs.md_text-sm.px-4.py-1.rounded-full.bg-white.text-black.text-sm.flex.items-center
               span 高度定制
               img.ml-1(src="data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.246 3.67L10.329.755a.583.583 0 0 0-.825 0L8.168 2.091l1.578 1.58-.825.825-1.578-1.58-.925.925.997.997-.825.824-.997-.997-.925.926 1.58 1.58-.825.825-1.58-1.58-.925.925.997.997-.825.824-.997-.997-1.339 1.34a.583.583 0 0 0 0 .824l2.917 2.917a.582.582 0 0 0 .825 0l8.75-8.75a.583.583 0 0 0 0-.825zM2.725 5.883l3.158-3.158-1.97-1.97a.583.583 0 0 0-.826 0L.754 3.087a.583.583 0 0 0 0 .824l1.971 1.971zM12.821 9.802a.59.59 0 0 0-.159-.298l-1.388-1.387-3.158 3.158 1.388 1.387a.578.578 0 0 0 .298.16l2.917.583a.584.584 0 0 0 .686-.686l-.584-2.917z' fill='%23444'/%3E%3C/svg%3E")
-          .mt-18
+          .mt-16
             a.large(href="javascript:void(0)" onclick="window.$youke('open')").btn.solid 现在咨询
-    .py-10
+    .py-20
       .container
-        .title 私有化部署版优势
-        .subtitle 安全可靠的同时更可以满足您的个性化需求
+        .text-center.text-4xl.font-semibold 私有化部署版优势
+        .mt-4.text-center.text-xl.text-gray-600 安全可靠的同时更可以满足您的个性化需求
         .self-tools.mt-12.-mx-8.flex.flex-wrap
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-security
             .mt-4.font-bold.text-lg 数据私密安全
             .mt-2.text-gray-600 数据私有化隔离，从系统层、数据层、内容层全面保护数据信息
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-customize
             .mt-4.font-bold.text-lg 高度可定制
             .mt-2.text-gray-600 可定制企业专属域名和登录页面，彰显品牌特色
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-structure
             .mt-4.font-bold.text-lg 高可用性能架构
             .mt-2.text-gray-600 线上已有项目可平滑迁移至私有化部署版本
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-control
             .mt-4.font-bold.text-lg 系统自主可控
             .mt-2.text-gray-600 系统完全可以自主控制，支持设置多个子账户以及其可用权限
-        .title 专业的部署服务
-        .subtitle 为企业提供高质量的私有化部署方案
+        .text-center.text-4xl.font-semibold.mt-10 专业的部署服务
+        .mt-4.text-center.text-xl.text-gray-600 为企业提供高质量的私有化部署方案
         .self-tools.mt-12.-mx-8.flex.flex-wrap
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-traning
             .mt-4.font-bold.text-lg 全员使用培训
             .mt-2.text-gray-600 多会活动使用方式讲解，帮助企业成员迅速上手
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-diagnosis
             .mt-4.font-bold.text-lg 企业需求诊断
             .mt-2.text-gray-600 了解企业需求，帮助企业找到提升活动质量的解决方案
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-guarantee
             .mt-4.font-bold.text-lg 部署专家保障
             .mt-2.text-gray-600 技术专家帮助企业从零到一完成系统部署，达成优质交付
-          .px-8.md_px-4.w-1_4.md_w-1_2.text-center
+          .px-4.md_px-8.w-1_2.md_w-1_4.text-center
             .icon-guide
             .mt-4.font-bold.text-lg 专属技术指导
             .mt-2.text-gray-600 专属技术支持优先响应，全程陪伴每一个活动

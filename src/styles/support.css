@@ -1,14 +1,4 @@
-.demo-form .chtitle{
-  margin-bottom: 0;
-}
-
 .inmini .action .try,
 .inmini .action .contact {
   display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .demo-form .chtitle{
-    margin-bottom: 24px;
-  }
 }
