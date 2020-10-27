@@ -45,16 +45,54 @@ ul{
 	clear: both;
 }
 
-.column{
-  box-sizing: border-box;
-}
-
 .text-color-theme {
   color: #176BE8;
 }
 
 .text-color-green {
   color: #2AB751;
+}
+
+.nav .nav-item.active {
+  border-color: #4299e1;
+}
+
+.nav .nav-item .nav-toggle-arrow {
+  padding-right: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 6.5L8 11 3.5 6.5' stroke='%23444' stroke-width='1.2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 14px;
+}
+
+.nav .nav-item .drawer {
+  cursor: default;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: all .23s;
+}
+
+.nav .nav-item:hover .drawer {
+  transform: rotateX(0);
+}
+
+.nav .nav-item:hover .nav-toggle-arrow {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.5 9.5L8 5l4.5 4.5' stroke='%23444' stroke-width='1.2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.nav .nav-item .drawer a .icon {
+  opacity: .6;
+}
+
+.nav .nav-item .drawer a:hover .icon {
+  opacity: 1;
+}
+
+.nav .nav-item .drawer .compare-arrow {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 8.5h13.5M10.5 3.5l5 5-5 5' stroke='%23888' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 16px;
 }
 
 .btn {
@@ -153,61 +191,6 @@ strong{
 
 .inmini .header, .inmini .footer{
   display: none;
-}
-
-.header{
-  background: #fff;
-  padding: 20px 0 22px;
-  border-bottom: 1px solid #eee;
-}
-
-.header .logo{
-  float: left;
-  line-height: 0;
-}
-
-.header .logo img{
-	height: 42px;
-}
-
-.header .nav{
-	float: right;
-	list-style: none;
-  margin: 0;
-  line-height: 0;
-}
-
-.header .main-nav{
-  float: left;
-  margin-left: 24px;
-}
-
-.header .nav .more{
-  float: left;
-  margin-right: 24px;
-}
-
-.header .nav a{
-  color: inherit;
-  display: inline-block;
-}
-
-.header .nav li{
-	float: left;
-	padding: 10px 20px;
-	margin: 0 5px;
-	border-radius: 6px;
-  font-weight: bold;
-  color: #444;
-  line-height: 22px;
-}
-
-.header .nav li:hover{
-	background-color: #fff;
-}
-
-.header .nav li.app{
-	background-color: #efefef;
 }
 
 .intro{
@@ -434,91 +417,6 @@ a.btn.product.enterprise:before{
 		padding: 5px 0;
 		margin-bottom: 6px;
 	}
-}
-
-
-
-.dropdown {
-    display: inline-flex;
-    position: relative;
-    vertical-align: top;
-}
-
-.dropdown.is-active .dropdown-menu, .dropdown.is-hoverable:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown.is-right .dropdown-menu {
-    left: auto;
-    right: 0;
-}
-
-.dropdown.is-up .dropdown-menu {
-    bottom: 100%;
-    padding-bottom: 4px;
-    padding-top: unset;
-    top: auto;
-}
-
-.dropdown-menu {
-    display: none;
-    left: 0;
-    min-width: 100px;
-    padding-top: 4px;
-    position: absolute;
-    top: 32px;
-    line-height: 0;
-    z-index: 20;
-}
-
-.dropdown-content {
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 3px rgba(51, 51, 51, 0.1), 0 0 0 1px rgba(51, 51, 51, 0.1);
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-}
-
-.dropdown-item {
-    color: #666;
-    display: block;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    padding: 0.375rem 1rem;
-    position: relative;
-}
-
-a.dropdown-item {
-    padding-right: 3rem;
-    white-space: nowrap;
-        text-decoration: none;
-    width: 100%;
-}
-
-a.dropdown-item:hover {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-a.dropdown-item.is-active {
-        background-color: #4893ff;
-    color: #fff;
-}
-
-.dropdown-divider {
-    background-color: #eee;
-    border: none;
-    display: block;
-    height: 1px;
-    margin: 0.5rem 0;
-}
-
-.is-hoverable {
-  cursor: pointer;
-}
-
-.is-hoverable > a li:hover{
-  background: none !important;
 }
 
   .price-box{
