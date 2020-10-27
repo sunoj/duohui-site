@@ -26,19 +26,19 @@ html
             li: a(href='#pricing') 价格费用
             li: a(href='#faq') 常见问题
             li: a(href='#cases') 应用案例
-        .hello
-          h1 #{product.tagline}
-          p #{product.desc}
+        .pt-10.pb-12
+          .text-4xl.font-semibold #{product.tagline}
+          .mt-4.text-xl.text-gray-600 #{product.desc}
         .action
           a.btn.contact(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
           a.btn.support(href='/support#inmini') 预约演示
           a.btn.solid.try(href='/app/') 立即试用
 
     .section.product-features: .container
-      h1#features 功能特征
-      .columns
+      .mb-4.text-2xl.font-semibold#features 功能特征
+      .flex.flex-wrap.-mx-2
         each feature in product.features
-          .column.col-md-4.col-12.feature.fbox
+          .w-full.md_w-1_3.px-2.feature.fbox
             .icon(class=feature.icon)
               img(src="./img/product/feature-icon/"+feature.icon+".png" srcset="./img/product/feature-icon/"+feature.icon+"@2x.png 2x")
             .copy
@@ -46,28 +46,24 @@ html
               p.description=feature.desc
 
     .section.product-pricing.white-bg: .container
-      h1#pricing 价格费用
-        a(href="/compare")
-          span.learn-more
-            img(src='./img/icon/compare-icon.png', srcset='./img/icon/compare-icon@2x.png 2x', alt='产品对比')
-            | 产品对比
-      .columns
-        .column.col-md-4.col-12: .pricing
+      .mb-4.text-2xl.font-semibold#pricing 价格费用
+      .flex.flex-wrap.-mx-2
+        .w-full.md_w-1_3.px-2: .pricing
           h3.title= product.price.basic_title || "基础费用"
           .price-tag !{product.price.basic}
             .monthly-price-tag !{product.price.monthly}
           .price-desc= product.price.basic_desc
-        .column.col-md-4.col-12: .pricing
+        .w-full.md_w-1_3.px-2: .pricing
           h3.title= product.price.fee_title || "售票手续费"
           .price-tag !{product.price.fee}
           .price-desc= product.price.fee_desc
         if product.code == 'checkin'
-          .column.col-md-4.col-12: .save.pricing
+          .w-full.md_w-1_3.px-2: .save.pricing
             .text-center.text-4xl.font-semibold 小型活动签到
             .price-tag 免费*
             .price-desc 小型活动可使用多会签到应用或公众号完成现场签到。
         else
-          a(href="/compare#price-cal"): .column.col-md-4.col-12: .save.pricing
+          a.w-full.md_w-1_3.px-2(href="/compare#price-cal"): .save.pricing
             h3.title= product.price.save_title || "预计可节省"
             .divider(style="bottom: " + (100 - product.price.save_percent) + "%")
             .save-bg(style="height: " + (100 - product.price.save_percent) + "%")
@@ -76,18 +72,18 @@ html
       if product.code == 'checkin'
         p.tips(style="font-size: 14px; color: #666; text-align: right; margin-top: 24px;") * 签到 App 和功能无需额外付费，但需购买标准版、高级版或企业版账号方可使用。
     .section.product-faq.product-cases: .container
-      h1#faq 常见问题
-      .columns
+      .mb-4.text-2xl.font-semibold#faq 常见问题
+      .flex.flex-wrap.-mx-2
         each qa in product.faqs
-          .column.col-md-6.col-12.qa
-            h3.question= qa.q
+          .w-full.md_w-1_2.px-2
+            .mt-3.mb-2.text-lg.font-semibold.question= qa.q
             p.answer= qa.a
 
-      h1#cases.examples 应用案例
+      .mb-4.text-2xl.font-semibold#cases.examples 应用案例
       include _event_block.pug
-      .columns
+      .flex.flex-wrap.-mx-2
         each usecase in product.cases
-          .column.col-md-4.col-12
+          .w-full.md_w-1_3.px-2
             +event(usecase)
                 
     include _footer.pug
