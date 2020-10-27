@@ -1,4 +1,5 @@
-var preprocess = require('gulp-preprocess');
+const preprocess = require('gulp-preprocess')
+const postcss = require('gulp-postcss')
 var pug = require('gulp-pug');
 var shell = require('gulp-shell');
 var del = require('del');
@@ -20,7 +21,8 @@ const scripts = function() {
 
 const css = function() {
   return src('./src/**/*.css')
-    .pipe(preprocess({context: { NODE_ENV: 'production', DEBUG: true}}))
+    .pipe(postcss())
+    .pipe(preprocess())
     .pipe(dest('./dist/'))
 }
 
