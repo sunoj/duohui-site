@@ -1,34 +1,167 @@
-extends partials/_product.pug
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge')
+    meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
+    title 多会 - 新一代活动管理系统
+    meta(name='description', content='多会是新一代的活动票务系统。通过多会轻松管理活动报名，在线售票收款，现场快速签到。办活动从未如此轻松！')
 
-block vars
-  -
-    var product = {
-      code: "checkin",
-      name: "极速签到",
-      title: "多会活动签到 - 软硬件结合，专业签到解决方案",
-      tagline: "千人大型活动轻松完成签到",
-      desc: "适用基于专用软硬件的多会快速签到系统，数千人的大型活动可在 30 分钟内完成签到。",
-      features: [
-        {'icon': 'offline', 'titile': '离线同步签到', 'desc': '多个签到设备在离线状态下通过局域网自动同步签到状态，签到更快，数据更准。'},
-        {'icon': 'tickets', 'titile': '报名信息实时显示', 'desc': '在签到时可实时展示票种、票价及其他自定义的报名信息。'},
-        {'icon': 'scene', 'titile': '多场次签到', 'desc': '支持分会场、VIP 区域等有多个场次的活动场景。'},
-      ],
-      price: {
-        basic_title: "签到设备租用",
-        basic: "499 <span>元每套每场</span>",
-        basic_desc: "每套签到设备预计签到速度为 300 人每小时。",
-        fee_title: "现场支持人员",
-        fee: "1,999 <span>元每天</span>",
-        fee_desc: "专业技术人员到场提供支持，大型活动现场签到有保障。",
-        save_percent: 62
-      },
-      faqs: [
-        {'q': '活动现场需要有网络吗？', 'a': '不必要。我们的签到设备和签到 App 都支持离线签到，只需提前联网将报名数据下载到设备上，即可在离线的情况下完成签到。'},
-        {'q': '签到设备是否需要连接电脑使用？', 'a': '不需要。多会的签到系统可独立完成工作，不需要连接电脑或其他设备。多会签到设备使用时无需连接电源，电池可以连续工作四小时左右。'}
-      ],
-      cases: [
-        {'img': 'gmis.jpg', 'event': 'GMIS 2017 全球机器智能峰会', 'logo': 'synced', 'tags': [{'name': '技术', 'style': 'design'}, {'name': '行业峰会', 'style': 'solid'}]},
-        {'img': 'onsite-nicc.jpg', 'event': '中国新三板投资者大会', 'logo': 'dudong', 'tags': [{'name': '投资', 'style': 'design'}, {'name': '行业峰会', 'style': 'lined'}]},
-        {'img': 'onsite-tedx.jpg', 'event': 'TEDxFuxingPark', 'logo': 'tedx', 'tags': [{'name': '文化', 'style': 'sport'}, {'name': '分享会', 'style': 'lined'}]}
-      ]
-    }
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="多会")
+    meta(property="og:description" content="新一代的活动票务系统")
+    meta(property="og:image" content="https://www.duohui.cn/img/thumbnail.png")
+    meta(property="og:url" content="https://www.duohui.cn/")
+
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/checkin.css?v=<!--@echo curtime -->')
+    meta(name='msapplication-tap-highlight', content='no')
+  body
+    include partials/_header.pug
+    include partials/_poster_block.pug
+    .section.intro
+      .container.pt-0.md_pt-12.flex.items-center
+        .pr-0.md_pr-8.flex-grow
+          .pb-8
+            .text-4xl.font-semibold 千人大型活动轻松签到
+            .mt-4.text-xl.text-gray-600 适用基于专用软硬件的多会快速签到系统，数千人的大型活动可在 30 分钟内完成签到。
+            img.mt-8.max-w-full.block.md_hidden(src='./img/banner/checkin.svg', alt='home')
+          .action
+            a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
+            a.btn.solid(href='https://app.duohui.cn') 立即试用
+        .hidden.md_block
+          img.max-w-full(src='./img/banner/checkin.svg', alt='体验购票')
+    .section.white-bg.mt-12
+      .container
+        .flex.flex-wrap.-mx-8.event-features.product-icons
+          .w-full.md_w-1_3
+            .font-bold.icon-offcheckin 离线同步签到
+            .feature-description.mt-2 多个签到设备在离线状态下通过局域网自动同步签到状态，签到快数据准。
+          .w-full.md_w-1_3
+            .font-bold.icon-display 报名信息实时显示
+            .feature-description.mt-2 在签到时可实时展示票种、票价及其他自定义的报名信息。
+          .w-full.md_w-1_3
+            .font-bold.icon-multi-checkin 多场次签到
+            .feature-description.mt-2 支持自定义票码。如导入实体卡号，电子票码可与实体卡保持一致。
+          .w-full.md_w-1_3
+            .font-bold.icon-rfid RFID签到
+            .feature-description.mt-2 签到设备自动识别，参与人员无需停留检票，让签到工作更简单智能。
+          .w-full.md_w-1_3
+            .font-bold.icon-face 人脸识别签到
+            .feature-description.mt-2 签到入场只需刷脸，无更多繁琐步骤，签到准确快速。
+          .w-full.md_w-1_3
+            .font-bold.icon-scan 扫码签到
+            .feature-description.mt-2 订单数据将通过多种图表进行统计展示，轻松查看售票情况。
+          .w-full.md_w-1_3
+            .font-bold.icon-device 专用签到设备
+            .feature-description.mt-2 提供专业的签到设备，让活动签到速度更快速。
+          .w-full.md_w-1_3
+            .font-bold.icon-printer 胸牌打印
+            .feature-description.mt-2 可为参与者打印胸牌，参与者信息一目了然，方便活动管理和互动。
+          .w-full.md_w-1_3
+            .font-bold.icon-collect 展商信息收集
+            .feature-description.mt-2 签到时可收集客户信息至二维码，方便展商收集访客信息。
+    .section.white-bg.mt-12
+      .container.event-frames
+        .frame.flex.flex-wrap.items-center
+          .w-full.md_w-1_2
+            .frame-title 减轻活动计划的压力
+            .frame-subtitle 适应多种活动场景，提供您所需要的签到方式
+            div.frame-icons.mt-8
+              div.mt-4.icon-forms
+                .font-bold 多种签到方式
+                .mt-1.text-sm 扫码签到、人脸识别、身份证签到、RFID感应等
+              div.mt-4.icon-upload
+                .font-bold 支持无网络无供电环境
+                .mt-1.text-sm 签到设在没有网络和供电的情况下也能正常运行
+              div.mt-4.icon-validation
+                .font-bold 快速准确的签到设备
+                .mt-1.text-sm 验证速度快而准确，适应各种大型活动
+          .w-full.md_w-1_2.flex.items-center.justify-img-right
+            img(src="./img/checkin/checkin.svg")
+        .frame.flex.flex-wrap.items-center.flex-row-reverse
+          .w-full.md_w-1_2.pl-0.md_pl-8
+            .frame-title 提升与会者的入场体验
+            .frame-subtitle 为参与者提供智能、快速的签到体验。
+            div.frame-icons.mt-8
+              div.mt-4.icon-checkin
+                .font-bold 快速人脸识别
+                .mt-1.text-sm 快速验证参与者信息，提升入场速度
+              div.mt-4.icon-import
+                .font-bold 多入口同步验票
+                .mt-1.text-sm 支持多设备同步验票，大型活动也能快速签到
+              div.mt-4.icon-eticket
+                .font-bold 支持胸牌打印
+                .mt-1.text-sm 胸牌信息可自动打印，减少参与者等待时间
+          .w-full.md_w-1_2.flex.items-center.justify-img-left
+            img(src="./img/checkin/scan.svg")
+        .frame.flex.flex-wrap.items-center
+          .w-full.md_w-1_2
+            .frame-title 为参展商提供更多潜在客户
+            .frame-subtitle 扫描二维码即可记录访客信息，积累更多潜在客户
+            div.frame-icons.mt-8
+              div.mt-4.icon-message
+                .font-bold 入场生成二维名牌
+                .mt-1.text-sm 扫码签到、人脸识别、身份证签到、RFID感应等
+              div.mt-4.icon-batch
+                .font-bold 扫码即可记录访客信息
+                .mt-1.text-sm 展商扫码即可获取访客信息，方便后续业务洽谈
+              div.mt-4.icon-language
+                .font-bold 访问者轨迹记录
+                .mt-1.text-sm 记录访问者观展轨迹，为展商发现潜在客户
+          .w-full.md_w-1_2.flex.items-center.justify-img-right
+            img(src="./img/checkin/list.svg")
+    //- .section.white-bg.mt-12
+    //-   .container
+    //-     .text-center.text-4xl.font-semibold 超多成功案例 丰富行业经验
+    //-     .mt-4.text-center.text-xl.text-gray-600 丰富的成功案例让我们积累了更多行业经验
+    //-     .case-list.mt-12
+    //-       .list-item.active
+    //-         .item-avatar(style="background-image: url('./img/cases/linxiang.png')")
+    //-         .item-main
+    //-           .main-prev
+    //-           .main-detail
+    //-             .detail-title
+    //-               //- img(src="./img/cases/.png")
+    //-               span 林象文化
+    //-             .detail-description
+    //-               p 林象文化创立于2017年，是一家立足于现场的青年文化推广机构。成立至今，策划并举办艺术放映、深夜市集、主题沙龙、音乐演出等200余场活动，累计到场观众超过25,000人次。
+    //-               p 多会提供多种活动入口：二维码、小程序码、网页链接等，林象文化使用多会发布活动，轻松实现全平台报名售票。
+    //-           .main-next
+    //-       .list-item
+    //-         .item-avatar(style="background-image: url('./img/cases/blhdyzx.png')")
+    //-         .item-main
+    //-           .main-prev
+    //-           .main-detail
+    //-             .detail-title
+    //-               //- img(src="./img/cases/.png")
+    //-               span 百老汇电影中心
+    //-             .detail-description
+    //-               p 百老汇戏院于1950年代开业，随后逐发展成百老汇院线，是现时中国香港最大的院线。旗下百老汇电影中心一直致力于艺术电影的民间传播和推广，至今已举办数百场现场放映及交流活动。
+    //-               p 通过使用多会提供的“保证金”功能，现场签到后，系统将自动退款。举办免费活动时，保证金功能可以提高到场率，减少无效报名。
+    //-           .main-next
+    .section.white-bg.mt-12.mb-12
+      include partials/_advisory.pug
+    .section.bg-blue-geo
+      .container.text-center
+        h2.mt-8.text-2xl 现在注册，立享 15 天免费试用和专属技术支持
+        .mt-6
+          a.btn(href="https://app.duohui.cn", target="_blank") 立即试用
+          a.btn.solid.ml-4(href="/compare") 查看定价
+    include partials/_footer.pug
+    script(src='./vendor/vendor.js')
+    script.
+      $('body')
+        .on('click', '.case-list .main-prev, .case-list .main-next', function() {
+          const $this = $(this)
+          const isPrev = $this.hasClass('main-prev')
+          const currentIndex = $this.parents('.list-item').index()
+          const items = $this.parents('.case-list').find('.list-item')
+          const count = items.length
+          let showIndex = currentIndex + (isPrev ? -1 : 1)
+          if (showIndex > count - 1) showIndex = 0
+          if (showIndex < 0 ) showIndex = count - 1
+          items.removeClass('active')
+          $(items[showIndex]).addClass('active')
+        })

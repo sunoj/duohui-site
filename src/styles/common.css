@@ -669,6 +669,43 @@ a.btn.product.enterprise:before{
   background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.125 12.167A4.125 4.125 0 0 1 14 8.042v-.917a4.125 4.125 0 0 1 8.25 0v.917a4.125 4.125 0 0 1-4.125 4.125zM9.417 17.667A3.667 3.667 0 0 1 5.75 14v-.917a3.667 3.667 0 0 1 7.333 0V14a3.667 3.667 0 0 1-3.666 3.667zM20.417 13.083h-4.584c-.314 0-.62.032-.916.093V14c0 1.235-.415 2.37-1.106 3.287a6.424 6.424 0 0 1 3.856 5.88V25h6.416c.506 0 .917-.41.917-.917v-6.416a4.584 4.584 0 0 0-4.583-4.584zM14.917 25h-11A.917.917 0 0 1 3 24.083v-.916a4.584 4.584 0 0 1 4.583-4.584h3.667a4.584 4.584 0 0 1 4.583 4.584v.916c0 .506-.41.917-.916.917z' fill='%23487EF0'/%3E%3C/svg%3E");
 }
 
+.product-icons .icon-offcheckin {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='12' fill='%23487EF0'/%3E%3Cpath d='M18 10c-.477-.582-.982-1.055-1.663-1.377a5.08 5.08 0 0 0-2.177-.487 5.148 5.148 0 0 0-5.113 4.84 2.737 2.737 0 0 0-1.123 4.7c.498.44.911.822 1.576.824M14 18.363h5.273a2.727 2.727 0 0 0 1.928-4.656C20.69 13.196 20 13 20 13M20 8L8 20' stroke='%23fff' stroke-width='1.78' stroke-miterlimit='10' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.product-icons .icon-display {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1c1.103 0 2 .897 2 2s-.897 2-2 2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1c-1.103 0-2-.897-2-2s.897-2 2-2zm-6 5H9v-2h10v2zm0-4H9v-2h10v2z' fill='%23111'/%3E%3Cpath d='M25 12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1c1.103 0 2 .897 2 2s-.897 2-2 2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1c-1.103 0-2-.897-2-2s.897-2 2-2zm-6 5H9v-2h10v2zm0-4H9v-2h10v2z' fill='%23487EF0'/%3E%3C/svg%3E");
+}
+
+.product-icons .icon-multi-checkin {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)' fill='%23487EF0'%3E%3Cpath d='M9.562 24.23H22.5a.562.562 0 0 0 .46-.24l3.938-5.625a.562.562 0 0 0 0-.645l-3.937-5.625a.563.563 0 0 0-.46-.24H9.561a1.687 1.687 0 0 0-1.687 1.687v9a1.688 1.688 0 0 0 1.687 1.688z'/%3E%3Cpath d='M3.22 16.376a1.563 1.563 0 0 0 1.28.666h12.938a2.688 2.688 0 0 0 2.687-2.688v-9a2.688 2.688 0 0 0-2.687-2.688H4.499a1.563 1.563 0 0 0-1.28.668v.001L-.718 8.96a1.563 1.563 0 0 0 0 1.791l3.938 5.626z' stroke='%23fff' stroke-width='2'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' d='M0 0h28v28H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+
+.product-icons .icon-rfid {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 24H8v-1c0-2.206-1.794-4-4-4H3v-2h1c3.309 0 6 2.691 6 6v1z' fill='%23487EF0'/%3E%3Cpath d='M14 24h-2v-1c0-4.411-3.589-8-8-8H3v-2h1c5.514 0 10 4.486 10 10v1zM4 24a1 1 0 1 0 0-2 1 1 0 0 0 0 2z' fill='%23487EF0'/%3E%3Cpath d='M24 4H5a1 1 0 0 0-1 1v6c5.944 0 10.866 4.327 11.82 10H24a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1z' fill='%23487EF0'/%3E%3C/svg%3E");
+}
+
+.product-icons .icon-face {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.818 5.947h2.727V4.129H4.91A.909.909 0 0 0 4 5.038v3.636h1.818V5.947zM8.545 17.765v-1.818H5.818V13.22H4v3.636c0 .503.407.91.91.91h3.635zM22.182 15.947h-2.727v1.818h3.636c.502 0 .909-.406.909-.909V13.22h-1.818v2.727zM23.09 4.129h-3.636v1.818h2.728v2.727H24V5.038a.909.909 0 0 0-.91-.91zM14 15.947a4.546 4.546 0 0 0 4.546-4.545v-.91a4.546 4.546 0 0 0-9.091 0v.91A4.546 4.546 0 0 0 14 15.947zM20.414 19.533A24.177 24.177 0 0 0 14 18.674c-2.627 0-4.833.422-6.414.86a3.64 3.64 0 0 0-2.677 3.509v1.995h18.182v-1.995a3.64 3.64 0 0 0-2.677-3.51z' fill='%23487EF0'/%3E%3C/svg%3E");
+}
+
+.product-icons .icon-scan {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 13.875h18M6.2 9.075v-2.4a1.2 1.2 0 0 1 1.2-1.2h2.4M21.8 9.075v-2.4a1.2 1.2 0 0 0-1.2-1.2h-2.4M6.2 18.675v2.4a1.2 1.2 0 0 0 1.2 1.2h2.4M21.8 18.675v2.4a1.2 1.2 0 0 1-1.2 1.2h-2.4' stroke='%23487EF0' stroke-width='2.4' stroke-linecap='square' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.product-icons .icon-device {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.167 10.333h-5.5a1.835 1.835 0 0 0-1.834 1.834v11c0 1.01.823 1.833 1.834 1.833h5.5A1.835 1.835 0 0 0 25 23.167v-11a1.835 1.835 0 0 0-1.833-1.834zm0 11h-5.5v-9.166h5.5v9.166z' fill='%23487EF0'/%3E%3Cpath d='M22.25 3H4.833A1.835 1.835 0 0 0 3 4.833v12.834c0 1.01.822 1.833 1.833 1.833H14v-2.75H9.417a.916.916 0 0 1-.917-.917V6.667c0-.507.41-.917.917-.917h11c.506 0 .916.41.916.917V8.5h2.75V4.833A1.835 1.835 0 0 0 22.25 3zm-16.5 9.167a.917.917 0 1 1 0-1.834.917.917 0 0 1 0 1.834z' fill='%23487EF0'/%3E%3C/svg%3E");
+}
+
+.product-icons .icon-printer {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.333 6.667H19.5V4.833h-11v1.834H6.667v-2.75A.917.917 0 0 1 7.583 3h12.834a.917.917 0 0 1 .916.917v2.75zM22.25 8.5H5.75A2.75 2.75 0 0 0 3 11.25v8.25a.917.917 0 0 0 .917.917h2.75v3.666a.917.917 0 0 0 .916.917h12.834a.917.917 0 0 0 .916-.917v-3.666h2.75A.917.917 0 0 0 25 19.5v-8.25a2.75 2.75 0 0 0-2.75-2.75zM19.5 23.167h-11v-8.25h11v8.25z' fill='%23487EF0'/%3E%3C/svg%3E");
+}
+
+.product-icons .icon-collect {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.667 18.667V17.5H3.512L3.5 22.167A2.325 2.325 0 0 0 5.833 24.5h16.334a2.325 2.325 0 0 0 2.333-2.333V17.5h-8.167v1.167h-4.666zm11.666-10.5h-4.678V5.833L16.322 3.5h-4.667L9.322 5.833v2.334H4.667A2.34 2.34 0 0 0 2.333 10.5V14a2.325 2.325 0 0 0 2.334 2.333h7V14h4.666v2.333h7A2.34 2.34 0 0 0 25.667 14v-3.5a2.34 2.34 0 0 0-2.334-2.333zm-7 0h-4.666V5.833h4.666v2.334z' fill='%23487EF0'/%3E%3C/svg%3E");
+}
+
+
 .justify-img-right {
   justify-content: flex-end;
 }
