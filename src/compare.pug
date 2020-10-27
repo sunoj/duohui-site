@@ -722,7 +722,7 @@ html
             $('.comparison-table').attr('data-show', plan)
           })
           .on('click', '.comparison-table .secondary-header', function() {
-            $(this).toggleClass('close').find('~ tr').toggle()
+            $(this).toggleClass('close').siblings().toggle()
           })
           .on('click', '.content-switch .switchers .switcher', function() {
             $switch = $(this)
