@@ -16,18 +16,17 @@ html
     include partials/_event_block.pug
     include partials/_poster_block.pug
 
-    .section.intro
+    .section.py-20
       .container
-        .hello
-          h1 众多行业领袖的选择，您的不二之选
-          p 数千家主办方择多会作为线下活动管理工具，多会是您举办线下活动的最佳选择。
-        .action
+        .text-4xl.font-semibold 众多行业领袖的选择，您的不二之选
+        .mt-4.text-lg.text-gray-800 数千家主办方择多会作为线下活动管理工具，多会是您举办线下活动的最佳选择。
+        .action.mt-8
           a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
           a.btn.solid(href='/app/') 立即试用
 
     .section.partners.white-bg
       .container
-        .flex.flex-wrap
+        .-mx-2.flex.flex-wrap
           .w-full.md_w-1_2
             img(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
           .w-full.md_w-1_2
@@ -47,20 +46,20 @@ html
 
     .section.events
       .container
-        h1 大型会议
+        .mb-4.text-2xl.font-semibold 大型会议
         -
           var events = [
             {"poster": "nicc.png", "title": "NICC 中国新三板投资者大会", "date": "09月17日", "location": "上海"},
             {"poster": "gnome.png", "title": "GNOME Asia 2017 亚洲峰会", "date": "10月14日", "location": "重庆"},
             {"poster": "rubyconf.png", "title": "RubyConf China 2017", "date": "09月16日", "location": "杭州"},
           ]
-        .columns
+        .-mx-2.flex.flex-wrap
           each event in events
-            .column.col-md-4.col-12
+            .px-2.w-full.md_w-1_3
               +poster(event)
     
     .section.customers.product-cases.white-bg: .container
-      h1 聚会沙龙
+      .mb-4.text-2xl.font-semibold 聚会沙龙
       -
         var cases = [
           {'img': 'sketchmeetup.jpg', 'event': 'Sketch Meetup', 'logo': 'dex', 'tags': [{'name': '设计', 'style': 'design'}, {'name': '分享会', 'style': 'solid'}]},
@@ -77,48 +76,48 @@ html
           .desc
             p EICO 是国内最知名的数字化业务咨询与产品设计专家。曾服务于摩拜、魅族、一加手机等国内外知名品牌。他们创造的数字化产品与品牌，正影响着中国数亿用户的工作与生活，为品牌带来持续的商业价值。
             p EICO TALKS 是由 EICO 策划举办的设计分享会。EICO 使用多会发布了效果精美的活动展示页面，轻松完成报名售票。
-      .columns
+      .-mx-2.flex.flex-wrap
         each usecase in cases
-          .column.col-md-4.col-12
+          .px-2.w-full.md_w-1_3
             +event(usecase)
 
     .section.customers.product-cases: .container
-      h1 演出娱乐
+      .mb-4.text-2xl.font-semibold 演出娱乐
       -
         var cases = [
           {'img': 'coart.png', 'event': "阿拉善 COART 嘉年华", 'logo': 'coart', 'tags': [{'name': '音乐', 'style': 'design'}, {'name': '演唱会', 'style': 'solid'}]},
           {'img': 'poster-ifmusic.jpg', 'event': '音乐梦想家巡演', 'logo': 'ifmusic', 'tags': [{'name': '音乐', 'style': 'design'}, {'name': '演唱会', 'style': 'lined'}]},
           {'img': 'punkeek.png', 'event': '協作派對的派對', 'logo': 'networkparty', 'tags': [{'name': '派对', 'style': 'lined'}, {'name': '现场娱乐', 'style': 'sport'}]},
         ]
-      .columns
+      .-mx-2.flex.flex-wrap
         each usecase in cases
-          .column.col-md-4.col-12
+          .px-2.w-full.md_w-1_3
             +event(usecase)
     
     .section.customers.product-cases.white-bg: .container
-      h1 文化体育
+      .mb-4.text-2xl.font-semibold 文化体育
       -
         var cases = [
           {'img': 'zizai.png', 'event': '字在生活节', 'logo': 'china30s', 'tags': [{'name': '分享', 'style': 'design'}, {'name': '市集', 'style': 'solid'}]},
           {'img': 'shopbop.png', 'event': '#瘦身大作战', 'logo': 'shopbop', 'tags': [{'name': '品牌活动', 'style': 'lined'}, {'name': '运动健身', 'style': 'sport'}]},
           {'img': 'poster-goin.jpg', 'event': 'GOIN 格斗游戏大会', 'logo': 'goin', 'tags': [{'name': '娱乐', 'style': 'lined'}, {'name': '电子竞技', 'style': 'sport'}]},
         ]
-      .columns
+      .-mx-2.flex.flex-wrap
         each usecase in cases
-          .column.col-md-4.col-12
+          .px-2.w-full.md_w-1_3
             +event(usecase)
 
     .section.customers.product-cases: .container
-      h1 教育公益
+      .mb-4.text-2xl.font-semibold 教育公益
       -
         var cases = [
           {'img': 'poster-speakout.jpg', 'event': 'SPEAKOUT 2017 ', 'logo': 'speakout', 'tags': [{'name': '公益', 'style': 'design'}, {'name': '演讲会', 'style': 'solid'}]},
           {'img': 'kxsy.jpg', 'event': '理性的力量', 'logo': 'voiceofscience', 'tags': [{'name': '科普', 'style': 'design'}, {'name': '演讲', 'style': 'lined'}]},
          {'img': 'girlscodingday.jpg', 'event': 'Girls Coding Day', 'logo': 'cgc', 'tags': [{'name': '公益', 'style': 'lined'}, {'name': '教育', 'style': 'sport'}]}
         ]
-      .columns
+      .-mx-2.flex.flex-wrap
         each usecase in cases
-          .column.col-md-4.col-12
+          .px-2.w-full.md_w-1_3
             +event(usecase)
 
     include partials/_footer.pug

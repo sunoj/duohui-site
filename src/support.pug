@@ -14,13 +14,11 @@ html
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_header.pug
-    
-    .section.intro
+    .section.py-20
       .container
-        .hello
-          h1 获取多会的服务支持
-          p 有兴趣了解更多关于多会产品的信息，或是遇到了活动管理的挑战，我们的活动专家愿意帮助您。
-        .action
+        .text-4xl.font-semibold 获取多会的服务支持
+        .mt-4.text-lg.text-gray-800 有兴趣了解更多关于多会产品的信息，或是遇到了活动管理的挑战，我们的活动专家愿意帮助您。
+        .action.mt-8
           a.btn.contact(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
           a.btn.solid.try(href='/app/') 立即试用
 
@@ -29,10 +27,10 @@ html
         <iframe id="demo-form" height="600" width="100%" src="https://i.duotai.net/forms/vo52o" frameborder="0" allowfullscreen>
         </iframe>
 
-    .section.help
-      .container
-        h1 联系方式
-        p
+    .section
+      .container.py-4
+        .text-2xl.font-semibold 联系方式
+        .leading-loose.mt-4
           a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 在线咨询
           |  或致电
           span.phone  021-80370533
