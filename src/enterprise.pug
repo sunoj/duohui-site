@@ -56,7 +56,7 @@ html
             span.icon-brand 独立品牌形象
     .py-10
       .container
-        .pt-14.pb-10.flex.flex-wrap.items-center#mini
+        .tab-target.pt-14.pb-10.flex.flex-wrap.items-center#mini
           .w-full.md_w-1_2
             .text-color-theme.text-3xl.font-bold 属于您的活动小程序
             .mt-8.font-bold.text-2xl 微信流量红利轻松获客
@@ -75,7 +75,7 @@ html
               a(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank").btn.solid.ml-4 立即试用
           .w-full.md_w-1_2.flex.items-center.justify-img-right
             img(src="./img/enterprise/mini.svg")
-        .pt-14.pb-10.flex.flex-wrap.items-center.flex-row-reverse#server
+        .tab-target.pt-14.pb-10.flex.flex-wrap.items-center.flex-row-reverse#server
           .w-full.md_w-1_2
             .text-color-theme.text-3xl.font-bold 支持绑定微信服务号
             .mt-8.font-bold.text-2xl 更多粉丝和活动曝光
@@ -93,7 +93,7 @@ html
               a(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank").btn.solid.ml-4 立即试用
           .w-full.md_w-1_2.flex.items-center.justify-img-left
             img(src="./img/enterprise/server.svg")
-        .pt-14.pb-10.flex.flex-wrap.items-center#medium
+        .tab-target.pt-14.pb-10.flex.flex-wrap.items-center#medium
           .w-full.md_w-1_2
             .text-color-theme.text-3xl.font-bold 专属收款渠道
             .mt-8.font-bold.text-2xl 绑定自有支付渠道
@@ -109,7 +109,7 @@ html
               a(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank").btn.solid 立即试用
           .w-full.md_w-1_2.flex.items-center.justify-img-right
             img(src="./img/enterprise/medium.svg")
-        .pt-14.pb-10.flex.flex-wrap.items-center.flex-row-reverse#brand
+        .tab-target.pt-14.pb-10.flex.flex-wrap.items-center.flex-row-reverse#brand
           .w-full.md_w-1_2
             .text-color-theme.text-3xl.font-bold 自定义品牌形象
             .mt-8.font-bold.text-2xl 和企业形象相互辉映
@@ -155,6 +155,20 @@ html
                 } else {
                   $tabs.removeClass('top-touched')
                 }
+
+                const bodyTop = document.body.scrollTop || document.documentElement.scrollTop
+                const distanceList = []
+                let minDistance = 999999
+                $('.tab-target').each((i, tabEl) => {
+                  const distance = Math.abs(tabEl.offsetTop - bodyTop)
+                  distanceList.push(distance)
+                  if (distance < minDistance) minDistance = distance
+                })
+                $tabs
+                  .find('.tab').eq(distanceList.indexOf(minDistance))
+                  .addClass('active')
+                  .siblings().removeClass('active')
+
                 timer = 0
               }, 200)
             }
