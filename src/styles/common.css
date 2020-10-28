@@ -67,13 +67,14 @@ ul{
 
 .nav .nav-item .drawer {
   cursor: default;
-  transform: rotateX(90deg);
-  transform-origin: top;
-  transition: all .23s;
+  height: 0;
+  opacity: 0;
+  transition: height .2s;
 }
 
 .nav .nav-item:hover .drawer {
-  transform: rotateX(0);
+  height: 256px;
+  opacity: 1;
 }
 
 .nav .nav-item:hover .nav-toggle-arrow {

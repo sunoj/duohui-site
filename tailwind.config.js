@@ -56,6 +56,11 @@ module.exports = {
       width: Object.assign({
 
       }, extra, percent),
+      colors: {
+        theme: {
+          blue: '#176BE8',
+        },
+      },
     },
   },
   separator: '_',
