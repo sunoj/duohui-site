@@ -36,7 +36,7 @@
 
     script.
       (function(y,o,u,k,e){y['YoukeInstance']=k;y[k]=y[k]||function(){(y[k].e=y[k].e||[]).push(arguments)};e=o.createElement('script');e.async=1;e.src=u;o.currentScript.parentNode.insertBefore(e,o.currentScript);})(window,document,'https://static.cdn.youke.co/js/widget.js','$youke');
-      $youke('load','duohui', { config: { pluginConfig: { hideLauncher: true } } });
+      $youke('load','duohui', { config: { pluginConfig: { hideLauncher: !!(window.innerWidth < 720) } } });
 
     script(async src="https://www.googletagmanager.com/gtag/js?id=UA-7239743-22")
 
