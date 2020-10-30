@@ -126,7 +126,7 @@ html
           label(for="room") 密室逃脱
           input(name="tab", type="radio").hidden.tool-tab#class
           label(for="class") 自习室
-          .mt-12.flex.justify-center.flex-wrap.-mx-8.service-tools.casual
+          .mt-12.flex.justify-center.flex-wrap.-mx-8.px-8.md_px-0.service-tools.casual
             .px-4.md_px-8.w-1_2.md_w-1_3.text-center
               .icon-cards
               .mt-4.font-bold.text-lg 年卡月卡次卡
@@ -210,10 +210,13 @@ html
       include partials/_advisory.pug
     .section.bg-blue-geo
       .container.text-center
-        h2.mt-8.text-2xl 现在注册，立享 15 天免费试用和专属技术支持
-        .mt-6
+        h2.mt-8.text-2xl.font-semibold.hidden.md_block 现在注册，立享 15 天免费试用和专属技术支持
+        h2.mt-8.text-2xl.font-semibold.block.md_hidden 现在注册，立享 15 天免费试用
+        .mt-6.hidden.md_block
           a.btn(href="https://app.duohui.cn", target="_blank") 立即试用
           a.btn.solid.ml-4(href="/compare") 查看定价
+        .mt-10.block.md_hidden
+          a.btn.solid.large(href="https://app.duohui.cn/signup", target="_blank") 立即注册
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
     script.

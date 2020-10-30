@@ -21,28 +21,32 @@ html
     include partials/_header.pug
     include partials/_poster_block.pug
     .section.intro
-      .container.pt-0.md_pt-12.flex.items-center
-        .pr-0.md_pr-8.flex-grow
-          .pb-8
-            .text-4xl.font-semibold 品牌专属活动平台
-            .mt-4.text-xl.text-gray-600 售票功能强大，适用于多种活动与服务场景，线上线下可同步售票。
-            img.mt-8.max-w-full.block.md_hidden(src='./img/banner/home.svg', alt='home')
-          .action
-            a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
-            a.btn.solid(href='https://app.duohui.cn') 立即试用
-        .hidden.md_block
-          img.max-w-full(src='./img/banner/home.svg', alt='home')
+      .container.pt-0.md_pt-12
+        .flex.items-center.py-10.md_py-0
+          .pr-0.md_pr-8.flex-grow
+            .pb-8
+              .text-center.md_text-left.text-4xl.font-semibold 品牌专属活动平台
+              .text-center.md_text-left.mt-4.text-xl.text-gray-600 售票功能强大，适用于多种活动与服务场景，线上线下可同步售票。
+              img.mt-8.max-w-full.block.md_hidden(src='./img/banner/home.svg', alt='home')
+            .action.hidden.md_block
+              a.btn(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
+              a.btn.solid(href='https://app.duohui.cn') 立即试用
+            .text-center.block.md_hidden
+              a.btn.solid.large(href='https://app.duohui.cn') 免费试用
+          .hidden.md_block
+            img.max-w-full(src='./img/banner/home.svg', alt='home')
     .section.white-bg.mt-12
       .container
-        .text-center.text-4xl.font-semibold 多种产品，满足众多活动形式
-        .mt-4.text-center.text-xl.text-gray-600 可根据使用场景选择最适合的产品
-        .mt-12.flex.flex-wrap
+        .text-center.text-2xl.md_text-4xl.font-semibold 多种产品，满足众多活动形式
+        .mt-4.text-center.text-base.md_text-xl.text-gray-600 可根据使用场景选择最适合的产品
+        .mt-12.flex.flex-wrap.pb-10
           table.products-table.product-icons.mr-0.md_mr-8
             thead
               tr
               th(colspan="2")
-                .mb-2.text-2xl.icon-tickets 活动票务
-                div 支持音乐演出、会议展览、剧场剧院等多场景售票
+                .flex.justify-center.md_justify-start
+                  .mb-0.md_mb-2.text-2xl.icon-tickets 活动票务
+                .hidden.md_block 支持音乐演出、会议展览、剧场剧院等多场景售票
             tbody
               tr
                 td
@@ -67,13 +71,16 @@ html
             tfoot
               tr
                 td(colspan="2")
-                  a.btn.large(href="/event") 了解更多
+                  .hidden.md_block
+                    a.btn.large(href="/event") 了解更多
+                  a.text-theme-blue.font-semibold.inline-block.md_hidden(href="/event") 了解更多
           table.products-table.product-icons.mt-8.md_mt-0
             thead
               tr
               th(colspan="2")
-                .mb-2.text-2xl.icon-pin 服务预订
-                div 专为休闲健身、景区旅游等日常服务场景设计
+                .flex.justify-center.md_justify-start
+                  .mb-0.md_mb-2.text-2xl.icon-pin 服务预订
+                .hidden.md_block 专为休闲健身、景区旅游等日常服务场景设计
             tbody
               tr
                 td
@@ -98,12 +105,14 @@ html
             tfoot
               tr
                 td(colspan="2")
-                  a.btn.large(href="/service") 了解更多
+                  .hidden.md_block
+                    a.btn.large(href="/service") 了解更多
+                  a.text-theme-blue.font-semibold.inline-block.md_hidden(href="/service") 了解更多
     .section.white-bg.mt-12
       .container
-        .text-center.text-4xl.font-semibold 为每个主办方提供专属微信营销工具
-        .mt-4.text-center.text-xl.text-gray-600 快速搭建小程序，获取微信流量红利
-        .mt-12.flex.flex-wrap.-mx-8.weixin-tools
+        .text-center.text-2xl.md_text-4xl.font-semibold 为每个主办方提供专属微信营销工具
+        .mt-4.text-center.text-base.md_text-xl.text-gray-600 快速搭建小程序，获取微信流量红利
+        .mt-12.flex.flex-wrap.-mx-8.px-8.md_px-0.weixin-tools
           .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-mp
             .mt-4.font-bold.text-lg 专属小程序
@@ -128,13 +137,15 @@ html
             .icon-server
             .mt-4.font-bold.text-lg 智能客服
             .mt-2.text-gray-600 可在服务号添加智能客服，提高和顾客的沟通效率
-        .text-center
+        .text-center.hidden.md_block
           a.btn.solid.large(href="https://app.duohui.cn", target="_blank") 立即试用
           a.btn.large.ml-4(href="/mini") 了解更多
-    .section.white-bg.mt-12
+        .text-center.block.md_hidden
+          a.btn.large.ml-4(href="/mini") 了解更多
+    .section.white-bg.mt-12.mb-4
       .container
-        .text-center.text-4xl.font-semibold 超多成功案例，丰富行业经验
-        .mt-4.text-center.text-xl.text-gray-600 成立4年，多会服务了来自各行各业7000多家主办方的各类活动
+        .text-center.text-2xl.md_text-4xl.font-semibold 超多成功案例，丰富行业经验
+        .mt-4.text-center.text-base.md_text-xl.text-gray-600 成立4年，多会服务了来自各行各业7000多家主办方的各类活动
         .mt-12.flex.flex-wrap
           .w-full.md_w-1_2
             img(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
@@ -152,14 +163,17 @@ html
             img(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
           .w-full.md_w-1_2
             img(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
-    .section.white-bg.mt-12.mb-12
+    .section.white-bg.mt-12.mb-12.hidden.md_block
       include partials/_advisory.pug
     .section.bg-blue-geo
       .container.text-center
-        h2.mt-8.text-2xl 现在注册，立享 15 天免费试用和专属技术支持
-        .mt-6
+        h2.mt-8.text-2xl.font-semibold.hidden.md_block 现在注册，立享 15 天免费试用和专属技术支持
+        h2.mt-8.text-2xl.font-semibold.block.md_hidden 现在注册，立享 15 天免费试用
+        .mt-6.hidden.md_block
           a.btn(href="https://app.duohui.cn", target="_blank") 立即试用
           a.btn.solid.ml-4(href="/compare") 查看定价
+        .mt-10.block.md_hidden
+          a.btn.solid.large(href="https://app.duohui.cn/signup", target="_blank") 立即注册
     include partials/_footer.pug
     //- TODO: need sign
     //- script(src="//res.wx.qq.com/open/js/jweixin-1.0.0.js")

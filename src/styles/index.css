@@ -72,6 +72,11 @@
   .why .trait {
     margin-bottom: 24px;
   }
+  .products-table thead tr th,
+  .products-table tbody tr td,
+  .products-table tfoot tr td {
+    padding: 12px;
+  }
 }
 
 #ib-content {

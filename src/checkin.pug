@@ -145,10 +145,13 @@ html
       include partials/_advisory.pug
     .section.bg-blue-geo
       .container.text-center
-        h2.mt-8.text-2xl 现在注册，立享 15 天免费试用和专属技术支持
-        .mt-6
+        h2.mt-8.text-2xl.font-semibold.hidden.md_block 现在注册，立享 15 天免费试用和专属技术支持
+        h2.mt-8.text-2xl.font-semibold.block.md_hidden 现在注册，立享 15 天免费试用
+        .mt-6.hidden.md_block
           a.btn(href="https://app.duohui.cn", target="_blank") 立即试用
           a.btn.solid.ml-4(href="/compare") 查看定价
+        .mt-10.block.md_hidden
+          a.btn.solid.large(href="https://app.duohui.cn/signup", target="_blank") 立即注册
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
     script.
