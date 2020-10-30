@@ -77,6 +77,13 @@
   .products-table tfoot tr td {
     padding: 12px;
   }
+  .product-icons [class*="icon-"] {
+    padding-left: 28px;
+    background-size: 20px;
+  }
+  .products-table tbody tr td {
+    border: none !important;
+  }
 }
 
 #ib-content {
