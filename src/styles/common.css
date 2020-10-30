@@ -36,7 +36,6 @@ ul{
 .container{
 	width: 1012px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .clear::after{

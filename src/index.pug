@@ -44,76 +44,78 @@ html
         .text-center.text-2xl.md_text-4xl.font-semibold 多种产品，满足众多活动形式
         .mt-4.text-center.text-base.md_text-xl.text-gray-600 可根据使用场景选择最适合的产品
         .mt-12.flex.flex-wrap.pb-10
-          table.products-table.product-icons.mr-0.md_mr-8
-            thead
-              tr
-              th(colspan="2")
-                .flex.justify-center.md_justify-start
-                  .mb-0.md_mb-2.text-lg.md_text-2xl.icon-tickets 活动票务
-                .hidden.md_block 支持音乐演出、会议展览、剧场剧院等多场景售票
-            tbody
-              tr
-                td
-                  span.icon-ticket 在线选座购票
-                td
-                  span.icon-layout 模块化活动页面
-              tr
-                td
-                  span.icon-checkin 离线签到
-                td
-                  span.icon-chart 数据报表
-              tr
-                td
-                  span.icon-form 自定义报名表单
-                td
-                  span.icon-bulb 多种营销工具
-              tr
-                td
-                  span.icon-order 订单导入导出
-                td
-                  span.icon-refund 自定义退款规则
-            tfoot
-              tr
-                td(colspan="2")
-                  .hidden.md_block
-                    a.btn.large(href="/event") 了解更多
-                  a.text-theme-blue.font-semibold.inline-block.md_hidden(href="/event") 了解更多
-          table.products-table.product-icons.mt-8.md_mt-0
-            thead
-              tr
-              th(colspan="2")
-                .flex.justify-center.md_justify-start
-                  .mb-0.md_mb-2.text-lg.md_text-2xl.icon-pin 服务预订
-                .hidden.md_block 专为休闲健身、景区旅游等日常服务场景设计
-            tbody
-              tr
-                td
-                  span.icon-useage 每日库存
-                td
-                  span.icon-scene 多场次功能
-              tr
-                td
-                  span.icon-entrance 多种入口
-                td
-                  span.icon-medium 渠道功能
-              tr
-                td
-                  span.icon-code 自定义票码
-                td
-                  span.icon-writeoff 多次核销功能
-              tr
-                td
-                  span.icon-coupon 优惠促销
-                td
-                  span.icon-data 服务数据统计
-            tfoot
-              tr
-                td(colspan="2")
-                  .hidden.md_block
-                    a.btn.large(href="/service") 了解更多
-                  a.text-theme-blue.font-semibold.inline-block.md_hidden(href="/service") 了解更多
+          .w-full.md_w-1_2.pr-0.md_pr-4
+            table.products-table.product-icons.w-full
+              thead
+                tr
+                th(colspan="2")
+                  .flex.justify-center.md_justify-start
+                    .mb-0.md_mb-2.text-lg.md_text-2xl.icon-tickets 活动票务
+                  .hidden.md_block 支持音乐演出、会议展览、剧场剧院等多场景售票
+              tbody
+                tr
+                  td
+                    span.icon-ticket 在线选座购票
+                  td
+                    span.icon-layout 模块化活动页面
+                tr
+                  td
+                    span.icon-checkin 离线签到
+                  td
+                    span.icon-chart 数据报表
+                tr
+                  td
+                    span.icon-form 自定义报名表单
+                  td
+                    span.icon-bulb 多种营销工具
+                tr
+                  td
+                    span.icon-order 订单导入导出
+                  td
+                    span.icon-refund 自定义退款规则
+              tfoot
+                tr
+                  td(colspan="2")
+                    .hidden.md_block
+                      a.btn.large(href="/event") 了解更多
+                    a.text-theme-blue.font-semibold.inline-block.md_hidden(href="/event") 了解更多
+          .w-full.md_w-1_2.pl-0.md_pl-4.mt-6.md_mt-0
+            table.products-table.product-icons.w-full
+              thead
+                tr
+                th(colspan="2")
+                  .flex.justify-center.md_justify-start
+                    .mb-0.md_mb-2.text-lg.md_text-2xl.icon-pin 服务预订
+                  .hidden.md_block 专为休闲健身、景区旅游等日常服务场景设计
+              tbody
+                tr
+                  td
+                    span.icon-useage 每日库存
+                  td
+                    span.icon-scene 多场次功能
+                tr
+                  td
+                    span.icon-entrance 多种入口
+                  td
+                    span.icon-medium 渠道功能
+                tr
+                  td
+                    span.icon-code 自定义票码
+                  td
+                    span.icon-writeoff 多次核销功能
+                tr
+                  td
+                    span.icon-coupon 优惠促销
+                  td
+                    span.icon-data 服务数据统计
+              tfoot
+                tr
+                  td(colspan="2")
+                    .hidden.md_block
+                      a.btn.large(href="/service") 了解更多
+                    a.text-theme-blue.font-semibold.inline-block.md_hidden(href="/service") 了解更多
     .section.white-bg.mt-12
-      .container
+      .container.overflow-hidden
         .text-center.text-2xl.md_text-4xl.font-semibold 为每个主办方提供专属微信营销工具
         .mt-4.text-center.text-base.md_text-xl.text-gray-600 快速搭建小程序，获取微信流量红利
         .mt-12.flex.flex-wrap.-mx-8.px-4.md_px-0.weixin-tools
@@ -152,21 +154,21 @@ html
         .mt-4.text-center.text-base.md_text-xl.text-gray-600 成立4年，多会服务了来自各行各业7000多家主办方的各类活动
         .mt-12.flex.flex-wrap
           .w-full.md_w-1_2
-            img(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
+            img.mx-auto(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
           .w-full.md_w-1_2
-            img(src='./img/partners/clients-2.png', srcset='./img/partners/clients-2@2x.png 2x', alt='多会客户列表')
+            img.mx-auto(src='./img/partners/clients-2.png', srcset='./img/partners/clients-2@2x.png 2x', alt='多会客户列表')
           .w-full.md_w-1_2
-            img(src='./img/partners/clients-3.png', srcset='./img/partners/clients-3@2x.png 2x', alt='多会客户列表')
+            img.mx-auto(src='./img/partners/clients-3.png', srcset='./img/partners/clients-3@2x.png 2x', alt='多会客户列表')
           .w-full.md_w-1_2
-            img(src='./img/partners/clients-4.png', srcset='./img/partners/clients-4@2x.png 2x', alt='多会客户列表')
+            img.mx-auto(src='./img/partners/clients-4.png', srcset='./img/partners/clients-4@2x.png 2x', alt='多会客户列表')
           .w-full.md_w-1_2
-            img(src='./img/partners/clients-5.png', srcset='./img/partners/clients-5@2x.png 2x', alt='多会客户列表')
+            img.mx-auto(src='./img/partners/clients-5.png', srcset='./img/partners/clients-5@2x.png 2x', alt='多会客户列表')
           .w-full.md_w-1_2
-            img(src='./img/partners/clients-6.png', srcset='./img/partners/clients-6@2x.png 2x', alt='多会客户列表')
+            img.mx-auto(src='./img/partners/clients-6.png', srcset='./img/partners/clients-6@2x.png 2x', alt='多会客户列表')
           .w-full.md_w-1_2
-            img(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
+            img.mx-auto(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
           .w-full.md_w-1_2
-            img(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
+            img.mx-auto(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
     .section.white-bg.mt-12.mb-12.hidden.md_block
       include partials/_advisory.pug
     .section.bg-blue-geo
