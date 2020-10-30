@@ -28,9 +28,15 @@
         span.block.md_inline-block 沪ICP备17014612号-2
         span.block.md_inline-block 沪公网安备 31010402004300号 <广告>
 
+.fixed.right-0.bottom-0.left-0.p-2.bg-white.flex.items-center.block.md_hidden(style="box-shadow: 0 -5px 10px rgba(0, 0, 0, .1);color: #176BE8;")
+  .w-1_3.pr-1
+    a.btn.text-center.w-full.text-theme-blue(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
+  .w-2_3.pl-1
+    a.btn.text-center.w-full.solid(href="https://app.duohui.cn/signup", target="_blank") 免费试用
+
     script.
       (function(y,o,u,k,e){y['YoukeInstance']=k;y[k]=y[k]||function(){(y[k].e=y[k].e||[]).push(arguments)};e=o.createElement('script');e.async=1;e.src=u;o.currentScript.parentNode.insertBefore(e,o.currentScript);})(window,document,'https://static.cdn.youke.co/js/widget.js','$youke');
-      $youke('load','duohui');
+      $youke('load','duohui', { config: { pluginConfig: { hideLauncher: true } } });
 
     script(async src="https://www.googletagmanager.com/gtag/js?id=UA-7239743-22")
 

@@ -34,8 +34,11 @@ html
               a.btn.solid.large(href='https://app.duohui.cn') 免费试用
           .hidden.md_block
             img.max-w-full(src='./img/banner/home.svg', alt='home')
-      .flex.justify-end
-        img.block.md_hidden(src='./img/banner/home-mobile.svg', alt='home')
+      .relative
+        .absolute.flex.justify-end.w-full
+          img.block.md_hidden(src='./img/banner/home-mobile-bg.svg', alt='home', style="width:72%;")
+        .relative.flex.justify-center(style="padding-top:3%;padding-bottom:10%;")
+          img.block.md_hidden(src='./img/banner/home-mobile.svg', alt='home', style="width:70%;")
     .section.white-bg.mt-12
       .container
         .text-center.text-2xl.md_text-4xl.font-semibold 多种产品，满足众多活动形式
