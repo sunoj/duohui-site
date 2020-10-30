@@ -47,7 +47,6 @@ function serve() {
       }
     },
     ui: false,
-    
   })
   watch('dist/**/*.*').on('change', browserSync.reload)
 }
@@ -69,12 +68,6 @@ const syncToServer = function () {
     }))
 }
 
-exports.sandbox = function () {
-  return deploy('sandbox')
-}
-
 const sync_to_instances = shell.task("ssh -t deploy@2.tinyservices.net ./plant-web-admin push duohui-web 10.154.57.202 10.105.55.246 10.105.242.113")
 
-const deploy = function (cb) {
-  return series(syncToServer, sync_to_instances, cb)
-}
+exports.deploy = series(syncToServer, sync_to_instances)
