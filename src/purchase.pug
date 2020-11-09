@@ -1,0 +1,213 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 双十一特惠 - 多会
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet' type='text/css' href='./purchase/css/index.css')
+  body
+    include partials/_header.pug
+    .main-container
+      .banner-container
+        .background
+          .icon-avatar-round.pos-1
+          .icon-lightning-round.pos-2
+          .icon-link-round.pos-3
+          .icon-vector-1.pos-4
+          .icon-vector-2.pos-5
+          .icon-vector-3.pos-6
+          .icon-ellipse-1.pos-7
+          .icon-ellipse-2.pos-8
+          .icon-ellipse-3.pos-9
+        .title
+        .sub-title
+          span.text 企业版5折起 成就你和团队 
+          span.time 11.9 - 11.20
+      .prod-container
+        .header
+          .title 多种产品，满足众多活动形式，新用户购买6折起！
+          .sub-title 售票功能强大，适用于多种活动与服务场景，线上线下可同步售票。
+        .content
+          .card
+            .header
+              .title 高级版
+              .sub-title 适合中小型活动主办方
+              .badge 新用户专享
+            .price
+              .current
+                span.num 1,299
+                span.unit 元/年
+              .normal
+                | 日常价1,799元/年
+            ul.supports
+              li 支持购票在线选座
+              li 销售数据统计
+              li 自定义报名表单
+              li 支持渠道售票
+              li 提供场次功能
+            .actions
+              a.btn.btn-get.open-purchase(data-sku="prime_for_new_1111")
+                | 立即选购
+              a.btn(href="/prime")
+                | 了解更多
+          .card
+            .header
+              .title 企业版
+              .sub-title 适合专业品牌主办方
+              .badge 新用户专享
+            .price
+              .current
+                span.num.hot 5,999
+                span.unit 元/年
+              .normal
+                | 日常价9,999元/年
+            ul.supports
+              li 包含高级版全部功能
+              li 自定义品牌形象
+              li
+                | 绑定 
+                a(href='/wechat') 服务号
+                |  ，报名即关注
+              li
+                | 独立的 
+                a(href='/mini') 活动小程序
+              li 自有支付，票款直接到账
+            .actions
+              a.btn.btn-get.btn-hot.open-purchase(data-sku="enterprise_for_new_1111")
+                | 立即选购
+              a.btn(href="/enterprise")
+                | 了解更多
+          .card
+            .header
+              .title 自部署版
+              .sub-title 适合有私有化部署需求的主办方
+              .badge 新用户专享
+            .price
+              .current
+                span.text 咨询最低价
+            ul.supports
+              li 包含企业版全部功能
+              li 本地私有化部署
+              li 个性化功能定制
+              li 员工使用培训
+              li 专属技术指导
+            .actions
+              a.btn.btn-get.open-youke
+                | 咨询顾问
+              a.btn(href="/self")
+                | 了解更多
+      .rc-container
+        .header
+          .title 老用户续费一年送半年，企业版价格5折起！
+          .sub-title 感恩一路陪伴，双十一特惠回馈，全年最低价。
+        .content
+          .card-version
+            .title
+              .text 高级版
+              span.badge 限时6折
+            .price
+              .current
+                span.num 1,799
+                span.unit 元/年
+                span.plus
+                  | 赠送6个月
+              .normal 日常价1,799元/年
+          .card-version
+            .title
+              .text 企业版
+              span.badge 限时6折
+            .price
+              .current
+                span.num.hot 7,499
+                span.unit 元/年
+                span.plus
+                  | 赠送6个月
+              .normal 日常价9,999元/年
+          .divide
+          .action
+            a.btn.btn-get.btn-hot.open-purchase(data-sku="for_regular_1111") 前往续费
+      .mobile-rc-container
+        .badge 特惠回馈
+        .header
+          .title 老用户续费一年送半年，企业版 5 折起！
+        .content
+          .card-version
+            .header
+              .title 高级版
+              .badge 限时五折
+            .price
+              .current
+                span.num 1,799
+                span.unit 元/年
+                span.plus
+                  | +赠送6个月
+          .card-version
+            .header
+              .title 企业版
+              .badge 限时五折
+            .price
+              .current
+                span.num 7,499
+                span.unit 元/年
+                span.plus
+                  | +赠送6个月
+      .mobile-prod-container
+        .badge 新用户专享
+        .header
+          .title 新用户专享购买 6 折起！
+        .content
+          .card-version
+            .header
+              .title 高级版
+              .sub-title 适合中小型活动主办方
+            .price
+              .current
+                span.num.hot 1,299
+                span.unit 元/年
+            .badge 限时7折
+          .card-version
+            .header
+              .title 企业版
+              .sub-title 适合专业品牌主办方
+            .price
+              .current
+                span.num.hot 5,999
+                span.unit 元/年
+            .badge 限时6折
+      .mobile-fotter-container
+        .qr-code
+          img(src='./img/qrcode-contact.png')
+        .content
+          h3 长按二维码
+          h2 联系多会客户经理
+    #purchase
+      .inner
+        .header
+          span 特惠购买
+          .close
+        iframe#purchase-iframe(src='')
+        #purchase-loading.absolute.inset-0.bg-white.flex.justify-center.items-center(style="top:40px;") 加载中..
+    include partials/_footer.pug
+    script(src='./vendor/vendor.js')
+    script.
+      $('body')
+        .on('click', '#purchase .close', function() {
+          $('#purchase').hide()
+        })
+        .on('click', '.open-purchase', function() {
+          const sku = $(this).data('sku')
+          $('#purchase-iframe').attr('src', `http://localhost:3000/quickPurchase?sku=${sku}`)
+          $('#purchase').show()
+          $('#purchase-loading').show()
+        })
+        .on('click', '.open-youke', function() {
+          const y = window.$youke
+          y && y('open')
+        })
+
+      $('#purchase-iframe').on('load', function() {
+        $('#purchase-loading').hide()
+      })
+
