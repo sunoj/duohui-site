@@ -198,7 +198,7 @@ html(lang='en')
         })
         .on('click', '.open-purchase', function() {
           const sku = $(this).data('sku')
-          $('#purchase-iframe').attr('src', `https://app.duohui.cn/quickPurchase?sku=${sku}`)
+          $('#purchase-iframe').attr('src', `https://beta.duohui.cn/quickPurchase?sku=${sku}`)
           $('#purchase').show()
           $('#purchase-loading').show()
         })
