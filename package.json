@@ -17,9 +17,9 @@
     "gulp-preprocess": "^2.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-rsync": "^0.0.8",
-    "gulp-sass": "^4.1.0",
     "gulp-shell": "^0.6.5",
-    "node-sass": "^5.0.0",
+    "postcss": "^8.1.6",
+    "postcss-nested": "^5.0.1",
     "tailwindcss": "^2.0.0-alpha.2"
   }
 }

@@ -1,6 +1,5 @@
 const preprocess = require('gulp-preprocess')
 const postcss = require('gulp-postcss')
-const nodesass = require('gulp-sass')
 var pug = require('gulp-pug');
 var shell = require('gulp-shell');
 var del = require('del');
@@ -33,13 +32,6 @@ const css = function() {
     .pipe(dest('./dist/'))
 }
 
-const sass = function () {
-  return src('./src/**/*.scss')
-    .pipe(nodesass())
-    .pipe(preprocess())
-    .pipe(dest('./dist/'))
-}
-
 const static = function() {
   return src('./static/**/*.*')
     .pipe(dest('./dist/'))
@@ -50,7 +42,6 @@ function serve() {
   const browserSync = require('browser-sync').create()
   watch('./src/**/*.js', scripts)
   watch('./src/**/*.css', css)
-  watch('./src/**/*.scss', sass)
   watch('./src/**/*.pug', html)
   watch('./src/**/*.html', html2)
   watch('./static/**/*.*', static)
@@ -67,11 +58,11 @@ function serve() {
   watch('dist/**/*.*').on('change', browserSync.reload)
 }
 
-exports.dev = series(scripts, css, sass, html, html2, static, serve)
+exports.dev = series(scripts, css, html, html2, static, serve)
 
 exports.clean = () => del(['dist/*'], { dot: true });
 
-exports.build = parallel(scripts, css, sass, html, html2, static)
+exports.build = parallel(scripts, css, html, html2, static)
 
 const syncToServer = function () {
   return src(['dist/**/*.*'])
