@@ -19,7 +19,7 @@ html
     meta(name='msapplication-tap-highlight', content='no')
   body
     include partials/_mixins.pug
-    .bg-black-geo.text-white#top-banner
+    .bg-black-geo.text-white#enterprise-head
       .container
         .h-20.flex.items-center
           .flex.items-center
@@ -143,7 +143,7 @@ html
         })
         .on('init', () => {
           const $tabs = $('#top-tabs')
-          const height = $('#top-banner').height()
+          const height = $('#enterprise-head').height()
           let timer = null
           $(window).on('scroll', () => {
             if (!timer) {
