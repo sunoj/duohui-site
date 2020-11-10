@@ -193,7 +193,7 @@ a{
     align-items: center;
     .banner-container {
         width: 100%;
-        height: 600px;
+        height: 380px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -211,6 +211,7 @@ a{
             background-repeat: no-repeat;
             background-size: contain;
             height: 140px;
+            margin-bottom: 32px;
             width: 840px;
             z-index: 1;
         }
