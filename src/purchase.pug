@@ -6,10 +6,10 @@ html(lang='en')
     title 双十一特惠 - 多会
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
-    link(rel='stylesheet' type='text/css' href='./purchase/css/index.css')
+    link(rel='stylesheet' type='text/css' href='./styles/purchase.css')
   body
     include partials/_header.pug
-    .main-container
+    .main-container.pb-12
       .banner-container
         .background
           .icon-avatar-round.pos-1
@@ -27,7 +27,7 @@ html(lang='en')
           span.time 11.9 - 11.20
       .prod-container
         .header
-          .title 多种产品，满足众多活动形式，新用户购买6折起！
+          .title.font-semibold 多种产品，满足众多活动形式，新用户购买6折起！
           .sub-title 售票功能强大，适用于多种活动与服务场景，线上线下可同步售票。
         .content
           .card
@@ -100,7 +100,7 @@ html(lang='en')
                 | 了解更多
       .rc-container
         .header
-          .title 老用户续费一年送半年，企业版价格5折起！
+          .title.font-semibold 老用户续费一年送半年，企业版价格5折起！
           .sub-title 感恩一路陪伴，双十一特惠回馈，全年最低价。
         .content
           .card-version
@@ -109,20 +109,20 @@ html(lang='en')
               span.badge 限时6折
             .price
               .current
-                span.num 1,799
+                span.num 1,599
                 span.unit 元/年
-                span.plus
+                span.plus.mx-1
                   | 赠送6个月
               .normal 日常价1,799元/年
           .card-version
             .title
               .text 企业版
-              span.badge 限时6折
+              span.badge 限时5折
             .price
               .current
                 span.num.hot 7,499
                 span.unit 元/年
-                span.plus
+                span.plus.mx-1
                   | 赠送6个月
               .normal 日常价9,999元/年
           .divide
@@ -136,17 +136,17 @@ html(lang='en')
           .card-version
             .header
               .title 高级版
-              .badge 限时五折
+              .badge 限时6折
             .price
               .current
-                span.num 1,799
+                span.num 1,599
                 span.unit 元/年
                 span.plus
                   | +赠送6个月
           .card-version
             .header
               .title 企业版
-              .badge 限时五折
+              .badge 限时5折
             .price
               .current
                 span.num 7,499
@@ -185,20 +185,23 @@ html(lang='en')
     #purchase
       .inner
         .header
-          span 特惠购买
+          span 双十一特惠
           .close
         iframe#purchase-iframe(src='')
-        #purchase-loading.absolute.inset-0.bg-white.flex.justify-center.items-center(style="top:40px;") 加载中..
+        #purchase-loading.absolute.inset-0.bg-white.flex.justify-center.items-center(style="top:40px;")
+          img(src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='lds-palette-ring' width='80' height='80' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Cg transform='rotate(150 50 50)'%3E%3Cpath d='M80 50a30 30 0 0 1-20.73 28.532' fill='none' stroke='%23999999' stroke-width='10'/%3E%3Cpath d='M59.27 78.532a30 30 0 0 1-33.54-10.898' fill='none' stroke='%23efefef' stroke-width='10'/%3E%3Cpath d='M25.73 67.634a30 30 0 0 1 0-35.268' fill='none' stroke='%23efefef' stroke-width='10'/%3E%3Cpath d='M25.73 32.366a30 30 0 0 1 33.54-10.898' fill='none' stroke='%23efefef' stroke-width='10'/%3E%3Cpath d='M59.27 21.468A30 30 0 0 1 80 50' fill='none' stroke='%23efefef' stroke-width='10'/%3E%3CanimateTransform attributeName='transform' type='rotate' values='0 50 50;360 50 50' dur='1' repeatCount='indefinite'/%3E%3C/g%3E%3C/svg%3E")
     include partials/_footer.pug
     script(src='./vendor/vendor.js')
     script.
       $('body')
         .on('click', '#purchase .close', function() {
           $('#purchase').hide()
+          $('#purchase-iframe').attr('src', '')
         })
         .on('click', '.open-purchase', function() {
           const sku = $(this).data('sku')
           $('#purchase-iframe').attr('src', `https://beta.duohui.cn/quickPurchase?sku=${sku}`)
+          //- $('#purchase-iframe').attr('src', `http://localhost:3000/quickPurchase?sku=${sku}`)
           $('#purchase').show()
           $('#purchase-loading').show()
         })
@@ -206,8 +209,9 @@ html(lang='en')
           const y = window.$youke
           y && y('open')
         })
-
-      $('#purchase-iframe').on('load', function() {
-        $('#purchase-loading').hide()
-      })
-
+        .on('init', function() {
+          $('#purchase-iframe').on('load', function() {
+            $('#purchase-loading').hide()
+          })
+        })
+        .trigger('init')
