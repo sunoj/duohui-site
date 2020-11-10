@@ -13,12 +13,6 @@ const html = function() {
     .pipe(dest('./dist/'))
 }
 
-const html2 = function () {
-  return src('./src/*.html')
-    .pipe(preprocess({ context: { curtime: Date.now() } }))
-    .pipe(dest('./dist/'))
-}
-
 const scripts = function() {
   return src(['./src/**/*.js'])
     .pipe(preprocess())
@@ -43,7 +37,6 @@ function serve() {
   watch('./src/**/*.js', scripts)
   watch('./src/**/*.css', css)
   watch('./src/**/*.pug', html)
-  watch('./src/**/*.html', html2)
   watch('./static/**/*.*', static)
 
   browserSync.init({
@@ -58,11 +51,11 @@ function serve() {
   watch('dist/**/*.*').on('change', browserSync.reload)
 }
 
-exports.dev = series(scripts, css, html, html2, static, serve)
+exports.dev = series(scripts, css, html, static, serve)
 
 exports.clean = () => del(['dist/*'], { dot: true });
 
-exports.build = parallel(scripts, css, html, html2, static)
+exports.build = parallel(scripts, css, html, static)
 
 const syncToServer = function () {
   return src(['dist/**/*.*'])
