@@ -57,10 +57,10 @@ html(lang='en')
               li 自定义报名表单
               li 支持渠道售票
               li 提供场次功能
-            .actions
-              a.btn.btn-get.open-purchase(data-sku="prime_for_new_1111")
+            .actions.w-full
+              a.text-center.btn.btn-get.open-purchase(data-sku="prime_for_new_1111")
                 | 立即选购
-              a.btn(href="/prime")
+              a.text-center.btn(href="/prime")
                 | 了解更多
           .card
             .header
@@ -84,10 +84,10 @@ html(lang='en')
                 | 独立的 
                 a(href='/mini') 活动小程序
               li 自有支付，票款直接到账
-            .actions
-              a.btn.btn-get.btn-hot.open-purchase(data-sku="enterprise_for_new_1111")
+            .actions.w-full
+              a.text-center.btn.btn-get.btn-hot.open-purchase(data-sku="enterprise_for_new_1111")
                 | 立即选购
-              a.btn(href="/enterprise")
+              a.text-center.btn(href="/enterprise")
                 | 了解更多
           .card
             .header
@@ -103,10 +103,10 @@ html(lang='en')
               li 个性化功能定制
               li 员工使用培训
               li 专属技术指导
-            .actions
-              a.btn.btn-get.open-youke
+            .actions.w-full
+              a.text-center.btn.btn-get.open-youke
                 | 咨询顾问
-              a.btn(href="/self")
+              a.text-center.btn(href="/self")
                 | 了解更多
       .rc-container
         .header
@@ -186,12 +186,12 @@ html(lang='en')
                 span.num.hot 5,999
                 span.unit 元/年
             .badge 限时6折
-      .mobile-fotter-container
-        .qr-code
+      .mobile-fotter-container.flex-col
+        .qr-code.mb-4
           img(src='./img/qrcode-contact.png')
         .content
           h3 长按二维码
-          h2 联系多会客户经理
+          h2 联系多会客户经理获得优惠
     #purchase
       .inner
         .header

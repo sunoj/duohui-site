@@ -163,7 +163,7 @@ body {
 
 }
 .btn {
-    padding: 16px 100px;
+    padding: 12px;
     margin-bottom: 10px;
     border-radius: 2px;
     border:1px solid #DDDDDD;
@@ -173,6 +173,11 @@ body {
     color: #fff;
     border:none;
     border-radius: 2px;
+}
+.actions {
+    .button {
+        padding: 16px;
+    }
 }
 .hot {
     color: #FA5C21 !important;
@@ -696,8 +701,6 @@ a{
     }
     .mobile-fotter-container{
         display: none;
-        flex-direction: row;
-        margin-bottom: 40px;
         .qr-code{
             background-color: #ffffff;
             border: 0.5px solid #F2D2C4;
@@ -705,7 +708,6 @@ a{
             border-radius: 4px;
             padding: 11px;
             display: flex;
-            margin-right: 23px;
         }
         .content{
             display: flex;
