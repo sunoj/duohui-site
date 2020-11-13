@@ -235,7 +235,10 @@ strong{
 #haiku-right-click-menu{
   display: none !important;
 }
-
+#wechat-animation > div, #wechat-animation > img {
+  min-width: 516px;
+  width: auto !important;
+}
 .intro{
 	padding-top: 0;
 	padding-bottom: 60px;
