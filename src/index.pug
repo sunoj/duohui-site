@@ -46,11 +46,47 @@ html
           img(src='./img/banner/home-mobile-bg.svg', alt='home', style="width:78%;")
         .relative.flex.justify-center(style="padding-top:5%;padding-bottom:10%;")
           img(src='./img/banner/home-mobile.svg', alt='home', style="width:70%;")
-    .section.white-bg.mt-12
+      
+    
+    .section.white-bg.mt-4
+      .container
+        .text-center.text-2xl.md_text-4xl.font-semibold 通过微信销售票券和各类服务
+        .mt-4.text-center.text-base.md_text-xl.text-gray-600 从线下活动到休闲健身，服务电商就用多会小程序。
+        .mt-12.flex.flex-wrap.flex-row.justify-between.pb-4
+          .w-1_3.md_w-1_12.text-center.pb-4
+            .icon.flex.justify-center
+              include ../static/img/homepage/biz-event.svg
+            .mt-2.font-bold.text-lg 线下活动
+          .w-1_3.md_w-1_12.text-center.pb-4
+            .icon.flex.justify-center
+              include ../static/img/homepage/biz-expo.svg
+            .mt-2.font-bold.text-lg 会议展览
+          .w-1_3.md_w-1_12.text-center.pb-4
+            .icon.flex.justify-center
+              include ../static/img/homepage/biz-travel.svg
+            .mt-2.font-bold.text-lg 景区门票
+          .w-1_3.md_w-1_12.text-center.pb-4
+            .icon.flex.justify-center
+              include ../static/img/homepage/biz-beauty.svg
+            .mt-2.font-bold.text-lg 休闲美业
+          .w-1_3.md_w-1_12.text-center.pb-4.hidden.md_block
+            .icon.flex.justify-center
+              include ../static/img/homepage/biz-fitness.svg
+            .mt-2.font-bold.text-lg 运动健身
+          .w-1_3.md_w-1_12.text-center.pb-4
+            .icon.flex.justify-center
+              include ../static/img/homepage/biz-edu.svg
+            .mt-2.font-bold.text-lg 教育培训
+          .w-1_3.md_w-1_12.text-center.pb-4
+            .icon.flex.justify-center
+              include ../static/img/homepage/biz-show.svg
+            .mt-2.font-bold.text-lg 剧场演出
+
+    .section.white-bg.mt-4
       .container
         .text-center.text-2xl.md_text-4xl.font-semibold 多种功能，满足多种使用场景
-        .mt-4.text-center.text-base.md_text-xl.text-gray-600 请根据业务场景选择了解更多
-        .mt-12.flex.flex-wrap.pb-10
+        .mt-4.text-center.text-base.md_text-xl.text-gray-600 多会的产品功能为活动和服务场景进行了深入优化设计。
+        .mt-12.flex.flex-wrap.pb-8
           .w-full.md_w-1_2.pr-0.md_pr-4
             table.products-table.product-icons.w-full
               thead
@@ -84,7 +120,7 @@ html
                 tr
                   td(colspan="2")
                     .hidden.md_block
-                      a.btn.large(href="/event") 了解更多
+                      a.w-full.btn.large(href="/event") 了解更多
                     a.text-theme-blue.font-semibold.inline-block.md_hidden(href="/event") 了解更多
           .w-full.md_w-1_2.pl-0.md_pl-4.mt-6.md_mt-0
             table.products-table.product-icons.w-full
@@ -119,37 +155,38 @@ html
                 tr
                   td(colspan="2")
                     .hidden.md_block
-                      a.btn.large(href="/service") 了解更多
+                      a.w-full.btn.large(href="/service") 了解更多
                     a.text-theme-blue.font-semibold.inline-block.md_hidden(href="/service") 了解更多
+    
     .section.white-bg.mt-12
       .container.overflow-hidden
         .text-center.text-2xl.md_text-4xl.font-semibold 专属微信营销工具
-        .mt-4.text-center.text-base.md_text-xl.text-gray-600 快速搭建小程序，获取微信流量红利
+        .mt-4.text-center.text-base.md_text-xl.text-gray-600 用多会快速搭建小程序，获取微信流量红利。
         .mt-12.flex.flex-wrap.-mx-8.px-4.md_px-0.weixin-tools
           .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-mp
             .mt-4.font-bold.text-lg 专属小程序
-            .mt-2.text-gray-600 小程序卡片、下拉菜单、发现页等多种专属入口轻松获客
+            .mt-2.text-gray-600.text-left 小程序卡片、下拉菜单、发现页等多种专属入口轻松获客。
           .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-marketing
             .mt-4.font-bold.text-lg 一体化营销
-            .mt-2.text-gray-600 公众号、小程序、微信群互联互通，流量转化快速高效
+            .mt-2.text-gray-600.text-left 公众号、小程序、微信群互联互通，流量转化快速高效。
           .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-pay
             .mt-4.font-bold.text-lg 自有支付
-            .mt-2.text-gray-600 配置自有微信支付商户账户，自主收款，资金直接到账
+            .mt-2.text-gray-600.text-left 配置自有微信支付商户账户，自主收款，资金直接到账。
           .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-notification
             .mt-4.font-bold.text-lg 实时推送购票信息
-            .mt-2.text-gray-600 用户可在微信上实时收取订单和票种的动态信息
+            .mt-2.text-gray-600.text-left 用户可在微信上实时收取订单和票种的动态信息。
           .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-pocket
             .mt-4.font-bold.text-lg 支持微信卡包
-            .mt-2.text-gray-600 可将电子票添加到微信卡包，查找验票更便捷
+            .mt-2.text-gray-600.text-left 可将电子票添加到微信卡包，查找验票更便捷。
           .px-4.md_px-8.w-1_2.md_w-1_3.text-center
             .icon-server
             .mt-4.font-bold.text-lg 智能客服
-            .mt-2.text-gray-600 可在服务号添加智能客服，提高和顾客的沟通效率
+            .mt-2.text-gray-600.text-left 可在服务号添加智能客服，提高和顾客的沟通效率。
         .text-center.hidden.md_block
           a.btn.solid.large(href="https://app.duohui.cn", target="_blank") 立即试用
           a.btn.large.ml-4(href="/mini") 了解更多
@@ -158,24 +195,28 @@ html
     .section.white-bg.mt-12.mb-4
       .container
         .text-center.text-2xl.md_text-4xl.font-semibold 超多成功案例，丰富行业经验
-        .mt-4.text-center.text-base.md_text-xl.text-gray-600 成立 4 年，多会服务了来自各行各业 7000 多家优秀品牌
+        .mt-4.text-center.text-base.md_text-xl.text-gray-600 成立 4 年，多会已服务来自各行各业的 7000 多家优秀品牌。
         .mt-12.flex.flex-wrap
-          .w-full.md_w-1_2
+          .w-full.md_w-1_2.my-1
             img.mx-auto(src='./img/partners/clients-1.png', srcset='./img/partners/clients-1@2x.png 2x', alt='多会客户列表')
-          .w-full.md_w-1_2
+          .w-full.md_w-1_2.my-1
             img.mx-auto(src='./img/partners/clients-2.png', srcset='./img/partners/clients-2@2x.png 2x', alt='多会客户列表')
-          .w-full.md_w-1_2
+          .w-full.md_w-1_2.my-1
             img.mx-auto(src='./img/partners/clients-3.png', srcset='./img/partners/clients-3@2x.png 2x', alt='多会客户列表')
-          .w-full.md_w-1_2
+          .w-full.md_w-1_2.my-1
             img.mx-auto(src='./img/partners/clients-4.png', srcset='./img/partners/clients-4@2x.png 2x', alt='多会客户列表')
-          .w-full.md_w-1_2
+          .w-full.md_w-1_2.my-1
             img.mx-auto(src='./img/partners/clients-5.png', srcset='./img/partners/clients-5@2x.png 2x', alt='多会客户列表')
-          .w-full.md_w-1_2
+          .w-full.md_w-1_2.my-1
             img.mx-auto(src='./img/partners/clients-6.png', srcset='./img/partners/clients-6@2x.png 2x', alt='多会客户列表')
-          .w-full.md_w-1_2
+          .w-full.md_w-1_2.my-1
             img.mx-auto(src='./img/partners/clients-7.png', srcset='./img/partners/clients-7@2x.png 2x', alt='多会客户列表')
-          .w-full.md_w-1_2
+          .w-full.md_w-1_2.my-1
             img.mx-auto(src='./img/partners/clients-8.png', srcset='./img/partners/clients-8@2x.png 2x', alt='多会客户列表')
+          .w-full.md_w-1_2.my-1
+            img.mx-auto(src='./img/partners/clients-9.png', srcset='./img/partners/clients-9@2x.png 2x', alt='多会客户列表')
+          .w-full.md_w-1_2.my-1
+            img.mx-auto(src='./img/partners/clients-10.png', srcset='./img/partners/clients-10@2x.png 2x', alt='多会客户列表')
     .section.white-bg.mt-12.mb-12.hidden.md_block
       include partials/_advisory.pug
     .section.bg-blue-geo
