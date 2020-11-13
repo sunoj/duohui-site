@@ -232,6 +232,9 @@ strong{
 .inmini .header, .inmini .footer{
   display: none;
 }
+#haiku-right-click-menu{
+  display: none !important;
+}
 
 .intro{
 	padding-top: 0;
