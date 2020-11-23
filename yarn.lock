@@ -22,6 +22,11 @@
   dependencies:
     "@types/babel-types" "*"
 
+"@types/pug@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@types/pug/-/pug-2.0.4.tgz#8772fcd0418e3cd2cc171555d73007415051f4b2"
+  integrity sha1-h3L80EGOPNLMFxVV1zAHQVBR9LI=
+
 accepts@~1.3.4:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/accepts/-/accepts-1.3.7.tgz#531bc726517a3b2b41f850021c6cc15eaab507cd"
@@ -1862,15 +1867,17 @@ gulp-preprocess@^2.0.0:
     map-stream "0.1.x"
     preprocess "^3.0.0"
 
-gulp-pug@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/gulp-pug/-/gulp-pug-3.3.0.tgz#46982c1439c094c360542ed8ba5c882d3bb711cf"
-  integrity sha1-RpgsFDnAlMNgVC7YulyILTu3Ec8=
+gulp-pug@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/gulp-pug/-/gulp-pug-4.0.1.tgz#5c5bb38303a5a565add8b200e292b4a076cf2efa"
+  integrity sha512-RsayLPwJtKKMub9bbO4VYlMPVnImUPdK8+BjvkiulkorrjWnahTbI3a3Li/7YkD0xs7ap7ePciNiPwweoVEPMQ==
   dependencies:
-    gulp-util "^3.0.2"
-    object-assign "^4.1.0"
-    pug ">=2.0.0-alpha <3"
-    through2 "^2.0.0"
+    "@types/pug" "^2.0.4"
+    fancy-log "^1.3.2"
+    plugin-error "^1.0.1"
+    pug "^2.0.3"
+    replace-ext "^1.0.0"
+    through2 "^2.0.3"
 
 gulp-rsync@^0.0.8:
   version "0.0.8"
@@ -1896,7 +1903,7 @@ gulp-shell@^0.6.5:
     plugin-error "^0.1.2"
     through2 "^2.0.3"
 
-gulp-util@^3.0.0, gulp-util@^3.0.2:
+gulp-util@^3.0.0:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   integrity sha1-AFTh50RQLifATBh8PsxQXdVLu08=
@@ -3758,7 +3765,7 @@ pug-walk@^1.1.8:
   resolved "https://registry.yarnpkg.com/pug-walk/-/pug-walk-1.1.8.tgz#b408f67f27912f8c21da2f45b7230c4bd2a5ea7a"
   integrity sha512-GMu3M5nUL3fju4/egXwZO0XLi6fW/K3T3VTgFQ14GxNi8btlxgT5qZL//JwZFm/2Fa64J/PNS8AZeys3wiMkVA==
 
-"pug@>=2.0.0-alpha <3":
+pug@^2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pug/-/pug-2.0.4.tgz#ee7682ec0a60494b38d48a88f05f3b0ac931377d"
   integrity sha512-XhoaDlvi6NIzL49nu094R2NA6P37ijtgMDuWE+ofekDChvfKnzFal60bhSdiy8y2PBO6fmz3oMEIcfpBVRUdvw==
