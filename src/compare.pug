@@ -319,31 +319,30 @@ html
           .calc
             span 我们每个月举办
               select.calc-select.p-1.text-lg.mx-2(name="calc_time")
-                option(value="1") 1
-                option(value="3", selected) 2~4
-                option(value="7") 5~10
-                option(value="20") 10+
+                option(value="1", selected) 1
+                option(value="4") 2-4
+                option(value="10") 5-10
+                option(value="11") 10+
               | 场活动，
             span 平均每场有
               select.calc-select.p-1.text-lg.mx-2(name="calc_people")
-                option(value="25") 10~50
-                option(value="75", selected) 50~100
-                option(value="300") 100~500
-                option(value="750") 500~1000
-                option(value="3000") 1000+
+                option(value="100", selected) 1-100
+                option(value="300") 100-300
+                option(value="1000") 300-1000
+                option(value="10001") 1000+
               | 人参与，
             span 人均票价为
               select.calc-select.p-1.text-lg.mx-2(name="calc_price")
-                option(value="0") 0
-                option(value="25") 10~50
-                option(value="75", selected) 50~100
-                option(value="300") 100~500
-                option(value="1000") 500+
+                option(value="0", selected) 0
+                option(value="100") 1-100
+                option(value="500") 100-500
+                option(value="1000") 500-1000
+                option(value="1001") 1000+
               | 元。
             .answer.usage.mt-12
               .text-color-theme.font-semibold 我们推荐您使用
               .products.outline.mt-4
-                .product.std
+                .product.standard
                   .font-bold 多会标准版
                   .main
                     .main-left
@@ -357,7 +356,7 @@ html
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
                       .mt-1.text-center
                         a(href="/standard").text-gray-600.text-sm 查看详情
-                .product.premier(style="display:inline-block;")
+                .product.prime.inline-block
                   .font-bold 多会高级版
                   .main
                     .main-left
@@ -390,13 +389,13 @@ html
           .text-lg.font-semibold.mt-8 所需功能
           .function.mt-2
             .checkers.flex.flex-wrap
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='std,premier')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='standard,prime')
                 .flex-grow
                   .text-xl.font-semibold 资金实时到帐，无需提现
                   .text-gray-600 使用自有的收款账号，费率更低，实时到帐。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='std,premier')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='standard,prime')
                 .flex-grow
                   .text-xl.font-semibold 独立品牌展示
                   .text-gray-600 隐藏多会品牌，完整独立的品牌展示。
@@ -414,25 +413,25 @@ html
                   .text-gray-600 提供专用签到 APP，没有网络同样快速签到。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='std')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='standard')
                 .flex-grow
                   .text-xl.font-semibold 在线选座
                   .text-gray-600 上传座位表，购票时可直接在线选座。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='premier,mini,std')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='prime,standard')
                 .flex-grow
                   .text-xl.font-semibold 报名时关注公众号
                   .text-gray-600 生产专属报名二维码，先关注后报名。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='std')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='standard')
                 .flex-grow
                   .text-xl.font-semibold 子账号权限管理
                   .text-gray-600 为其他团队成员创建子账号，设置管理权限。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='std')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='standard')
                 .flex-grow
                   .text-xl.font-semibold 分渠道统计
                   .text-gray-600 创建活动发布渠道，设置渠道专属票，生成统计。
@@ -441,7 +440,7 @@ html
             .answer.feature.mt-12
               .text-color-theme.font-semibold 我们推荐您使用
               .products.outline.mt-4
-                .product.std(style="display:inline-block;")
+                .product.standard.inline-block
                   .font-bold 多会标准版
                   .main
                     .main-left
@@ -455,7 +454,7 @@ html
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
                       .mt-1.text-center
                         a(href="/standard").text-gray-600.text-sm 查看详情
-                .product.premier(style="display:inline-block;")
+                .product.prime.inline-block
                   .font-bold 多会高级版
                   .main
                     .main-left
@@ -469,7 +468,7 @@ html
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
                       .mt-1.text-center
                         a(href="/prime").text-gray-600.text-sm 查看详情
-                .product.enterprise(style="display:inline-block;")
+                .product.enterprise.inline-block
                   .font-bold 多会企业版
                   .main
                     .main-left
@@ -483,58 +482,6 @@ html
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
                       .mt-1.text-center
                         a(href="/enterprise").text-gray-600.text-sm 查看详情
-        //- .calc_detail_modal
-        //-   .calc_detail
-        //-     .p-8.bg-white
-        //-       div.hide_calc_detail.cursor-pointer 关闭
-        //-       p#js-compare-save 对比其他活动平台，预计每月可以节省
-        //-         span.clac_save --
-        //-         | 元！
-        //-       .columns
-        //-         .column.col-md-6.col-12.byus
-        //-           .group.byus
-        //-             h3.group-title.line 多会成本预计
-        //-             .line.hr.clear(data-item="poundage")
-        //-               .left
-        //-                 h4.item-title 交易手续费
-        //-                 pre.exp --
-        //-               .right.result --
-        //-             .line.hr.clear(data-item="fee_per_month")
-        //-               .left
-        //-                 h4.item-title 月费
-        //-                 pre.exp --
-        //-               .right.result --
-        //-             .line.hr.clear(data-item="sms")
-        //-               .left
-        //-                 h4.item-title 短信费
-        //-                 pre.exp --
-        //-               .right.result --
-        //-             .line.total.clear(data-item="total")
-        //-               .left
-        //-                 h4.item-title 总计
-        //-               .right.result --
-        //-         .column.col-md-6.col-12.byother
-        //-           .group.byother
-        //-             h3.group-title.line 活动行成本预计
-        //-             .line.hr.clear(data-item="poundage")
-        //-               .left
-        //-                 h4.item-title 交易手续费
-        //-                 pre.exp --
-        //-               .right.result --
-        //-             .line.hr.clear(data-item="fee_per_month")
-        //-               .left
-        //-                 h4.item-title 月费
-        //-                 pre.exp --
-        //-               .right.result --
-        //-             .line.hr.clear(data-item="sms")
-        //-               .left
-        //-                 h4.item-title 短信费
-        //-                 pre.exp --
-        //-               .right.result --
-        //-             .line.total.clear(data-item="total")
-        //-               .left
-        //-                 h4.item-title 总计
-        //-               .right.result --
     .section.white-bg
       .container
         .mb-12.text-4xl.font-semibold.text-center 还未决定？我们的活动专家可以帮助你
@@ -564,26 +511,8 @@ html
         }
         return res;
       }
-      var formatTemplate = function(data, tmpl) {  
-        var format = {  
-            name: function(x) {  
-              return x ; 
-            }  
-        };  
-        return tmpl.replace(/{(\w+)}/g, function(m1, m2) {  
-            if (!m2)  
-              return "";  
-            return (format && format[m2]) ? format[m2](data[m2]) : data[m2];  
-        });
-      }
       function selectFunction() {
         var selected = [];
-        //- $(".function .checkers .minitoggle.active").each(function() {
-        //-   var data = $(this).parent('.js-toggle').data('cantuse').split(',');
-        //-   if (data[0] != '') {
-        //-     selected = selected.concat(data);
-        //-   }
-        //- });
         $('.function .checkers .js-toggle.active').each(function() {
           var data = $(this).data('cantuse').split(',');
           if (data[0] != '') {
@@ -596,142 +525,58 @@ html
           $(".function .answer.feature .products .product."+selected[i]).css('display', 'none');
         };
       }
-      function calcPrice(){
-        var input = {
-          time : $('.quota .calc select[name=calc_time]').val(),
-          people : $('.quota .calc select[name=calc_people]').val(),
-          price : $('.quota .calc select[name=calc_price]').val(),
-          isfree: ($('.quota .calc select[name=calc_price]').val() > 0 ? 1: 0)
-        }
-        var feeRates = {
-          'std':{
-            expression :{
-              poundage: '{people}x{time}x{isfree}+{people}x{time}x{price}x1%',
-              fee_per_month: '299/12',
-              sms: '({time}*{people}-100)*0.1'
-            },
-            result:{
-              poundage: '{people}*{time}*{isfree}+{people}*{time}*{price}*0.01',
-              fee_per_month: '299/12',
-              sms: '({time}*{people}-100)*0.1'
-            }
-          },
-          'premier':{
-            expression :{
-              poundage: '{people}x{time}x{price}x1%',
-              fee_per_month: '1799/12',
-              sms: '({time}*{people}-500)*0.1'
-            },
-            result:{
-              poundage: '{people}*{time}*{price}*0.01',
-              fee_per_month: '1799/12',
-              sms: '({time}*{people}-500)*0.1'
-            }
-          },
-          'enterprise':{
-            expression :{
-              poundage: '{people}x{time}x{price}x0.6%',
-              fee_per_month: '9999/12',
-              sms: '({time}*{people}-1000)*0.1'
-            },
-            result:{
-              poundage: '{people}*{time}*{price}*0.006',
-              fee_per_month: '9999/12',
-              sms: '({time}*{people}-1000)*0.1'
-            }
-          },
-          'other':{
-            expression:{
-              poundage: '{people}x{time}x{isfree}+{people}x{time}x{price}x2.5%',
-              fee_per_month: '0',
-              sms: '{time}x{people}x0.1'
-            },
-            result:{
-              poundage: '{people}*{time}*{isfree}+{people}*{time}*{price}*0.025',
-              fee_per_month: '0',
-              sms: '{time}*{people}*0.1'
-            }
+      function getMatchPlan(time, people, price) {
+        if (price === 0) {
+          if (time > 10 || people > 1000) {
+            return 'enterprise'
           }
-        };
-        var min_data = {type: null,total: 9999999}; //最小方案
-        $.each(feeRates, function(service,item){
-          // 循环：公式，表达式
-          $.each(item, function(type,collect){
-            var total = 0;
-            for(exp in collect){
-              // 单价表达式
-              collect[exp] = formatTemplate(input, collect[exp]);
-              // 计算单价，>0
-              if(type=='result'){
-                eval(collect[exp]) <= 0 ? collect[exp] = 0 : collect[exp] = eval(collect[exp]);
-                total = total + collect[exp];
-              }
-            };
-            if(type=='result'){
-              // 计算金额总数
-              collect['total'] = total;
-              // 比较大小，记录最小方案
-              if(total < min_data.total){
-                min_data.total = total;
-                min_data.type = service;
-              }
-            }
-            console.log('collect', service, collect)
-          });
-        });
-
-        if (min_data.type == "other") {
-          min_data.type = 'std'
-          $('#js-compare-save').hide()
+          if (time <= 4 && people <= 300) {
+            return 'standard'
+          } else {
+            return 'prime'
+          }
         } else {
-          $('#js-compare-save').show()
+          if (time > 10 || people > 1000 || price > 1000) {
+            return 'enterprise'
+          }
+          if (people * time <= 200 && price <= 500) {
+            return 'standard'
+          }
+          if (people * time * price <= 17 * 10000) {
+            return 'prime'
+          } else {
+            return 'enterprise'
+          }
         }
-
-        // dom产品
-        $(".quota .answer.usage .products .product").css('display','none');
-        $(".quota .answer.usage .products ."+min_data.type).css('display','inline-block');
-        // dom节省价格
-        var cacl_save = feeRates.other.result.total - min_data.total;
-        $(".clac_save").text(cacl_save.toFixed(0));
-        // dom自家方案最低价
-        $(".quota .byus .line[data-item]").each(function(){
-          var data_item = $(this).data('item');
-          $(this).find('.exp').text(feeRates[min_data.type]['expression'][data_item]+"=");
-          $(this).find('.result').text("￥"+feeRates[min_data.type]['result'][data_item].toFixed(0) );
-        });
-        // dom活动行方案
-        $(".quota .byother .line[data-item]").each(function(){
-          var data_item = $(this).data('item');
-          $(this).find('.exp').text(feeRates['other']['expression'][data_item]+"=");
-          $(this).find('.result').text("￥"+feeRates['other']['result'][data_item].toFixed(0));
-        });
-
-        $('body')
-          .on('click', '.comparison-table-tabs .tab', function() {
-            const $tab = $(this)
-            const plan = $tab.data('plan')
-            $tab.addClass('active').siblings().removeClass('active')
-            $('.comparison-table').attr('data-show', plan)
-          })
-          .on('click', '.comparison-table .secondary-header', function() {
-            $(this).toggleClass('close').siblings().toggle()
-          })
-          .on('click', '.content-switch .switchers .switcher', function() {
-            $switch = $(this)
-            const index = $switch.index()
-            $switch
-              .addClass('active')
-              .siblings().removeClass('active')
-            $switch
-              .parents('.content-switch')
-              .find('.content').eq(index)
-              .addClass('active')
-              .siblings().removeClass('active')
-          })
-          //- .on('click', '.show_calc_detail', () => {
-          //-   $('.calc_detail_modal').show()
-          //- })
-          //- .on('click', '.hide_calc_detail', () => {
-          //-   $('.calc_detail_modal').hide()
-          //- })
       }
+      function calcPrice(){
+        const time = +$('.quota .calc select[name=calc_time]').val()
+        const people = +$('.quota .calc select[name=calc_people]').val()
+        const price = +$('.quota .calc select[name=calc_price]').val()
+        const matchPlan = getMatchPlan(time, people, price)
+        $('.quota .answer.usage .products .product').hide()
+        $(`.quota .answer.usage .products .${matchPlan}`).show()
+      }
+
+      $('body')
+        .on('click', '.comparison-table-tabs .tab', function() {
+          const $tab = $(this)
+          const plan = $tab.data('plan')
+          $tab.addClass('active').siblings().removeClass('active')
+          $('.comparison-table').attr('data-show', plan)
+        })
+        .on('click', '.comparison-table .secondary-header', function() {
+          $(this).toggleClass('close').siblings().toggle()
+        })
+        .on('click', '.content-switch .switchers .switcher', function() {
+          $switch = $(this)
+          const index = $switch.index()
+          $switch
+            .addClass('active')
+            .siblings().removeClass('active')
+          $switch
+            .parents('.content-switch')
+            .find('.content').eq(index)
+            .addClass('active')
+            .siblings().removeClass('active')
+        })
