@@ -18,7 +18,7 @@
       .mt-6
         .mb-2.text-xl.font-semibold 关于和帮助
         .flex.flex-wrap.my-6
-          a.inline-block.mb-3.md_mb-0.mr-0.md_mr-6.w-1_2.sm_w-1_3.md_w-auto(href='/about' target="_blank") 关于我们
+          a.inline-block.mb-3.md_mb-0.mr-0.md_mr-6.w-1_2.sm_w-1_3.md_w-auto(href='https://xinxiao.tech' target="_blank") 关于我们
           a.inline-block.mb-3.md_mb-0.mr-0.md_mr-6.w-1_2.sm_w-1_3.md_w-auto(href='https://docs.duohui.cn/brand/' target="_blank") 品牌资源
           a.inline-block.mb-3.md_mb-0.mr-0.md_mr-6.w-1_2.sm_w-1_3.md_w-auto(href='/support') 帮助支持
           a.inline-block.mb-3.md_mb-0.mr-0.md_mr-6.w-1_2.sm_w-1_3.md_w-auto(href='/customers') 客户案例
@@ -40,7 +40,7 @@ iframe.hidden#iframe-app(src="#")
 
     script.
       const iframe = document.getElementById('iframe-app')
-      if (window.__wxjs_environment === 'miniprogram') {
+      if (window.__wxjs_environment === 'miniprogram' || navigator.userAgent.indexOf("miniProgram") > -1) {
         console.log("in miniprogram")
       } else {
         iframe.src = "https://app.duohui.cn/i.html"
