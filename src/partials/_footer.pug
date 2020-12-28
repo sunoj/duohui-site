@@ -66,6 +66,17 @@ iframe.hidden#iframe-app(src="#")
           }, "https://app.duohui.cn")
         }
       }
+      if (window.location.search.indexOf("utm_source") > -1) {
+        iframe.onload = function(){
+          iframe.contentWindow.postMessage({
+            action: 'save',
+            key: 'utm_landing_url',
+            value: {
+              url: window.location.href
+            }
+          }, "https://app.duohui.cn")
+        }
+      }
 
     script.
       (function(y,o,u,k,e){y['YoukeInstance']=k;y[k]=y[k]||function(){(y[k].e=y[k].e||[]).push(arguments)};e=o.createElement('script');e.async=1;e.src=u;o.currentScript.parentNode.insertBefore(e,o.currentScript);})(window,document,'https://static.cdn.youke.co/js/widget.js','$youke');
