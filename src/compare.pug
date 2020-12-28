@@ -14,306 +14,486 @@ html
     include partials/_header.pug
     .section.bg-geo
     .section.bg-white
-      .container.comparison-table-wrapper
-        .top-tile.py-8.text-center
-          .text-4xl.font-semibold 选择合适的多会产品
-          .mt-4.text-xl.text-gray-600 多会为不同的应用场景设计了专属的产品方案
-        .py-4
-          .comparison-table-tabs.text-center
-            span.tab.mx-2.cursor-pointer(data-plan="standard").active 标准版
-            span.tab.mx-2.cursor-pointer(data-plan="prime") 高级版
-            span.tab.mx-2.cursor-pointer(data-plan="enterprise") 企业版
-        table.comparison-table.shadow-lg.rounded-2xl(data-show="standard")
-          thead
-            tr
-              td(style="border-bottom: none;")
-              td.font-bold 标准版
-              td.font-bold 高级版
-              td.font-bold 企业版
-            tr
-              td(style="vertical-align: center;border-top: none;")
-                .phone-call
-                .pt-2.text-sm 您还可以拨打
-                .py-2.font-bold 021 - 8037 0533
-                .text-sm 咨询套餐详情和更多信息
-              td
-                .p-4
-                  .content-switch
-                    .switchers
-                      .switcher.active 年付
-                      .switcher 月付
-                    .contents
-                      .content.active
-                        .price-panel.text-center
-                          div.price
-                            span.text-4xl 299
-                            span 元/年
-                          div.price-origin
-                            span.promotion-tag 年付优惠
-                            span.line-through 708元/年
-                      .content.text-center
-                        .price-panel.text-center
-                          div.price
-                            span.text-4xl 49
-                            span 元/月
-                          div.price-origin
-                            span.line-through 59/月
-                  a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
-              td
-                .p-4
-                  .content-switch
-                    .switchers
-                      .switcher.active 年付
-                      .switcher 月付
-                    .contents
-                      .content.active
-                        .price-panel.text-center
-                          div.price
-                            span.text-4xl 1,799
-                            span 元/年
-                          div.price-origin
-                            span.promotion-tag 年付优惠
-                            span.line-through 3,588元/年
-                      .content.text-center
-                        .price-panel.text-center
-                          div.price
-                            span.text-4xl 249
-                            span 元/月
-                          div.price-origin
-                            span.line-through 299/月
-                  a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
-              td
-                .p-4
-                  .content-switch
-                    .switchers
-                      .switcher.active 年付
-                      .switcher 季付
-                    .contents
-                      .content.active
-                        .price-panel.text-center
-                          div.price
-                            span.text-4xl 9,999
-                            span 元/年
-                          div.price-origin
-                            span.promotion-tag 年付优惠
-                            span.line-through 17,988元/年
-                      .content.text-center
-                        .price-panel.text-center
-                          div.price
-                            span.text-4xl 3,499
-                            span 元/季
-                          div.price-origin
-                            span.line-through 4,499/季
-                  a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
+      div(style="margin-top: -400px")
+        .top-tile.pt-12.pb-12.md_pb-24.text-center
+          .text-2xl.md_text-4xl.font-semibold 选择适合你的多会产品
+        .container
+          .plan-panel.mb-10.p-8.shadow.rounded-lg.bg-white.relative
+            .flex.flex-wrap
+              .w-full.md_w-1_4.mb-6.md_mb-0
+                .flex.items-center
+                  img(src="data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.667 14.483l-12.15-12.15H3.5V0H14c.31 0 .606.123.825.342l12.491 12.491-1.65 1.65z' fill='%23176BE8'/%3E%3Cpath d='M23.474 15.991L12.491 5.008a1.167 1.167 0 0 0-.825-.341H2.333a1.167 1.167 0 0 0-1.167 1.166v9.334c0 .309.124.606.342.824l10.983 10.983a3.499 3.499 0 0 0 4.95 0l6.033-6.032a3.499 3.499 0 0 0 0-4.95zM8.166 14a2.333 2.333 0 1 1 0-4.667 2.333 2.333 0 0 1 0 4.667z' fill='%23176BE8'/%3E%3C/svg%3E")
+                  span.ml-2.text-theme-main.text-2xl.font-semibold.text-color-theme 新小优惠
+              .w-full.md_w-1_2
+                .plan-title.text-black.font-semibold 多会为以下行业的初创小型商户提供专属折扣
+                .plan-feature-list.mt-2.text-sm.text-gray-700.leading-loose
+                  p 限创立2年以内的小型初创商户，员工人数25人以内
+                  p 如有需要，欢迎随时与我们联系
+                  p.text-gray-500 需要更多会话用量和解锁更多功能请使用付费版
+              .w-full.md_w-1_4.flex.justify-center.md_justify-end.items-end.md_items-center
+                span.mt-4.md_mt-0.flex.items-center.border.border-blue-300.bg-blue-100.px-4.py-2.rounded.cursor-pointer.select-none(onclick="window.$youke('open')")
+                  img(src="data:image/svg+xml,%3Csvg width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 1.5h-13a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3v4l4.667-4H15.5a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1z' stroke='%23176BE8' stroke-width='1.5' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+                  span.ml-2.text-color-theme 与我们联系
+            .flex.flex-wrap.justify-center.md_justify-between.mt-6.text-color-theme.font-semibold
+              .flex.justify-center.lg_justify-start.items-center.w-1_2.md_w-1_3.lg_w-auto
+                img(src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M0 0h40v40H0z'/%3E%3Cpath d='M17.31 24.421a1.23 1.23 0 0 1 1.451-.226l3.793 1.997 2.993-3.33a1.23 1.23 0 0 1 1.829-.002l6.771 7.497a.615.615 0 0 1-.456 1.028H10.46l6.85-6.964z' fill='%23B4CFF6'/%3E%3Cpath d='M17.727 14.664c.77 3.525 3.127 6.141 7.376 6.597 2.307-5.69-3.235-10.565-7.452-11.094C13 8.97 6.148 14.283 7.39 20.278c2.151.9 8.036-1.792 10.338-5.614z' fill='%23347CE9'/%3E%3Cpath d='M11.89 20.224l-.214.071-.086.21a53.044 53.044 0 0 0-1.942 5.649c-.535 1.925-.91 3.81-.91 5.23v.492h5.522v-.492c0-.931.175-3.13.583-5.68s1.043-5.409 1.95-7.675l-.78-.554c-1.503 1.31-2.628 2.25-4.123 2.749z' fill='%23347CE9' stroke='%23fff' stroke-width='.985'/%3E%3Cpath d='M19.198 10.573C15.583 6.418 8.295 6.819 6.322 9.335a7.11 7.11 0 0 0 3.523 2.05c2.368-1.951 6.521-1.795 8.923-.924a6.9 6.9 0 0 1 .43.112z' fill='%23347CE9'/%3E%3Cpath d='M18.505 10.674c2.643.362 5.596 1.45 7.34 4.095 1.846.308 2.966.335 4.172-.883-2.945-4.512-8.586-4.751-11.512-3.212z' fill='%23347CE9'/%3E%3C/svg%3E")
+                span.ml-2 景区门票
+              .flex.justify-center.lg_justify-start.items-center.w-1_2.md_w-1_3.lg_w-auto
+                img(src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M0 0h40v40H0z'/%3E%3Cpath d='M28.09 8.51a2.462 2.462 0 0 0-3.48 0l-16.1 16.1a2.462 2.462 0 0 0 0 3.481l3.915 3.916a1.224 1.224 0 0 0 1.243.303 1.243 1.243 0 0 0 .498-.303l1.306-1.305c.48-.48.48-1.26 0-1.74l-2.829-2.83a.923.923 0 0 1 1.305-1.305l2.829 2.829a1.23 1.23 0 0 0 1.74-1.74l-2.828-2.83a.923.923 0 0 1 1.305-1.304l2.829 2.828a1.23 1.23 0 0 0 1.74-1.74l-2.828-2.83a.923.923 0 1 1 1.306-1.305l2.828 2.829a1.23 1.23 0 0 0 1.74-1.74l-2.828-2.83a.923.923 0 1 1 1.306-1.304l2.828 2.828a1.23 1.23 0 0 0 1.74-1.74l-2.828-2.83a.921.921 0 0 1 0-1.305.923.923 0 0 1 1.305 0l2.829 2.829c.48.48 1.26.48 1.74 0l1.306-1.306c.48-.48.48-1.26 0-1.74L28.091 8.51z' fill='%23B4CFF6'/%3E%3Cpath d='M23.445 27.355l.394.325.485-.162 1.306-.435.928-.31.128.107.055-.167.095-.032-.058-.079.334-1 .435-1.306.155-.467-.3-.39-4.517-5.85-.02-.026-.022-.025c-3.64-4.082-6.852-6.618-9.273-8.058-1.207-.717-2.239-1.175-3.045-1.41a4.33 4.33 0 0 0-1.113-.192c-.281-.004-.769.033-1.128.391-.366.367-.393.863-.381 1.145.013.334.096.707.223 1.098.256.788.741 1.796 1.484 2.978 1.489 2.37 4.072 5.534 8.148 9.17l.013.011.014.012 5.66 4.672z' fill='%23347CE9' stroke='%23fff' stroke-width='1.846'/%3E%3Ccircle cx='29.194' cy='23.972' r='2.741' transform='rotate(-45 29.194 23.972)' stroke='%23347CE9' stroke-width='1.287'/%3E%3Ccircle cx='23.972' cy='29.193' r='2.741' transform='rotate(-45 23.972 29.193)' stroke='%23347CE9' stroke-width='1.287'/%3E%3Ccircle cx='20.616' cy='20.616' r='.923' fill='%23fff'/%3E%3C/svg%3E")
+                span.ml-2 休闲美业
+              .flex.justify-center.lg_justify-start.items-center.w-1_2.md_w-1_3.lg_w-auto
+                img(src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M0 0h40v40H0z'/%3E%3Cpath d='M7.385 12.84c0-.306.224-.565.526-.61l12.09-1.769 12.088 1.77a.615.615 0 0 1 .526.608v12.486c0 1.662-1.317 3.026-2.976 3.127-2.87.175-7.073.534-9.13 1.202a1.643 1.643 0 0 1-1.018 0c-2.056-.668-6.26-1.027-9.13-1.202-1.659-.101-2.976-1.465-2.976-3.127V12.84z' fill='%23347CE9'/%3E%3Cpath d='M11.628 10.075c-.978-.038-1.755.756-1.755 1.71V24.01c0 .962.775 1.725 1.712 1.764 1.202.05 2.771.17 4.256.365 1.5.198 2.864.469 3.688.807.304.124.643.124.947 0 .824-.338 2.187-.609 3.688-.807a50.31 50.31 0 0 1 4.256-.365c.937-.04 1.712-.802 1.712-1.764V11.784c0-.953-.777-1.747-1.755-1.709-1.278.05-2.956.181-4.548.467-1.415.254-2.831.64-3.826 1.245-.996-.605-2.412-.992-3.827-1.245-1.592-.286-3.27-.417-4.548-.467z' fill='%23B4CFF6' stroke='%23fff' stroke-width='1.054' stroke-linejoin='round'/%3E%3Cpath fill='%23fff' d='M19.366 11.439h1.231v15.867h-1.231z'/%3E%3Cpath d='M17.538 10.154L20 9.846l1.846.308v.615L20 11.692l-1.231-.615-1.23-.923z' fill='%23fff'/%3E%3C/svg%3E")
+                span.ml-2 教育培训
+              .flex.justify-center.lg_justify-start.items-center.w-1_2.md_w-1_3.lg_w-auto
+                img(src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M0 0h40v40H0z'/%3E%3Cpath fill='%23B4CFF6' d='M13.539 18.461h12.923v3.692H13.539z'/%3E%3Crect x='32.904' y='18.461' width='1.846' height='3.692' rx='.923' fill='%23B4CFF6'/%3E%3Crect x='5.249' y='18.461' width='1.846' height='3.692' rx='.923' fill='%23B4CFF6'/%3E%3Cpath d='M6.48 16a1.846 1.846 0 1 1 3.692 0v8.616a1.846 1.846 0 0 1-3.692 0V16zM33.52 24.615a1.846 1.846 0 1 1-3.692 0V16a1.846 1.846 0 0 1 3.692 0v8.615z' fill='%23B4CFF6'/%3E%3Crect x='11.294' y='11.294' width='4.235' height='18.353' rx='1.846' fill='%23347CE9'/%3E%3Crect x='28.706' y='29.647' width='4.235' height='18.353' rx='1.846' transform='rotate(-180 28.706 29.647)' fill='%23347CE9'/%3E%3C/svg%3E")
+                span.ml-2 运动建生
+              .flex.justify-center.lg_justify-start.items-center.w-1_2.md_w-1_3.lg_w-auto
+                img(src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M0 0h40v40H0z'/%3E%3Cpath d='M29.23 21.077l-18.461.167' stroke='%23347CE9' stroke-width='2.35' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.327 27.582v2.07a.907.907 0 0 1-.907.907h-1.866a.907.907 0 0 1-.907-.908v-2.069M27.369 27.582v2.07a.907.907 0 0 1-.907.907h-1.866a.907.907 0 0 1-.907-.908v-2.069' fill='%23347CE9'/%3E%3Cpath d='M28.398 12.13v15.06a.907.907 0 0 1-.907.908H12.523a.907.907 0 0 1-.907-.907V12.129c0-.564.177-1.106.492-1.505.314-.4.741-.624 1.186-.624H26.72c.445 0 .872.224 1.187.624.314.399.491.94.491 1.505z' fill='%23B4CFF6' stroke='%23fff' stroke-width='.671' stroke-miterlimit='10' stroke-linecap='square'/%3E%3Cpath d='M14.823 25.24h1.84M23.352 25.24h1.84' stroke='%23fff' stroke-width='1.984' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='13.79' y='13.104' width='12.755' height='8.727' rx='1.27' fill='%23347CE9'/%3E%3C/svg%3E")
+                span.ml-2 客运售票
+              .flex.justify-center.lg_justify-start.items-center.w-1_2.md_w-1_3.lg_w-auto
+                img(src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M24.62 9.893a2.97 2.97 0 0 0-4.62.47 2.97 2.97 0 0 0-4.621-.47 3.082 3.082 0 0 0 0 4.308l4.62 4.699 4.624-4.696a3.085 3.085 0 0 0-.002-4.311z' fill='%23347CE9'/%3E%3Cpath d='M17.63 24.046l-3.13-3.13a1.348 1.348 0 0 0-1.833 0 1.299 1.299 0 0 0 0 1.834l2.75 2.75a.46.46 0 0 1-.642.659l-.011-.011-2.75-2.75a2.215 2.215 0 0 1-.264-2.8v-3.806a1.375 1.375 0 0 0-2.75 0v6.233c0 .416.141.82.402 1.146l3.265 4.079V31h5.5v-5.658c0-.486-.194-.952-.538-1.296zM22.37 24.046l3.13-3.13a1.348 1.348 0 0 1 1.833 0 1.299 1.299 0 0 1 0 1.834l-2.75 2.75a.46.46 0 0 0 .642.659l.01-.011 2.75-2.75a2.216 2.216 0 0 0 .265-2.8v-3.806a1.375 1.375 0 1 1 2.75 0v6.233c0 .416-.142.82-.402 1.146l-3.265 4.079V31h-5.5v-5.658c0-.486.193-.952.537-1.296z' fill='%23B4CFF6'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Cpath fill='%23fff' transform='translate(9 9)' d='M0 0h22v22H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+                span.ml-2 公益政务
 
-            tr
-              td 概述
-              td 适合低频小型活动
-              td 适合中小型活动
-              td 适合专业主办方
+        .container
+          mixin showCompare()
+            .comparison-table-dialog-open.absolute.right-0.bottom-0.left-0.py-4.flex.justify-center.cursor-pointer
+              span.font-semibold.text-xs.flex.items-center
+                span 查看详细对比
+                img(src="data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 8h11.334' stroke='%23111' stroke-width='1.333' stroke-miterlimit='10'/%3E%3Cpath d='M8.667 3.333L13.334 8l-4.667 4.666' stroke='%23111' stroke-width='1.333' stroke-miterlimit='10' stroke-linecap='square'/%3E%3C/svg%3E")
+          input.hidden.plan-radio#plan-pay(name="plan", type="radio", value="pay", checked="true")
+          .plan-panel.mb-10.p-8.shadow.rounded-lg.bg-white.relative
+            label.inset-0.z-10.absolute.w-full.h-full.cursor-pointer.select-none(for="plan-pay")
+            .flex.flex-wrap
+              .w-full.md_w-1_4.mb-6.md_mb-0
+                .flex.items-center
+                  span.radio-icon
+                  span.ml-2.text-theme-main.text-2xl.font-semibold.text-color-theme 订阅版
+                .mt-2
+                  span.inline-block.px-4.py-1.rounded-lg.bg-green-200.text-green-600.text-sm 最高试用30天
+              .w-full.md_w-1_2
+                .plan-title.text-black.font-semibold 高效灵活的活动、服务发布工具，适用于各类型机构和企业
+                .plan-feature-list.mt-2.text-sm.text-gray-700.leading-loose
+                  p 创建和发布活动
+                  p 支持电子票扫码核销，灵活的导入导出订单信息
+                  p 设置票种优惠券和促销功能*
+              .w-full.md_w-1_4
+              input.hidden#annual-switch(name="annual", type="checkbox", checked="true")
+              .w-full.py-4.flex.justify-end.switch-button
+                label.z-20.cursor-pointer.select-none(for="annual-switch")
+                  span.switch-icon.text-green-600.text-sm.font-semibold 使用年付优惠
+              .w-full.flex.flex-wrap.md_flex-no-wrap.switch-panels
+                .relative.z-20.pb-20.w-full.md_w-1_3.mb-4.md_mb-0.p-4.border.rounded-lg.bg-white
+                  h4.text-black.font-semibold 标准版
+                  .mt-1.text-sm.text-gray-500 适合低频小型活动主办方
+                  .mt-2.flex.items-center
+                    span.mr-1.text-3xl.font-semibold
+                      span.switch.annual 24.9
+                      span.switch.month 49
+                    span.mt-2.text-gray-700 元/月
+                  .mt-4
+                    a(href="https://app.duohui.cn/signup?plan=standard").plan-button.pay.inline-block.w-full.text-center.py-2.cursor-pointer.rounded.text-white.bg-blue-700.hover_bg-blue-600.active_bg-gray-600 开始试用
+                  .plan-feature-list.mt-6.border-t.text-sm
+                    .mt-3.font-semibold 售票功能
+                    p.py-2 严格的票种价格和库存限制
+                    p.py-2 单个活动票种数量≤3个
+                    p.py-2 报名人数≤300人
+                    p.py-2 免费票无手续费
+                    p.py-2 付费票1元+1%的手续费
+                    .mt-3.font-semibold 营销互动
+                    p.py-2 支持群发通知&邀请函
+                    p.py-2 每月100条免费短信
+                    p.py-2 发布优惠券
+                    .mt-3.font-semibold 服务支持
+                    p.py-2 帮助文档&在线客服
+                    +showCompare()
+                .relative.z-20.pb-20.w-full.md_w-1_3.mb-4.md_mb-0.p-4.border.rounded-lg.bg-white.mx-0.md_mx-4
+                  h4.text-black.font-semibold 高级版
+                  .mt-1.text-sm.text-gray-500 适合中小型活动主办方
+                  .mt-2.flex.items-center
+                    span.mr-1.text-3xl.font-semibold
+                      span.switch.annual 149
+                      span.switch.month 249
+                    span.mt-2.text-gray-700 元/月
+                  .mt-4
+                    a(href="https://app.duohui.cn/signup?plan=prime").plan-button.pay.inline-block.w-full.text-center.py-2.cursor-pointer.rounded.text-white.bg-blue-700.hover_bg-blue-600.active_bg-gray-600 开始试用
+                  .plan-feature-list.mt-6.border-t.text-sm
+                    .mt-3.font-semibold 售票功能
+                    p.py-2 宽松的票种价格和库存限制
+                    p.py-2 单个活动票种数量无限制
+                    p.py-2 报名人数无限制
+                    p.py-2 免费票无手续费
+                    p.py-2 付费票1%的手续费
+                    p.py-2 场次和座位表选择
+                    p.py-2 渠道票和专属票
+                    .mt-3.font-semibold 营销互动
+                    p.py-2 支持群发通知&邀请函
+                    p.py-2 每月500条免费短信
+                    p.py-2 发布优惠券和促销活动
+                    .mt-3.font-semibold 服务支持
+                    p.py-2 帮助文档&在线客服
+                    p.py-2 电话客服支持
+                    +showCompare()
+                .relative.z-20.pb-20.w-full.md_w-1_3.mb-4.md_mb-0.p-4.border.rounded-lg.bg-white
+                  h4.text-black.font-semibold 企业版
+                  .mt-1.text-sm.text-gray-500 适合专业主办方
+                  .mt-2.flex.items-center
+                    span.mr-1.text-3xl.font-semibold
+                      span.switch.annual 2,499
+                      span.switch.month 3,499
+                    span.mt-2.text-gray-700 元/季
+                  .mt-4
+                    a(href="https://app.duohui.cn/signup?plan=enterprise").plan-button.pay.inline-block.w-full.text-center.py-2.cursor-pointer.rounded.text-white.bg-blue-700.hover_bg-blue-600.active_bg-gray-600 开始试用
+                  .plan-feature-list.mt-6.border-t.text-sm
+                    .mt-3.font-semibold 售票功能
+                    p.py-2 票种价格和库存无限制
+                    p.py-2 单个活动票种数量无限制
+                    p.py-2 报名人数无限制
+                    p.py-2 免费票无手续费
+                    p.py-2
+                      span 付费票无手续费*
+                      span.fee-tip 
+                        span.fee-tooltip.block.shadow-md 多会企业版使用商户自有的支付商户收款，多会不按票款收取手续费和服务费。但支付渠道（微信支付或支付宝）可能直接向您收取 0.6% 的手续费，具体费率以您和支付渠道签订的协议为准。
+                    p.py-2 场次和座位表选择
+                    p.py-2 渠道票和专属票
+                    p.py-2 独立支付
+                    p.py-2 生成活动小程序
+                    .mt-3.font-semibold 营销互动
+                    p.py-2 支持群发通知&邀请函
+                    p.py-2 每月1000条免费短信
+                    p.py-2 发布优惠券和促销活动
+                    p.py-2 绑定 服务号，报名即关注
+                    .mt-3.font-semibold 服务支持
+                    p.py-2 帮助文档&在线客服
+                    p.py-2 电话客服支持
+                    p.py-2 一对一客户经理
+                    +showCompare()
+          input.hidden.plan-radio#plan-free(name="plan", type="radio", value="free")
+          .plan-panel.mb-10.p-8.shadow.rounded-lg.bg-white.relative
+            label.inset-0.z-10.absolute.w-full.h-full.cursor-pointer.select-none(for="plan-free")
+            .flex.flex-wrap
+              .w-full.md_w-1_4.mb-6.md_mb-0
+                .flex.items-center
+                  span.radio-icon
+                  span.ml-2.text-theme-main.text-2xl.font-semibold.text-color-theme 免费版
+              .w-full.md_w-1_2
+                .plan-title.text-black.font-semibold 基本的活动发布功能，适用于个人使用
+                .plan-feature-list.mt-2.text-sm.text-gray-700.leading-loose
+                  p 每月可发布3个活动
+                  p 票种数量≤2个，每个票种库存≤50张，单张票价≤100元
+                  p 付费票手续费1元+2.5%
+                  p.text-gray-500 需要解锁更多功能限制请使用订阅版
+              .w-full.md_w-1_4.flex.md_justify-end.items-end
+                .flex.flex-col.justify-center
+                  .flex.md_justify-center.items-center
+                    span.mr-1.text-6xl.font-semibold 0
+                    span.mt-8.text-gray-700 元/月
+                  a.z-20(href="https://app.duohui.cn").plan-button.free.px-12.py-2.cursor-pointer.rounded.text-white.bg-blue-700.hover_bg-blue-600.active_bg-gray-600 开始使用
 
-          tbody
-            tr.secondary-header
-              td(colspan="4") 版本差异
-            tr
-              td 单张票价
-              td ≤1000元
-              td ≤3000元
-              td 无限制
-            tr
-              td 单个活动票种数量
-              td ≤3个
-              td 无限制
-              td 无限制
-            tr
-              td 活动/服务的报名人数
-              td ≤300人
-              td 无限制
-              td 无限制
-            tr
-              td 免费赠送短信数量
-              td 100条/月
-              td 500条/月
-              td 1000条/月
-            tr
-              td 免费赠送邮件数量
-              td 500封/月
-              td 2500封/月
-              td 5000封/月
-            tr
-              td 微信零钱提现手续费
-              td 免手续费
-              td 免手续费
-              td 免手续费
-            tr
-              td 免费票手续费
-              td 无手续费
-              td 无手续费
-              td 无手续费
-            tr
-              td 付费票手续费
-              td 1元+1%
-              td 1%
-              td
-                span 无手续费，由支付渠道收取
-                span.fee-tip
-                  .fee-tooltip.shadow-md 多会企业版使用商户自有的支付商户收款，多会不按票款收取手续费和服务费。但支付渠道（微信支付或支付宝）可能直接向您收取 0.6% 的手续费，具体费率以您和支付渠道签订的协议为准。
-            tr
-              td 应用中心扩展 
-              td 需单独付费购买
-              td 需单独付费购买
-              td 需单独付费购买
+    #comparison-table-dialog.hidden.fixed.z-40.inset-0.py-20.overflow-y-auto(style="background-color: rgba(0, 0, 0, .2);")
+      .container.bg-white.shadow-lg.rounded-2xl
+        .p-8
+          .flex.items-center
+            .w-12
+            .flex-grow.text-xl.font-semibold.text-center 版本详细对比
+            .w-12.flex.justify-end.comparison-table-dialog-close.cursor-pointer
+              img(src="data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='.4' stroke='%23111' stroke-width='1.818' stroke-miterlimit='10' stroke-linecap='square'%3E%3Cpath d='M28 8L8 28M28 28L8 8'/%3E%3C/g%3E%3C/svg%3E")
+          .mt-4.py-4
+            .comparison-table-tabs.text-center
+              span.tab.mx-2.cursor-pointer(data-plan="standard").active 标准版
+              span.tab.mx-2.cursor-pointer(data-plan="prime") 高级版
+              span.tab.mx-2.cursor-pointer(data-plan="enterprise") 企业版
+          table.comparison-table(data-show="standard")
+            thead
+              tr
+                td(style="border-bottom: none;")
+                td.font-bold 标准版
+                td.font-bold 高级版
+                td.font-bold 企业版
+              tr
+                td(style="vertical-align: center;border-top: none;")
+                  .phone-call
+                  .pt-2.text-sm 您还可以拨打
+                  .py-2.font-bold 021 - 8037 0533
+                  .text-sm 咨询套餐详情和更多信息
+                td
+                  .p-4
+                    .content-switch
+                      .switchers
+                        .switcher.active 年付
+                        .switcher 月付
+                      .contents
+                        .content.active
+                          .price-panel.text-center
+                            div.price
+                              span.text-4xl 299
+                              span 元/年
+                            div.price-origin
+                              span.promotion-tag 年付优惠
+                              span.line-through 708元/年
+                        .content.text-center
+                          .price-panel.text-center
+                            div.price
+                              span.text-4xl 49
+                              span 元/月
+                            div.price-origin
+                              span.line-through 59/月
+                    a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
+                td
+                  .p-4
+                    .content-switch
+                      .switchers
+                        .switcher.active 年付
+                        .switcher 月付
+                      .contents
+                        .content.active
+                          .price-panel.text-center
+                            div.price
+                              span.text-4xl 1,799
+                              span 元/年
+                            div.price-origin
+                              span.promotion-tag 年付优惠
+                              span.line-through 3,588元/年
+                        .content.text-center
+                          .price-panel.text-center
+                            div.price
+                              span.text-4xl 249
+                              span 元/月
+                            div.price-origin
+                              span.line-through 299/月
+                    a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
+                td
+                  .p-4
+                    .content-switch
+                      .switchers
+                        .switcher.active 年付
+                        .switcher 季付
+                      .contents
+                        .content.active
+                          .price-panel.text-center
+                            div.price
+                              span.text-4xl 9,999
+                              span 元/年
+                            div.price-origin
+                              span.promotion-tag 年付优惠
+                              span.line-through 17,988元/年
+                        .content.text-center
+                          .price-panel.text-center
+                            div.price
+                              span.text-4xl 3,499
+                              span 元/季
+                            div.price-origin
+                              span.line-through 4,499/季
+                    a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
 
-          tbody
-            tr.secondary-header
-              td(colspan="4")
-                span.text-base 功能对比
-                span.text-gray-600.pl-2 仅展示部分功能，更多功能请咨询在线客服
-            tr
-              td 创建及发布活动
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 二维码电子票
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 扫码验票
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 群发通知
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 自定义报名表单
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 邀请函
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 保证金
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 审核票
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 订单导入导出
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 优惠券
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 促销活动
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 活动列表及巡演功能
-              td
-              td.tick
-              td.tick
-            tr
-              td 座位表及自选座位
-              td
-              td.tick
-              td.tick
-            tr
-              td 渠道及专属票
-              td
-              td.tick
-              td.tick
-            tr
-              td 场次及自选场次
-              td
-              td.tick
-              td.tick
-            tr
-              td 数据统计
-              td
-              td.tick
-              td.tick
-            tr
-              td 独立支付
-              td
-              td
-              td.tick
-            tr
-              td
-                span 生成独立 
-                a.text-blue-light(href="/mini") 小程序
-              td
-              td
-              td.tick
-            tr
-              td 
-                span 绑定 
-                a.text-blue-light(href="/wechat") 服务号
-                span ，报名即关注
-              td
-              td
-              td.tick
-            tr
-              td 隐藏多会品牌
-              td
-              td
-              td.tick
+              tr
+                td 概述
+                td 适合低频小型活动
+                td 适合中小型活动
+                td 适合专业主办方
 
-          tbody
-            tr.secondary-header
-              td(colspan="4") 服务支持
-            tr
-              td 多会帮助文档
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 在线客服支持
-              td.tick
-              td.tick
-              td.tick
-            tr
-              td 电话客服支持
-              td
-              td.tick
-              td.tick
-            tr
-              td 一对一客户经理
-              td
-              td
-              td.tick
-          tfoot
-            tr
-              td
-              td 
-                .p-4
-                  a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 试用标准版
-              td
-                .p-4
-                  a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 试用高级版
-              td
-                .p-4
-                  a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 试用企业版
+            tbody
+              tr.secondary-header
+                td(colspan="4") 版本差异
+              tr
+                td 单张票价
+                td ≤1000元
+                td ≤3000元
+                td 无限制
+              tr
+                td 单个活动票种数量
+                td ≤3个
+                td 无限制
+                td 无限制
+              tr
+                td 活动/服务的报名人数
+                td ≤300人
+                td 无限制
+                td 无限制
+              tr
+                td 免费赠送短信数量
+                td 100条/月
+                td 500条/月
+                td 1000条/月
+              tr
+                td 免费赠送邮件数量
+                td 500封/月
+                td 2500封/月
+                td 5000封/月
+              tr
+                td 微信零钱提现手续费
+                td 免手续费
+                td 免手续费
+                td 免手续费
+              tr
+                td 免费票手续费
+                td 无手续费
+                td 无手续费
+                td 无手续费
+              tr
+                td 付费票手续费
+                td 1元+1%
+                td 1%
+                td
+                  span 无手续费，由支付渠道收取
+                  span.fee-tip
+                    .fee-tooltip.shadow-md 多会企业版使用商户自有的支付商户收款，多会不按票款收取手续费和服务费。但支付渠道（微信支付或支付宝）可能直接向您收取 0.6% 的手续费，具体费率以您和支付渠道签订的协议为准。
+              tr
+                td 应用中心扩展 
+                td 需单独付费购买
+                td 需单独付费购买
+                td 需单独付费购买
+
+            tbody
+              tr.secondary-header
+                td(colspan="4")
+                  span.text-base 功能对比
+                  span.text-gray-600.pl-2 仅展示部分功能，更多功能请咨询在线客服
+              tr
+                td 创建及发布活动
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 二维码电子票
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 扫码验票
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 群发通知
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 自定义报名表单
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 邀请函
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 保证金
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 审核票
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 订单导入导出
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 优惠券
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 促销活动
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 活动列表及巡演功能
+                td
+                td.tick
+                td.tick
+              tr
+                td 座位表及自选座位
+                td
+                td.tick
+                td.tick
+              tr
+                td 渠道及专属票
+                td
+                td.tick
+                td.tick
+              tr
+                td 场次及自选场次
+                td
+                td.tick
+                td.tick
+              tr
+                td 数据统计
+                td
+                td.tick
+                td.tick
+              tr
+                td 独立支付
+                td
+                td
+                td.tick
+              tr
+                td
+                  span 生成独立 
+                  a.text-blue-light(href="/mini") 小程序
+                td
+                td
+                td.tick
+              tr
+                td 
+                  span 绑定 
+                  a.text-blue-light(href="/wechat") 服务号
+                  span ，报名即关注
+                td
+                td
+                td.tick
+              tr
+                td 隐藏多会品牌
+                td
+                td
+                td.tick
+
+            tbody
+              tr.secondary-header
+                td(colspan="4") 服务支持
+              tr
+                td 多会帮助文档
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 在线客服支持
+                td.tick
+                td.tick
+                td.tick
+              tr
+                td 电话客服支持
+                td
+                td.tick
+                td.tick
+              tr
+                td 一对一客户经理
+                td
+                td
+                td.tick
+            tfoot
+              tr
+                td
+                td 
+                  .p-4
+                    a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 试用标准版
+                td
+                  .p-4
+                    a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 试用高级版
+                td
+                  .p-4
+                    a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 试用企业版
+
     .section.bg-white.quota
       .container
         .mb-12.text-4xl.font-semibold.text-center#price-cal 版本智能推荐
-        .p-8.center-shadow.rounded-2xl
+        .p-8.rounded-2xl(style="background-color: #F9F8F8;")
           .text-2xl.font-semibold 根据用量为我推荐产品
           .text-lg.font-semibold.mt-8 预计用量
           .calc
@@ -342,7 +522,7 @@ html
             .answer.usage.mt-12
               .text-color-theme.font-semibold 我们推荐您使用
               .products.outline.mt-4
-                .product.standard
+                .product.standard.bg-white
                   .font-bold 多会标准版
                   .main
                     .main-left
@@ -356,7 +536,7 @@ html
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
                       .mt-1.text-center
                         a(href="/standard").text-gray-600.text-sm 查看详情
-                .product.prime.inline-block
+                .product.prime.inline-block.bg-white
                   .font-bold 多会高级版
                   .main
                     .main-left
@@ -370,7 +550,7 @@ html
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
                       .mt-1.text-center
                         a(href="/prime").text-gray-600.text-sm 查看详情
-                .product.enterprise
+                .product.enterprise.bg-white
                   .font-bold 多会企业版
                   .main
                     .main-left
@@ -389,49 +569,49 @@ html
           .text-lg.font-semibold.mt-8 所需功能
           .function.mt-2
             .checkers.flex.flex-wrap
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='standard,prime')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard,prime')
                 .flex-grow
                   .text-xl.font-semibold 资金实时到帐，无需提现
                   .text-gray-600 使用自有的收款账号，费率更低，实时到帐。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='standard,prime')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard,prime')
                 .flex-grow
                   .text-xl.font-semibold 独立品牌展示
                   .text-gray-600 隐藏多会品牌，完整独立的品牌展示。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='')
                 .flex-grow
                   .text-xl.font-semibold 活动开始短信提醒
                   .text-gray-600 在活动开始前向参与者群发短信提醒。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='')
                 .flex-grow
                   .text-xl.font-semibold 离线快速签到
                   .text-gray-600 提供专用签到 APP，没有网络同样快速签到。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='standard')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard')
                 .flex-grow
                   .text-xl.font-semibold 在线选座
                   .text-gray-600 上传座位表，购票时可直接在线选座。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='prime,standard')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='prime,standard')
                 .flex-grow
                   .text-xl.font-semibold 报名时关注公众号
                   .text-gray-600 生产专属报名二维码，先关注后报名。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='standard')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard')
                 .flex-grow
                   .text-xl.font-semibold 子账号权限管理
                   .text-gray-600 为其他团队成员创建子账号，设置管理权限。
                 div
                   .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.js-toggle(data-cantuse='standard')
+              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard')
                 .flex-grow
                   .text-xl.font-semibold 分渠道统计
                   .text-gray-600 创建活动发布渠道，设置渠道专属票，生成统计。
@@ -440,7 +620,7 @@ html
             .answer.feature.mt-12
               .text-color-theme.font-semibold 我们推荐您使用
               .products.outline.mt-4
-                .product.standard.inline-block
+                .product.standard.inline-block.bg-white
                   .font-bold 多会标准版
                   .main
                     .main-left
@@ -454,7 +634,7 @@ html
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
                       .mt-1.text-center
                         a(href="/standard").text-gray-600.text-sm 查看详情
-                .product.prime.inline-block
+                .product.prime.inline-block.bg-white
                   .font-bold 多会高级版
                   .main
                     .main-left
@@ -468,7 +648,7 @@ html
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
                       .mt-1.text-center
                         a(href="/prime").text-gray-600.text-sm 查看详情
-                .product.enterprise.inline-block
+                .product.enterprise.inline-block.bg-white
                   .font-bold 多会企业版
                   .main
                     .main-left
@@ -482,6 +662,16 @@ html
                       a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
                       .mt-1.text-center
                         a(href="/enterprise").text-gray-600.text-sm 查看详情
+
+    .container.pb-20
+      .p-4.md_p-8.rounded-lg.bg-red-100.text-red-600.flex.items-center.flex-wrap
+        img.mr-4(src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='5.455' fill='%23FBC7C7'/%3E%3Cpath d='M29.045 12.955a6.325 6.325 0 0 0-4.5-1.864c-1.7 0-3.297.662-4.499 1.863l-.046.047-.046-.046a6.325 6.325 0 0 0-4.5-1.864c-1.7 0-3.297.662-4.5 1.864a6.316 6.316 0 0 0-1.863 4.5c0 1.7.662 3.297 1.864 4.498L20 31l9.045-9.046a6.32 6.32 0 0 0 1.864-4.499c0-1.699-.662-3.297-1.864-4.499z' fill='%23F86464'/%3E%3C/svg%3E", alt="")
+        .flex-grow.py-4
+          p 多会为非盈利组织、开源项目或公益项目提供专属折扣价格。如有需要，欢迎您与我们联系。
+        span.flex.items-center.border.border-red-500.px-4.py-2.rounded.cursor-pointer.select-none(onclick="window.$youke('open')")
+          img(src="data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 2.6H3a1.8 1.8 0 0 0-1.8 1.8v6A1.8 1.8 0 0 0 3 12.2h6a.598.598 0 0 1 .425.176L12 14.952V12.8a.6.6 0 0 1 .6-.6H15a1.8 1.8 0 0 0 1.8-1.8v-6A1.8 1.8 0 0 0 15 2.6zM3 1.4h12a3 3 0 0 1 3 3v6a2.999 2.999 0 0 1-3 3h-1.8v3a.6.6 0 0 1-1.025.425L8.752 13.4H3a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3z' fill='%23FA3030'/%3E%3C/svg%3E")
+          span.ml-2 与我们联系
+
     .section.white-bg
       .container
         .mb-12.text-4xl.font-semibold.text-center 还未决定？我们的活动专家可以帮助你
@@ -579,4 +769,12 @@ html
             .find('.content').eq(index)
             .addClass('active')
             .siblings().removeClass('active')
+        })
+        .on('click', '.comparison-table-dialog-open', () => {
+          $('body').css({ overflowY: 'hidden' })
+          $('#comparison-table-dialog').show()
+        })
+        .on('click', '.comparison-table-dialog-close', () => {
+          $('body').css({ overflowY: 'auto' })
+          $('#comparison-table-dialog').hide()
         })

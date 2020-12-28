@@ -35,10 +35,6 @@
   margin-bottom: 2rem;
 }
 
-.comparison-table-wrapper {
-  margin-top: -400px;
-}
-
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
@@ -414,4 +410,80 @@
     width: 100%;
     margin-right: 0;
   }
+}
+
+
+.radio-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='13' fill='%23F3F3F3' stroke='%23C8C8C8' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.plan-radio + .plan-panel {
+  background: #fafafa;
+}
+
+.plan-radio:checked + .plan-panel {
+  background: #fff;
+}
+
+.plan-radio:checked + .plan-panel .radio-icon {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='14' fill='%23176BE8'/%3E%3Cpath d='M8 14l4 4 8-8' stroke='%23fff' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.plan-radio:not(:checked) + .plan-panel {
+  filter: grayscale(.7);
+}
+
+.plan-radio:not(:checked) + .plan-panel .plan-button {
+  background: transparent;
+  color: #a4a4a4;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .2);
+  cursor: not-allowed;
+}
+
+.plan-feature-list p::before {
+  content: "";
+  display: inline-block;
+  margin-right: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #c4c4c4;
+  vertical-align: middle;
+}
+
+.plan-feature-list p.text-gray-500::before {
+  background: #a0aec0;
+  height: 2px;
+  border-radius: 0;
+}
+
+#annual-switch + .switch-button .switch-icon {
+  display: inline-block;
+  padding-right: 40px;
+  color: #bbb;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='20' viewBox='0 0 32 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.667.667H9.333A9.276 9.276 0 0 0 0 10c0 5.2 4.133 9.333 9.333 9.333h13.334C27.867 19.333 32 15.2 32 10S27.867.667 22.667.667zM9.333 15.333C6.4 15.333 4 12.933 4 10c0-2.934 2.4-5.333 5.333-5.333 2.934 0 5.334 2.4 5.334 5.333 0 2.933-2.4 5.333-5.334 5.333z' fill='%23BBB'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+#annual-switch:checked + .switch-button .switch-icon {
+  color: #36A635;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='20' viewBox='0 0 32 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.333 19.333h13.334C27.867 19.333 32 15.2 32 10S27.867.666 22.667.666H9.333A9.276 9.276 0 0 0 0 10c0 5.2 4.133 9.333 9.333 9.333zM22.667 4.666C25.6 4.666 28 7.066 28 10c0 2.933-2.4 5.333-5.333 5.333-2.934 0-5.334-2.4-5.334-5.333 0-2.934 2.4-5.334 5.334-5.334z' fill='%2336A635'/%3E%3C/svg%3E");
+}
+
+#annual-switch:checked ~ .switch-panels .switch.annual,
+#annual-switch ~ .switch-panels .switch.month {
+  display: inline-block;
+}
+
+#annual-switch ~ .switch-panels .switch.annual,
+#annual-switch:checked ~ .switch-panels .switch.month {
+  display: none;
 }
