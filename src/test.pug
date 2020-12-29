@@ -6,9 +6,9 @@ html(lang="zh-cn")
     meta(name="description", content="")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
-    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css')
-    link(rel='stylesheet', type='text/css', href='./styles/common.css')
-    link(rel='stylesheet', type='text/css', href='./styles/test.css')
+    link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
+    link(rel='stylesheet', type='text/css', href='./styles/test.css?v=<!--@echo curtime -->')
   body
     include partials/_header.pug
     #test
