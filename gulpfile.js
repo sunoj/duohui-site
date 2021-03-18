@@ -68,6 +68,6 @@ const syncToServer = function () {
     }))
 }
 
-const sync_to_instances = shell.task("ssh -t deploy@2.tinyservices.net ./plant-web-admin push duohui-web 10.154.57.202 10.105.55.246 10.105.242.113")
+const sync_to_instances = shell.task("ssh -t deploy@2.tinyservices.net ./plant-web-admin push duohui-web 10.105.55.246 10.105.242.113")
 
 exports.deploy = series(syncToServer, sync_to_instances)
