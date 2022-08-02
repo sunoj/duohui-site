@@ -51,7 +51,8 @@ html
         .w-full.md_w-1_3.px-2: .pricing
           h3.title= product.price.basic_title || "基础费用"
           .price-tag !{product.price.basic}
-            .monthly-price-tag !{product.price.monthly}
+            if product.price.monthly
+              .monthly-price-tag !{product.price.monthly}
           .price-desc= product.price.basic_desc
         .w-full.md_w-1_3.px-2: .pricing
           h3.title= product.price.fee_title || "售票手续费"
