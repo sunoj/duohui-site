@@ -4,7 +4,7 @@ html
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=Edge')
     meta#viewport(name='viewport', content='width=device-width, initial-scale=1')
-    title 多会 - 服务电商小程序
+    title 多会 - 活动票务小程序
     meta(name='description', content='生成你自己的小程序，在微信销售活动和服务。适用于线下活动、剧场演出、会议展览、景区门票、休闲美业、运动健身、教育培训等多种业务场景。')
     link(rel='stylesheet', type='text/css', href='./vendor/vendor.css?v=<!--@echo curtime -->')
     link(rel='stylesheet', type='text/css', href='./styles/common.css?v=<!--@echo curtime -->')
@@ -98,7 +98,7 @@ html
                         //- span.switch.month 708
                       span.mt-2.text-gray-700 元/年
                   .mt-4
-                    a(href="https://app.duohui.cn/signup?plan=standard").plan-button.pay.inline-block.w-full.text-center.py-2.cursor-pointer.rounded.text-white.bg-blue-700.hover_bg-blue-600.active_bg-gray-600 开始试用
+                    a(href="#").plan-button.pay.inline-block.w-full.text-center.py-2.cursor-pointer.rounded.text-white.bg-blue-700.hover_bg-blue-600.active_bg-gray-600 暂停注册
                   .plan-feature-list.mt-6.border-t.text-sm
                     .mt-3.font-semibold 售票功能
                     p.py-2 票种库存 ≤ 100 张
@@ -126,7 +126,7 @@ html
                         //- span.switch.month 4,188
                       span.mt-2.text-gray-700 元/年
                   .mt-4
-                    a(href="https://app.duohui.cn/signup?plan=prime").plan-button.pay.inline-block.w-full.text-center.py-2.cursor-pointer.rounded.text-white.bg-blue-700.hover_bg-blue-600.active_bg-gray-600 开始试用
+                    a(href="#").plan-button.pay.inline-block.w-full.text-center.py-2.cursor-pointer.rounded.text-white.bg-blue-700.hover_bg-blue-600.active_bg-gray-600 暂停注册
                   .plan-feature-list.mt-6.border-t.text-sm
                     .mt-3.font-semibold 售票功能
                     p.py-2 票种库存 ≤ 3000 张
@@ -271,7 +271,7 @@ html
                         //-       span 元/月
                         //-     div.price-origin
                         //-       span.line-through 499/月
-                    a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
+                    a.btn.solid.w-full.text-center(href="#") 暂停注册
                 td
                   .p-4
                     .content-switch
@@ -492,10 +492,10 @@ html
                 td
                 td 
                   .p-4
-                    a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 试用标准版
+                    a.btn.solid.w-full.text-center(href="#") 暂停注册
                 td
                   .p-4
-                    a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 试用高级版
+                    a.btn.solid.w-full.text-center(href="#") 暂停注册
                 td
                   .p-4
                     a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 试用企业版
@@ -543,7 +543,7 @@ html
                       //-   span.promotion-tag.text-sm 年付优惠
                       //-   span.line-through 708 元/年
                     .main-right.mt-2
-                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
+                      a.btn.solid.text-sm.w-full.text-center(href="#") 暂停注册
                       .mt-1.text-center
                         a(href="/standard").text-gray-600.text-sm 查看详情
                 .product.prime.inline-block.bg-white
@@ -557,7 +557,7 @@ html
                       //-   span.promotion-tag.text-sm 年付优惠
                       //-   span.line-through 3,588 元/年
                     .main-right.mt-2
-                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
+                      a.btn.solid.text-sm.w-full.text-center(href="#") 暂停注册
                       .mt-1.text-center
                         a(href="/prime").text-gray-600.text-sm 查看详情
                 .product.enterprise.bg-white
@@ -655,7 +655,7 @@ html
                       //-   span.promotion-tag.text-sm 年付优惠
                       //-   span.line-through 3,588 元/年
                     .main-right.mt-2
-                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=prime", target="_blank") 开始试用
+                      a.btn.solid.text-sm.w-full.text-center.disable(href="#") 暂停注册
                       .mt-1.text-center
                         a(href="/prime").text-gray-600.text-sm 查看详情
                 .product.enterprise.inline-block.bg-white
