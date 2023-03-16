@@ -32,7 +32,10 @@ html
         .action
           a.btn.contact(href="javascript:void(0)" onclick="window.$youke('open')") 联系销售
           a.btn.support(href='/support#inmini') 预约演示
-          a.btn.solid.try(href='/app/') 立即试用
+          if product.code == 'prime' || product.code == 'std'
+            a.solid.try.text-center.py-4.px-6.rounded.text-white.bg-gray-400(href='#') 暂停注册
+          else
+            a.btn.solid.try(href='/app/') 立即试用
 
     .section.product-features: .container
       .mb-4.text-2xl.font-semibold#features 功能特征

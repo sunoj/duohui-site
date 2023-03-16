@@ -153,6 +153,11 @@ ul{
   transition: all 0.3s;
 }
 
+.btn.disable{
+  background-color: #ccc;
+  border-color: #aaa;
+}
+
 .btn.large {
   padding: 10px 32px;
 }
