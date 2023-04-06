@@ -178,27 +178,7 @@ html
                     p.py-2 电话客服支持
                     p.py-2 一对一客户经理
                     +showCompare()
-          input.hidden.plan-radio#plan-free(name="plan", type="radio", value="free")
-          .plan-panel.mb-10.p-8.shadow.rounded-lg.bg-white.relative
-            label.inset-0.z-10.absolute.w-full.h-full.cursor-pointer.select-none(for="plan-free")
-            .flex.flex-wrap
-              .w-full.md_w-1_4.mb-6.md_mb-0
-                .flex.items-center
-                  span.radio-icon
-                  span.ml-2.text-theme-main.text-2xl.font-semibold.text-color-theme 免费版
-              .w-full.md_w-1_2
-                .plan-title.text-black.font-semibold 提供基础功能，适合个人用户使用
-                .plan-feature-list.mt-2.text-sm.text-gray-700.leading-loose
-                  p 每月可发布 2 个活动
-                  p 票种数量 ≤ 2 个，单个票种库存上限 50 张，单张票价上限 100 元
-                  p 付费票手续费为 2.5% + 1 元
-                  p.text-gray-500 需要解锁更多功能限制请使用订阅版
-              .w-full.md_w-1_4.flex.md_justify-end.items-end
-                .flex.flex-col.justify-center
-                  .flex.md_justify-center.items-center
-                    span.mr-1.text-6xl.font-semibold 0
-                    span.mt-8.text-gray-700 元/月
-                  a.z-20(href="https://app.duohui.cn").plan-button.free.px-12.py-2.cursor-pointer.rounded.text-white.bg-blue-700.hover_bg-blue-600.active_bg-gray-600 开始使用
+         
 
     #comparison-table-dialog.hidden.fixed.z-40.inset-0.py-20.overflow-y-auto(style="background-color: rgba(0, 0, 0, .2);")
       .container.bg-white.shadow-lg.rounded-2xl
