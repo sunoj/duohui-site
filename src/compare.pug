@@ -93,10 +93,7 @@ html
                     //-     span.switch.month 59
                     //-   span.mt-2.text-gray-700 元/月
                     .flex.items-center
-                      span.mr-1.text-2xl
-                        span.switch.annual 999
-                        //- span.switch.month 708
-                      span.mt-2.text-gray-700 元/年
+                      span.mt-2.text-gray-700 已停售，不再提供报价
                   .mt-4
                     a(href="#").plan-button.pay.inline-block.w-full.text-center.py-2.rounded.text-white.bg-gray-400 暂停注册
                   .plan-feature-list.mt-6.border-t.text-sm
@@ -121,10 +118,7 @@ html
                     //-     span.switch.month 349
                     //-   span.mt-2.text-gray-700 元/月
                     .flex.items-center
-                      span.mr-1.text-2xl
-                        span.switch.annual 4,999
-                        //- span.switch.month 4,188
-                      span.mt-2.text-gray-700 元/年
+                      span.mt-2.text-gray-700 已停售，不再提供报价
                   .mt-4
                     a(href="#").plan-button.pay.inline-block.w-full.text-center.py-2.rounded.text-white.bg-gray-400 暂停注册
                   .plan-feature-list.mt-6.border-t.text-sm
@@ -475,172 +469,172 @@ html
                   .p-4
                     a.btn.solid.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 试用企业版
 
-    .section.bg-white.quota
-      .container
-        .mb-12.text-4xl.font-semibold.text-center#price-cal 版本智能推荐
-        .p-8.rounded-2xl(style="background-color: #F9F8F8;")
-          .text-2xl.font-semibold 根据用量为我推荐产品
-          .text-lg.font-semibold.mt-8 预计用量
-          .calc
-            span 我们每个月举办
-              select.calc-select.p-1.text-lg.mx-2(name="calc_time")
-                option(value="1", selected) 1
-                option(value="4") 2-4
-                option(value="10") 5-10
-                option(value="11") 10+
-              | 场活动，
-            span 平均每场有
-              select.calc-select.p-1.text-lg.mx-2(name="calc_people")
-                option(value="100", selected) 1-100
-                option(value="300") 100-300
-                option(value="1000") 300-1000
-                option(value="10001") 1000+
-              | 人参与，
-            span 人均票价为
-              select.calc-select.p-1.text-lg.mx-2(name="calc_price")
-                option(value="0", selected) 0
-                option(value="100") 1-100
-                option(value="500") 100-500
-                option(value="1000") 500-1000
-                option(value="1001") 1000+
-              | 元。
-            .answer.usage.mt-12
-              .text-color-theme.font-semibold 我们推荐您使用
-              .products.outline.mt-4
-                .product.standard.bg-white
-                  .font-bold 多会标准版
-                  .main
-                    .main-left
-                      span
-                        span.text-3xl 999
-                        span 元/年
-                      //- div.price-origin
-                      //-   span.promotion-tag.text-sm 年付优惠
-                      //-   span.line-through 708 元/年
-                    .main-right.mt-2
-                      a.text-center.inline-block.w-full.text-center.py-2.rounded.text-white.bg-gray-400(href="#") 暂停注册
-                      .mt-1.text-center
-                        a(href="/standard").text-gray-600.text-sm 查看详情
-                .product.prime.inline-block.bg-white
-                  .font-bold 多会高级版
-                  .main
-                    .main-left
-                      span
-                        span.text-3xl 4,999
-                        span 元/年
-                      //- div.price-origin
-                      //-   span.promotion-tag.text-sm 年付优惠
-                      //-   span.line-through 3,588 元/年
-                    .main-right.mt-2
-                      a.text-center.inline-block.w-full.text-center.py-2.rounded.text-white.bg-gray-400(href="#") 暂停注册
-                      .mt-1.text-center
-                        a(href="/prime").text-gray-600.text-sm 查看详情
-                .product.enterprise.bg-white
-                  .font-bold 多会企业版
-                  .main
-                    .main-left
-                      span
-                        span.text-3xl 19,999
-                        span 元/年
-                    .main-right.mt-2
-                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
-                      .mt-1.text-center
-                        a(href="/enterprise").text-gray-600.text-sm 查看详情
-          .my-8.border-t.border-gray-600
-          .text-2xl.font-semibold 根据功能需求为我推荐产品
-          .text-lg.font-semibold.mt-8 所需功能
-          .function.mt-2
-            .checkers.flex.flex-wrap
-              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard,prime')
-                .flex-grow
-                  .text-xl.font-semibold 资金实时到帐，无需提现
-                  .text-gray-600 使用自有的收款账号，费率更低，实时到帐。
-                div
-                  .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard,prime')
-                .flex-grow
-                  .text-xl.font-semibold 独立品牌展示
-                  .text-gray-600 隐藏多会品牌，完整独立的品牌展示。
-                div
-                  .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='')
-                .flex-grow
-                  .text-xl.font-semibold 活动开始短信提醒
-                  .text-gray-600 在活动开始前向参与者群发短信提醒。
-                div
-                  .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='')
-                .flex-grow
-                  .text-xl.font-semibold 离线快速签到
-                  .text-gray-600 提供专用签到 APP，没有网络同样快速签到。
-                div
-                  .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard')
-                .flex-grow
-                  .text-xl.font-semibold 在线选座
-                  .text-gray-600 上传座位表，购票时可直接在线选座。
-                div
-                  .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='prime,standard')
-                .flex-grow
-                  .text-xl.font-semibold 报名时关注公众号
-                  .text-gray-600 生产专属报名二维码，先关注后报名。
-                div
-                  .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard')
-                .flex-grow
-                  .text-xl.font-semibold 子账号权限管理
-                  .text-gray-600 为其他团队成员创建子账号，设置管理权限。
-                div
-                  .checkbox
-              .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard')
-                .flex-grow
-                  .text-xl.font-semibold 分渠道统计
-                  .text-gray-600 创建活动发布渠道，设置渠道专属票，生成统计。
-                div
-                  .checkbox
-            .answer.feature.mt-12
-              .text-color-theme.font-semibold 我们推荐您使用
-              .products.outline.mt-4
-                .product.standard.inline-block.bg-white
-                  .font-bold 多会标准版
-                  .main
-                    .main-left
-                      span
-                        span.text-3xl 999
-                        span 元/年
-                      //- div.price-origin
-                      //-   span.promotion-tag.text-sm 年付优惠
-                      //-   span.line-through 708 元/年
-                    .main-right.mt-2
-                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
-                      .mt-1.text-center
-                        a(href="/standard").text-gray-600.text-sm 查看详情
-                .product.prime.inline-block.bg-white
-                  .font-bold 多会高级版
-                  .main
-                    .main-left
-                      span
-                        span.text-3xl 4,999
-                        span 元/年
-                      //- div.price-origin
-                      //-   span.promotion-tag.text-sm 年付优惠
-                      //-   span.line-through 3,588 元/年
-                    .main-right.mt-2
-                      a.btn.solid.text-sm.w-full.text-center.disable(href="#") 暂停注册
-                      .mt-1.text-center
-                        a(href="/prime").text-gray-600.text-sm 查看详情
-                .product.enterprise.inline-block.bg-white
-                  .font-bold 多会企业版
-                  .main
-                    .main-left
-                      span
-                        span.text-3xl 19,999
-                        span 元/年
-                    .main-right.mt-2
-                      a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
-                      .mt-1.text-center
-                        a(href="/enterprise").text-gray-600.text-sm 查看详情
+    //- .section.bg-white.quota
+    //-   .container
+    //-     .mb-12.text-4xl.font-semibold.text-center#price-cal 版本智能推荐
+    //-     .p-8.rounded-2xl(style="background-color: #F9F8F8;")
+    //-       .text-2xl.font-semibold 根据用量为我推荐产品
+    //-       .text-lg.font-semibold.mt-8 预计用量
+    //-       .calc
+    //-         span 我们每个月举办
+    //-           select.calc-select.p-1.text-lg.mx-2(name="calc_time")
+    //-             option(value="1", selected) 1
+    //-             option(value="4") 2-4
+    //-             option(value="10") 5-10
+    //-             option(value="11") 10+
+    //-           | 场活动，
+    //-         span 平均每场有
+    //-           select.calc-select.p-1.text-lg.mx-2(name="calc_people")
+    //-             option(value="100", selected) 1-100
+    //-             option(value="300") 100-300
+    //-             option(value="1000") 300-1000
+    //-             option(value="10001") 1000+
+    //-           | 人参与，
+    //-         span 人均票价为
+    //-           select.calc-select.p-1.text-lg.mx-2(name="calc_price")
+    //-             option(value="0", selected) 0
+    //-             option(value="100") 1-100
+    //-             option(value="500") 100-500
+    //-             option(value="1000") 500-1000
+    //-             option(value="1001") 1000+
+    //-           | 元。
+    //-         .answer.usage.mt-12
+    //-           .text-color-theme.font-semibold 我们推荐您使用
+    //-           .products.outline.mt-4
+    //-             .product.standard.bg-white
+    //-               .font-bold 多会标准版
+    //-               .main
+    //-                 .main-left
+    //-                   span
+    //-                     span.text-3xl 999
+    //-                     span 元/年
+    //-                   //- div.price-origin
+    //-                   //-   span.promotion-tag.text-sm 年付优惠
+    //-                   //-   span.line-through 708 元/年
+    //-                 .main-right.mt-2
+    //-                   a.text-center.inline-block.w-full.text-center.py-2.rounded.text-white.bg-gray-400(href="#") 暂停注册
+    //-                   .mt-1.text-center
+    //-                     a(href="/standard").text-gray-600.text-sm 查看详情
+    //-             .product.prime.inline-block.bg-white
+    //-               .font-bold 多会高级版
+    //-               .main
+    //-                 .main-left
+    //-                   span
+    //-                     span.text-3xl 4,999
+    //-                     span 元/年
+    //-                   //- div.price-origin
+    //-                   //-   span.promotion-tag.text-sm 年付优惠
+    //-                   //-   span.line-through 3,588 元/年
+    //-                 .main-right.mt-2
+    //-                   a.text-center.inline-block.w-full.text-center.py-2.rounded.text-white.bg-gray-400(href="#") 暂停注册
+    //-                   .mt-1.text-center
+    //-                     a(href="/prime").text-gray-600.text-sm 查看详情
+    //-             .product.enterprise.bg-white
+    //-               .font-bold 多会企业版
+    //-               .main
+    //-                 .main-left
+    //-                   span
+    //-                     span.text-3xl 19,999
+    //-                     span 元/年
+    //-                 .main-right.mt-2
+    //-                   a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
+    //-                   .mt-1.text-center
+    //-                     a(href="/enterprise").text-gray-600.text-sm 查看详情
+    //-       .my-8.border-t.border-gray-600
+    //-       .text-2xl.font-semibold 根据功能需求为我推荐产品
+    //-       .text-lg.font-semibold.mt-8 所需功能
+    //-       .function.mt-2
+    //-         .checkers.flex.flex-wrap
+    //-           .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard,prime')
+    //-             .flex-grow
+    //-               .text-xl.font-semibold 资金实时到帐，无需提现
+    //-               .text-gray-600 使用自有的收款账号，费率更低，实时到帐。
+    //-             div
+    //-               .checkbox
+    //-           .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard,prime')
+    //-             .flex-grow
+    //-               .text-xl.font-semibold 独立品牌展示
+    //-               .text-gray-600 隐藏多会品牌，完整独立的品牌展示。
+    //-             div
+    //-               .checkbox
+    //-           .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='')
+    //-             .flex-grow
+    //-               .text-xl.font-semibold 活动开始短信提醒
+    //-               .text-gray-600 在活动开始前向参与者群发短信提醒。
+    //-             div
+    //-               .checkbox
+    //-           .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='')
+    //-             .flex-grow
+    //-               .text-xl.font-semibold 离线快速签到
+    //-               .text-gray-600 提供专用签到 APP，没有网络同样快速签到。
+    //-             div
+    //-               .checkbox
+    //-           .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard')
+    //-             .flex-grow
+    //-               .text-xl.font-semibold 在线选座
+    //-               .text-gray-600 上传座位表，购票时可直接在线选座。
+    //-             div
+    //-               .checkbox
+    //-           .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='prime,standard')
+    //-             .flex-grow
+    //-               .text-xl.font-semibold 报名时关注公众号
+    //-               .text-gray-600 生产专属报名二维码，先关注后报名。
+    //-             div
+    //-               .checkbox
+    //-           .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard')
+    //-             .flex-grow
+    //-               .text-xl.font-semibold 子账号权限管理
+    //-               .text-gray-600 为其他团队成员创建子账号，设置管理权限。
+    //-             div
+    //-               .checkbox
+    //-           .flex.items-center.cursor-pointer.border.rounded.p-4.bg-white.js-toggle(data-cantuse='standard')
+    //-             .flex-grow
+    //-               .text-xl.font-semibold 分渠道统计
+    //-               .text-gray-600 创建活动发布渠道，设置渠道专属票，生成统计。
+    //-             div
+    //-               .checkbox
+    //-         .answer.feature.mt-12
+    //-           .text-color-theme.font-semibold 我们推荐您使用
+    //-           .products.outline.mt-4
+    //-             .product.standard.inline-block.bg-white
+    //-               .font-bold 多会标准版
+    //-               .main
+    //-                 .main-left
+    //-                   span
+    //-                     span.text-3xl 999
+    //-                     span 元/年
+    //-                   //- div.price-origin
+    //-                   //-   span.promotion-tag.text-sm 年付优惠
+    //-                   //-   span.line-through 708 元/年
+    //-                 .main-right.mt-2
+    //-                   a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup", target="_blank") 开始试用
+    //-                   .mt-1.text-center
+    //-                     a(href="/standard").text-gray-600.text-sm 查看详情
+    //-             .product.prime.inline-block.bg-white
+    //-               .font-bold 多会高级版
+    //-               .main
+    //-                 .main-left
+    //-                   span
+    //-                     span.text-3xl 4,999
+    //-                     span 元/年
+    //-                   //- div.price-origin
+    //-                   //-   span.promotion-tag.text-sm 年付优惠
+    //-                   //-   span.line-through 3,588 元/年
+    //-                 .main-right.mt-2
+    //-                   a.btn.solid.text-sm.w-full.text-center.disable(href="#") 暂停注册
+    //-                   .mt-1.text-center
+    //-                     a(href="/prime").text-gray-600.text-sm 查看详情
+    //-             .product.enterprise.inline-block.bg-white
+    //-               .font-bold 多会企业版
+    //-               .main
+    //-                 .main-left
+    //-                   span
+    //-                     span.text-3xl 19,999
+    //-                     span 元/年
+    //-                 .main-right.mt-2
+    //-                   a.btn.solid.text-sm.w-full.text-center(href="https://app.duohui.cn/signup?plan=enterprise", target="_blank") 开始试用
+    //-                   .mt-1.text-center
+    //-                     a(href="/enterprise").text-gray-600.text-sm 查看详情
 
     .section.white-bg
       .container
